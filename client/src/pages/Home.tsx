@@ -191,6 +191,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Darija Message Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-700 to-blue-600">
+        <div className="container mx-auto max-w-3xl">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+              Bghiti t7assen l-English dyalek?
+            </h2>
+            <div className="text-white/95 space-y-4 text-lg leading-relaxed">
+              <p>
+                Doroosi one-on-one faqat - ma kan5dmch b groups, 7it levels kaykhtalfo, w bzzaf dyal students kayb9aw ghir galsin w ma kaystafdowch mzyan.
+              </p>
+              <p>
+                Ana English teacher 3ndi experience; kan9ddem lessons online w in-person, b thaman mzyan w flexible.
+              </p>
+              <p>
+                General English + courses mkhasssin l-sectors: tourism, logistics, sales, w majalat okhra.
+              </p>
+              <p>
+                Exam preparation: IELTS & TOEFL training lli kay3awnk tkon ready l-tests kbira w t7a9aq goals dyalek.
+              </p>
+              <p>
+                Ila nta f Tangier wla ay blassa, t9der t9ra m3aya online mn comfort dyal dar, wla private face-to-face.
+              </p>
+              <p className="text-xl font-bold text-blue-200">
+                Start improving mn awal sessions!
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-white/90 mb-6">
+                Sift liya message daba, w let's start your English journey today!
+              </p>
+              <a href="https://wa.me/212672580932" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
+                  Message Ibrahim on WhatsApp
+                </Button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
