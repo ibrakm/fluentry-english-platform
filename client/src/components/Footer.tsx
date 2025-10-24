@@ -8,7 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">Fluentry</h3>
+            <Link href="/">
+              <h3 className="text-white text-lg font-bold mb-4">Fluentry</h3>
+            </Link>
             <p className="text-sm text-gray-400">
               Empowering confident English communicators from Morocco to the world.
             </p>
@@ -19,23 +21,23 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/">
-                  <a className="hover:text-blue-400 transition-colors">Home</a>
+                <Link href="/" className="hover:text-blue-400 transition-colors">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className="hover:text-blue-400 transition-colors">About</a>
+                <Link href="/about" className="hover:text-blue-400 transition-colors">
+                  About
                 </Link>
               </li>
               <li>
-                <Link href="/courses">
-                  <a className="hover:text-blue-400 transition-colors">Courses</a>
+                <Link href="/courses" className="hover:text-blue-400 transition-colors">
+                  Courses
                 </Link>
               </li>
               <li>
-                <Link href="/free-test">
-                  <a className="hover:text-blue-400 transition-colors">Free Test</a>
+                <Link href="/free-test" className="hover:text-blue-400 transition-colors">
+                  Free Test
                 </Link>
               </li>
             </ul>
