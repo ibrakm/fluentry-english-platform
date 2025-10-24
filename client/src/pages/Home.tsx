@@ -207,7 +207,7 @@ export default function Home() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/212672580932"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -216,7 +216,7 @@ export default function Home() {
                 variant="outline"
                 className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
               >
-                Contact Us on WhatsApp
+                Contact Ibrahim on WhatsApp
               </Button>
             </a>
           </div>

@@ -19,21 +19,30 @@ export default function About() {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Our Story: Fluency Starts with Passion
+            Meet Mr. Ibrahim K. — Your English Coach
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              Fluentry was founded by a passionate Moroccan English teacher who saw a need for a more natural, communication-focused approach to learning. Frustrated by traditional methods that focused too much on grammar rules and too little on actual speaking, our founder created Fluentry to bridge the gap.
+              Mr. Ibrahim K. is a dedicated English educator from Tangier, Morocco, with years of experience helping learners gain confidence and fluency in real communication. He founded Fluentry because he saw a need for a more natural, communication-focused approach to learning English.
             </p>
             <p>
-              Our goal is simple: to help every learner in Morocco and beyond communicate their ideas, dreams, and expertise without hesitation. We believe that English is not just a subject to study—it's a skill to master, and more importantly, a tool for empowerment.
+              Frustrated by traditional methods that focused too much on grammar rules and too little on actual speaking, Ibrahim created Fluentry to bridge the gap. His goal is simple: to help every learner in Morocco and beyond communicate their ideas, dreams, and expertise without hesitation.
+            </p>
+            <p>
+              Ibrahim believes that English is not just a subject to study—it's a skill to master, and more importantly, a tool for empowerment. Through Fluentry, he has successfully guided dozens of students toward their personal and professional goals.
             </p>
             <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg my-8">
               <p className="text-lg italic text-blue-900 font-semibold">
                 "I believe that English is the key to countless opportunities. My passion is seeing that 'aha!' moment when a student finally expresses themselves perfectly, without translating in their head."
               </p>
-              <p className="text-blue-800 mt-4 font-medium">— Fluentry Founder</p>
+              <p className="text-blue-800 mt-4 font-medium">— Mr. Ibrahim K., Founder & Lead Coach</p>
             </div>
+            <p className="font-semibold text-gray-900">
+              His Teaching Approach:
+            </p>
+            <p>
+              Ibrahim combines interactive speaking practice, real-life scenarios, and individualized feedback to ensure every student speaks English naturally and confidently. He focuses on practical, engaging, and life-changing language learning.
+            </p>
           </div>
         </div>
       </section>
@@ -107,15 +116,15 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Meet Your Coach?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey with Mr. Ibrahim K.?</h2>
           <p className="text-lg text-blue-100 mb-8">
-            Let's start your journey to confident, fluent English communication.
+            Let's start your journey to confident, fluent English communication. Ibrahim is ready to help you achieve your goals.
           </p>
-          <Link href="/book-lesson">
+            <a href="https://wa.me/212672580932" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
-              Meet Your Coach
+              Chat with Ibrahim on WhatsApp
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
     </div>

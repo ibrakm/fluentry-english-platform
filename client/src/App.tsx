@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Courses from "./pages/Courses";
 import FreeTest from "./pages/FreeTest";
 import BookLesson from "./pages/BookLesson";
+import Pricing from "./pages/Pricing";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -19,8 +20,9 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/courses"} component={Courses} />
       <Route path={"/free-test"} component={FreeTest} />
-      <Route path={"/book-lesson"} component={BookLesson} />
-      <Route path={"/404"} component={NotFound} />
+        <Route path={"book-lesson"} component={BookLesson} />
+      <Route path={"pricing"} component={Pricing} />
+      <Route path={"404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>

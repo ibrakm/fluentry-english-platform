@@ -40,6 +40,11 @@ export default function Footer() {
                   Free Test
                 </Link>
               </li>
+              <li>
+                <Link href="/pricing" className="hover:text-blue-400 transition-colors">
+                  Pricing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -75,7 +80,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-3">
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/212672580932"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm hover:text-blue-400 transition-colors"
@@ -84,7 +89,7 @@ export default function Footer() {
                 WhatsApp
               </a>
               <a
-                href="mailto:info@fluentry.com"
+                href="mailto:ibrahimkabaikm@gmail.com"
                 className="flex items-center gap-2 text-sm hover:text-blue-400 transition-colors"
               >
                 <Mail size={16} />

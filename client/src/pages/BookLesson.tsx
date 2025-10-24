@@ -50,13 +50,18 @@ export default function BookLesson() {
                 </ol>
               </div>
 
-              <Button
-                size="lg"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                onClick={() => alert("Calendly integration would go here")}
+              <a
+                href="https://calendly.com/ibrahimkabaikm/30min"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Schedule via Calendly
-              </Button>
+                <Button
+                  size="lg"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                >
+                  Schedule via Calendly
+                </Button>
+              </a>
             </Card>
 
             {/* Option 2: WhatsApp */}
@@ -89,7 +94,7 @@ export default function BookLesson() {
               </div>
 
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/212672580932"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -97,7 +102,7 @@ export default function BookLesson() {
                   size="lg"
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
                 >
-                  Message Us on WhatsApp
+                  Message Ibrahim on WhatsApp
                 </Button>
               </a>
             </Card>
@@ -198,9 +203,9 @@ export default function BookLesson() {
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 Do you offer group classes?
               </h3>
-              <p className="text-gray-600">
-                Yes! We offer both one-on-one private sessions and small-group conversation practice classes. Choose what works best for your learning style.
-              </p>
+                <p className="text-gray-600">
+                  Yes! We offer both one-on-one private sessions and small-group conversation practice classes. Choose what works best for your learning style. Contact Ibrahim on WhatsApp for more details about group class schedules.
+                </p>
             </Card>
           </div>
         </div>
@@ -216,15 +221,20 @@ export default function BookLesson() {
             Your first lesson is just a few clicks away. Let's get started!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
-              onClick={() => alert("Calendly integration would go here")}
-            >
-              Schedule via Calendly
-            </Button>
             <a
-              href="https://wa.me/1234567890"
+              href="https://calendly.com/ibrahimkabaikm/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+              >
+                Schedule via Calendly
+              </Button>
+            </a>
+            <a
+              href="https://wa.me/212672580932"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -233,7 +243,7 @@ export default function BookLesson() {
                 variant="outline"
                 className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
               >
-                Contact on WhatsApp
+                Contact Ibrahim on WhatsApp
               </Button>
             </a>
           </div>
