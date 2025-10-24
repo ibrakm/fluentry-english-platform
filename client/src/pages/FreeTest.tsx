@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Zap, CheckCircle, TrendingUp } from "lucide-react";
+import EnglishLevelTest from "@/components/EnglishLevelTest";
 
 export default function FreeTest() {
   return (
@@ -9,16 +10,23 @@ export default function FreeTest() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Find Your True English Level in 10 Minutes
+            Find Your True English Level
           </h1>
           <p className="text-lg text-blue-100">
-            Stop guessing. Our quick, free, and accurate AI-powered test assesses your current fluency, grammar, and vocabulary to give you an objective starting point.
+            Take our quick, free, and accurate English proficiency test. Get your CEFR level and personalized course recommendations in minutes.
           </p>
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Test Section */}
       <section className="py-16 px-4">
+        <div className="container mx-auto max-w-3xl">
+          <EnglishLevelTest />
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             How It Works
@@ -33,7 +41,7 @@ export default function FreeTest() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Questions</h3>
               <p className="text-gray-600">
-                Answer a series of adaptive questions that adjust based on your responses, ensuring a precise assessment of your skill level.
+                Answer 10 questions that assess your grammar, vocabulary, and comprehension skills across different difficulty levels.
               </p>
             </Card>
 
@@ -44,9 +52,9 @@ export default function FreeTest() {
                   <span className="text-3xl font-bold text-blue-600">2</span>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">AI Analysis</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Instant Scoring</h3>
               <p className="text-gray-600">
-                Our intelligent system instantly processes your answers, identifying strengths and pinpointing areas for improvement.
+                Our system instantly calculates your score and determines your CEFR level (A1 to C2) with detailed accuracy.
               </p>
             </Card>
 
@@ -57,9 +65,9 @@ export default function FreeTest() {
                   <span className="text-3xl font-bold text-blue-600">3</span>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Instant Results</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Personalized Plan</h3>
               <p className="text-gray-600">
-                Receive a detailed report with your CEFR level (A1 to C2) and a personalized recommendation for the best Fluentry course for you.
+                Receive a detailed report with your level and a personalized recommendation for the best Fluentry course for you.
               </p>
             </Card>
           </div>
@@ -67,7 +75,7 @@ export default function FreeTest() {
       </section>
 
       {/* Benefits */}
-      <section className="py-16 px-4 bg-gray-50">
+      <section className="py-16 px-4">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             The Benefits of Testing
@@ -80,7 +88,7 @@ export default function FreeTest() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Accuracy</h3>
                   <p className="text-gray-600">
-                    Objective, AI-driven scoring means no bias—just a clear picture of your English proficiency.
+                    Objective, data-driven scoring means no bias—just a clear picture of your English proficiency.
                   </p>
                 </div>
               </div>
@@ -106,7 +114,7 @@ export default function FreeTest() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Motivation</h3>
                   <p className="text-gray-600">
-                    See concrete evidence of your progress every time you re-test.
+                    See concrete evidence of your progress every time you re-test. Track your improvement over time.
                   </p>
                 </div>
               </div>
@@ -115,54 +123,50 @@ export default function FreeTest() {
         </div>
       </section>
 
+      {/* Info Section */}
+      <section className="py-16 px-4 bg-blue-50">
+        <div className="container mx-auto max-w-3xl">
+          <div className="bg-white border-l-4 border-blue-600 p-8 rounded-r-lg shadow-sm">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Understanding CEFR Levels</h3>
+            <p className="text-gray-700 mb-6">
+              The Common European Framework of Reference (CEFR) is an international standard for describing language proficiency. Your test will place you at one of these levels:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="border border-gray-200 rounded-lg p-4">
+                <p className="font-bold text-blue-600 text-lg mb-2">A1 - A2</p>
+                <p className="text-gray-700 font-semibold mb-2">Beginner</p>
+                <p className="text-sm text-gray-600">Basic communication, simple sentences, everyday vocabulary</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-4">
+                <p className="font-bold text-blue-600 text-lg mb-2">B1 - B2</p>
+                <p className="text-gray-700 font-semibold mb-2">Intermediate</p>
+                <p className="text-sm text-gray-600">Fluent conversation, complex topics, professional communication</p>
+              </div>
+              <div className="border border-gray-200 rounded-lg p-4">
+                <p className="font-bold text-blue-600 text-lg mb-2">C1 - C2</p>
+                <p className="text-gray-700 font-semibold mb-2">Advanced</p>
+                <p className="text-sm text-gray-600">Near-native fluency, nuanced expression, academic/professional mastery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Test Your Level?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
           <p className="text-lg text-blue-100 mb-8">
-            Get your personalized English proficiency report in just 10 minutes. Our test is powered by EF SET, the world's leading free English proficiency test trusted by millions.
+            Once you've completed the test and received your level, book your first lesson with a Fluentry coach who will tailor lessons to your specific needs.
           </p>
-          <a
-            href="https://www.efset.org/quick-check/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="/book-lesson">
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
             >
-              Take the Free Test Now!
+              Book Your First Lesson
             </Button>
           </a>
-          <p className="text-sm text-blue-200 mt-4">
-            Opens in a new window. Takes about 15-20 minutes.
-          </p>
-        </div>
-      </section>
-
-      {/* Info Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-lg">
-            <h3 className="text-xl font-bold text-blue-900 mb-4">What is the CEFR Level?</h3>
-            <p className="text-blue-800 mb-4">
-              The Common European Framework of Reference (CEFR) is an international standard for describing language proficiency. Your test will place you at one of these levels:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <p className="font-bold text-blue-900">A1 - A2</p>
-                <p className="text-sm text-blue-800">Beginner</p>
-              </div>
-              <div className="text-center">
-                <p className="font-bold text-blue-900">B1 - B2</p>
-                <p className="text-sm text-blue-800">Intermediate</p>
-              </div>
-              <div className="text-center">
-                <p className="font-bold text-blue-900">C1 - C2</p>
-                <p className="text-sm text-blue-800">Advanced</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>

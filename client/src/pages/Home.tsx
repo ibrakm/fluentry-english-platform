@@ -21,11 +21,7 @@ export default function Home() {
                 Book Your First Lesson
               </Button>
             </Link>
-            <a
-              href="https://www.efset.org/quick-check/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/free-test">
               <Button
                 size="lg"
                 variant="outline"
@@ -33,7 +29,7 @@ export default function Home() {
               >
                 Take the Free AI English Test
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -133,15 +133,11 @@ export default function Courses() {
           <p className="text-lg text-gray-600 mb-8">
             Take our quick, free AI-powered English test to find your exact level and get a personalized course recommendation.
           </p>
-          <a
-            href="https://www.efset.org/quick-check/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href="/free-test">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               Take the Free Level Test
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
