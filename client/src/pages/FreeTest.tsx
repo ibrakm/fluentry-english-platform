@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Zap, CheckCircle, TrendingUp } from "lucide-react";
-import ComprehensiveEnglishTest from "@/components/ComprehensiveEnglishTest";
+import ProfessionalEnglishTest from "@/components/ProfessionalEnglishTest";
 
 export default function FreeTest() {
   return (
@@ -20,8 +20,8 @@ export default function FreeTest() {
 
       {/* Test Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-3xl">
-          <ComprehensiveEnglishTest />
+        <div className="container mx-auto max-w-4xl">
+          <ProfessionalEnglishTest />
         </div>
       </section>
 
