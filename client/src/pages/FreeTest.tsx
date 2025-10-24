@@ -120,15 +120,23 @@ export default function FreeTest() {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Test Your Level?</h2>
           <p className="text-lg text-blue-100 mb-8">
-            Get your personalized English proficiency report in just 10 minutes.
+            Get your personalized English proficiency report in just 10 minutes. Our test is powered by EF SET, the world's leading free English proficiency test trusted by millions.
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
-            onClick={() => alert("Test functionality would be integrated here")}
+          <a
+            href="https://www.efset.org/quick-check/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Take the Free Test Now!
-          </Button>
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+            >
+              Take the Free Test Now!
+            </Button>
+          </a>
+          <p className="text-sm text-blue-200 mt-4">
+            Opens in a new window. Takes about 15-20 minutes.
+          </p>
         </div>
       </section>
 
