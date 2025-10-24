@@ -459,6 +459,55 @@ export default function ComprehensiveEnglishTest() {
           </div>
         </Card>
 
+        {/* Coaching Recommendation */}
+        <Card className="p-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+          <div className="flex gap-6">
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Your Personalized Learning Path
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Congratulations on completing the test! You've identified your current English level. Now it's time to take the next step and accelerate your progress with personalized coaching.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex gap-3">
+                  <div className="text-blue-600 font-bold text-lg">✓</div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Start From Your Level</p>
+                    <p className="text-sm text-gray-600">We'll tailor lessons specifically for {testResult.level} level, ensuring you're neither bored nor overwhelmed</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="text-blue-600 font-bold text-lg">✓</div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Guided Progress</p>
+                    <p className="text-sm text-gray-600">Your coach will focus on your weak areas and build on your strengths to help you advance steadily</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="text-blue-600 font-bold text-lg">✓</div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Real-World Communication</p>
+                    <p className="text-sm text-gray-600">Move beyond textbooks to speak naturally and confidently in real-life situations</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="text-blue-600 font-bold text-lg">✓</div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Flexible & Convenient</p>
+                    <p className="text-sm text-gray-600">One-on-one lessons via Google Meet, scheduled at times that work for you</p>
+                  </div>
+                </div>
+              </div>
+              <a href="/book-lesson">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full">
+                  Book Your First Coaching Lesson Now
+                </Button>
+              </a>
+            </div>
+          </div>
+        </Card>
+
         {/* Section Breakdown */}
         <Card className="p-6">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
