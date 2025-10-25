@@ -20,9 +20,9 @@ function Router() {
       <Route path={"/about"} component={About} />
       <Route path={"/courses"} component={Courses} />
       <Route path={"/free-test"} component={FreeTest} />
-        <Route path={"book-lesson"} component={BookLesson} />
-      <Route path={"pricing"} component={Pricing} />
-      <Route path={"404"} component={NotFound} />
+        <Route path={"/book-lesson"} component={BookLesson} />
+      <Route path={"/pricing"} component={Pricing} />
+      <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
     </Switch>
