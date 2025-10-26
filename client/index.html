@@ -68,6 +68,24 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+    
+    <!-- Position Tawk.to widget to not overlap WhatsApp -->
+    <style>
+      /* Move Tawk.to chat widget to left side */
+      #tawk-bubble-container {
+        bottom: 20px !important;
+        left: 20px !important;
+        right: auto !important;
+      }
+      
+      /* Adjust for mobile */
+      @media (max-width: 768px) {
+        #tawk-bubble-container {
+          bottom: 90px !important;
+          left: 20px !important;
+        }
+      }
+    </style>
   </body>
 
 </html>
