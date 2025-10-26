@@ -10,6 +10,7 @@ import Courses from "./pages/Courses";
 import FreeTest from "./pages/FreeTest";
 import BookLesson from "./pages/BookLesson";
 import Pricing from "./pages/Pricing";
+import TheUnspokenPassport from "./pages/articles/TheUnspokenPassport";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
@@ -23,6 +24,7 @@ function Router() {
       <Route path={"/free-test"} component={FreeTest} />
         <Route path={"/book-lesson"} component={BookLesson} />
       <Route path={"/pricing"} component={Pricing} />
+      <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
