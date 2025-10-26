@@ -23,15 +23,17 @@ export default function About() {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-3 gap-8 items-start">
             {/* Photo Placeholder */}
+                        {/* Coach Photo */}
             <div className="md:col-span-1">
-              <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-8 text-center shadow-lg">
-                <div className="w-48 h-48 mx-auto bg-blue-200 rounded-full flex items-center justify-center mb-4">
-                  <Users className="w-24 h-24 text-blue-600" />
-                </div>
-                <p className="text-sm text-gray-600 italic">
-                  Professional photo placeholder
-                </p>
+              <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg p-4 text-center shadow-lg">
+                <img 
+                  src="/ibrahim-photo.jpg" 
+                  alt="Mr. Ibrahim K. - English Language Coach" 
+                  className="w-full h-auto rounded-lg shadow-md"
+                />
               </div>
+            </div>
+
             </div>
 
             {/* Introduction */}
