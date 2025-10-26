@@ -257,9 +257,11 @@ export default function FreeResources() {
                     <li>• Student success stories</li>
                     <li>• Weekly learning tips</li>
                   </ul>
-                  <Button variant="outline" className="w-full" disabled>
-                    Coming Soon
-                  </Button>
+                  <Link href="/blog">
+                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                      Read Blog
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>

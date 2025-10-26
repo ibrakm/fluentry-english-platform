@@ -61,21 +61,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Signals Section (New) */}
-      <section className="py-8 px-4 bg-white border-b border-gray-100">
-        <div className="container mx-auto max-w-5xl text-center">
-          <p className="text-sm font-semibold uppercase text-gray-500 mb-6">
-            Trusted by students from leading universities and companies
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
-            {/* Placeholder Logos - Replace with actual images */}
-            <span className="text-2xl font-bold text-gray-700">University A</span>
-            <span className="text-2xl font-bold text-gray-700">Company B</span>
-            <span className="text-2xl font-bold text-gray-700">Tech Startup C</span>
-            <span className="text-2xl font-bold text-gray-700">Business School D</span>
-          </div>
-        </div>
-      </section>
 
       {/* Quick Intro */}
       <section className="py-16 px-4 bg-gray-50">

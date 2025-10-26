@@ -11,6 +11,8 @@ import FreeTest from "./pages/FreeTest";
 import BookLesson from "./pages/BookLesson";
 import Pricing from "./pages/Pricing";
 import FreeResources from "./pages/FreeResources";
+import Blog from "./pages/Blog";
+import HowToThinkInEnglish from "./pages/blog/HowToThinkInEnglish";
 import TheUnspokenPassport from "./pages/articles/TheUnspokenPassport";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -27,6 +29,8 @@ function Router() {
         <Route path={"/book-lesson"} component={BookLesson} />
       <Route path={"/pricing"} component={Pricing} />
       <Route path={"/free-resources"} component={FreeResources} />
+      <Route path={"/blog"} component={Blog} />
+      <Route path={"/blog/how-to-think-in-english"} component={HowToThinkInEnglish} />
       <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
