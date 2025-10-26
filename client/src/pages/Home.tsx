@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-20 px-4">
+      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4 shadow-xl">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
             Speak English with Confidence. Start Fluently Today.
@@ -17,7 +17,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book-lesson">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
+              <Button size="lg" className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50">
                 Book Your First Lesson
               </Button>
             </Link>
@@ -30,6 +30,22 @@ export default function Home() {
                 Take the Free AI English Test
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals Section (New) */}
+      <section className="py-8 px-4 bg-white border-b border-gray-100">
+        <div className="container mx-auto max-w-5xl text-center">
+          <p className="text-sm font-semibold uppercase text-gray-500 mb-6">
+            Trusted by students from leading universities and companies
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+            {/* Placeholder Logos - Replace with actual images */}
+            <span className="text-2xl font-bold text-gray-700">University A</span>
+            <span className="text-2xl font-bold text-gray-700">Company B</span>
+            <span className="text-2xl font-bold text-gray-700">Tech Startup C</span>
+            <span className="text-2xl font-bold text-gray-700">Business School D</span>
           </div>
         </div>
       </section>
@@ -192,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Darija Message Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-700 to-blue-600">
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-800 to-blue-700">
         <div className="container mx-auto max-w-3xl">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
@@ -223,7 +239,7 @@ export default function Home() {
                 Sift liya message daba, w let's start your English journey today!
               </p>
               <a href="https://wa.me/212672580932" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
+                <Button size="lg" className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50">
                   Message Ibrahim on WhatsApp
                 </Button>
               </a>
@@ -233,7 +249,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 px-4 bg-blue-600 text-white">
+      <section className="py-16 px-4 bg-blue-800 text-white">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Unlock Your English Potential?
@@ -243,7 +259,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book-lesson">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
+              <Button size="lg" className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50">
                 Book Your Lesson Today
               </Button>
             </Link>

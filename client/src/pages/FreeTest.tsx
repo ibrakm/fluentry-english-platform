@@ -7,7 +7,7 @@ export default function FreeTest() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-4 shadow-xl">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Find Your True English Level
@@ -157,12 +157,12 @@ export default function FreeTest() {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Learning?</h2>
           <p className="text-lg text-blue-100 mb-8">
-            Once you've completed the test and received your level, book your first lesson with a Fluentry coach who will tailor lessons to your specific needs.
+            Once you've completed the test and received your level, book your first lesson with a Fluentry coach. **Please remember to include your test result (e.g., "B2") in your booking notes!**
           </p>
-          <a href="/book-lesson">
+          <a href="https://calendly.com/ibrahimkabaikm/30min" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+              className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50"
             >
               Book Your First Lesson
             </Button>

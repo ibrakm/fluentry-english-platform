@@ -6,13 +6,13 @@ export default function BookLesson() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-4 shadow-xl">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Let's Get Started: Book Your First Session
           </h1>
           <p className="text-lg text-blue-100">
-            We've made scheduling your lessons as easy as possible. Choose the method that works best for you!
+            We've made scheduling your lessons as easy as possible. Choose the method that works best for you! **Please remember to include your English Test results (e.g., "B2") in the booking notes or your message.**
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function BookLesson() {
                   </li>
                   <li className="flex gap-3">
                     <span className="font-bold text-blue-600">3.</span>
-                    <span>Confirm and pay securely</span>
+                    <span>Confirm, pay securely, and **include your test result (e.g., "B2") in the notes**</span>
                   </li>
                 </ol>
               </div>
@@ -72,7 +72,7 @@ export default function BookLesson() {
               </div>
 
               <p className="text-gray-600 mb-6">
-                If you have specific questions about our programs, your level, or need help choosing a coach, feel free to send us a message! Our team is ready to help you find the perfect fit.
+                If you have specific questions about our programs, your level, or need help choosing a coach, feel free to send us a message! Our team is ready to help you find the perfect fit. **Please include your test result (e.g., "B2") in your first message.**
               </p>
 
               <div className="bg-gray-50 p-4 rounded-lg mb-6">

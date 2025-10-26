@@ -319,7 +319,7 @@ export default function EnglishLevelTest() {
               className="w-full bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => {
                 // This would navigate to book lesson page
-                window.location.href = "/book-lesson";
+                window.open("https://calendly.com/ibrahimkabaikm/30min", "_blank");
               }}
             >
               Book Your First Lesson
