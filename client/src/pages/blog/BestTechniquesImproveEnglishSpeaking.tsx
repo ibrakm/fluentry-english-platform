@@ -30,7 +30,7 @@ export default function BestTechniquesImproveEnglishSpeaking() {
               <div className="mb-8">
                 <Badge className="mb-4">Speaking Skills</Badge>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  5 Best Techniques to Improve Your English Speaking Skills
+                  🗣️ 5 Best Techniques to Improve Your English Speaking Skills
                 </h1>
                 <div className="flex items-center gap-6 text-gray-600">
                   <span className="flex items-center gap-2">
@@ -46,179 +46,163 @@ export default function BestTechniquesImproveEnglishSpeaking() {
 
               <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-700 mb-6">
-                  Want to speak English fluently and confidently? These five techniques have helped my students go from hesitant speakers to confident communicators. They're practical, proven, and you can start using them today.
+                  Want to finally speak English fluently and confidently? These five practical techniques have helped hundreds of my students in Morocco and abroad go from shy, hesitant speakers to confident communicators. I've seen real transformations — and if you stay consistent, you'll notice the same change in just a few weeks.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-8 mb-4">Technique 1: Shadow Speaking</h2>
+                <h2 className="text-2xl font-bold mt-8 mb-4">1️⃣ Shadow Speaking – Train Your Ear, Tongue, and Confidence</h2>
                 
                 <p>
-                  Shadow speaking means listening to native English audio and repeating it immediately, trying to match the pronunciation, rhythm, and intonation exactly.
+                  Listen, repeat, and imitate — that's the secret. Choose a short audio clip from a podcast, TED Talk, or movie, then shadow it. Try to match every sound, every rhythm, every emotion.
                 </p>
 
-                <p className="font-semibold mt-4">How to do it:</p>
-                <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li>Choose a short audio clip (30-60 seconds) from a podcast, TED talk, or movie scene</li>
-                  <li>Listen to it several times to understand the meaning</li>
-                  <li>Play it again and speak along with it, matching every word</li>
-                  <li>Focus on copying the speaker's rhythm, stress, and intonation—not just the words</li>
-                  <li>Practice the same clip daily for a week</li>
-                </ol>
+                <p className="font-semibold mt-4">🎧 How to start:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                  <li>Pick a 30-second clip you enjoy</li>
+                  <li>Listen first for meaning, then for sound</li>
+                  <li>Speak along with it several times daily for a week</li>
+                </ul>
 
-                <p className="font-semibold">Why it works:</p>
+                <p className="font-semibold">💡 Why it works:</p>
                 <p className="mb-6">
-                  Shadow speaking trains your mouth muscles to produce English sounds naturally. It also helps you internalize the rhythm and melody of English, making your speech sound more natural.
+                  Shadow speaking trains your mouth to move like a native speaker's. You don't just learn English — you start feeling it.
                 </p>
 
                 <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8">
                   <p className="font-semibold text-green-900 mb-2">✓ Student Success Story:</p>
                   <p className="text-green-800">
-                    "After 3 months of shadow speaking for 15 minutes daily, my colleagues at work started asking if I lived abroad. My pronunciation improved dramatically!" - Youssef, Casablanca
+                    "After three months of shadow speaking 15 minutes a day, my colleagues asked if I'd studied abroad." — Youssef (from Casablanca)
                   </p>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-8 mb-4">Technique 2: The 30-Second Challenge</h2>
+                <h2 className="text-2xl font-bold mt-8 mb-4">2️⃣ The 30-Second Challenge – Think in English, Not in Translation</h2>
                 
                 <p>
-                  Set a timer for 30 seconds and speak continuously about any topic without stopping, pausing, or translating in your head.
+                  Set a timer for 30 seconds and talk without stopping. Don't worry about mistakes — just keep speaking.
                 </p>
 
-                <p className="font-semibold mt-4">How to do it:</p>
-                <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li>Pick a simple topic (your morning routine, your favorite food, your city)</li>
-                  <li>Set a 30-second timer</li>
-                  <li>Start speaking and don't stop until the timer ends</li>
-                  <li>If you don't know a word, describe it or use a simpler word</li>
-                  <li>Record yourself to track progress</li>
-                  <li>Gradually increase to 1 minute, then 2 minutes</li>
-                </ol>
-
-                <p className="font-semibold">Why it works:</p>
-                <p className="mb-6">
-                  This technique forces you to think in English and keep speaking even when you're unsure. It builds fluency by training you to communicate your ideas, even with limited vocabulary.
-                </p>
-
-                <h2 className="text-2xl font-bold mt-8 mb-4">Technique 3: Conversation Simulation</h2>
-                
-                <p>
-                  Practice real-life conversations by yourself before they happen. Prepare for common situations you'll face.
-                </p>
-
-                <p className="font-semibold mt-4">How to do it:</p>
-                <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li>Think of situations where you'll need English (job interview, restaurant, meeting)</li>
-                  <li>Write down key phrases and vocabulary you'll need</li>
-                  <li>Practice both sides of the conversation out loud</li>
-                  <li>Imagine different scenarios and how you'd respond</li>
-                  <li>Record yourself and listen back</li>
-                </ol>
-
-                <p className="font-semibold">Common scenarios to practice:</p>
+                <p className="font-semibold mt-4">🕒 Try this:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-6">
-                  <li>Introducing yourself professionally</li>
-                  <li>Ordering food at a restaurant</li>
-                  <li>Making phone calls</li>
-                  <li>Asking for directions</li>
+                  <li>Pick a topic: your city, your job, your morning routine</li>
+                  <li>Talk for 30 seconds nonstop</li>
+                  <li>Increase to 1 minute, then 2</li>
+                </ul>
+
+                <p className="mb-6">
+                  This builds fluency fast — it forces your brain to stay in English mode.
+                </p>
+
+                <h2 className="text-2xl font-bold mt-8 mb-4">3️⃣ Conversation Simulation – Rehearse Before Real Life</h2>
+                
+                <p>
+                  Most people freeze because they haven't practiced the situations they'll face. Simulate them first.
+                </p>
+
+                <p className="font-semibold mt-4">🎭 Examples:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
                   <li>Job interviews</li>
-                  <li>Small talk with colleagues</li>
+                  <li>Ordering food</li>
+                  <li>Talking to colleagues</li>
+                  <li>Phone calls or meetings</li>
                 </ul>
 
-                <p className="font-semibold">Why it works:</p>
                 <p className="mb-6">
-                  When you practice conversations beforehand, you're prepared when the real situation happens. You'll feel more confident and speak more naturally because you've already "rehearsed."
+                  Write key phrases, play both roles, and speak out loud. When the real moment comes, you'll sound calm and ready — because you've already "been there."
                 </p>
 
-                <h2 className="text-2xl font-bold mt-8 mb-4">Technique 4: Voice Journaling</h2>
+                <h2 className="text-2xl font-bold mt-8 mb-4">4️⃣ Voice Journaling – Your Daily Confidence Habit</h2>
                 
                 <p>
-                  Instead of writing a journal, record yourself speaking about your day, thoughts, or feelings in English.
+                  Forget writing journals. Speak them. Every night, talk for 5-10 minutes about your day, your plans, or your thoughts. Use your phone's recorder — no partner needed.
                 </p>
 
-                <p className="font-semibold mt-4">How to do it:</p>
-                <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li>Use your phone's voice recorder</li>
-                  <li>Spend 5-10 minutes daily talking about your day</li>
-                  <li>Speak naturally, as if talking to a friend</li>
-                  <li>Don't worry about mistakes—just keep talking</li>
-                  <li>Listen to your recordings weekly to notice improvement</li>
-                </ol>
-
-                <p className="font-semibold">What to talk about:</p>
-                <ul className="list-disc pl-6 space-y-2 mb-6">
-                  <li>What you did today</li>
-                  <li>Your plans for tomorrow</li>
-                  <li>Something interesting you learned</li>
-                  <li>Your opinion on a news story</li>
-                  <li>A problem you're facing and possible solutions</li>
-                </ul>
-
-                <p className="font-semibold">Why it works:</p>
                 <p className="mb-6">
-                  Voice journaling gives you daily speaking practice without needing a conversation partner. It also creates a record of your progress—you'll be amazed when you listen to recordings from a month ago!
+                  After a few weeks, listen back. You'll be amazed at how much clearer and more natural your speech becomes.
                 </p>
 
-                <h2 className="text-2xl font-bold mt-8 mb-4">Technique 5: The Question-Answer Method</h2>
+                <h2 className="text-2xl font-bold mt-8 mb-4">5️⃣ The Question-Answer Method – Train Your Mind to Respond in English</h2>
                 
                 <p>
-                  Don't just listen to English content passively. Actively engage by asking and answering questions about what you hear or read.
+                  Don't just read or watch passively. Engage. Ask yourself:
                 </p>
 
-                <p className="font-semibold mt-4">How to do it:</p>
-                <ol className="list-decimal pl-6 space-y-2 mb-6">
-                  <li>Watch a short video or read an article in English</li>
-                  <li>Pause and ask yourself questions about it (Who? What? Why? How?)</li>
-                  <li>Answer your questions out loud in complete sentences</li>
-                  <li>Explain the main ideas to yourself as if teaching someone</li>
-                  <li>Give your opinion about the topic</li>
-                </ol>
-
-                <p className="font-semibold">Example:</p>
-                <p className="mb-2">After watching a video about climate change:</p>
                 <ul className="list-disc pl-6 space-y-2 mb-6">
-                  <li>"What was the main problem discussed?" → Answer out loud</li>
-                  <li>"Why is this important?" → Explain in your own words</li>
-                  <li>"What do I think about this?" → Share your opinion</li>
-                  <li>"How does this affect Morocco?" → Connect to your context</li>
+                  <li>Who? What? Why? How?</li>
+                  <li>Answer aloud — even if you're alone</li>
                 </ul>
 
-                <p className="font-semibold">Why it works:</p>
+                <p className="font-semibold mt-4">For example, after watching a video on climate change:</p>
+                <ul className="list-disc pl-6 space-y-2 mb-6">
+                  <li>"What was the main problem?" → Answer aloud</li>
+                  <li>"Why is this important?" → Explain it</li>
+                  <li>"What's my opinion?" → Say it in full sentences</li>
+                </ul>
+
                 <p className="mb-6">
-                  This technique forces you to process information in English and express your thoughts. It develops both your comprehension and speaking skills simultaneously.
+                  This technique strengthens both understanding and spontaneous speaking.
                 </p>
 
-                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-                  <p className="font-semibold text-blue-900 mb-2">💡 Pro Tip:</p>
-                  <p className="text-blue-800">
-                    Combine these techniques! For example: Shadow speak for 10 minutes, then do the 30-second challenge, then voice journal about what you learned. This comprehensive approach will accelerate your progress.
-                  </p>
-                </div>
-
-                <h2 className="text-2xl font-bold mt-8 mb-4">Your 7-Day Speaking Challenge</h2>
+                <h2 className="text-2xl font-bold mt-8 mb-4">⚡ Your 7-Day Speaking Challenge</h2>
                 
                 <div className="bg-slate-50 p-6 rounded-lg my-6">
-                  <p className="font-semibold mb-3">Day 1-2: Shadow Speaking</p>
-                  <p className="mb-4">Choose one short clip and practice 15 minutes daily.</p>
-
-                  <p className="font-semibold mb-3">Day 3-4: 30-Second Challenge</p>
-                  <p className="mb-4">Practice speaking continuously about 5 different topics.</p>
-
-                  <p className="font-semibold mb-3">Day 5: Conversation Simulation</p>
-                  <p className="mb-4">Prepare and practice 3 common scenarios.</p>
-
-                  <p className="font-semibold mb-3">Day 6: Voice Journaling</p>
-                  <p className="mb-4">Record yourself talking about your week for 10 minutes.</p>
-
-                  <p className="font-semibold mb-3">Day 7: Question-Answer Method</p>
-                  <p>Watch a TED talk and practice asking/answering questions about it.</p>
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="pb-3 font-semibold">Day</th>
+                        <th className="pb-3 font-semibold">Focus</th>
+                        <th className="pb-3 font-semibold">What to Do</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b">
+                        <td className="py-3">1–2</td>
+                        <td className="py-3">Shadow Speaking</td>
+                        <td className="py-3">15 minutes daily with one short clip</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3">3–4</td>
+                        <td className="py-3">30-Second Challenge</td>
+                        <td className="py-3">Speak about five topics</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3">5</td>
+                        <td className="py-3">Conversation Simulation</td>
+                        <td className="py-3">Practice three real-life situations</td>
+                      </tr>
+                      <tr className="border-b">
+                        <td className="py-3">6</td>
+                        <td className="py-3">Voice Journaling</td>
+                        <td className="py-3">Record a 10-minute reflection</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3">7</td>
+                        <td className="py-3">Q-A Method</td>
+                        <td className="py-3">Watch a TED Talk and answer aloud</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
 
-                <h2 className="text-2xl font-bold mt-8 mb-4">The Most Important Thing</h2>
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
+                  <p className="font-semibold text-blue-900 mb-2">💬 Remember:</p>
+                  <p className="text-blue-800">
+                    Fluency is like a muscle: you don't build it once, you train it daily.
+                  </p>
+                </div>
+
+                <h2 className="text-2xl font-bold mt-8 mb-4">🎯 Why My Students Succeed</h2>
                 
                 <p>
-                  All these techniques work, but only if you practice consistently. Speaking English is like building a muscle—you need regular exercise, not occasional intense workouts.
+                  Because we practice these exact techniques together — live, with feedback. As a TESOL-certified English coach, I help you correct pronunciation, choose natural expressions, and build the confidence to use English anywhere.
                 </p>
 
-                <p>
-                  Start with just one technique for 15 minutes daily. Once it becomes a habit, add another. In 3 months, you'll be amazed at your progress.
+                <p className="mb-6">
+                  If you've tried studying alone but still hesitate to speak, personalized coaching will change that.
+                </p>
+
+                <h2 className="text-2xl font-bold mt-8 mb-4">💡 Ready to See the Difference?</h2>
+                
+                <p className="mb-6">
+                  Book your first one-on-one Fluentry lesson today. It's flexible, affordable, and focused 100% on helping you speak English naturally — just like my students in Tangier, Casablanca, and abroad.
                 </p>
 
                 <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-8 rounded-lg mt-12">
