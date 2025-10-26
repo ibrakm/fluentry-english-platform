@@ -10,6 +10,7 @@
 - [x] Connect Facebook page (https://web.facebook.com/SweetLollipope/)
 - [x] Add Facebook social link in footer
 - [ ] Test all new integrations
+- [x] Move WhatsApp button to left side to avoid overlap with Tawk.to
 - [x] Fix Tawk.to chat widget overlapping WhatsApp button
 
 ## Completed Features

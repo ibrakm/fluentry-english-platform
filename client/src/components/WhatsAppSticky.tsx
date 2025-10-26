@@ -4,7 +4,7 @@ export function WhatsAppSticky() {
       href="https://wa.me/212672580932?text=Hi%20Fluentry!%20I%27d%20like%20to%20improve%20my%20English."
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white transition-colors"
+      className="fixed bottom-5 left-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white transition-colors"
       aria-label="Chat on WhatsApp"
       onClick={() => {
         // Analytics event
