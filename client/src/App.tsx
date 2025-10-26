@@ -14,6 +14,7 @@ import TheUnspokenPassport from "./pages/articles/TheUnspokenPassport";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
+import { HelmetProvider } from "react-helmet-async";
 
 function Router() {
   return (
@@ -34,8 +35,9 @@ function Router() {
 
 function App() {
   return (
-    <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
+    <HelmetProvider>
+      <ErrorBoundary>
+        <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <div className="flex flex-col min-h-screen">
@@ -47,8 +49,9 @@ function App() {
             <WhatsAppSticky />
           </div>
         </TooltipProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
+        </ThemeProvider>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 
