@@ -18,7 +18,7 @@ const publishedArticles = [
   },
   {
     slug: "common-mistakes-moroccan-english-learners",
-    published: false,
+    published: true,
     title: "10 Common Mistakes Moroccan English Learners Make (And How to Fix Them)",
     excerpt: "Learn about the most frequent errors Arabic and French speakers make when learning English, with practical solutions for each one.",
     category: "Grammar & Vocabulary",
@@ -28,7 +28,7 @@ const publishedArticles = [
   },
   {
     slug: "best-techniques-improve-english-speaking",
-    published: false,
+    published: true,
     title: "5 Best Techniques to Improve Your English Speaking Skills",
     excerpt: "Master these five powerful techniques used by successful English learners to dramatically improve your speaking confidence and fluency.",
     category: "Speaking Skills",
@@ -38,7 +38,7 @@ const publishedArticles = [
   },
   {
     slug: "ielts-speaking-test-success-guide",
-    published: false,
+    published: true,
     title: "IELTS Speaking Test: Complete Success Guide for Moroccan Students",
     excerpt: "Everything you need to know to ace the IELTS Speaking test, including common questions, scoring criteria, and expert tips from a TESOL-certified coach.",
     category: "Exam Preparation",
@@ -48,7 +48,7 @@ const publishedArticles = [
   },
   {
     slug: "business-english-email-writing-guide",
-    published: false,
+    published: true,
     title: "Business English Email Writing: Professional Templates and Tips",
     excerpt: "Learn how to write professional business emails in English with templates, phrases, and examples for common workplace situations.",
     category: "Business English",
@@ -58,7 +58,7 @@ const publishedArticles = [
   },
   {
     slug: "improve-english-pronunciation-arabic-speakers",
-    published: false,
+    published: true,
     title: "How to Improve English Pronunciation for Arabic Speakers",
     excerpt: "Tackle the most challenging English sounds for Arabic speakers with practical exercises and pronunciation tips from an expert coach.",
     category: "Pronunciation",
