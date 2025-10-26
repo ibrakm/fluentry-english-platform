@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -94,6 +94,15 @@ export default function Footer() {
               >
                 <Mail size={16} />
                 Email
+              </a>
+              <a
+                href="https://web.facebook.com/SweetLollipope/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm hover:text-blue-400 transition-colors"
+              >
+                <Facebook size={16} />
+                Facebook
               </a>
             </div>
           </div>

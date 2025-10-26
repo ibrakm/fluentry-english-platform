@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight } from "lucide-react";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 
 export default function Home() {
   return (
@@ -254,19 +255,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Newsletter Signup */}
+      <NewsletterSignup />
+
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
+      <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your English Journey?
           </h2>
-          <p className="text-lg text-blue-100 mb-8">
+          <p className="text-lg text-orange-100 mb-8">
             Book a free 10-minute consultation to discuss your goals and find the perfect course for you.
           </p>
           <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'd%20like%20to%20book%20a%20free%2010-minute%20consultation" target="_blank" rel="noopener noreferrer">
             <Button 
               size="lg" 
-              className="bg-white text-blue-600 hover:bg-blue-50 font-semibold shadow-xl"
+              className="bg-white text-orange-600 hover:bg-orange-50 font-semibold shadow-xl"
               onClick={() => {
                 if (typeof window !== 'undefined' && (window as any).plausible) {
                   (window as any).plausible('CTA Free Consultation Click');
