@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Clock, Users } from "lucide-react";
+import { CheckCircle, Clock, Users, Zap, Star } from "lucide-react";
 
 export default function Pricing() {
   return (
@@ -9,42 +9,44 @@ export default function Pricing() {
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Affordable English Coaching with Proven Results
+            Clear, Affordable Pricing for Every Learner
           </h1>
           <p className="text-lg text-blue-100">
-            Flexible pricing options designed to fit your budget and learning goals.
+            Flexible packages designed to fit your budget and learning goals. Save up to 20% with monthly packages.
           </p>
         </div>
       </section>
 
       {/* Pricing Plans */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            1-on-1 Lesson Pricing
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+            Choose Your Learning Package
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Plan 1 */}
+          <p className="text-center text-gray-600 mb-12">
+            All packages include 1-hour personalized lessons via Google Meet with Mr. Ibrahim K.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Starter Package */}
             <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="w-8 h-8 text-blue-600" />
-                <h3 className="text-2xl font-bold text-gray-900">Pay-Per-Lesson</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Starter</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Perfect if you want flexibility and want to try lessons first.
+                Perfect for new learners or occasional practice
               </p>
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <p className="text-4xl font-bold text-blue-600 mb-2">100 DH</p>
-                <p className="text-gray-600">per 1-hour lesson</p>
+                <p className="text-4xl font-bold text-blue-600 mb-2">100 MAD</p>
+                <p className="text-gray-600">per lesson</p>
+                <p className="text-sm text-gray-500 mt-3">4 lessons/month</p>
+                <p className="text-lg font-bold text-gray-900 mt-2">400 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">Book lessons as you go</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">No commitment required</span>
+                  <span className="text-gray-700">4 lessons per month</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -54,43 +56,48 @@ export default function Pricing() {
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700">Personalized feedback</span>
                 </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">Progress tracking</span>
+                </li>
               </ul>
-              <a href="https://calendly.com/ibrahimkabaikm/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'm%20interested%20in%20the%20Starter%20Package" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Book Your First Lesson
+                  Get Started
                 </Button>
               </a>
             </Card>
 
-            {/* Plan 2 */}
-            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-blue-600 relative">
+            {/* Standard Package - BEST VALUE */}
+            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-blue-600 relative transform md:scale-105">
               <div className="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 rounded-bl-lg text-sm font-bold">
                 BEST VALUE
               </div>
               <div className="flex items-center gap-3 mb-6">
                 <Users className="w-8 h-8 text-blue-600" />
-                <h3 className="text-2xl font-bold text-gray-900">Monthly Package</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Standard</h3>
               </div>
               <p className="text-gray-600 mb-6">
-                Save 30% with our monthly package. Ideal for committed learners.
+                Ideal for regular learners improving fluency
               </p>
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <p className="text-4xl font-bold text-blue-600 mb-2">70 DH</p>
-                <p className="text-gray-600">per 1-hour lesson (12 lessons/month)</p>
-                <p className="text-sm text-gray-500 mt-2">Total: 840 DH/month</p>
+                <div className="flex items-baseline gap-2 mb-2">
+                  <p className="text-4xl font-bold text-blue-600">90 MAD</p>
+                  <p className="text-lg text-gray-500 line-through">100 MAD</p>
+                </div>
+                <p className="text-gray-600">per lesson</p>
+                <p className="text-sm text-green-600 font-semibold mt-1">Save 10% per lesson</p>
+                <p className="text-sm text-gray-500 mt-3">8 lessons/month</p>
+                <p className="text-lg font-bold text-gray-900 mt-2">720 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">12 lessons per month</span>
+                  <span className="text-gray-700">8 lessons per month</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">30% discount per lesson</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">Consistent progress tracking</span>
+                  <span className="text-gray-700"><strong>10% discount</strong> per lesson</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -100,12 +107,87 @@ export default function Pricing() {
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700">Customized learning plan</span>
                 </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">Progress reports</span>
+                </li>
               </ul>
-              <a href="https://wa.me/212672580932" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'm%20interested%20in%20the%20Standard%20Package" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Get Started with Monthly Plan
+                  Get Started
                 </Button>
               </a>
+            </Card>
+
+            {/* Premium Package */}
+            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-purple-600">
+              <div className="absolute top-0 right-0 bg-purple-600 text-white px-4 py-1 rounded-bl-lg text-sm font-bold">
+                MOST POPULAR
+              </div>
+              <div className="flex items-center gap-3 mb-6">
+                <Star className="w-8 h-8 text-purple-600" />
+                <h3 className="text-2xl font-bold text-gray-900">Premium</h3>
+              </div>
+              <p className="text-gray-600 mb-6">
+                For serious learners aiming for mastery
+              </p>
+              <div className="bg-purple-50 p-6 rounded-lg mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <p className="text-4xl font-bold text-purple-600">80 MAD</p>
+                  <p className="text-lg text-gray-500 line-through">100 MAD</p>
+                </div>
+                <p className="text-gray-600">per lesson</p>
+                <p className="text-sm text-green-600 font-semibold mt-1">Save 20% per lesson</p>
+                <p className="text-sm text-gray-500 mt-3">12 lessons/month</p>
+                <p className="text-lg font-bold text-gray-900 mt-2">960 MAD/month</p>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">12 lessons per month</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700"><strong>20% discount</strong> per lesson</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">VIP priority scheduling</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">Advanced learning plan</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">Weekly progress reports</span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">Study materials included</span>
+                </li>
+              </ul>
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'm%20interested%20in%20the%20Premium%20Package" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                  Get Started
+                </Button>
+              </a>
+            </Card>
+          </div>
+
+          {/* Pay-Per-Lesson Option */}
+          <div className="mt-12 max-w-2xl mx-auto">
+            <Card className="p-6 bg-gray-50 border-2 border-gray-300">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Pay-Per-Lesson</h3>
+                  <p className="text-gray-600">No commitment required. Book lessons as you go.</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-3xl font-bold text-gray-900">100 MAD</p>
+                  <p className="text-sm text-gray-600">per lesson</p>
+                </div>
+              </div>
             </Card>
           </div>
         </div>
@@ -215,10 +297,10 @@ export default function Pricing() {
           <div className="space-y-6">
             <Card className="p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">
-                Can I switch from pay-per-lesson to the monthly plan?
+                Can I switch between packages?
               </h3>
               <p className="text-gray-600">
-                Absolutely! You can upgrade to the monthly plan at any time. Contact Ibrahim on WhatsApp to make the switch.
+                Absolutely! You can upgrade or change your package at any time. Contact Ibrahim on WhatsApp to make the switch.
               </p>
             </Card>
 
@@ -227,16 +309,7 @@ export default function Pricing() {
                 What payment methods do you accept?
               </h3>
               <p className="text-gray-600">
-                We accept bank transfers and mobile payments. Contact Ibrahim for payment details and options.
-              </p>
-            </Card>
-
-            <Card className="p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                Do you offer group classes at a different price?
-              </h3>
-              <p className="text-gray-600">
-                Yes! We offer small-group conversation classes at special rates. Contact Ibrahim on WhatsApp for details about group pricing and schedules.
+                We accept bank transfers (MAD), mobile payments, and international payments. Contact Ibrahim for payment details and options.
               </p>
             </Card>
 
@@ -245,7 +318,16 @@ export default function Pricing() {
                 Is there a free trial lesson?
               </h3>
               <p className="text-gray-600">
-                We recommend taking our free AI-powered English test first to determine your level, then booking your first paid lesson. This ensures your lesson is tailored perfectly to your needs.
+                Yes! We offer a free 10-minute consultation where you can meet Mr. Ibrahim K., discuss your goals, and get a personalized learning plan. Book your free consultation today!
+              </p>
+            </Card>
+
+            <Card className="p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                What if I miss a lesson?
+              </h3>
+              <p className="text-gray-600">
+                You can reschedule up to 24 hours in advance. Missed lessons without notice cannot be refunded or rescheduled.
               </p>
             </Card>
           </div>
@@ -259,12 +341,12 @@ export default function Pricing() {
             Ready to Invest in Your English?
           </h2>
           <p className="text-lg text-blue-100 mb-8">
-            Choose your plan and start your journey to fluent English with Mr. Ibrahim K. today.
+            Choose your package and start your journey to fluent English with Mr. Ibrahim K. today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://calendly.com/ibrahimkabaikm/30min" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'd%20like%20to%20book%20a%20free%2010-minute%20consultation" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
-                Book Your First Lesson
+                Book Free Consultation
               </Button>
             </a>
             <a href="https://wa.me/212672580932" target="_blank" rel="noopener noreferrer">

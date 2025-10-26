@@ -16,36 +16,36 @@ export default function Home() {
             Your journey to natural, confident English communication begins here. Personalized online coaching from Morocco's passionate English experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/free-test">
+            <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'd%20like%20to%20book%20a%20free%2010-minute%20consultation" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
                 className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50"
                 onClick={() => {
                   if (typeof window !== 'undefined' && (window as any).plausible) {
-                    (window as any).plausible('Start Free Test');
+                    (window as any).plausible('Free Consultation Click');
                   }
                 }}
               >
-                Start Free CEFR Test
+                Book Free 10-Min Consultation
               </Button>
-            </Link>
-            <Link href="/book-lesson">
+            </a>
+            <Link href="/free-test">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-blue-700"
                 onClick={() => {
                   if (typeof window !== 'undefined' && (window as any).plausible) {
-                    (window as any).plausible('Book Lesson Click');
+                    (window as any).plausible('Start Free Test');
                   }
                 }}
               >
-                Book a Lesson
+                Take Free CEFR Test
               </Button>
             </Link>
           </div>
           <p className="mt-4 text-sm text-blue-100">
-            Fast, friendly, flexible. From 70 MAD/lesson with packages.
+            Fast, friendly, flexible. From 80 MAD/lesson with packages.
           </p>
         </div>
       </section>
