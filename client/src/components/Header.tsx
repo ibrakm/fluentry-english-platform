@@ -34,6 +34,9 @@ export default function Header() {
             <Link href="/free-test" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Free Test
             </Link>
+            <Link href="/free-resources" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              Free Resources
+            </Link>
             <Link href="/book-lesson">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Book a Lesson
@@ -88,6 +91,13 @@ export default function Header() {
               onClick={() => setIsOpen(false)}
             >
               Free Test
+            </Link>
+            <Link
+              href="/free-resources"
+              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Free Resources
             </Link>
             <Link href="/book-lesson">
               <Button
