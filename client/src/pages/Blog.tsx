@@ -5,9 +5,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
-const blogArticles = [
+const publishedArticles = [
   {
     slug: "how-to-think-in-english",
+    published: true,
     title: "How to Think in English: Stop Translating in Your Head",
     excerpt: "Discover proven techniques to stop translating from your native language and start thinking directly in English for more natural, fluent communication.",
     category: "Learning Strategies",
@@ -17,6 +18,7 @@ const blogArticles = [
   },
   {
     slug: "common-mistakes-moroccan-english-learners",
+    published: false,
     title: "10 Common Mistakes Moroccan English Learners Make (And How to Fix Them)",
     excerpt: "Learn about the most frequent errors Arabic and French speakers make when learning English, with practical solutions for each one.",
     category: "Grammar & Vocabulary",
@@ -26,6 +28,7 @@ const blogArticles = [
   },
   {
     slug: "best-techniques-improve-english-speaking",
+    published: false,
     title: "5 Best Techniques to Improve Your English Speaking Skills",
     excerpt: "Master these five powerful techniques used by successful English learners to dramatically improve your speaking confidence and fluency.",
     category: "Speaking Skills",
@@ -35,6 +38,7 @@ const blogArticles = [
   },
   {
     slug: "ielts-speaking-test-success-guide",
+    published: false,
     title: "IELTS Speaking Test: Complete Success Guide for Moroccan Students",
     excerpt: "Everything you need to know to ace the IELTS Speaking test, including common questions, scoring criteria, and expert tips from a TESOL-certified coach.",
     category: "Exam Preparation",
@@ -44,6 +48,7 @@ const blogArticles = [
   },
   {
     slug: "business-english-email-writing-guide",
+    published: false,
     title: "Business English Email Writing: Professional Templates and Tips",
     excerpt: "Learn how to write professional business emails in English with templates, phrases, and examples for common workplace situations.",
     category: "Business English",
@@ -53,6 +58,7 @@ const blogArticles = [
   },
   {
     slug: "improve-english-pronunciation-arabic-speakers",
+    published: false,
     title: "How to Improve English Pronunciation for Arabic Speakers",
     excerpt: "Tackle the most challenging English sounds for Arabic speakers with practical exercises and pronunciation tips from an expert coach.",
     category: "Pronunciation",
@@ -95,7 +101,7 @@ export default function Blog() {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogArticles.map((article) => (
+                {publishedArticles.map((article) => (
                   <Card key={article.slug} className="hover:shadow-lg transition-shadow flex flex-col">
                     <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-t-lg overflow-hidden">
                       <img 
@@ -122,12 +128,18 @@ export default function Blog() {
                     <CardContent>
                       <div className="flex items-center justify-between">
                         <span className="text-sm text-gray-500">{article.date}</span>
-                        <Link href={`/blog/${article.slug}`}>
-                          <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
-                            Read More
-                            <ArrowRight className="w-4 h-4 ml-1" />
+                        {article.published ? (
+                          <Link href={`/blog/${article.slug}`}>
+                            <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
+                              Read More
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <Button variant="ghost" size="sm" disabled className="text-gray-400">
+                            Coming Soon
                           </Button>
-                        </Link>
+                        )}
                       </div>
                     </CardContent>
                   </Card>

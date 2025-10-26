@@ -246,22 +246,20 @@ export default function HowToThinkInEnglish() {
 
               {/* Related Articles */}
               <div className="mt-12">
-                <h3 className="text-2xl font-bold mb-6">Related Articles</h3>
+                <h3 className="text-2xl font-bold mb-6">More Articles Coming Soon</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <Link href="/blog/best-techniques-improve-english-speaking">
-                    <div className="p-6 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
-                      <Badge className="mb-3">Speaking Skills</Badge>
-                      <h4 className="font-bold mb-2">5 Best Techniques to Improve Your English Speaking Skills</h4>
-                      <p className="text-sm text-gray-600">Master these five powerful techniques used by successful English learners...</p>
-                    </div>
-                  </Link>
-                  <Link href="/blog/common-mistakes-moroccan-english-learners">
-                    <div className="p-6 border rounded-lg hover:shadow-md transition-shadow cursor-pointer">
-                      <Badge className="mb-3">Grammar & Vocabulary</Badge>
-                      <h4 className="font-bold mb-2">10 Common Mistakes Moroccan English Learners Make</h4>
-                      <p className="text-sm text-gray-600">Learn about the most frequent errors Arabic and French speakers make...</p>
-                    </div>
-                  </Link>
+                  <div className="p-6 border rounded-lg bg-gray-50">
+                    <Badge className="mb-3">Speaking Skills</Badge>
+                    <h4 className="font-bold mb-2">5 Best Techniques to Improve Your English Speaking Skills</h4>
+                    <p className="text-sm text-gray-600 mb-3">Master these five powerful techniques used by successful English learners...</p>
+                    <span className="text-xs text-gray-500">Coming Soon</span>
+                  </div>
+                  <div className="p-6 border rounded-lg bg-gray-50">
+                    <Badge className="mb-3">Grammar & Vocabulary</Badge>
+                    <h4 className="font-bold mb-2">10 Common Mistakes Moroccan English Learners Make</h4>
+                    <p className="text-sm text-gray-600 mb-3">Learn about the most frequent errors Arabic and French speakers make...</p>
+                    <span className="text-xs text-gray-500">Coming Soon</span>
+                  </div>
                 </div>
               </div>
             </div>
