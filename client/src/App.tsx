@@ -12,6 +12,7 @@ import BookLesson from "./pages/BookLesson";
 import Pricing from "./pages/Pricing";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { WhatsAppSticky } from "./components/WhatsAppSticky";
 
 function Router() {
   return (
@@ -41,6 +42,7 @@ function App() {
               <Router />
             </main>
             <Footer />
+            <WhatsAppSticky />
           </div>
         </TooltipProvider>
       </ThemeProvider>

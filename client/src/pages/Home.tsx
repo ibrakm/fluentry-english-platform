@@ -16,21 +16,37 @@ export default function Home() {
             Your journey to natural, confident English communication begins here. Personalized online coaching from Morocco's passionate English experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/book-lesson">
-              <Button size="lg" className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50">
-                Book Your First Lesson
+            <Link href="/free-test">
+              <Button 
+                size="lg" 
+                className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).plausible) {
+                    (window as any).plausible('Start Free Test');
+                  }
+                }}
+              >
+                Start Free CEFR Test
               </Button>
             </Link>
-            <Link href="/free-test">
+            <Link href="/book-lesson">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-blue-700"
+                onClick={() => {
+                  if (typeof window !== 'undefined' && (window as any).plausible) {
+                    (window as any).plausible('Book Lesson Click');
+                  }
+                }}
               >
-                Take the Free AI English Test
+                Book a Lesson
               </Button>
             </Link>
           </div>
+          <p className="mt-4 text-sm text-blue-100">
+            Fast, friendly, flexible. From 70 MAD/lesson with packages.
+          </p>
         </div>
       </section>
 
