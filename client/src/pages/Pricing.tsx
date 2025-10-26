@@ -52,6 +52,10 @@ export default function Pricing() {
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700">2 lessons per week</span>
                 </li>
+              </ul>
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'm%20interested%20in%20the%20Starter%20Package" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Get Started
                 </Button>
               </a>
             </Card>
