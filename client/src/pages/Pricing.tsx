@@ -37,33 +37,21 @@ export default function Pricing() {
               <p className="text-gray-600 mb-6">
                 Perfect for new learners or occasional practice
               </p>
-              <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <p className="text-4xl font-bold text-blue-600 mb-2">100 MAD</p>
-                <p className="text-gray-600">per lesson</p>
-                <p className="text-sm text-gray-500 mt-3">4 lessons/month</p>
-                <p className="text-lg font-bold text-gray-900 mt-2">400 MAD/month</p>
+           <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                <p className="text-4xl font-bold text-blue-600">62.50 MAD</p>
+                <p className="text-gray-600">per lesson (45 min)</p>
+                <p className="text-sm text-gray-500 mt-3">8 lessons/month • 2 lessons/week</p>
+                <p className="text-lg font-bold text-gray-900 mt-2">500 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">4 lessons per month</span>
+                  <span className="text-gray-700">8 lessons per month (45 min each)</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">Flexible scheduling</span>
+                  <span className="text-gray-700">2 lessons per week</span>
                 </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">Personalized feedback</span>
-                </li>
-                <li className="flex gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">Progress tracking</span>
-                </li>
-              </ul>
-              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'm%20interested%20in%20the%20Starter%20Package" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Get Started
                 </Button>
               </a>
             </Card>
