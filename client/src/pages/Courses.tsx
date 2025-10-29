@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { BookOpen, Users, Briefcase, Award } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 interface Course {
   id: string;
@@ -69,8 +70,13 @@ const courses: Course[] = [
 ];
 
 export default function Courses() {
+  const title = "English Courses: General, Business, IELTS/TOEFL Prep | Fluentry";
+  const description = "Explore Fluentry's specialized English courses: General English, Business English, Conversation Practice, and IELTS/TOEFL Exam Preparation. Personalized 1-on-1 coaching for real-world fluency.";
+  
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO title={title} description={description} path="/courses" />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
@@ -141,6 +147,7 @@ export default function Courses() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
