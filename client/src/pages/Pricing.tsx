@@ -1,10 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Clock, Users, Zap, Star } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function Pricing() {
+  const title = "Affordable English Lesson Pricing & Packages | Fluentry";
+  const description = "View Fluentry's clear and affordable pricing for 1-on-1 English coaching. Choose from Starter, Standard, and Premium packages, or pay-per-lesson. Save up to 20% with monthly plans.";
+  
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO title={title} description={description} path="/pricing" />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
@@ -354,6 +360,7 @@ export default function Pricing() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

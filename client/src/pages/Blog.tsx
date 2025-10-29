@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
@@ -69,14 +69,12 @@ const publishedArticles = [
 ];
 
 export default function Blog() {
+  const title = "English Learning Blog - Tips, Strategies & Success Stories";
+  const description = "Expert English learning tips, strategies, and success stories from TESOL-certified coach Mr. Ibrahim K. Practical advice for Moroccan English learners.";
+  
   return (
     <>
-      <Helmet>
-        <title>English Learning Blog - Tips, Strategies & Success Stories | Fluentry</title>
-        <meta name="description" content="Expert English learning tips, strategies, and success stories from TESOL-certified coach Mr. Ibrahim K. Practical advice for Moroccan English learners." />
-        <meta name="keywords" content="English learning tips, English study strategies, IELTS preparation, business English, English pronunciation, Morocco English blog" />
-      </Helmet>
-
+      <SEO title={title} description={description} path="/blog" />
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-16">

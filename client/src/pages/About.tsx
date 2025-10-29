@@ -2,10 +2,16 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { Heart, Target, Lightbulb, Award, BookOpen, Users, Globe } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function About() {
+  const title = "About Mr. Ibrahim K. - TESOL Certified English Coach in Tangier";
+  const description = "Meet Mr. Ibrahim K., a TESOL-certified English language coach based in Tangier, Morocco. Learn about his qualifications, teaching philosophy, and commitment to helping students achieve real-world fluency.";
+  
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO title={title} description={description} path="/about" />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-4 shadow-xl">
         <div className="container mx-auto max-w-4xl text-center">
@@ -258,6 +264,7 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

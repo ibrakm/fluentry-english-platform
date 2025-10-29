@@ -3,10 +3,16 @@ import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
 import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight } from "lucide-react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { SEO } from "@/components/SEO";
 
 export default function Home() {
+  const title = "1-on-1 English Coaching & Free CEFR Test | Fluentry";
+  const description = "Achieve fluency with personalized 1-on-1 English coaching from Morocco's experts. Take a free CEFR test, explore Business English, IELTS/TOEFL prep, and book your first lesson. Start communicating with confidence.";
+
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO title={title} description={description} path="/" />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4 shadow-xl">
         <div className="container mx-auto max-w-6xl">
@@ -283,6 +289,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 
