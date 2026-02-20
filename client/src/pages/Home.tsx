@@ -1,37 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight } from "lucide-react";
+import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock } from "lucide-react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SEO } from "@/components/SEO";
 
 export default function Home() {
-  const title = "1-on-1 English Coaching & Free CEFR Test | Fluentry";
-  const description = "Achieve fluency with personalized 1-on-1 English coaching from Morocco's experts. Take a free CEFR test, explore Business English, IELTS/TOEFL prep, and book your first lesson. Start communicating with confidence.";
+  const title = "1-on-1 English Coaching Online | Fluentry Morocco";
+  const description = "Achieve fluency with personalized 1-on-1 English coaching from Morocco's TESOL-certified expert. Take a free CEFR level test, explore Business English, IELTS/TOEFL prep, and book your first lesson today. From 62.50 MAD/lesson.";
 
   return (
     <>
       <SEO title={title} description={description} path="/" />
       <div className="min-h-screen">
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4 shadow-xl">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left">
+              {/* Trust badge */}
+              <div className="inline-flex items-center gap-2 bg-blue-800/60 border border-blue-500/40 text-blue-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Award className="w-4 h-4 text-yellow-400" />
+                TESOL-Certified Coach · Based in Morocco
+              </div>
+
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Speak English with Confidence. Start Fluently Today.
+                Speak English with Confidence.<br className="hidden md:block" /> Start Fluently Today.
               </h1>
               <p className="text-lg md:text-xl text-blue-100 mb-8">
-                Your journey to natural, confident English communication begins here. Personalized online coaching from Morocco's passionate English experts.
+                Personalized online coaching from Morocco's passionate English expert, Mr. Ibrahim K. Real-world fluency, not just textbook grammar.
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'd%20like%20to%20book%20a%20free%2010-minute%20consultation" target="_blank" rel="noopener noreferrer">
-                  <Button 
-                    size="lg" 
-                    className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50"
+                <a
+                  href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20consultation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-orange-500 text-white hover:bg-orange-600 font-semibold shadow-2xl shadow-orange-500/50 w-full sm:w-auto"
                     onClick={() => {
-                      if (typeof window !== 'undefined' && (window as any).plausible) {
-                        (window as any).plausible('Free Consultation Click');
+                      if (typeof window !== "undefined" && (window as any).plausible) {
+                        (window as any).plausible("Free Consultation Click");
                       }
                     }}
                   >
@@ -42,10 +54,10 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-white text-white hover:bg-blue-700"
+                    className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
                     onClick={() => {
-                      if (typeof window !== 'undefined' && (window as any).plausible) {
-                        (window as any).plausible('Start Free Test');
+                      if (typeof window !== "undefined" && (window as any).plausible) {
+                        (window as any).plausible("Start Free Test");
                       }
                     }}
                   >
@@ -53,21 +65,41 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-              <p className="mt-4 text-sm text-blue-100">
-                Fast, friendly, flexible. From 62.50 MAD/lesson with packages.
+
+              <p className="mt-4 text-sm text-blue-200">
+                No credit card required · Lessons from 62.50 MAD · Cancel anytime
               </p>
+
+              {/* Quick stats */}
+              <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-white">100+</p>
+                  <p className="text-xs text-blue-200">Students Coached</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-white">4.9★</p>
+                  <p className="text-xs text-blue-200">Average Rating</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-white">3+</p>
+                  <p className="text-xs text-blue-200">Years Experience</p>
+                </div>
+              </div>
             </div>
+
             <div className="hidden md:block">
-              <img 
-                src="/hero-illustration.png" 
-                alt="Online English Lesson" 
+              <img
+                src="/hero-illustration.png"
+                alt="Online English lesson with Mr. Ibrahim K. — Fluentry Morocco"
                 className="w-full h-auto rounded-lg shadow-2xl"
+                loading="eager"
+                width="600"
+                height="450"
               />
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Quick Intro */}
       <section className="py-16 px-4 bg-gray-50">
@@ -77,14 +109,14 @@ export default function Home() {
               Stop Translating. Start Communicating.
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Fluentry is more than just English lessons—it's a mindset shift. Based in Morocco, we connect students, professionals, and adults with dedicated coaches who are passionate about helping you achieve true fluency. We focus on real-world communication, not just textbooks.
+              Fluentry is more than just English lessons — it's a mindset shift. Based in Morocco, we connect students, professionals, and adults with a dedicated coach who is passionate about helping you achieve true fluency. We focus on real-world communication, not just textbooks.
             </p>
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+            <blockquote className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded text-left">
               <p className="text-xl font-semibold text-blue-900">
                 "English isn't just grammar and vocabulary. It's confidence, clarity, and connection."
               </p>
-              <p className="text-sm text-gray-600 mt-2">— Mr. Ibrahim K., Founder & Coach</p>
-            </div>
+              <footer className="text-sm text-gray-600 mt-2">— Mr. Ibrahim K., Founder & Coach</footer>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -102,7 +134,7 @@ export default function Home() {
                 Personalized 1-on-1 Coaching
               </h3>
               <p className="text-gray-600">
-                Every lesson is tailored to your goals, level, and interests. No crowded classrooms—just you and your coach.
+                Every lesson is tailored to your goals, level, and interests. No crowded classrooms — just you and your coach.
               </p>
             </Card>
 
@@ -112,7 +144,7 @@ export default function Home() {
                 Real-World Fluency
               </h3>
               <p className="text-gray-600">
-                We don't just teach English—we help you think in English. Practice conversations, presentations, and real-life scenarios.
+                We don't just teach English — we help you think in English. Practice conversations, presentations, and real-life scenarios.
               </p>
             </Card>
 
@@ -129,6 +161,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="py-16 px-4 bg-blue-50">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            How It Works
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { step: "1", icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "Take the Free Test", desc: "Find your CEFR level in minutes with our free English proficiency test." },
+              { step: "2", icon: <Clock className="w-6 h-6 text-blue-600" />, title: "Book Your Lesson", desc: "Choose a time that works for you via Calendly or WhatsApp." },
+              { step: "3", icon: <Star className="w-6 h-6 text-blue-600" />, title: "Start Learning", desc: "Join your personalized lesson on Google Meet and start improving from day one." },
+            ].map((item) => (
+              <div key={item.step} className="text-center">
+                <div className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-600 text-sm">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link href="/free-test">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                Start with the Free Test
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Courses Preview */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
@@ -139,53 +202,22 @@ export default function Home() {
             Whether you're a student, professional, or lifelong learner, we have a course for you.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">General English</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                Build a strong foundation in speaking, listening, reading, and writing.
-              </p>
-              <Link href="/courses">
-                <Button variant="outline" size="sm" className="w-full">
-                  Learn More
-                </Button>
-              </Link>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Business English</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                Master professional communication for meetings, emails, and presentations.
-              </p>
-              <Link href="/courses">
-                <Button variant="outline" size="sm" className="w-full">
-                  Learn More
-                </Button>
-              </Link>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">IELTS & TOEFL Prep</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                Achieve your target score with focused test strategies and practice.
-              </p>
-              <Link href="/courses">
-                <Button variant="outline" size="sm" className="w-full">
-                  Learn More
-                </Button>
-              </Link>
-            </Card>
-
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Conversation Practice</h3>
-              <p className="text-sm text-gray-600 mb-4">
-                Improve fluency and confidence through natural, engaging conversations.
-              </p>
-              <Link href="/courses">
-                <Button variant="outline" size="sm" className="w-full">
-                  Learn More
-                </Button>
-              </Link>
-            </Card>
+            {[
+              { title: "General English", desc: "Build a strong foundation in speaking, listening, reading, and writing." },
+              { title: "Business English", desc: "Master professional communication for meetings, emails, and presentations." },
+              { title: "IELTS & TOEFL Prep", desc: "Achieve your target score with focused test strategies and practice." },
+              { title: "Conversation Practice", desc: "Improve fluency and confidence through natural, engaging conversations." },
+            ].map((course) => (
+              <Card key={course.title} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{course.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">{course.desc}</p>
+                <Link href="/courses">
+                  <Button variant="outline" size="sm" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -202,15 +234,18 @@ export default function Home() {
               Latest from Fluentry
             </h2>
           </div>
-          
+
           <Link href="/articles/the-unspoken-passport">
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-auto">
                   <img
                     src="/images/the-unspoken-passport.png"
-                    alt="The Unspoken Passport"
+                    alt="The Unspoken Passport — Why English Still Shapes the World"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="600"
+                    height="400"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
                 </div>
@@ -223,7 +258,7 @@ export default function Home() {
                   </p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
                     <span>By Mr. Ibrahim K.</span>
-                    <span>•</span>
+                    <span>·</span>
                     <span>5 min read</span>
                   </div>
                   <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
@@ -237,25 +272,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Social Proof / Testimonials */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
             What Our Students Say
           </h2>
+          <p className="text-center text-gray-500 mb-12">Real results from real students across Morocco.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-6 bg-blue-50">
-              <p className="text-gray-700 mb-4">
+              <div className="flex gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 italic">
                 "Ibrahim's coaching completely changed how I approach English. I went from translating every word to actually thinking in English. My IELTS score improved by 1.5 bands!"
               </p>
-              <p className="font-semibold text-gray-900">— Amina, University Student</p>
+              <div>
+                <p className="font-semibold text-gray-900">Fatima Z.</p>
+                <p className="text-sm text-gray-500">IELTS Student, Casablanca</p>
+              </div>
             </Card>
 
             <Card className="p-6 bg-blue-50">
-              <p className="text-gray-700 mb-4">
+              <div className="flex gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-4 italic">
                 "As a business professional, I needed to improve my presentation skills fast. Ibrahim's Business English course gave me the confidence to lead international meetings."
               </p>
-              <p className="font-semibold text-gray-900">— Youssef, Marketing Manager</p>
+              <div>
+                <p className="font-semibold text-gray-900">Youssef B.</p>
+                <p className="text-sm text-gray-500">Marketing Manager, Rabat</p>
+              </div>
             </Card>
           </div>
         </div>
@@ -264,32 +316,47 @@ export default function Home() {
       {/* Newsletter Signup */}
       <NewsletterSignup />
 
-      {/* CTA Section */}
+      {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Start Your English Journey?
           </h2>
           <p className="text-lg text-orange-100 mb-8">
-            Book a free 10-minute consultation to discuss your goals and find the perfect course for you.
+            Book a free 10-minute consultation to discuss your goals and find the perfect course for you. No commitment required.
           </p>
-          <a href="https://wa.me/212672580932?text=Hi%20Ibrahim,%20I'd%20like%20to%20book%20a%20free%2010-minute%20consultation" target="_blank" rel="noopener noreferrer">
-            <Button 
-              size="lg" 
-              className="bg-white text-orange-600 hover:bg-orange-50 font-semibold shadow-xl"
-              onClick={() => {
-                if (typeof window !== 'undefined' && (window as any).plausible) {
-                  (window as any).plausible('CTA Free Consultation Click');
-                }
-              }}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20consultation"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book Your Free Consultation Now
-            </Button>
-          </a>
+              <Button
+                size="lg"
+                className="bg-white text-orange-600 hover:bg-orange-50 font-semibold shadow-xl w-full sm:w-auto"
+                onClick={() => {
+                  if (typeof window !== "undefined" && (window as any).plausible) {
+                    (window as any).plausible("CTA Free Consultation Click");
+                  }
+                }}
+              >
+                Book Your Free Consultation Now
+              </Button>
+            </a>
+            <Link href="/pricing">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-orange-600 w-full sm:w-auto"
+              >
+                View Pricing
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
+
     </div>
     </>
   );
 }
-

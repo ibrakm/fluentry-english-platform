@@ -1,10 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, MessageCircle, CheckCircle } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 export default function BookLesson() {
   return (
-    <div className="min-h-screen">
+    <>
+      <SEO
+        title="Book an English Lesson Online | Fluentry Morocco"
+        description="Book your 1-on-1 English lesson with Mr. Ibrahim K. in seconds. Choose a time via Calendly or message on WhatsApp. Lessons via Google Meet from anywhere in Morocco."
+        path="/book-lesson"
+      />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-4 shadow-xl">
         <div className="container mx-auto max-w-4xl text-center">
@@ -12,7 +19,8 @@ export default function BookLesson() {
             Let's Get Started: Book Your First Session
           </h1>
           <p className="text-lg text-blue-100">
-            We've made scheduling your lessons as easy as possible. Choose the method that works best for you! **Please remember to include your English Test results (e.g., "B2") in the booking notes or your message.**
+            We've made scheduling your lessons as easy as possible. Choose the method that works best for you!{" "}
+            <strong>Please remember to include your English Test results (e.g., "B2") in the booking notes or your message.</strong>
           </p>
         </div>
       </section>
@@ -25,7 +33,7 @@ export default function BookLesson() {
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-4 mb-6">
                 <Calendar className="w-10 h-10 text-blue-600" />
-                <h3 className="text-2xl font-bold text-gray-900">Book Online in 3 Clicks</h3>
+                <h2 className="text-2xl font-bold text-gray-900">Book Online in 3 Clicks</h2>
               </div>
 
               <p className="text-gray-600 mb-6">
@@ -33,7 +41,7 @@ export default function BookLesson() {
               </p>
 
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">How it works:</h4>
+                <h3 className="font-semibold text-gray-900 mb-3">How it works:</h3>
                 <ol className="space-y-2 text-gray-600 text-sm">
                   <li className="flex gap-3">
                     <span className="font-bold text-blue-600">1.</span>
@@ -45,7 +53,7 @@ export default function BookLesson() {
                   </li>
                   <li className="flex gap-3">
                     <span className="font-bold text-blue-600">3.</span>
-                    <span>Confirm, pay securely, and **include your test result (e.g., "B2") in the notes**</span>
+                    <span>Confirm and <strong>include your test result (e.g., "B2") in the notes</strong></span>
                   </li>
                 </ol>
               </div>
@@ -67,34 +75,35 @@ export default function BookLesson() {
             {/* Option 2: WhatsApp */}
             <Card className="p-8 hover:shadow-lg transition-shadow">
               <div className="flex items-center gap-4 mb-6">
-                <MessageCircle className="w-10 h-10 text-blue-600" />
-                <h3 className="text-2xl font-bold text-gray-900">Need to Chat First?</h3>
+                <MessageCircle className="w-10 h-10 text-green-600" />
+                <h2 className="text-2xl font-bold text-gray-900">Need to Chat First?</h2>
               </div>
 
               <p className="text-gray-600 mb-6">
-                If you have specific questions about our programs, your level, or need help choosing a coach, feel free to send us a message! Our team is ready to help you find the perfect fit. **Please include your test result (e.g., "B2") in your first message.**
+                If you have specific questions about our programs, your level, or need help choosing a course, feel free to send us a message! Our team is ready to help you find the perfect fit.{" "}
+                <strong>Please include your test result (e.g., "B2") in your first message.</strong>
               </p>
 
               <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                <h4 className="font-semibold text-gray-900 mb-3">Why WhatsApp?</h4>
+                <h3 className="font-semibold text-gray-900 mb-3">Why WhatsApp?</h3>
                 <ul className="space-y-2 text-gray-600 text-sm">
                   <li className="flex gap-3">
-                    <span className="text-blue-600">✓</span>
+                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Get personalized advice from our team</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-blue-600">✓</span>
+                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Ask questions before booking</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="text-blue-600">✓</span>
+                    <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Fast and convenient communication</span>
                   </li>
                 </ul>
               </div>
 
               <a
-                href="https://wa.me/212672580932"
+                href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20an%20English%20lesson.%20My%20level%20is%3A"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -117,7 +126,6 @@ export default function BookLesson() {
             What Happens Next?
           </h2>
           <div className="space-y-6">
-            {/* Step 1 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
@@ -132,7 +140,6 @@ export default function BookLesson() {
               </div>
             </div>
 
-            {/* Step 2 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
@@ -142,12 +149,11 @@ export default function BookLesson() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Preparation</h3>
                 <p className="text-gray-600">
-                  Your coach will review your goals (and test results, if applicable) to prepare a tailored first lesson.
+                  Your coach will review your goals and test results to prepare a tailored first lesson just for you.
                 </p>
               </div>
             </div>
 
-            {/* Step 3 */}
             <div className="flex gap-6">
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
@@ -155,7 +161,7 @@ export default function BookLesson() {
                 </div>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Fluency!</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Start Learning!</h3>
                 <p className="text-gray-600">
                   Log in at your scheduled time and start your journey to confident, fluent English.
                 </p>
@@ -195,7 +201,7 @@ export default function BookLesson() {
                 What if I'm not sure about my English level?
               </h3>
               <p className="text-gray-600">
-                Take our free AI-powered English test to get an accurate assessment of your level, or contact us on WhatsApp to discuss your needs with our team.
+                Take our free CEFR English test to get an accurate assessment of your level, or contact us on WhatsApp to discuss your needs with our team.
               </p>
             </Card>
 
@@ -203,9 +209,9 @@ export default function BookLesson() {
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 Do you offer group classes?
               </h3>
-                <p className="text-gray-600">
-                  Yes! We offer both one-on-one private sessions and small-group conversation practice classes. Choose what works best for your learning style. Contact Ibrahim on WhatsApp for more details about group class schedules.
-                </p>
+              <p className="text-gray-600">
+                Yes! We offer both one-on-one private sessions and small-group conversation practice classes. Contact Ibrahim on WhatsApp for more details about group class schedules.
+              </p>
             </Card>
           </div>
         </div>
@@ -228,13 +234,13 @@ export default function BookLesson() {
             >
               <Button
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold w-full sm:w-auto"
               >
                 Schedule via Calendly
               </Button>
             </a>
             <a
-              href="https://wa.me/212672580932"
+              href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20an%20English%20lesson."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -250,6 +256,6 @@ export default function BookLesson() {
         </div>
       </section>
     </div>
+    </>
   );
 }
-

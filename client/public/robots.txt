@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
-Sitemap: https://fluentry-english-platform.vercel.app/sitemap.xml
+Disallow: /404
+Disallow: /api/
+Disallow: /*.json$
 
+# Sitemap location
+Sitemap: https://fluentry-english-platform.vercel.app/sitemap.xml
