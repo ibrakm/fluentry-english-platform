@@ -463,6 +463,13 @@ export default function ProfessionalEnglishTest() {
   const [audioPlayed, setAudioPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
+  // Lead capture form state
+  const [leadName, setLeadName] = useState("");
+  const [leadEmail, setLeadEmail] = useState("");
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadSubmitting, setLeadSubmitting] = useState(false);
+  const [leadError, setLeadError] = useState("");
+
   const questions = testType === "quick" ? quickTestQuestions : comprehensiveTestQuestions;
 
   const handleStartTest = (type: "quick" | "comprehensive") => {
@@ -487,7 +494,27 @@ export default function ProfessionalEnglishTest() {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      finishTest();
+      // Calculate result but show lead capture FIRST
+      const finalScore = selectedAnswers.reduce((acc, answer, idx) => {
+        return acc + (answer === questions[idx].correctAnswer ? 1 : 0);
+      }, 0);
+      const percentage = Math.round((finalScore / questions.length) * 100);
+      let level: "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
+      if (percentage <= 20) level = "A1";
+      else if (percentage <= 40) level = "A2";
+      else if (percentage <= 55) level = "B1";
+      else if (percentage <= 70) level = "B2";
+      else if (percentage <= 85) level = "C1";
+      else level = "C2";
+
+      setTestResult({
+        level,
+        score: finalScore,
+        totalQuestions: questions.length,
+        percentage,
+        testType: testType!,
+      });
+      setStage("lead-capture");
     }
   };
 
@@ -736,7 +763,7 @@ export default function ProfessionalEnglishTest() {
           </div>
         </Card>
 
-        {/* Navigation */}
+        {/* Next Button */}
         <Button
           size="lg"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-6"
@@ -749,6 +776,9 @@ export default function ProfessionalEnglishTest() {
             <>🎉 Finish & Get My Results!</>
           )}
         </Button>
+        {!isAnswered && (
+          <p className="text-center text-sm text-gray-500">Please select an answer to continue</p>
+        )}
       </div>
     );
   }
@@ -902,7 +932,7 @@ export default function ProfessionalEnglishTest() {
             </a>
             <Button size="lg" variant="outline" className="w-full border-white text-white hover:bg-white/10" onClick={handleRetakeTest}>
               <RotateCcw className="mr-2 h-4 w-4" />
-              Retake Test
+              Retake the Test
             </Button>
           </div>
         </Card>
