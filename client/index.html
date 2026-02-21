@@ -52,6 +52,21 @@
     <!-- Analytics -->
     <script defer data-domain="fluentry-english-platform.vercel.app" src="https://plausible.io/js/script.js"></script>
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5PMV50NTG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q5PMV50NTG', {
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'send_page_view': true
+      });
+    </script>
+    <!-- Preconnect for GA4 performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
     <!-- JSON-LD Structured Data: Local Business -->
     <script type="application/ld+json">
     {
