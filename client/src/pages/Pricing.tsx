@@ -6,12 +6,13 @@ import { Link } from "wouter";
 
 export default function Pricing() {
   const title = "Affordable English Lesson Pricing & Packages | Fluentry";
-  const description = "View Fluentry's clear and affordable pricing for 1-on-1 English coaching in Morocco. Choose from Starter (500 MAD/month), Standard (720 MAD/month), or Premium (960 MAD/month) packages, or pay 100 MAD per lesson.";
+  const description = "View Fluentry's clear and affordable pricing for 1-on-1 English coaching in Morocco. Choose from Starter (500 MAD/month), Standard (720 MAD/month), Premium (960 MAD/month), or Group Study (200 MAD/month) packages.";
 
   return (
     <>
       <SEO title={title} description={description} path="/pricing" />
       <div className="min-h-screen">
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
@@ -26,7 +27,7 @@ export default function Pricing() {
 
       {/* Pricing Plans */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
             Choose Your Learning Package
           </h2>
@@ -34,7 +35,9 @@ export default function Pricing() {
             All packages include personalized lessons via Google Meet with Mr. Ibrahim K.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {/* 1-on-1 Packages — top row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-8">
+
             {/* Starter Package */}
             <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-gray-200">
               <div className="flex items-center gap-3 mb-6">
@@ -46,14 +49,14 @@ export default function Pricing() {
               </p>
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
                 <p className="text-4xl font-bold text-blue-600">62.50 MAD</p>
-                <p className="text-gray-600">per lesson (45 min)</p>
+                <p className="text-gray-600">per lesson · <strong>45 min</strong></p>
                 <p className="text-sm text-gray-500 mt-3">8 lessons/month · 2 lessons/week</p>
                 <p className="text-lg font-bold text-gray-900 mt-2">500 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">8 lessons per month (45 min each)</span>
+                  <span className="text-gray-700">8 lessons per month — <strong>45 min each</strong></span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -88,15 +91,19 @@ export default function Pricing() {
                   <p className="text-4xl font-bold text-blue-600">90 MAD</p>
                   <p className="text-lg text-gray-500 line-through">100 MAD</p>
                 </div>
-                <p className="text-gray-600">per lesson</p>
+                <p className="text-gray-600">per lesson · <strong>1 hour</strong></p>
                 <p className="text-sm text-green-600 font-semibold mt-1">Save 10% per lesson</p>
-                <p className="text-sm text-gray-500 mt-3">8 lessons/month</p>
+                <p className="text-sm text-gray-500 mt-3">8 lessons/month · 2 lessons/week</p>
                 <p className="text-lg font-bold text-gray-900 mt-2">720 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">8 lessons per month (60 min each)</span>
+                  <span className="text-gray-700">8 lessons per month — <strong>1 hour each</strong></span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">2 lessons per week</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -139,15 +146,19 @@ export default function Pricing() {
                   <p className="text-4xl font-bold text-purple-600">80 MAD</p>
                   <p className="text-lg text-gray-500 line-through">100 MAD</p>
                 </div>
-                <p className="text-gray-600">per lesson</p>
+                <p className="text-gray-600">per lesson · <strong>1 hour</strong></p>
                 <p className="text-sm text-green-600 font-semibold mt-1">Save 20% per lesson</p>
-                <p className="text-sm text-gray-500 mt-3">12 lessons/month</p>
+                <p className="text-sm text-gray-500 mt-3">12 lessons/month · 3 lessons/week</p>
                 <p className="text-lg font-bold text-gray-900 mt-2">960 MAD/month</p>
               </div>
               <ul className="space-y-3 mb-8">
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-                  <span className="text-gray-700">12 lessons per month (60 min each)</span>
+                  <span className="text-gray-700">12 lessons per month — <strong>1 hour each</strong></span>
+                </li>
+                <li className="flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <span className="text-gray-700">3 lessons per week</span>
                 </li>
                 <li className="flex gap-3">
                   <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
@@ -178,8 +189,71 @@ export default function Pricing() {
             </Card>
           </div>
 
+          {/* Group Study Package — full-width row below */}
+          <div className="max-w-3xl mx-auto mb-8">
+            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-green-600 relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-1 rounded-full text-sm font-bold whitespace-nowrap">
+                NEW — GROUP STUDY
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                {/* Left: info */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="w-8 h-8 text-green-600" />
+                    <h3 className="text-2xl font-bold text-gray-900">Group Study</h3>
+                  </div>
+                  <p className="text-gray-600 mb-6">
+                    Learn together with other students in a small, interactive group setting. Perfect for those who enjoy collaborative learning and want an affordable option to practise English regularly.
+                  </p>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">8 lessons per month — <strong>1 hour each</strong></span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">2 lessons per week</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">Small group — interactive & engaging</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">Structured group lesson plan</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                      <span className="text-gray-700">Live via Google Meet</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Right: price + CTA */}
+                <div className="text-center">
+                  <div className="bg-green-50 p-6 rounded-lg mb-6">
+                    <p className="text-5xl font-bold text-green-600">200 MAD</p>
+                    <p className="text-gray-600 mt-1">per month</p>
+                    <p className="text-sm text-gray-500 mt-3">8 lessons · 2 per week · 1 hour each</p>
+                    <p className="text-sm font-semibold text-green-700 mt-2">Only 25 MAD per lesson!</p>
+                  </div>
+                  <a
+                    href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%20Group%20Study%20Package%20(200%20MAD%2Fmonth)"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3">
+                      Join the Group
+                    </Button>
+                  </a>
+                  <p className="text-xs text-gray-500 mt-3">Limited spots available per group</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
           {/* Pay-Per-Lesson Option */}
-          <div className="mt-12 max-w-2xl mx-auto">
+          <div className="mt-4 max-w-2xl mx-auto">
             <Card className="p-6 bg-gray-50 border-2 border-gray-300">
               <div className="flex items-center justify-between flex-wrap gap-4">
                 <div>
@@ -188,7 +262,7 @@ export default function Pricing() {
                 </div>
                 <div className="text-right">
                   <p className="text-3xl font-bold text-gray-900">100 MAD</p>
-                  <p className="text-sm text-gray-600">per lesson (60 min)</p>
+                  <p className="text-sm text-gray-600">per lesson · <strong>1 hour</strong></p>
                 </div>
               </div>
               <div className="mt-4">
@@ -269,6 +343,7 @@ export default function Pricing() {
               { q: "What payment methods do you accept?", a: "We accept bank transfers (MAD), mobile payments, and international payments. Contact Ibrahim for payment details and options." },
               { q: "Is there a free trial lesson?", a: "Yes! We offer a free 10-minute consultation where you can meet Mr. Ibrahim K., discuss your goals, and get a personalized learning plan." },
               { q: "What if I miss a lesson?", a: "You can reschedule up to 24 hours in advance. Missed lessons without notice cannot be refunded or rescheduled." },
+              { q: "How many students are in a Group Study session?", a: "Group Study sessions are kept small (typically 3–6 students) to ensure everyone gets attention and plenty of speaking practice." },
             ].map((faq) => (
               <Card key={faq.q} className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.q}</h3>
@@ -300,6 +375,7 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
     </div>
     </>
   );
