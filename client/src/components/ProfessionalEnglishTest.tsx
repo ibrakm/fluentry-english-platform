@@ -445,8 +445,9 @@ const getLevelInfo = (level: string) => {
   return levels[level] || levels["A1"];
 };
 
-// ─── WEBHOOK URL ─────────────────────────────────────────────────────────────
-const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbzhG3jRJnkgYlr9Cvuzu94zhfOKF9TzPYOztESLVb5ToSa2lWU6cGuzADxIM6PGkj41cg/exec";
+// ─── API ENDPOINT ────────────────────────────────────────────────────────────
+// Uses a Vercel serverless function to forward data server-side (no CORS issues)
+const SUBMIT_LEAD_API = "/api/submit-lead";
 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 export default function ProfessionalEnglishTest() {
@@ -462,13 +463,6 @@ export default function ProfessionalEnglishTest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [audioPlayed, setAudioPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-
-  // Lead capture form state
-  const [leadName, setLeadName] = useState("");
-  const [leadEmail, setLeadEmail] = useState("");
-  const [leadPhone, setLeadPhone] = useState("");
-  const [leadSubmitting, setLeadSubmitting] = useState(false);
-  const [leadError, setLeadError] = useState("");
 
   const questions = testType === "quick" ? quickTestQuestions : comprehensiveTestQuestions;
 
@@ -514,7 +508,7 @@ export default function ProfessionalEnglishTest() {
         percentage,
         testType: testType!,
       });
-      setStage("lead-capture");
+      setStage("lead_capture");
     }
   };
 
@@ -554,13 +548,16 @@ export default function ProfessionalEnglishTest() {
     };
 
     try {
-      await fetch(GOOGLE_SHEET_WEBHOOK, {
+      // Use our Vercel serverless function — no CORS issues
+      await fetch(SUBMIT_LEAD_API, {
         method: "POST",
-        mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-    } catch (_) { /* no-cors mode always throws, data still sent */ }
+    } catch (err) {
+      console.error("Lead submission error:", err);
+      // Continue anyway — WhatsApp flow should not be blocked
+    }
 
     setLeadSubmitted(true);
     setIsSubmitting(false);
