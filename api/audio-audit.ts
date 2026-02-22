@@ -151,7 +151,7 @@ Respond ONLY with valid JSON (no markdown, no extra text):
 If transcript is unavailable, give score 5 and general advice for the level.`;
 
         const pplxResponse = await perplexityClient.chat.completions.create({
-          model: "llama-3.1-sonar-small-128k-online",
+          model: "sonar",
           messages: [{ role: "user", content: scoringPrompt }],
           temperature: 0.2,
         });
