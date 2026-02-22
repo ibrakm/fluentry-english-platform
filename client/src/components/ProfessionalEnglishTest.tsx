@@ -548,15 +548,11 @@ export default function ProfessionalEnglishTest() {
     };
 
     try {
-      // Google Apps Script requires form-encoded data for cross-origin requests
-      const formData = new URLSearchParams();
-      Object.entries(payload).forEach(([key, value]) => {
-        formData.append(key, String(value));
-      });
-      await fetch(GOOGLE_SHEET_WEBHOOK, {
+      // Use the Vercel serverless API route — runs server-side, no CORS issues
+      await fetch(SUBMIT_LEAD_API, {
         method: "POST",
-        mode: "no-cors",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
     } catch (_) { /* silent fail — WhatsApp notification still works */ }
 
