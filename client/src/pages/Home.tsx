@@ -1,18 +1,45 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock } from "lucide-react";
+import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock, X } from "lucide-react";
+import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SEO } from "@/components/SEO";
 
 export default function Home() {
   const title = "1-on-1 English Coaching Online | Fluentry Morocco";
   const description = "Achieve fluency with personalized 1-on-1 English coaching from Morocco's TESOL-certified expert. Take a free CEFR level test, explore Business English, IELTS/TOEFL prep, and book your first lesson today. From 62.50 MAD/lesson.";
+  const [bannerVisible, setBannerVisible] = useState(true);
 
   return (
     <>
       <SEO title={title} description={description} path="/" />
       <div className="min-h-screen">
+
+      {/* Bilingual Moroccan Banner */}
+      {bannerVisible && (
+        <div className="bg-gradient-to-r from-green-700 to-green-600 text-white py-3 px-4 relative">
+          <div className="container mx-auto max-w-6xl flex items-center justify-between gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left flex-1">
+              <span className="text-lg">🇲🇦</span>
+              <span className="text-sm sm:text-base font-semibold">
+                <span className="text-yellow-300">بالعربية:</span> تعلم الإنجليزية مع كوتش متخصص — نتائج مضمونة
+              </span>
+              <span className="hidden sm:block text-green-300">|</span>
+              <span className="text-sm sm:text-base font-semibold">
+                <span className="text-yellow-300">En français:</span> Coaching anglais en ligne — Résultats garantis
+              </span>
+            </div>
+            <button
+              onClick={() => setBannerVisible(false)}
+              className="text-green-200 hover:text-white transition-colors flex-shrink-0"
+              aria-label="Close banner"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4 shadow-xl">
@@ -28,6 +55,10 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 Speak English with Confidence.<br className="hidden md:block" /> Start Fluently Today.
               </h1>
+              {/* Bilingual subtitle for Moroccan audience */}
+              <p className="text-base text-yellow-300 font-medium mb-2 italic">
+                تجمد وأنت تتكلم الإنجليزية؟ — Vous bloquez quand vous parlez anglais ?
+              </p>
               <p className="text-lg md:text-xl text-blue-100 mb-8">
                 Personalized online coaching from Morocco's passionate English expert, Mr. Ibrahim K. Real-world fluency, not just textbook grammar.
               </p>

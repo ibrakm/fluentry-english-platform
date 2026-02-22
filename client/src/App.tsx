@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
+import { ExitIntentPopup } from "./components/ExitIntentPopup";
 import { HelmetProvider } from "react-helmet-async";
 
 // Eagerly load the home page for fast initial render
@@ -87,6 +88,7 @@ function App() {
               </main>
               <Footer />
               <WhatsAppSticky />
+              <ExitIntentPopup />
             </div>
           </TooltipProvider>
         </ThemeProvider>
