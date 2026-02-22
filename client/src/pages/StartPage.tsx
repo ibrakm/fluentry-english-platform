@@ -97,11 +97,11 @@ export default function StartPage() {
               <Link href="/free-test">
                 <Button
                   size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-8 py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto animate-pulse"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-5 sm:px-8 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto animate-pulse"
                 >
-                  <Zap className="w-5 h-5 mr-2" />
-                  اكتشف مستواك مجاناً — Test Gratuit
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <Zap className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
+                  <span className="truncate">اكتشف مستواك مجاناً — Test Gratuit</span>
+                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
                 </Button>
               </Link>
               <a
@@ -112,9 +112,9 @@ export default function StartPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-lg px-8 py-6 rounded-xl w-full sm:w-auto"
+                  className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-sm sm:text-lg px-5 sm:px-8 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
                 >
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
                   راسلني على واتساب
                 </Button>
               </a>
@@ -172,9 +172,9 @@ export default function StartPage() {
               <p className="text-xl font-bold text-green-700 mb-2">✅ عندي الحل ليك!</p>
               <p className="text-gray-600 mb-6">J'ai la solution pour toi — coaching 1-sur-1 personnalisé.</p>
               <Link href="/free-test">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-5 rounded-xl shadow-lg">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base px-5 sm:px-8 py-5 rounded-xl shadow-lg">
                   ابدأ بالتيست المجاني — Commence par le test gratuit
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
                 </Button>
               </Link>
             </div>
@@ -249,7 +249,7 @@ export default function StartPage() {
                 { name: "Standard", nameAr: "الاحترافي", price: "800 MAD", period: "/شهر", lessons: "8 حصص", duration: "ساعة كاملة", color: "border-blue-500", popular: true },
                 { name: "Premium", nameAr: "المتميز", price: "1,400 MAD", period: "/شهر", lessons: "16 حصة", duration: "ساعة كاملة", color: "border-purple-500" },
               ].map((pkg) => (
-                <div key={pkg.name} className={`relative border-2 ${pkg.color} rounded-2xl p-5 ${pkg.popular ? "bg-blue-50 shadow-lg scale-105" : "bg-white"}`}>
+                <div key={pkg.name} className={`relative border-2 ${pkg.color} rounded-2xl p-4 sm:p-5 ${pkg.popular ? "bg-blue-50 shadow-lg" : "bg-white"}`}>
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       الأكثر طلباً
@@ -263,7 +263,7 @@ export default function StartPage() {
               ))}
             </div>
             <Link href="/pricing">
-              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 mr-3">
+              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 text-sm sm:text-base px-4">
                 شوف كل الأثمنة — Voir tous les tarifs
               </Button>
             </Link>
@@ -284,10 +284,13 @@ export default function StartPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/free-test">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg px-10 py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto">
-                  <Zap className="w-5 h-5 mr-2" />
+                <Button
+                  size="lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto"
+                >
+                  <Zap className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
                   ابدأ التيست المجاني الآن
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
                 </Button>
               </Link>
               <a
@@ -295,8 +298,12 @@ export default function StartPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg" variant="outline" className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-lg px-10 py-6 rounded-xl w-full sm:w-auto">
-                  <MessageCircle className="w-5 h-5 mr-2" />
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
+                >
+                  <MessageCircle className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
                   راسلني على واتساب
                 </Button>
               </a>

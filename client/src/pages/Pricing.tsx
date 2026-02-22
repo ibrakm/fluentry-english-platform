@@ -39,7 +39,7 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-8">
 
             {/* Starter Package */}
-            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-gray-200">
+            <Card className="p-6 sm:p-8 hover:shadow-lg transition-shadow border-2 border-gray-200">
               <div className="flex items-center gap-3 mb-6">
                 <Clock className="w-8 h-8 text-blue-600" />
                 <h3 className="text-2xl font-bold text-gray-900">Starter</h3>
@@ -75,7 +75,7 @@ export default function Pricing() {
             </Card>
 
             {/* Standard Package - BEST VALUE */}
-            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-blue-600 relative transform md:scale-105">
+            <Card className="p-6 sm:p-8 hover:shadow-lg transition-shadow border-2 border-blue-600 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-1 rounded-full text-sm font-bold whitespace-nowrap">
                 BEST VALUE
               </div>
@@ -130,7 +130,7 @@ export default function Pricing() {
             </Card>
 
             {/* Premium Package - MOST POPULAR */}
-            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-purple-600 relative">
+            <Card className="p-6 sm:p-8 hover:shadow-lg transition-shadow border-2 border-purple-600 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1 rounded-full text-sm font-bold whitespace-nowrap">
                 MOST POPULAR
               </div>
@@ -191,7 +191,7 @@ export default function Pricing() {
 
           {/* Group Study Package — full-width row below */}
           <div className="max-w-3xl mx-auto mb-8">
-            <Card className="p-8 hover:shadow-lg transition-shadow border-2 border-green-600 relative">
+            <Card className="p-6 sm:p-8 hover:shadow-lg transition-shadow border-2 border-green-600 relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-1 rounded-full text-sm font-bold whitespace-nowrap">
                 NEW — GROUP STUDY
               </div>

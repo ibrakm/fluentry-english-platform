@@ -580,7 +580,7 @@ export default function ProfessionalEnglishTest() {
           <div className="inline-block bg-green-100 text-green-700 text-sm font-bold px-4 py-1 rounded-full mb-2">
             100% FREE — No Registration Required
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900">
             Discover Your Real English Level
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -590,11 +590,11 @@ export default function ProfessionalEnglishTest() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Quick Test */}
-          <Card className="p-8 border-2 border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="p-5 sm:p-8 border-2 border-blue-200 hover:border-blue-500 hover:shadow-xl transition-all bg-gradient-to-br from-blue-50 to-blue-100">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="bg-blue-600 p-2 rounded-lg"><Zap className="w-6 h-6 text-white" /></div>
-                <h2 className="text-2xl font-bold text-gray-900">Quick Test</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Quick Test</h2>
               </div>
               <p className="text-gray-700">Fast and effective — perfect if you want a quick snapshot of your level.</p>
               <div className="space-y-2 text-sm text-gray-600">
@@ -603,7 +603,7 @@ export default function ProfessionalEnglishTest() {
                 <p className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-500" /> Grammar, vocabulary & reading</p>
                 <p className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-500" /> Instant CEFR level result</p>
               </div>
-              <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg font-bold py-6 shadow-md hover:shadow-lg transition-all" onClick={() => handleStartTest("quick")}>
+              <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-lg font-bold py-5 sm:py-6 shadow-md hover:shadow-lg transition-all" onClick={() => handleStartTest("quick")}>
                 🚀 Start Quick Test — It's Free!
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
@@ -611,14 +611,14 @@ export default function ProfessionalEnglishTest() {
           </Card>
 
           {/* Comprehensive Test */}
-          <Card className="p-8 border-2 border-purple-300 hover:border-purple-600 hover:shadow-xl transition-all bg-gradient-to-br from-purple-50 to-purple-100 relative overflow-hidden">
+          <Card className="p-5 sm:p-8 border-2 border-purple-300 hover:border-purple-600 hover:shadow-xl transition-all bg-gradient-to-br from-purple-50 to-purple-100 relative overflow-hidden">
             <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-black px-3 py-1 rounded-full shadow">
               MOST ACCURATE ⭐
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <div className="bg-purple-600 p-2 rounded-lg"><BookOpen className="w-6 h-6 text-white" /></div>
-                <h2 className="text-2xl font-bold text-gray-900">Full Assessment</h2>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Full Assessment</h2>
               </div>
               <p className="text-gray-700">The most accurate test — includes reading, listening, and error correction like real CEFR exams.</p>
               <div className="space-y-2 text-sm text-gray-600">
@@ -629,7 +629,7 @@ export default function ProfessionalEnglishTest() {
                 <p className="flex items-center gap-2"><AlertCircle className="w-4 h-4 text-purple-500" /> Error correction exercises</p>
                 <p className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-purple-500" /> Detailed CEFR breakdown + coaching plan</p>
               </div>
-              <Button size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white text-lg font-bold py-6 shadow-md hover:shadow-lg transition-all" onClick={() => handleStartTest("comprehensive")}>
+              <Button size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white text-sm sm:text-lg font-bold py-5 sm:py-6 shadow-md hover:shadow-lg transition-all" onClick={() => handleStartTest("comprehensive")}>
                 🎯 Take the Full Assessment — Free!
                 <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
@@ -875,23 +875,23 @@ export default function ProfessionalEnglishTest() {
     return (
       <div className="space-y-8">
         {/* Results Header */}
-        <div className={`${levelInfo.color} text-white rounded-2xl p-12 text-center space-y-4`}>
+        <div className={`${levelInfo.color} text-white rounded-2xl p-6 sm:p-12 text-center space-y-4`}>
           {leadSubmitted && (
             <div className="bg-white/20 rounded-xl px-4 py-2 inline-block mb-2">
               <p className="text-sm font-semibold">✅ Your results have been sent to Mr. Ibrahim!</p>
             </div>
           )}
           <p className="text-lg font-semibold opacity-90">Your English Level</p>
-          <h1 className="text-7xl font-bold">{testResult.level}</h1>
-          <p className="text-3xl font-semibold">{levelInfo.title}</p>
+          <h1 className="text-5xl sm:text-7xl font-bold">{testResult.level}</h1>
+          <p className="text-2xl sm:text-3xl font-semibold">{levelInfo.title}</p>
           <p className="text-lg opacity-90">
             You scored {testResult.score} out of {testResult.totalQuestions} ({testResult.percentage}%)
           </p>
         </div>
 
         {/* What this means */}
-        <Card className="p-8 border-2 border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">What This Means For You</h2>
+        <Card className="p-5 sm:p-8 border-2 border-gray-200">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">What This Means For You</h2>
           <p className="text-lg text-gray-700 mb-6">{levelInfo.description}</p>
           <div className="bg-blue-50 border-l-4 border-blue-600 p-5 rounded-r-xl">
             <p className="text-gray-800">
@@ -904,8 +904,8 @@ export default function ProfessionalEnglishTest() {
         </Card>
 
         {/* CTA */}
-        <Card className="p-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
-          <h2 className="text-2xl font-bold mb-3">Ready to Start Your Journey?</h2>
+        <Card className="p-5 sm:p-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0">
+          <h2 className="text-xl sm:text-2xl font-bold mb-3">Ready to Start Your Journey?</h2>
           <p className="text-lg mb-6 opacity-90">
             Mr. Ibrahim has received your results and is ready to help you reach the next level. Message him now — your first consultation is free!
           </p>
@@ -915,12 +915,12 @@ export default function ProfessionalEnglishTest() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-lg py-6 shadow-lg">
+              <Button size="lg" className="w-full bg-green-500 hover:bg-green-600 text-white font-bold text-sm sm:text-lg py-5 sm:py-6 shadow-lg">
                 💬 Message Mr. Ibrahim on WhatsApp
               </Button>
             </a>
             <a href="/book-lesson">
-              <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 font-bold text-lg py-6">
+              <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 font-bold text-sm sm:text-lg py-5 sm:py-6">
                 📅 Book Your First Lesson Now
               </Button>
             </a>
