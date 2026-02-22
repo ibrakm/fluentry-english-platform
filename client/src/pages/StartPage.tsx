@@ -8,9 +8,10 @@
  */
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Star, Award, MessageCircle, Clock, Users, ArrowRight, Zap, Shield } from "lucide-react";
+import { CheckCircle, Star, Award, MessageCircle, Clock, Users, ArrowRight, Zap, Shield, Download, BookOpen, Mic } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -45,6 +46,128 @@ const painPoints = [
   { ar: "خايف من الأخطاء أمام الناس؟", fr: "Tu as peur de faire des erreurs devant les autres ?" },
   { ar: "محتاج الإنجليزية للشغل أو الدراسة؟", fr: "Tu as besoin de l'anglais pour le travail ou les études ?" },
 ];
+
+function LeadMagnetForm() {
+  const [name, setName] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !whatsapp.trim()) {
+      setError("من فضلك أدخل اسمك ورقم واتساب.");
+      return;
+    }
+    setLoading(true);
+    setError("");
+    try {
+      await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          whatsapp,
+          source: "Lead Magnet — 50 Mistakes PDF",
+          level: "N/A",
+          score: "N/A",
+          testType: "PDF Download",
+        }),
+      });
+    } catch (_) {
+      // Don't block the download even if the API fails
+    }
+    setSubmitted(true);
+    setLoading(false);
+  };
+
+  if (submitted) {
+    return (
+      <div className="bg-white rounded-2xl shadow-lg p-8 text-center border-2 border-green-400">
+        <div className="text-5xl mb-4">🎉</div>
+        <h3 className="text-xl font-bold text-green-700 mb-2">مبروك! الدليل جاهز ليك</h3>
+        <p className="text-gray-600 mb-6">Félicitations ! Votre guide est prêt à télécharger.</p>
+        <a
+          href="/50_Common_Mistakes_Fluentry.pdf"
+          download="50_Common_Mistakes_Fluentry.pdf"
+          className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+        >
+          <Download className="w-5 h-5" />
+          حمّل الدليل الآن — Télécharger
+        </a>
+        <p className="text-xs text-gray-400 mt-4">سيتواصل معك الأستاذ إبراهيم قريباً على واتساب 📱</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-orange-200">
+      <div className="flex flex-col md:flex-row gap-6 items-start">
+        {/* Left: What's inside */}
+        <div className="md:w-1/2">
+          <h3 className="font-bold text-gray-900 text-lg mb-3">ما فيه الدليل:</h3>
+          <ul className="space-y-2 text-sm text-gray-700">
+            {[
+              "أخطاء النطق (P vs B, TH, Silent H)",
+              "أخطاء القواعد (Have/Be, Tenses)",
+              "False Friends مع الفرنسية",
+              "أخطاء الحروف الجر",
+              "تعابير يومية غلط",
+            ].map((item, i) => (
+              <li key={i} className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 flex items-center gap-2 text-xs text-gray-500">
+            <BookOpen className="w-4 h-4" />
+            <span>PDF مجاني · 50 درساً · مخصص للمغاربة</span>
+          </div>
+        </div>
+
+        {/* Right: Form */}
+        <div className="md:w-1/2 w-full">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">اسمك الكامل *</label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="مثال: يوسف أمين"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">رقم واتساب *</label>
+              <input
+                type="tel"
+                value={whatsapp}
+                onChange={(e) => setWhatsapp(e.target.value)}
+                placeholder="+212 6XX XXX XXX"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
+                required
+              />
+            </div>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-orange-500 hover:bg-orange-600 disabled:opacity-60 text-white font-bold py-4 rounded-xl text-base shadow-lg flex items-center justify-center gap-2 transition-colors"
+            >
+              <Download className="w-5 h-5" />
+              {loading ? "جاري التحميل..." : "احصل على الدليل المجاني"}
+            </button>
+            <p className="text-xs text-gray-400 text-center">🔒 معلوماتك آمنة 100% — لن تُشارك مع أي طرف ثالث</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function StartPage() {
   return (
@@ -181,6 +304,27 @@ export default function StartPage() {
           </div>
         </section>
 
+        {/* LEAD MAGNET — Free PDF Download */}
+        <section className="py-14 px-4 bg-gradient-to-br from-yellow-50 to-orange-50 border-y-2 border-orange-200">
+          <div className="container mx-auto max-w-3xl">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                <Download className="w-4 h-4" />
+                هدية مجانية — Cadeau Gratuit
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                📘 50 غلطة شايعة يديرها المغاربة بالإنجليزية
+              </h2>
+              <p className="text-gray-600 mb-2">Les 50 erreurs les plus fréquentes des Marocains en anglais</p>
+              <p className="text-gray-500 text-sm max-w-xl mx-auto">
+                دليل مجاني مخصص للمغاربة — مع شرح كل غلطة وكيفاش تصلحها. حمّله دابا مجاناً!
+              </p>
+            </div>
+
+            <LeadMagnetForm />
+          </div>
+        </section>
+
         {/* HOW IT WORKS */}
         <section className="py-12 px-4 bg-white">
           <div className="container mx-auto max-w-3xl">
@@ -313,6 +457,30 @@ export default function StartPage() {
               <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> مجاني 100%</span>
               <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> نتيجة فورية</span>
               <span className="flex items-center gap-1"><Shield className="w-4 h-4 text-green-400" /> بدون التزام</span>
+            </div>
+          </div>
+        </section>
+
+        {/* AUDIO AUDIT CTA */}
+        <section className="py-12 px-4 bg-white border-t border-gray-100">
+          <div className="container mx-auto max-w-3xl">
+            <div className="bg-gradient-to-br from-blue-900 to-indigo-800 rounded-3xl p-8 text-white text-center">
+              <div className="text-4xl mb-3">🎤</div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">اختبر نطقك الآن — مجاناً</h2>
+              <p className="text-blue-200 mb-2">Teste ta prononciation maintenant — gratuitement</p>
+              <p className="text-blue-300 text-sm mb-6 max-w-lg mx-auto">
+                سجّل صوتك وأنت تقرأ جملة واحدة. الأستاذ إبراهيم سيرسل لك تقييماً شخصياً على واتساب خلال 24 ساعة.
+              </p>
+              <Link href="/audio-audit">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-900 hover:bg-blue-50 font-bold text-sm sm:text-base px-6 sm:px-10 py-4 rounded-xl shadow-lg"
+                >
+                  <Mic className="w-4 h-4 mr-2" />
+                  ابدأ اختبار النطق المجاني
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
