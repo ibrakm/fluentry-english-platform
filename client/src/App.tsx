@@ -30,6 +30,7 @@ const IeltsSpeakingTestSuccessGuide = lazy(() => import("./pages/blog/IeltsSpeak
 const BusinessEnglishEmailWritingGuide = lazy(() => import("./pages/blog/BusinessEnglishEmailWritingGuide"));
 const ImproveEnglishPronunciationArabicSpeakers = lazy(() => import("./pages/blog/ImproveEnglishPronunciationArabicSpeakers"));
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
+const StartPage = lazy(() => import("./pages/StartPage"));
 
 // Loading fallback — minimal spinner shown while a page chunk loads
 function PageLoader() {
@@ -62,6 +63,8 @@ function Router() {
         <Route path={"/blog/business-english-email-writing-guide"} component={BusinessEnglishEmailWritingGuide} />
         <Route path={"/blog/improve-english-pronunciation-arabic-speakers"} component={ImproveEnglishPronunciationArabicSpeakers} />
         <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
+        <Route path={"/start"} component={StartPage} />
+        <Route path={"/fb"} component={StartPage} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

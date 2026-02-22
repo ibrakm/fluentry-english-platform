@@ -445,8 +445,9 @@ const getLevelInfo = (level: string) => {
   return levels[level] || levels["A1"];
 };
 
-// ─── WEBHOOK URL ─────────────────────────────────────────────────────────────
-const GOOGLE_SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbzhG3jRJnkgYlr9Cvuzu94zhfOKF9TzPYOztESLVb5ToSa2lWU6cGuzADxIM6PGkj41cg/exec";
+// ─── API ENDPOINT ────────────────────────────────────────────────────────────
+// Uses a Vercel serverless function to forward data server-side (no CORS issues)
+const SUBMIT_LEAD_API = "/api/submit-lead";
 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 export default function ProfessionalEnglishTest() {
