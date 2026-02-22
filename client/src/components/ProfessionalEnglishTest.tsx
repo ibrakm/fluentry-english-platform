@@ -463,13 +463,6 @@ export default function ProfessionalEnglishTest() {
   const [audioPlayed, setAudioPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // Lead capture form state
-  const [leadName, setLeadName] = useState("");
-  const [leadEmail, setLeadEmail] = useState("");
-  const [leadPhone, setLeadPhone] = useState("");
-  const [leadSubmitting, setLeadSubmitting] = useState(false);
-  const [leadError, setLeadError] = useState("");
-
   const questions = testType === "quick" ? quickTestQuestions : comprehensiveTestQuestions;
 
   const handleStartTest = (type: "quick" | "comprehensive") => {
@@ -514,7 +507,7 @@ export default function ProfessionalEnglishTest() {
         percentage,
         testType: testType!,
       });
-      setStage("lead-capture");
+      setStage("lead_capture");
     }
   };
 
@@ -554,13 +547,17 @@ export default function ProfessionalEnglishTest() {
     };
 
     try {
+      // Google Apps Script requires form-encoded data for cross-origin requests
+      const formData = new URLSearchParams();
+      Object.entries(payload).forEach(([key, value]) => {
+        formData.append(key, String(value));
+      });
       await fetch(GOOGLE_SHEET_WEBHOOK, {
         method: "POST",
         mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
-    } catch (_) { /* no-cors mode always throws, data still sent */ }
+    } catch (_) { /* silent fail — WhatsApp notification still works */ }
 
     setLeadSubmitted(true);
     setIsSubmitting(false);
@@ -875,7 +872,7 @@ export default function ProfessionalEnglishTest() {
   if (stage === "results" && testResult) {
     const levelInfo = getLevelInfo(testResult.level);
     const whatsappMessage = encodeURIComponent(
-      `Hi Mr. Ibrahim! 👋\n\nI just completed the English test on your Fluentry website and I got my results:\n\n📊 My Level: ${testResult.level} — ${levelInfo.title}\n✅ Score: ${testResult.score}/${testResult.totalQuestions} (${testResult.percentage}%)\n\nMy name is ${leadData.name}.\n\nCould you please tell me what you recommend for me and how we can start working together? 😊`
+      `Hi Mr. Ibrahim! 👋\n\nI just completed your English test on Fluentry and here are my results:\n\n📊 My Level: ${testResult.level} — ${levelInfo.title}\n✅ Score: ${testResult.score}/${testResult.totalQuestions} (${testResult.percentage}%)\n\nMy name is ${leadData.name}.${leadData.phone ? `\n📱 My WhatsApp: ${leadData.phone}` : ""}${leadData.email ? `\n📧 My Email: ${leadData.email}` : ""}\n\nBased on my result, what package do you recommend for me? I'd love to start as soon as possible! 😊`
     );
 
     return (
