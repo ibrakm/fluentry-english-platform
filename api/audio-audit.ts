@@ -2,8 +2,8 @@
  * /api/audio-audit
  *
  * Receives a base64-encoded audio recording from the frontend.
- * 1. Transcribes the audio using OpenAI Whisper
- * 2. Scores the pronunciation using GPT-4o-mini
+ * 1. Transcribes the audio using OpenAI Whisper (if key available)
+ * 2. Scores the pronunciation using Perplexity AI
  * 3. Saves the full result to Google Sheets via webhook
  * 4. Returns the score + coach note to the frontend
  */
@@ -13,17 +13,6 @@ import OpenAI from "openai";
 
 const GOOGLE_SHEET_WEBHOOK =
   "https://script.google.com/macros/s/AKfycbzhG3jRJnkgYlr9Cvuzu94zhfOKF9TzPYOztESLVb5ToSa2lWU6cGuzADxIM6PGkj41cg/exec";
-
-// Perplexity API (OpenAI-compatible) for text scoring/coaching
-const perplexity = new OpenAI({
-  apiKey: process.env.PERPLEXITY_API_KEY,
-  baseURL: "https://api.perplexity.ai",
-});
-
-// OpenAI for Whisper transcription (audio-only endpoint)
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 export const config = {
   api: {
@@ -58,74 +47,90 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     let transcript = "";
     let transcriptionError = false;
 
-    try {
-      // Convert base64 to Buffer
-      const audioBuffer = Buffer.from(audioBase64, "base64");
-      const audioMime = mimeType || "audio/webm";
-      const extension = audioMime.includes("mp4") ? "mp4" : audioMime.includes("ogg") ? "ogg" : "webm";
+    const openaiKey = process.env.OPENAI_API_KEY;
+    if (openaiKey) {
+      try {
+        const openaiClient = new OpenAI({ apiKey: openaiKey });
+        const audioBuffer = Buffer.from(audioBase64, "base64");
+        const audioMime = mimeType || "audio/webm";
+        const extension = audioMime.includes("mp4") ? "mp4" : audioMime.includes("ogg") ? "ogg" : "webm";
+        const audioFile = new File([audioBuffer], `recording.${extension}`, { type: audioMime });
 
-      // Create a File-like object for the OpenAI SDK
-      const audioFile = new File([audioBuffer], `recording.${extension}`, { type: audioMime });
+        const transcriptionResponse = await openaiClient.audio.transcriptions.create({
+          file: audioFile,
+          model: "whisper-1",
+          language: "en",
+          prompt: `The student is reading this passage: "${sentence.substring(0, 100)}". Transcribe exactly what they said.`,
+        });
 
-      const transcriptionResponse = await openai.audio.transcriptions.create({
-        file: audioFile,
-        model: "whisper-1",
-        language: "en",
-        prompt: `The student is reading this sentence: "${sentence}". Transcribe exactly what they said.`,
-      });
-
-      transcript = transcriptionResponse.text;
-    } catch (err) {
-      console.error("Whisper transcription error:", err);
+        transcript = transcriptionResponse.text;
+      } catch (err) {
+        console.error("Whisper transcription error:", err);
+        transcriptionError = true;
+        transcript = "[Transcription unavailable]";
+      }
+    } else {
       transcriptionError = true;
-      transcript = "[Transcription unavailable]";
+      transcript = "[Transcription unavailable — no OpenAI key]";
     }
 
-    // ── Step 2: Score with Perplexity ────────────────────────────────────────
+    // ── Step 2: Score with Perplexity ─────────────────────────────────────────
     let score = 0;
     let coachNote = "";
     let strengths = "";
     let improvements = "";
 
-    try {
-      const scoringPrompt = `You are an expert English pronunciation coach specializing in helping Moroccan Arabic and French speakers improve their English.
+    const pplxKey = process.env.PERPLEXITY_API_KEY;
+    if (pplxKey) {
+      try {
+        const perplexityClient = new OpenAI({
+          apiKey: pplxKey,
+          baseURL: "https://api.perplexity.ai",
+        });
 
-A student (Level: ${level}) was asked to read this sentence aloud:
-"${sentence}"
+        const scoringPrompt = `You are an expert English pronunciation coach specializing in helping Moroccan Arabic and French speakers improve their English.
+
+A student (Level: ${level}) was asked to read this passage aloud:
+"${sentence.substring(0, 300)}..."
 
 Their speech was transcribed as:
 "${transcript}"
 
 Please evaluate their pronunciation and fluency. Consider:
-- How accurately they read the sentence (missing words, added words, substitutions)
+- How accurately they read the passage (missing words, added words, substitutions)
 - Common Moroccan pronunciation challenges (P vs B, TH sounds, silent letters, word stress, French influence)
 - Fluency and naturalness
 
 Respond ONLY with a valid JSON object in this exact format (no extra text, no markdown):
-{"score": <number 1-10>, "strengths": "<one short sentence>", "improvements": "<one or two specific issues>", "coachNote": "<warm encouraging 2-3 sentence WhatsApp note>"}
+{"score": <number 1-10>, "strengths": "<one short sentence>", "improvements": "<one or two specific issues>", "coachNote": "<warm encouraging 2-3 sentence WhatsApp note from the coach>"}
 
-If transcript is empty or unavailable, use score 0 and note audio could not be processed.`;
+If transcript is empty or unavailable, give score 5 and provide general advice based on the level.`;
 
-      const pplxResponse = await perplexity.chat.completions.create({
-        model: "llama-3.1-sonar-small-128k-online",
-        messages: [{ role: "user", content: scoringPrompt }],
-        temperature: 0.2,
-      });
+        const pplxResponse = await perplexityClient.chat.completions.create({
+          model: "llama-3.1-sonar-small-128k-online",
+          messages: [{ role: "user", content: scoringPrompt }],
+          temperature: 0.2,
+        });
 
-      const rawContent = pplxResponse.choices[0].message.content || "{}";
-      // Extract JSON from the response (Perplexity may wrap it)
-      const jsonMatch = rawContent.match(/\{[\s\S]*\}/);
-      const parsed = jsonMatch ? JSON.parse(jsonMatch[0]) : {};
-      score = parsed.score || 0;
-      strengths = parsed.strengths || "Good effort!";
-      improvements = parsed.improvements || "Keep practising.";
-      coachNote = parsed.coachNote || "Great job completing the audio audit!";
-    } catch (err) {
-      console.error("Perplexity scoring error:", err);
-      score = 0;
-      coachNote = "Audio received — manual review needed by coach.";
-      strengths = "N/A";
-      improvements = "N/A";
+        const rawContent = pplxResponse.choices[0].message.content || "{}";
+        const jsonMatch = rawContent.match(/\{[\s\S]*\}/);
+        const parsed = jsonMatch ? JSON.parse(jsonMatch[0]) : {};
+        score = typeof parsed.score === "number" ? Math.min(10, Math.max(1, parsed.score)) : 5;
+        strengths = parsed.strengths || "Good effort completing the test!";
+        improvements = parsed.improvements || "Continue practising reading aloud daily.";
+        coachNote = parsed.coachNote || "Great job completing the audio audit! I will review your recording and send you personal feedback on WhatsApp.";
+      } catch (err) {
+        console.error("Perplexity scoring error:", err);
+        score = 5;
+        coachNote = "Your audio was received. The coach will review it manually and send you feedback on WhatsApp within 24 hours.";
+        strengths = "Completed the audio test";
+        improvements = "To be reviewed by coach";
+      }
+    } else {
+      score = 5;
+      coachNote = "Your audio was received. The coach will review it and send you personal feedback on WhatsApp within 24 hours.";
+      strengths = "Completed the audio test";
+      improvements = "To be reviewed by coach";
     }
 
     // ── Step 3: Save to Google Sheet ──────────────────────────────────────────
@@ -137,7 +142,7 @@ If transcript is empty or unavailable, use score 0 and note audio could not be p
       level,
       score: `${score}/10`,
       testType: "Audio Pronunciation Audit",
-      sentence,
+      sentence: sentence.substring(0, 200),
       transcript,
       strengths,
       improvements,
@@ -153,7 +158,6 @@ If transcript is empty or unavailable, use score 0 and note audio could not be p
       });
     } catch (err) {
       console.error("Google Sheet webhook error:", err);
-      // Don't block the response — sheet sync is best-effort
     }
 
     // ── Step 4: Return result to frontend ─────────────────────────────────────
