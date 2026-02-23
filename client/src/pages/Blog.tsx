@@ -7,6 +7,16 @@ import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 const publishedArticles = [
   {
+    slug: "how-to-pass-ielts-in-morocco",
+    published: true,
+    title: "How to Pass IELTS in Morocco: The Ultimate 2026 Guide",
+    excerpt: "Your complete guide to acing the IELTS test in Morocco. Find test centers, fees, dates, and expert strategies for Listening, Reading, Writing, and Speaking sections.",
+    category: "Exam Preparation",
+    readTime: "15 min read",
+    date: "February 23, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
     slug: "how-to-think-in-english",
     published: true,
     title: "How to Think in English: Stop Translating in Your Head",

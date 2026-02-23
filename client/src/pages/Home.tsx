@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock, X } from "lucide-react";
 import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { Testimonials } from "@/components/Testimonials";
 import { SEO } from "@/components/SEO";
 
 const homeFAQ = [
@@ -346,46 +347,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof / Testimonials */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            What Our Students Say
-          </h2>
-          <p className="text-center text-gray-500 mb-12">Real results from real students across Morocco.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-6 bg-blue-50">
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "Ibrahim's coaching completely changed how I approach English. I went from translating every word to actually thinking in English. My IELTS score improved by 1.5 bands!"
-              </p>
-              <div>
-                <p className="font-semibold text-gray-900">Fatima Z.</p>
-                <p className="text-sm text-gray-500">IELTS Student, Casablanca</p>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-blue-50">
-              <div className="flex gap-1 mb-3">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "As a business professional, I needed to improve my presentation skills fast. Ibrahim's Business English course gave me the confidence to lead international meetings."
-              </p>
-              <div>
-                <p className="font-semibold text-gray-900">Youssef B.</p>
-                <p className="text-sm text-gray-500">Marketing Manager, Rabat</p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+<Testimonials />
 
       {/* Newsletter Signup */}
       <NewsletterSignup />

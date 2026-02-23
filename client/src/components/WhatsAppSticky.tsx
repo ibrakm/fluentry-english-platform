@@ -14,7 +14,7 @@ export function WhatsAppSticky() {
 
       {/* WhatsApp button with pulse ring */}
       <a
-        href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20learn%20more%20about%20English%20lessons%20at%20Fluentry!"
+        href="https://wa.me/212672580932?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B9%D8%B1%D9%81%20%D9%83%D8%AB%D8%B1%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AF%D8%B1%D9%88%D8%B3"
         target="_blank"
         rel="noopener noreferrer"
         className="relative inline-flex items-center justify-center w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white transition-all duration-200 hover:scale-110"
