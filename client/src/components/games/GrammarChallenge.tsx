@@ -169,22 +169,27 @@ export default function GrammarChallenge() {
             const showIncorrect = showFeedback && isSelected && !isCorrect;
 
             return (
-              <Button
+              <button
                 key={index}
                 onClick={() => !showFeedback && handleAnswer(index)}
                 disabled={showFeedback}
-                variant="outline"
-                className={`h-auto py-4 px-6 text-left justify-start ${
-                  showCorrect ? 'bg-green-100 border-green-500 hover:bg-green-100' :
-                  showIncorrect ? 'bg-red-100 border-red-500 hover:bg-red-100' :
-                  'hover:bg-accent'
+                style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                className={`w-full min-h-[52px] py-3 px-4 text-left rounded-xl border-2 font-medium text-sm sm:text-base transition-all duration-150 flex items-center gap-3 ${
+                  showCorrect ? 'bg-green-50 border-green-500 text-green-800' :
+                  showIncorrect ? 'bg-red-50 border-red-500 text-red-800' :
+                  showFeedback ? 'bg-gray-50 border-gray-200 text-gray-500 opacity-60' :
+                  'bg-white border-gray-200 hover:border-blue-400 hover:bg-blue-50 active:bg-blue-100'
                 }`}
               >
-                <span className="font-semibold mr-3">{String.fromCharCode(65 + index)}.</span>
-                {option}
-                {showCorrect && <span className="ml-auto">✓</span>}
-                {showIncorrect && <span className="ml-auto">✗</span>}
-              </Button>
+                <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
+                  showCorrect ? 'bg-green-500 text-white' :
+                  showIncorrect ? 'bg-red-500 text-white' :
+                  'bg-gray-100 text-gray-600'
+                }`}>{String.fromCharCode(65 + index)}</span>
+                <span className="flex-1">{option}</span>
+                {showCorrect && <span className="text-green-600 font-bold ml-auto">✓</span>}
+                {showIncorrect && <span className="text-red-600 font-bold ml-auto">✗</span>}
+              </button>
             );
           })}
         </div>

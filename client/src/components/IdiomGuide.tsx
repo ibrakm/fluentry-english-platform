@@ -1,6 +1,7 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ChevronDown, ChevronUp, MessageSquare, BookOpen, List } from "lucide-react";
 
 interface Idiom {
   id: string;
@@ -22,7 +23,7 @@ const idioms: Idiom[] = [
     id: "piece-of-cake",
     title: "Piece of Cake",
     meaning: "Something very easy to do",
-    explanation: "This idiom means that something is very simple or easy to accomplish. Just like eating a piece of cake is easy, the task at hand requires minimal effort.",
+    explanation: "This idiom means that something is very simple or easy to accomplish. Just like eating a piece of cake requires minimal effort, the task at hand is effortless.",
     examples: [
       "The math test was a piece of cake. I finished it in 20 minutes.",
       "Installing the software was a piece of cake for someone with her experience.",
@@ -44,7 +45,7 @@ const idioms: Idiom[] = [
   {
     id: "water-under-bridge",
     title: "Water Under the Bridge",
-    meaning: "Don't worry about the past; it's over and done with",
+    meaning: "Past events that should not be worried about",
     explanation: "This idiom suggests that past events should not be dwelled upon. Just like water flows under a bridge and is gone forever, past mistakes or conflicts should be forgotten and forgiven.",
     examples: [
       "I know we had an argument last week, but that's water under the bridge now.",
@@ -58,7 +59,7 @@ const idioms: Idiom[] = [
         { speaker: "Sarah", text: "I'm sorry I was late last week." },
         { speaker: "Mike", text: "It's water under the bridge." },
         { speaker: "Sarah", text: "So we're good?" },
-        { speaker: "Mike", text: "We're good and if possible, let's move forward together." },
+        { speaker: "Mike", text: "We're good. Let's move forward together." },
       ],
     },
     image: "/idioms/water-under-bridge.png",
@@ -67,12 +68,12 @@ const idioms: Idiom[] = [
   {
     id: "dont-cry-over-spilled-milk",
     title: "Don't Cry Over Spilled Milk",
-    meaning: "Don't be upset about something that has already happened and cannot be changed",
-    explanation: "This idiom advises against worrying about past events that cannot be undone. Like spilled milk that cannot be put back in the glass, past mistakes cannot be changed, so it's better to focus on the future.",
+    meaning: "Don't be upset about something that cannot be changed",
+    explanation: "This idiom advises against worrying about past events that cannot be undone. Like spilled milk that cannot be put back in the glass, past mistakes cannot be changed.",
     examples: [
       "I made a mistake on the report, but there's no point crying over spilled milk.",
       "She failed the exam, but crying over spilled milk won't help her pass next time.",
-      "Yes, I lost my phone, but don't cry over spilled milk—let's focus on finding it.",
+      "Yes, I lost my phone, but don't cry over spilled milk—let's focus on solutions.",
     ],
     dialogue: {
       person1: "Tom",
@@ -81,7 +82,7 @@ const idioms: Idiom[] = [
         { speaker: "Tom", text: "I sent the wrong file to my boss. I feel terrible." },
         { speaker: "Lisa", text: "It happens. Don't cry over spilled milk." },
         { speaker: "Tom", text: "So what should I do?" },
-        { speaker: "Lisa", text: "Send the correct file and apologize quickly. That's all you can do." },
+        { speaker: "Lisa", text: "Send the correct file and apologize quickly." },
       ],
     },
     image: "/idioms/cat-out-of-bag.png",
@@ -114,7 +115,7 @@ const idioms: Idiom[] = [
     id: "speak-of-the-devil",
     title: "Speak of the Devil",
     meaning: "When someone appears just as you were talking about them",
-    explanation: "This idiom is used when someone arrives or appears right after you've been discussing them. It's often said as 'speak of the devil' or 'speak of the devil and he shall appear.'",
+    explanation: "This idiom is used when someone arrives right after you've been discussing them. It's often said as 'speak of the devil and he shall appear.'",
     examples: [
       "We were just talking about John, and speak of the devil, he walked in!",
       "I was mentioning your name, and speak of the devil, you called me.",
@@ -141,7 +142,7 @@ const idioms: Idiom[] = [
     examples: [
       "By going to the gym before work, I kill two birds with one stone—exercise and save time.",
       "Learning Spanish while traveling to Mexico lets you kill two birds with one stone.",
-      "This job interview is perfect; I'll get the job and network at the same time—two birds with one stone.",
+      "This job interview is perfect; I'll get the job and network at the same time.",
     ],
     dialogue: {
       person1: "Carlos",
@@ -160,7 +161,7 @@ const idioms: Idiom[] = [
     id: "when-pigs-fly",
     title: "When Pigs Fly",
     meaning: "Something that will never happen",
-    explanation: "This idiom is used to express that something is impossible or highly unlikely to occur. Since pigs cannot fly, the phrase humorously suggests that the mentioned event will never happen.",
+    explanation: "This idiom is used to express that something is impossible or highly unlikely to occur. Since pigs cannot fly, the phrase humorously suggests the event will never happen.",
     examples: [
       "He'll finish the project on time? When pigs fly!",
       "My brother will clean his room? When pigs fly!",
@@ -183,7 +184,7 @@ const idioms: Idiom[] = [
     id: "arm-and-leg",
     title: "Cost an Arm and a Leg",
     meaning: "Something is very expensive",
-    explanation: "This idiom describes something that costs a lot of money. It humorously suggests that you'd have to give up your arm and leg (something very valuable) to afford it.",
+    explanation: "This idiom describes something that costs a lot of money. It humorously suggests that you'd have to give up your arm and leg to afford it.",
     examples: [
       "That new car costs an arm and a leg!",
       "The hotel in the city center costs an arm and a leg, but it's worth it.",
@@ -206,7 +207,7 @@ const idioms: Idiom[] = [
     id: "ball-in-your-court",
     title: "Ball is in Your Court",
     meaning: "It's your turn to take action; the responsibility is yours",
-    explanation: "This idiom, borrowed from tennis, means that it's now someone's responsibility to make a decision or take action. The other person has done their part, and now it's your move.",
+    explanation: "Borrowed from tennis, this idiom means it's now someone's responsibility to make a decision or take action. The other person has done their part.",
     examples: [
       "I've given you all the information you need. The ball is in your court now.",
       "I've sent you the proposal. The ball is in your court to make a decision.",
@@ -229,7 +230,7 @@ const idioms: Idiom[] = [
     id: "bite-the-bullet",
     title: "Bite the Bullet",
     meaning: "Face a difficult situation with courage",
-    explanation: "This idiom means to face something difficult or unpleasant with bravery and determination. Historically, soldiers would bite bullets during surgery to cope with pain.",
+    explanation: "This idiom means to face something difficult or unpleasant with bravery. Historically, soldiers would bite bullets during surgery to cope with pain.",
     examples: [
       "I don't want to go to the dentist, but I need to bite the bullet.",
       "She bit the bullet and asked for a promotion despite her nervousness.",
@@ -298,7 +299,7 @@ const idioms: Idiom[] = [
     id: "break-a-leg",
     title: "Break a Leg",
     meaning: "Good luck, especially before a performance",
-    explanation: "This idiom is used to wish someone good luck, particularly before they perform in a play, concert, or other event. It's ironic because 'break a leg' sounds negative but actually means the opposite.",
+    explanation: "This idiom is used to wish someone good luck, particularly before they perform. It's ironic because 'break a leg' sounds negative but actually means the opposite.",
     examples: [
       "Good luck on your presentation! Break a leg!",
       "Before the concert, I told the musician, 'Break a leg!'",
@@ -340,94 +341,637 @@ const idioms: Idiom[] = [
     image: "/idioms/eye-to-eye.png",
     difficulty: "Intermediate",
   },
+  // --- 16 NEW IDIOMS ---
+  {
+    id: "under-the-weather",
+    title: "Under the Weather",
+    meaning: "Feeling sick or unwell",
+    explanation: "This idiom is used to describe feeling ill or not in good health. It originally came from sailors who would go below deck when the weather was bad, to avoid seasickness.",
+    examples: [
+      "I'm feeling a bit under the weather today, so I'll stay home.",
+      "She looked under the weather at the meeting — pale and tired.",
+      "He's been under the weather all week with a cold.",
+    ],
+    dialogue: {
+      person1: "Nadia",
+      person2: "Omar",
+      lines: [
+        { speaker: "Nadia", text: "You don't look well. Are you okay?" },
+        { speaker: "Omar", text: "I'm a bit under the weather. I think I have a cold." },
+        { speaker: "Nadia", text: "You should rest and drink plenty of water." },
+        { speaker: "Omar", text: "I will. Thanks for your concern!" },
+      ],
+    },
+    image: "/idioms/under-the-weather.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "spill-the-beans",
+    title: "Spill the Beans",
+    meaning: "To reveal a secret or confidential information",
+    explanation: "This idiom means to accidentally or intentionally reveal information that was supposed to be kept secret. It's often used when someone shares news before they were supposed to.",
+    examples: [
+      "Don't spill the beans about the surprise party!",
+      "She spilled the beans about the company merger before it was announced.",
+      "Who spilled the beans? Everyone knows about the secret project now.",
+    ],
+    dialogue: {
+      person1: "Fatima",
+      person2: "Youssef",
+      lines: [
+        { speaker: "Fatima", text: "Did you tell anyone about the surprise party?" },
+        { speaker: "Youssef", text: "I accidentally spilled the beans to Ahmed. I'm sorry!" },
+        { speaker: "Fatima", text: "Oh no! Now the surprise is ruined." },
+        { speaker: "Youssef", text: "I'll make it up to you. I promise!" },
+      ],
+    },
+    image: "/idioms/spill-the-beans.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "burning-bridges",
+    title: "Burning Bridges",
+    meaning: "Doing something that permanently damages a relationship",
+    explanation: "This idiom means to take an action that destroys a relationship or opportunity permanently, making it impossible to go back. Like burning a bridge, you can no longer cross back.",
+    examples: [
+      "Don't burn your bridges by quitting without notice.",
+      "He burned his bridges with his old employer by speaking badly about them.",
+      "Be careful not to burn bridges in this industry — it's very small.",
+    ],
+    dialogue: {
+      person1: "Karim",
+      person2: "Layla",
+      lines: [
+        { speaker: "Karim", text: "I'm thinking of quitting and telling my boss exactly what I think of him." },
+        { speaker: "Layla", text: "Be careful! You don't want to burn your bridges." },
+        { speaker: "Karim", text: "You're right. I might need a reference from him later." },
+        { speaker: "Layla", text: "Exactly. Leave professionally, even if you're frustrated." },
+      ],
+    },
+    image: "/idioms/burning-bridges.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "bite-off-more",
+    title: "Bite Off More Than You Can Chew",
+    meaning: "Take on more responsibility than you can handle",
+    explanation: "This idiom warns against taking on too much work or too many responsibilities at once. Just like trying to eat a bite that's too big, you can get overwhelmed.",
+    examples: [
+      "I think I bit off more than I can chew by taking three courses at once.",
+      "She bit off more than she could chew when she agreed to manage two teams.",
+      "Don't bite off more than you can chew — focus on one project at a time.",
+    ],
+    dialogue: {
+      person1: "Hassan",
+      person2: "Amina",
+      lines: [
+        { speaker: "Hassan", text: "I agreed to three freelance projects this month." },
+        { speaker: "Amina", text: "That sounds like you've bitten off more than you can chew!" },
+        { speaker: "Hassan", text: "I know. I'm already stressed and it's only day two." },
+        { speaker: "Amina", text: "Try to renegotiate deadlines before it's too late." },
+      ],
+    },
+    image: "/idioms/bite-off-more.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "hit-the-nail",
+    title: "Hit the Nail on the Head",
+    meaning: "To describe exactly what is causing a situation or problem",
+    explanation: "This idiom means to say or do exactly the right thing, or to describe a situation perfectly. Like a carpenter hitting a nail precisely, you've identified the exact point.",
+    examples: [
+      "You hit the nail on the head — that's exactly the problem.",
+      "Her analysis hit the nail on the head about why sales are declining.",
+      "The teacher hit the nail on the head when explaining the grammar rule.",
+    ],
+    dialogue: {
+      person1: "Tariq",
+      person2: "Salma",
+      lines: [
+        { speaker: "Tariq", text: "I think the problem is that we're not communicating clearly with clients." },
+        { speaker: "Salma", text: "You've hit the nail on the head! That's exactly it." },
+        { speaker: "Tariq", text: "So we need to improve our communication strategy." },
+        { speaker: "Salma", text: "Absolutely. Let's start with weekly updates." },
+      ],
+    },
+    image: "/idioms/hit-the-nail.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "on-the-fence",
+    title: "On the Fence",
+    meaning: "Unable to decide between two options; undecided",
+    explanation: "This idiom describes someone who hasn't made a decision yet and is neutral between two choices. Like sitting on a fence, you haven't chosen which side to jump to.",
+    examples: [
+      "I'm still on the fence about whether to accept the job offer.",
+      "She's on the fence about moving to a new city.",
+      "He's been on the fence about buying a car for months.",
+    ],
+    dialogue: {
+      person1: "Rania",
+      person2: "Bilal",
+      lines: [
+        { speaker: "Rania", text: "Have you decided which university to attend?" },
+        { speaker: "Bilal", text: "I'm still on the fence between two options." },
+        { speaker: "Rania", text: "What are the main differences?" },
+        { speaker: "Bilal", text: "One has a better program, the other is closer to home." },
+      ],
+    },
+    image: "/idioms/on-the-fence.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "pull-leg",
+    title: "Pull Someone's Leg",
+    meaning: "To joke or tease someone",
+    explanation: "This idiom means to joke with someone or tell them something untrue in a playful way. It's used when you're teasing someone for fun, not to be mean.",
+    examples: [
+      "Are you serious, or are you pulling my leg?",
+      "He told me he won the lottery, but I think he was pulling my leg.",
+      "Stop pulling my leg! That can't be true.",
+    ],
+    dialogue: {
+      person1: "Nour",
+      person2: "Samir",
+      lines: [
+        { speaker: "Nour", text: "I heard you got promoted to manager!" },
+        { speaker: "Samir", text: "Ha! I'm just pulling your leg. I'm still in the same position." },
+        { speaker: "Nour", text: "You got me! I was about to congratulate you." },
+        { speaker: "Samir", text: "Sorry! I couldn't resist the joke." },
+      ],
+    },
+    image: "/idioms/pull-leg.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "raining-cats-dogs",
+    title: "Raining Cats and Dogs",
+    meaning: "Raining very heavily",
+    explanation: "This idiom is used to describe extremely heavy rain. The origin is uncertain, but it's one of the most well-known English idioms for describing bad weather.",
+    examples: [
+      "Take an umbrella — it's raining cats and dogs outside.",
+      "The match was cancelled because it was raining cats and dogs.",
+      "I got completely soaked. It was raining cats and dogs!",
+    ],
+    dialogue: {
+      person1: "Hind",
+      person2: "Mehdi",
+      lines: [
+        { speaker: "Hind", text: "Did you go for your morning run today?" },
+        { speaker: "Mehdi", text: "No way! It was raining cats and dogs at 6 AM." },
+        { speaker: "Hind", text: "That's too bad. Maybe tomorrow will be better." },
+        { speaker: "Mehdi", text: "I hope so. I need to get back to my routine." },
+      ],
+    },
+    image: "/idioms/raining-cats-dogs.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "the-last-straw",
+    title: "The Last Straw",
+    meaning: "The final problem that makes a situation unbearable",
+    explanation: "This idiom refers to the final small problem that causes someone to lose patience or give up. It comes from the idea of a camel's back breaking under one final piece of straw.",
+    examples: [
+      "When he was late for the third time, that was the last straw.",
+      "The last straw was when they cut our lunch break to 20 minutes.",
+      "Her rude comment was the last straw — I decided to quit.",
+    ],
+    dialogue: {
+      person1: "Zineb",
+      person2: "Amine",
+      lines: [
+        { speaker: "Zineb", text: "I heard you resigned from your job. What happened?" },
+        { speaker: "Amine", text: "My boss cancelled my vacation for the third time. That was the last straw." },
+        { speaker: "Zineb", text: "I understand. You had been patient for a long time." },
+        { speaker: "Amine", text: "Exactly. Everyone has a limit." },
+      ],
+    },
+    image: "/idioms/the-last-straw.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "actions-speak",
+    title: "Actions Speak Louder Than Words",
+    meaning: "What you do is more important than what you say",
+    explanation: "This proverb means that people's actions are a better indicator of their true intentions and character than their words. Doing something is more meaningful than just talking about it.",
+    examples: [
+      "He always promises to help but never does. Actions speak louder than words.",
+      "Instead of just talking about change, let's do something. Actions speak louder than words.",
+      "She showed her love through actions, not just words.",
+    ],
+    dialogue: {
+      person1: "Maryam",
+      person2: "Khalid",
+      lines: [
+        { speaker: "Maryam", text: "He keeps saying he'll change, but nothing ever happens." },
+        { speaker: "Khalid", text: "Remember — actions speak louder than words." },
+        { speaker: "Maryam", text: "You're right. I need to see real change, not just promises." },
+        { speaker: "Khalid", text: "Give it time, but don't ignore what you see." },
+      ],
+    },
+    image: "/idioms/actions-speak.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "add-fuel",
+    title: "Add Fuel to the Fire",
+    meaning: "To make a bad situation worse",
+    explanation: "This idiom means to do or say something that makes an already bad or angry situation even worse. Like adding fuel to a fire, it intensifies the problem.",
+    examples: [
+      "His sarcastic comment only added fuel to the fire during the argument.",
+      "Don't add fuel to the fire by bringing up old arguments.",
+      "The manager's harsh email added fuel to the fire among the unhappy employees.",
+    ],
+    dialogue: {
+      person1: "Souad",
+      person2: "Rachid",
+      lines: [
+        { speaker: "Souad", text: "They're already arguing. Should I remind them about the deadline?" },
+        { speaker: "Rachid", text: "No! That will just add fuel to the fire." },
+        { speaker: "Souad", text: "You're right. I'll wait until they calm down." },
+        { speaker: "Rachid", text: "Good idea. Timing is everything." },
+      ],
+    },
+    image: "/idioms/add-fuel.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "back-to-square-one",
+    title: "Back to Square One",
+    meaning: "Having to start something again from the beginning",
+    explanation: "This idiom means that a plan or effort has failed and you must start over from the beginning. It comes from board games where landing on a certain square sends you back to the start.",
+    examples: [
+      "The project failed, so we're back to square one.",
+      "After the client rejected our proposal, we went back to square one.",
+      "My computer crashed and I lost all my work — back to square one!",
+    ],
+    dialogue: {
+      person1: "Ismail",
+      person2: "Houda",
+      lines: [
+        { speaker: "Ismail", text: "The client didn't like our design at all." },
+        { speaker: "Houda", text: "So we're back to square one?" },
+        { speaker: "Ismail", text: "Afraid so. We need to rethink the whole concept." },
+        { speaker: "Houda", text: "Let's schedule a brainstorming session tomorrow." },
+      ],
+    },
+    image: "/idioms/back-to-basics.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "curiosity-killed-cat",
+    title: "Curiosity Killed the Cat",
+    meaning: "Being too nosy or curious can get you into trouble",
+    explanation: "This idiom warns that being overly curious or nosy can lead to problems or danger. It's used to caution someone who is asking too many questions or prying into others' business.",
+    examples: [
+      "Don't open that box — curiosity killed the cat!",
+      "She kept asking about the surprise and I told her: curiosity killed the cat.",
+      "He snooped through his colleague's files. Curiosity killed the cat — he got fired.",
+    ],
+    dialogue: {
+      person1: "Widad",
+      person2: "Driss",
+      lines: [
+        { speaker: "Widad", text: "I wonder what's in that locked drawer in the office." },
+        { speaker: "Driss", text: "Curiosity killed the cat! Leave it alone." },
+        { speaker: "Widad", text: "But don't you want to know?" },
+        { speaker: "Driss", text: "Some things are better left unknown." },
+      ],
+    },
+    image: "/idioms/curiosity-killed-cat.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "every-cloud",
+    title: "Every Cloud Has a Silver Lining",
+    meaning: "Every difficult situation has a positive aspect",
+    explanation: "This idiom means that even in the worst situations, there is always something positive or hopeful to be found. It encourages optimism during hard times.",
+    examples: [
+      "I lost my job, but every cloud has a silver lining — I now have time to pursue my passion.",
+      "The lockdown was hard, but every cloud has a silver lining: I learned new skills.",
+      "She failed the exam, but every cloud has a silver lining — she studied harder and passed next time.",
+    ],
+    dialogue: {
+      person1: "Ghita",
+      person2: "Younes",
+      lines: [
+        { speaker: "Ghita", text: "I'm so upset. My flight was cancelled." },
+        { speaker: "Younes", text: "Every cloud has a silver lining! You get to spend more time here." },
+        { speaker: "Ghita", text: "I hadn't thought of it that way." },
+        { speaker: "Younes", text: "We can visit that museum you wanted to see!" },
+      ],
+    },
+    image: "/idioms/every-cloud.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "jump-on-bandwagon",
+    title: "Jump on the Bandwagon",
+    meaning: "To follow a trend or popular activity",
+    explanation: "This idiom means to join or support something because it has become popular, not necessarily because you believe in it. It often implies following trends without thinking critically.",
+    examples: [
+      "Everyone is jumping on the bandwagon with this new diet trend.",
+      "The company jumped on the bandwagon and created a TikTok account.",
+      "Don't just jump on the bandwagon — research before you invest.",
+    ],
+    dialogue: {
+      person1: "Najat",
+      person2: "Fouad",
+      lines: [
+        { speaker: "Najat", text: "I'm thinking of starting a podcast. Everyone seems to have one." },
+        { speaker: "Fouad", text: "Don't just jump on the bandwagon. Do you have something unique to say?" },
+        { speaker: "Najat", text: "Good point. I should think about my niche first." },
+        { speaker: "Fouad", text: "Exactly. Quality over trend!" },
+      ],
+    },
+    image: "/idioms/jump-on-bandwagon.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "miss-the-boat",
+    title: "Miss the Boat",
+    meaning: "To miss an opportunity",
+    explanation: "This idiom means to fail to take advantage of an opportunity, often because you were too slow or too late. Like missing a boat that has already left the dock.",
+    examples: [
+      "I missed the boat on that investment — the price has doubled since.",
+      "Don't miss the boat on this job offer. It's a great opportunity.",
+      "She missed the boat by not applying for the scholarship in time.",
+    ],
+    dialogue: {
+      person1: "Ilham",
+      person2: "Badr",
+      lines: [
+        { speaker: "Ilham", text: "Did you apply for the early bird discount?" },
+        { speaker: "Badr", text: "No, I forgot. I think I missed the boat on that one." },
+        { speaker: "Ilham", text: "That's a shame. It was 40% off." },
+        { speaker: "Badr", text: "I'll set a reminder next time. Lesson learned!" },
+      ],
+    },
+    image: "/idioms/miss-the-boat.png",
+    difficulty: "Intermediate",
+  },
+  {
+    id: "no-pain-no-gain",
+    title: "No Pain, No Gain",
+    meaning: "You have to work hard and endure difficulty to achieve success",
+    explanation: "This idiom means that achieving something worthwhile requires effort and sometimes discomfort. It's commonly used in fitness, education, and career contexts.",
+    examples: [
+      "Learning a language is hard, but no pain, no gain!",
+      "She trained every day despite being tired. No pain, no gain.",
+      "Starting a business is tough, but remember: no pain, no gain.",
+    ],
+    dialogue: {
+      person1: "Samira",
+      person2: "Adil",
+      lines: [
+        { speaker: "Samira", text: "I'm exhausted from studying every night." },
+        { speaker: "Adil", text: "No pain, no gain! Your exams are next week." },
+        { speaker: "Samira", text: "I know. I just need to push through." },
+        { speaker: "Adil", text: "You'll thank yourself when you see the results." },
+      ],
+    },
+    image: "/idioms/no-pain-no-gain.png",
+    difficulty: "Beginner",
+  },
+  {
+    id: "steal-thunder",
+    title: "Steal Someone's Thunder",
+    meaning: "To take attention or credit away from someone else",
+    explanation: "This idiom means to do something that takes attention or recognition away from another person, often unintentionally. It can also mean to use someone else's idea before they do.",
+    examples: [
+      "She announced her promotion at my birthday party and stole my thunder.",
+      "He presented the idea first and stole his colleague's thunder.",
+      "Don't steal her thunder — let her share the good news herself.",
+    ],
+    dialogue: {
+      person1: "Leila",
+      person2: "Hamza",
+      lines: [
+        { speaker: "Leila", text: "I was about to announce my engagement, but my sister told everyone first!" },
+        { speaker: "Hamza", text: "She totally stole your thunder!" },
+        { speaker: "Leila", text: "I was so disappointed. It was my moment." },
+        { speaker: "Hamza", text: "Talk to her about it. She probably didn't mean any harm." },
+      ],
+    },
+    image: "/idioms/steal-thunder.png",
+    difficulty: "Advanced",
+  },
 ];
 
-export default function IdiomGuide() {
-  const difficultyColors = {
-    Beginner: "bg-green-100 text-green-800",
-    Intermediate: "bg-yellow-100 text-yellow-800",
-    Advanced: "bg-red-100 text-red-800",
+type TabType = "explanation" | "examples" | "dialogue";
+
+function IdiomCard({ idiom }: { idiom: Idiom }) {
+  const [activeTab, setActiveTab] = useState<TabType>("explanation");
+  const [expanded, setExpanded] = useState(false);
+
+  const difficultyColors: Record<string, string> = {
+    Beginner: "bg-green-100 text-green-800 border-green-200",
+    Intermediate: "bg-yellow-100 text-yellow-800 border-yellow-200",
+    Advanced: "bg-red-100 text-red-800 border-red-200",
   };
 
   return (
-    <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">English Idioms Guide</h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Learn common English idioms with explanations, examples, and real-world dialogues
+    <Card className="overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 border border-gray-100">
+      {/* Card Header - always visible */}
+      <button
+        className="w-full text-left"
+        onClick={() => setExpanded(!expanded)}
+        style={{ WebkitTapHighlightColor: "transparent" }}
+      >
+        <div className="flex items-center gap-4 p-4">
+          <img
+            src={idiom.image}
+            alt={idiom.title}
+            className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl flex-shrink-0"
+            onError={(e) => {
+              e.currentTarget.src = `https://placehold.co/80x80/e2e8f0/64748b?text=${encodeURIComponent(idiom.title[0])}`;
+            }}
+          />
+          <div className="flex-1 min-w-0">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 leading-tight">{idiom.title}</h3>
+              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full border flex-shrink-0 ${difficultyColors[idiom.difficulty]}`}>
+                {idiom.difficulty}
+              </span>
+            </div>
+            <p className="text-sm text-blue-600 font-medium mt-1 leading-snug">{idiom.meaning}</p>
+          </div>
+          <div className="flex-shrink-0 text-gray-400 ml-1">
+            {expanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+          </div>
+        </div>
+      </button>
+
+      {/* Expanded Content */}
+      {expanded && (
+        <div className="border-t border-gray-100">
+          {/* Large image on expand */}
+          <div className="px-4 pt-4">
+            <img
+              src={idiom.image}
+              alt={idiom.title}
+              className="w-full max-h-56 object-cover rounded-xl"
+              onError={(e) => {
+                e.currentTarget.src = `https://placehold.co/400x200/e2e8f0/64748b?text=${encodeURIComponent(idiom.title)}`;
+              }}
+            />
+          </div>
+
+          {/* Tab buttons */}
+          <div className="flex gap-2 px-4 pt-4 pb-1">
+            <button
+              onClick={() => setActiveTab("explanation")}
+              className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                activeTab === "explanation"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
+              <BookOpen className="w-3.5 h-3.5" />
+              <span>Explain</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("examples")}
+              className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                activeTab === "examples"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
+              <List className="w-3.5 h-3.5" />
+              <span>Examples</span>
+            </button>
+            <button
+              onClick={() => setActiveTab("dialogue")}
+              className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                activeTab === "dialogue"
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>Dialogue</span>
+            </button>
+          </div>
+
+          {/* Tab content */}
+          <div className="px-4 pb-4 pt-3">
+            {activeTab === "explanation" && (
+              <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{idiom.explanation}</p>
+            )}
+            {activeTab === "examples" && (
+              <ul className="space-y-2">
+                {idiom.examples.map((example, idx) => (
+                  <li key={idx} className="flex gap-2 text-sm sm:text-base">
+                    <span className="text-blue-500 font-bold flex-shrink-0 mt-0.5">•</span>
+                    <span className="text-gray-700 italic">"{example}"</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {activeTab === "dialogue" && (
+              <div className="bg-blue-50 rounded-xl p-3 space-y-2">
+                <p className="text-xs font-semibold text-blue-600 uppercase tracking-wide mb-3">
+                  Conversation Example
+                </p>
+                {idiom.dialogue.lines.map((line, idx) => (
+                  <div key={idx} className={`flex gap-2 ${idx % 2 === 0 ? "" : "flex-row-reverse"}`}>
+                    <div className={`max-w-[80%] rounded-xl px-3 py-2 text-sm ${
+                      idx % 2 === 0
+                        ? "bg-white text-gray-800 rounded-tl-none shadow-sm"
+                        : "bg-blue-600 text-white rounded-tr-none"
+                    }`}>
+                      <span className={`text-xs font-semibold block mb-0.5 ${idx % 2 === 0 ? "text-blue-600" : "text-blue-100"}`}>
+                        {line.speaker}
+                      </span>
+                      {line.text}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </Card>
+  );
+}
+
+export default function IdiomGuide() {
+  const [filter, setFilter] = useState<"All" | "Beginner" | "Intermediate" | "Advanced">("All");
+  const [search, setSearch] = useState("");
+
+  const filtered = idioms.filter((idiom) => {
+    const matchesDifficulty = filter === "All" || idiom.difficulty === filter;
+    const matchesSearch =
+      search === "" ||
+      idiom.title.toLowerCase().includes(search.toLowerCase()) ||
+      idiom.meaning.toLowerCase().includes(search.toLowerCase());
+    return matchesDifficulty && matchesSearch;
+  });
+
+  return (
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-2">English Idioms Guide</h2>
+        <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
+          {idioms.length} common English idioms with explanations, examples, and real conversations
         </p>
       </div>
 
-      <div className="grid gap-6">
-        {idioms.map((idiom) => (
-          <Card key={idiom.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="grid md:grid-cols-3 gap-6 p-6">
-              {/* Image */}
-              <div className="flex items-center justify-center">
-                <img
-                  src={idiom.image}
-                  alt={idiom.title}
-                  className="w-full h-64 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://via.placeholder.com/300x300?text=" + idiom.title;
-                  }}
-                />
-              </div>
+      {/* Search */}
+      <div className="max-w-md mx-auto">
+        <input
+          type="text"
+          placeholder="Search idioms..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+        />
+      </div>
 
-              {/* Content */}
-              <div className="md:col-span-2">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{idiom.title}</h3>
-                    <p className="text-lg text-blue-600 font-semibold mb-2">{idiom.meaning}</p>
-                  </div>
-                  <Badge className={difficultyColors[idiom.difficulty]}>
-                    {idiom.difficulty}
-                  </Badge>
-                </div>
-
-                <Tabs defaultValue="explanation" className="w-full">
-                  <TabsList className="grid w-full grid-cols-3">
-                    <TabsTrigger value="explanation">Explanation</TabsTrigger>
-                    <TabsTrigger value="examples">Examples</TabsTrigger>
-                    <TabsTrigger value="dialogue">Dialogue</TabsTrigger>
-                  </TabsList>
-
-                  <TabsContent value="explanation" className="mt-4">
-                    <p className="text-gray-700 leading-relaxed">{idiom.explanation}</p>
-                  </TabsContent>
-
-                  <TabsContent value="examples" className="mt-4">
-                    <ul className="space-y-3">
-                      {idiom.examples.map((example, idx) => (
-                        <li key={idx} className="flex gap-3">
-                          <span className="text-blue-600 font-bold flex-shrink-0">•</span>
-                          <span className="text-gray-700">{example}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </TabsContent>
-
-                  <TabsContent value="dialogue" className="mt-4">
-                    <div className="bg-gray-50 p-4 rounded-lg space-y-3">
-                      <p className="text-sm font-semibold text-gray-600 mb-4">
-                        Dialogue: "{idiom.dialogue.person1}" & "{idiom.dialogue.person2}"
-                      </p>
-                      {idiom.dialogue.lines.map((line, idx) => (
-                        <div key={idx} className="flex gap-3">
-                          <span className="font-semibold text-blue-600 min-w-fit">
-                            {line.speaker}:
-                          </span>
-                          <span className="text-gray-700">{line.text}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </TabsContent>
-                </Tabs>
-              </div>
-            </div>
-          </Card>
+      {/* Filter buttons */}
+      <div className="flex flex-wrap justify-center gap-2">
+        {(["All", "Beginner", "Intermediate", "Advanced"] as const).map((level) => (
+          <button
+            key={level}
+            onClick={() => setFilter(level)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              filter === level
+                ? "bg-blue-600 text-white shadow-sm"
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+            }`}
+            style={{ WebkitTapHighlightColor: "transparent" }}
+          >
+            {level} {level !== "All" && `(${idioms.filter((i) => i.difficulty === level).length})`}
+          </button>
         ))}
+      </div>
+
+      {/* Count */}
+      <p className="text-center text-sm text-gray-400">
+        Showing {filtered.length} of {idioms.length} idioms
+      </p>
+
+      {/* Idiom cards */}
+      <div className="grid gap-3 sm:gap-4">
+        {filtered.length > 0 ? (
+          filtered.map((idiom) => <IdiomCard key={idiom.id} idiom={idiom} />)
+        ) : (
+          <div className="text-center py-12 text-gray-400">
+            <p className="text-lg">No idioms found for "{search}"</p>
+            <button
+              onClick={() => { setSearch(""); setFilter("All"); }}
+              className="mt-3 text-blue-600 hover:underline text-sm"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

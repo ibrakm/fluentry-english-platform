@@ -125,48 +125,48 @@ export default function IdiomMatcher() {
         <CardDescription>Match each idiom with its correct meaning. Score: {score}/{idioms.length}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6">
           {/* Idioms Column */}
-          <div className="space-y-3">
-            <h3 className="font-semibold text-lg mb-4">Idioms</h3>
+          <div className="space-y-2">
+            <h3 className="font-semibold text-base mb-3 text-blue-700 uppercase tracking-wide text-xs">Idioms</h3>
             {idioms.map((item, index) => (
-              <Button
+              <button
                 key={index}
                 onClick={() => handleIdiomClick(index)}
                 disabled={matched.includes(index)}
-                variant="outline"
-                className={`w-full h-auto py-4 px-6 text-left justify-start whitespace-normal ${
-                  matched.includes(index) ? 'bg-green-100 border-green-500 opacity-50' :
-                  selectedIdiom === index ? 'bg-primary text-primary-foreground border-primary' :
-                  'hover:bg-accent'
+                style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                className={`w-full min-h-[48px] py-3 px-4 text-left rounded-xl border-2 text-sm font-medium transition-all duration-150 flex items-center justify-between gap-2 ${
+                  matched.includes(index) ? 'bg-green-50 border-green-400 text-green-700 opacity-60' :
+                  selectedIdiom === index ? 'bg-blue-600 text-white border-blue-600 shadow-md' :
+                  'bg-white border-gray-200 hover:border-blue-400 hover:bg-blue-50 active:bg-blue-100'
                 }`}
               >
-                {item.idiom}
-                {matched.includes(index) && <span className="ml-auto">✓</span>}
-              </Button>
+                <span>{item.idiom}</span>
+                {matched.includes(index) && <span className="text-green-600 font-bold flex-shrink-0">✓</span>}
+              </button>
             ))}
           </div>
 
           {/* Meanings Column */}
-          <div className="space-y-3">
-            <h3 className="font-semibold text-lg mb-4">Meanings</h3>
+          <div className="space-y-2">
+            <h3 className="font-semibold text-base mb-3 text-orange-600 uppercase tracking-wide text-xs">Meanings</h3>
             {shuffledMeanings.map((item, index) => {
               const originalIndex = idioms.findIndex(i => i.meaning === item.meaning);
               return (
-                <Button
+                <button
                   key={index}
                   onClick={() => handleMeaningClick(index)}
                   disabled={matched.includes(index)}
-                  variant="outline"
-                  className={`w-full h-auto py-4 px-6 text-left justify-start whitespace-normal ${
-                    matched.includes(index) ? 'bg-green-100 border-green-500 opacity-50' :
-                    selectedMeaning === index ? 'bg-primary text-primary-foreground border-primary' :
-                    'hover:bg-accent'
+                  style={{ WebkitTapHighlightColor: 'transparent', touchAction: 'manipulation' }}
+                  className={`w-full min-h-[48px] py-3 px-4 text-left rounded-xl border-2 text-sm font-medium transition-all duration-150 flex items-center justify-between gap-2 ${
+                    matched.includes(index) ? 'bg-green-50 border-green-400 text-green-700 opacity-60' :
+                    selectedMeaning === index ? 'bg-orange-500 text-white border-orange-500 shadow-md' :
+                    'bg-white border-gray-200 hover:border-orange-400 hover:bg-orange-50 active:bg-orange-100'
                   }`}
                 >
-                  {item.meaning}
-                  {matched.includes(index) && <span className="ml-auto">✓</span>}
-                </Button>
+                  <span>{item.meaning}</span>
+                  {matched.includes(index) && <span className="text-green-600 font-bold flex-shrink-0">✓</span>}
+                </button>
               );
             })}
           </div>
