@@ -1,17 +1,30 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers, Calendar } from "lucide-react";
 import { useState } from "react";
+
+const navLinks = [
+  { href: "/", label: "Home", icon: Home },
+  { href: "/about", label: "About", icon: Info },
+  { href: "/courses", label: "Courses", icon: BookOpen },
+  { href: "/pricing", label: "Pricing", icon: Tag },
+  { href: "/free-test", label: "Free Test", icon: ClipboardList },
+  { href: "/free-resources", label: "Free Resources", icon: Layers },
+];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+          <Link
+            href="/"
+            className="flex items-center gap-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
+            style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
+          >
             <span className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-3 py-1 rounded-lg">
               Fluentry
             </span>
@@ -19,24 +32,15 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              About
-            </Link>
-            <Link href="/courses" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Courses
-            </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Pricing
-            </Link>
-            <Link href="/free-test" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Free Test
-            </Link>
-            <Link href="/free-resources" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Free Resources
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
             <Link href="/book-lesson">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Book a Lesson
@@ -44,73 +48,53 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-            <Link
-              href="/"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/courses"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Courses
-            </Link>
-            <Link
-              href="/pricing"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link
-              href="/free-test"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Free Test
-            </Link>
-            <Link
-              href="/free-resources"
-              className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Free Resources
-            </Link>
-            <Link href="/book-lesson">
-              <Button
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                onClick={() => setIsOpen(false)}
-              >
-                Book a Lesson
-              </Button>
-            </Link>
-          </nav>
-        )}
       </div>
+
+      {/* Mobile Navigation Drawer */}
+      {isOpen && (
+        <div className="md:hidden border-t border-gray-100 bg-white shadow-lg">
+          <nav className="flex flex-col py-2">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
+                  className="flex items-center gap-3 px-5 py-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors font-medium text-base w-full"
+                >
+                  <Icon className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                  <span>{link.label}</span>
+                </Link>
+              );
+            })}
+
+            {/* Book a Lesson CTA */}
+            <div className="px-5 py-3 border-t border-gray-100 mt-1">
+              <Link href="/book-lesson" onClick={() => setIsOpen(false)}>
+                <Button
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 text-base rounded-xl"
+                  style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent", minHeight: "52px" }}
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Book a Lesson
+                </Button>
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
-

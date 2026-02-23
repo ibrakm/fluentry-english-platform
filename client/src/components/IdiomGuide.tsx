@@ -85,7 +85,7 @@ const idioms: Idiom[] = [
         { speaker: "Lisa", text: "Send the correct file and apologize quickly." },
       ],
     },
-    image: "/idioms/cat-out-of-bag.png",
+    image: "/idioms/dont-cry-spilled-milk.png",
     difficulty: "Beginner",
   },
   {

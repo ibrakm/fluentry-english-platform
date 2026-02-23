@@ -10,7 +10,7 @@
  */
 
 import { useEffect, useState, useCallback } from "react";
-import { X, Zap, ArrowRight } from "lucide-react";
+import { X, Star, ArrowRight, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
@@ -38,7 +38,6 @@ export function ExitIntentPopup() {
     if (!hasBeenOnPageLong) return;
 
     const handleMouseLeave = (e: MouseEvent) => {
-      // Only trigger when mouse exits from the top of the page
       if (e.clientY <= 5) {
         showPopup();
       }
@@ -59,7 +58,6 @@ export function ExitIntentPopup() {
       const currentScrollY = window.scrollY;
       if (currentScrollY < lastScrollY) {
         scrollUpCount++;
-        // Trigger after 3 consecutive scroll-up events and user has scrolled down first
         if (scrollUpCount >= 3 && lastScrollY > 300) {
           showPopup();
         }
@@ -89,65 +87,95 @@ export function ExitIntentPopup() {
       <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 pointer-events-none">
         <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full pointer-events-auto animate-in zoom-in-95 duration-300 overflow-hidden">
 
-          {/* Header — gradient */}
-          <div className="bg-gradient-to-br from-blue-900 to-blue-700 text-white p-6 relative text-center">
+          {/* Header */}
+          <div className="bg-gradient-to-br from-blue-700 to-blue-500 text-white p-6 relative text-center">
             <button
               onClick={close}
-              className="absolute top-4 right-4 text-blue-300 hover:text-white transition-colors"
+              className="absolute top-4 right-4 text-blue-300 hover:text-white transition-colors p-1"
               aria-label="Close"
+              style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="text-4xl mb-3">⚠️</div>
-            <h2 className="text-xl font-extrabold mb-1">
-              انتظر! — Attends !
+            {/* Trophy icon */}
+            <div className="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
+              <Trophy className="w-7 h-7 text-white" />
+            </div>
+
+            <h2 className="text-xl font-extrabold mb-1 leading-tight">
+              🎯 اكتشف مستواك الحقيقي مجاناً
             </h2>
-            <p className="text-yellow-300 font-semibold text-lg">
-              قبل ما تمشي...
-            </p>
-            <p className="text-blue-200 text-sm mt-1 italic">
-              Avant de partir...
+            <p className="text-blue-100 text-sm mt-1">
+              Découvre ton vrai niveau en anglais — gratuitement
             </p>
           </div>
 
           {/* Body */}
-          <div className="p-6 text-center">
-            <p className="text-gray-800 font-bold text-lg mb-1">
-              خد التيست المجاني — 5 دقايق بس!
+          <div className="p-6">
+
+            {/* Value proposition */}
+            <p className="text-gray-800 font-bold text-base mb-1 text-center">
+              في 5 دقايق فقط، غادي تعرف:
             </p>
-            <p className="text-gray-500 text-sm italic mb-4">
-              Fais le test gratuit — seulement 5 minutes !
+            <p className="text-gray-400 text-xs text-center italic mb-4">
+              En 5 minutes seulement, tu vas savoir :
             </p>
 
-            <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-5 text-left">
-              <p className="text-sm font-semibold text-orange-800 mb-2">🎯 شنو غادي تعرف:</p>
-              <ul className="text-sm text-gray-700 space-y-1">
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  مستواك الحقيقي في الإنجليزية (A1 → C2)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  نقاط ضعفك بالضبط
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  الباقة المناسبة ليك
-                </li>
-              </ul>
-              <p className="text-xs text-gray-400 mt-2 italic">
-                Découvre ton niveau exact, tes points faibles, et le programme adapté.
+            {/* Benefits list */}
+            <div className="space-y-2.5 mb-5">
+              <div className="flex items-start gap-3 bg-blue-50 rounded-xl p-3">
+                <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Star className="w-3.5 h-3.5 text-white fill-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">وين أنت بالضبط — من A1 لـ C2</p>
+                  <p className="text-xs text-gray-400 italic">Exactement où tu en es — de A1 à C2</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-orange-50 rounded-xl p-3">
+                <div className="w-7 h-7 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Zap className="w-3.5 h-3.5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">شنو اللي خاصك تتحسن فيه أكثر</p>
+                  <p className="text-xs text-gray-400 italic">Ce sur quoi tu dois travailler en priorité</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 bg-green-50 rounded-xl p-3">
+                <div className="w-7 h-7 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <ArrowRight className="w-3.5 h-3.5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">الخطة المثالية باش توصل لهدفك بسرعة</p>
+                  <p className="text-xs text-gray-400 italic">Le plan idéal pour atteindre ton objectif rapidement</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social proof */}
+            <div className="flex items-center justify-center gap-2 mb-5">
+              <div className="flex -space-x-2">
+                {["🧑‍💼", "👩‍🎓", "👨‍💻"].map((emoji, i) => (
+                  <div key={i} className="w-7 h-7 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-sm">{emoji}</div>
+                ))}
+              </div>
+              <p className="text-xs text-gray-500">
+                <span className="font-bold text-gray-700">+200 طالب</span> خدو هاد التيست هاد الشهر
               </p>
             </div>
 
+            {/* CTA */}
             <Link href="/free-test" onClick={close}>
               <Button
                 size="lg"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-base py-5 rounded-xl shadow-lg shadow-orange-500/30 mb-3"
+                style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent", minHeight: "52px" }}
               >
-                <Zap className="w-5 h-5 mr-2" />
-                ابدأ التيست المجاني الآن
+                <Trophy className="w-5 h-5 mr-2" />
+                اكتشف مستواك الآن — مجاناً
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -157,21 +185,24 @@ export function ExitIntentPopup() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={close}
+              className="block"
             >
               <Button
                 variant="outline"
                 size="lg"
                 className="w-full border-green-500 text-green-700 hover:bg-green-50 font-semibold text-sm py-4 rounded-xl mb-3"
+                style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent", minHeight: "48px" }}
               >
-                💬 راسلني على واتساب — Contacte-moi sur WhatsApp
+                💬 تواصل معي مباشرة على واتساب
               </Button>
             </a>
 
             <button
               onClick={close}
-              className="text-xs text-gray-400 hover:text-gray-600 transition-colors underline"
+              className="w-full text-xs text-gray-400 hover:text-gray-600 transition-colors py-1"
+              style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
             >
-              لا شكراً، سأغادر الآن · Non merci, je pars
+              ربما في وقت آخر · Peut-être une autre fois
             </button>
           </div>
         </div>
