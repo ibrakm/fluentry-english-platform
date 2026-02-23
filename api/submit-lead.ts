@@ -21,6 +21,16 @@ function sanitize(value: unknown, maxLength = 200): string {
     .substring(0, maxLength);
 }
 
+// Sanitize a number field — accept number or numeric string
+function sanitizeNumber(value: unknown): string {
+  if (typeof value === "number" && !isNaN(value)) return String(value);
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (trimmed !== "" && !isNaN(Number(trimmed))) return trimmed;
+  }
+  return "";
+}
+
 // Validate a phone number loosely (digits, spaces, +, -)
 function isValidPhone(phone: string): boolean {
   return /^[\d\s\+\-\(\)]{6,20}$/.test(phone);
@@ -61,15 +71,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // ── Sanitize and whitelist fields — never forward raw user input ─────────
-    // Map frontend field names to what we need for Google Sheets
     const name = sanitize(body.name, 100);
     const email = sanitize(body.email, 100);
-    const phone = sanitize(body.phone, 30);  // Frontend sends 'phone', not 'whatsapp'
+    // Accept both 'phone' and 'whatsapp' field names from the frontend
+    const phone = sanitize(body.phone || body.whatsapp, 30);
     const level = sanitize(body.level, 50);
     const levelTitle = sanitize(body.levelTitle, 100);
-    const score = sanitize(body.score, 20);
-    const total = sanitize(body.total, 20);
-    const percentage = sanitize(body.percentage, 20);
+    // Use sanitizeNumber so numeric values survive the sanitizer
+    const score = sanitizeNumber(body.score);
+    const total = sanitizeNumber(body.total);
+    const percentage = sanitizeNumber(body.percentage);
     const testType = sanitize(body.testType, 100);
     const recommendation = sanitize(body.recommendation, 200);
 
@@ -81,20 +92,33 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(400).json({ error: "Invalid phone number format" });
     }
 
-    // ── Build a clean, controlled payload — no spread of raw body ────────────
-    // Include all fields that the Google Apps Script expects
+    // ── Build a clean, controlled payload ────────────────────────────────────
+    // Send BOTH 'phone' and 'whatsapp' so the GAS template works regardless
+    // of which field name it reads. Also send 'Email' (capitalised) as alias.
     const safePayload = {
       name,
+      // Both casing variants so GAS template matches either
       email: email || "Not provided",
+      Email: email || "Not provided",
+      // Both field names for WhatsApp/phone
       phone: phone || "Not provided",
-      level,
-      levelTitle,
-      score,
-      total,
-      percentage,
-      testType,
+      whatsapp: phone || "Not provided",
+      WhatsApp: phone || "Not provided",
+      // Level with and without title combined, to cover all GAS template variants
+      level: levelTitle ? `${level} — ${levelTitle}` : level,
+      levelOnly: level,
+      levelTitle: levelTitle || "",
+      // Score fields as both string and number
+      score: score || "N/A",
+      total: total || "N/A",
+      percentage: percentage ? `${percentage}%` : "N/A",
+      scoreRaw: score,
+      totalRaw: total,
+      percentageRaw: percentage,
+      testType: testType || "English Test",
       recommendation,
       timestamp: new Date().toISOString(),
+      source: "Fluentry Website",
     };
 
     // ── Forward to Google Sheets ──────────────────────────────────────────────

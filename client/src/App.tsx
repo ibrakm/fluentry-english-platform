@@ -30,6 +30,7 @@ const BestTechniquesImproveEnglishSpeaking = lazy(() => import("./pages/blog/Bes
 const IeltsSpeakingTestSuccessGuide = lazy(() => import("./pages/blog/IeltsSpeakingTestSuccessGuide"));
 const BusinessEnglishEmailWritingGuide = lazy(() => import("./pages/blog/BusinessEnglishEmailWritingGuide"));
 const ImproveEnglishPronunciationArabicSpeakers = lazy(() => import("./pages/blog/ImproveEnglishPronunciationArabicSpeakers"));
+const HowToPassIeltsInMorocco = lazy(() => import("./pages/blog/HowToPassIeltsInMorocco"));
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
@@ -64,6 +65,7 @@ function Router() {
         <Route path={"/blog/ielts-speaking-test-success-guide"} component={IeltsSpeakingTestSuccessGuide} />
         <Route path={"/blog/business-english-email-writing-guide"} component={BusinessEnglishEmailWritingGuide} />
         <Route path={"/blog/improve-english-pronunciation-arabic-speakers"} component={ImproveEnglishPronunciationArabicSpeakers} />
+        <Route path={"/blog/how-to-pass-ielts-in-morocco"} component={HowToPassIeltsInMorocco} />
         <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />

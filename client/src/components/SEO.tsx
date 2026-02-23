@@ -20,10 +20,10 @@ interface SEOProps {
   };
 }
 
-const BASE_URL = "https://fluentry-english-platform.vercel.app";
+const BASE_URL = "https://fluentry.com";
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.png`;
 const DEFAULT_KEYWORDS =
-  "English coaching Morocco, online English lessons Morocco, English teacher Tangier, TESOL certified coach Morocco, Business English Morocco, IELTS preparation Morocco, learn English online Morocco, 1-on-1 English coaching, private English lessons Morocco, English fluency Morocco, cours anglais en ligne Maroc, تعلم الإنجليزية المغرب, English tutor Morocco, English speaking course Morocco, online English teacher Morocco";
+  "English coaching Morocco, online English lessons Morocco, English teacher Tangier, TESOL certified coach Morocco, Business English Morocco, IELTS preparation Morocco, IELTS Morocco 2026, learn English online Morocco, 1-on-1 English coaching, private English lessons Morocco, English fluency Morocco, cours anglais en ligne Maroc, تعلم الإنجليزية المغرب, English tutor Morocco, English speaking course Morocco, online English teacher Morocco, English lessons Casablanca, English lessons Rabat, English lessons Marrakech, English lessons Fes, English coach Tangier, CEFR test Morocco, English for job interviews Morocco, business English Casablanca, English pronunciation Morocco, speak English fluently Morocco, تعلم الانجليزية اون لاين المغرب, cours anglais Casablanca, cours anglais Maroc en ligne, professeur anglais Maroc";
 
 export const SEO = ({
   title,
