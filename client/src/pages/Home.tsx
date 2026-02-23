@@ -6,14 +6,57 @@ import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { SEO } from "@/components/SEO";
 
+const homeFAQ = [
+  {
+    question: "How much does English coaching cost in Morocco?",
+    answer: "Fluentry offers English coaching from 62.50 MAD per lesson. Packages start at 250 MAD for 4 sessions, 450 MAD for 8 sessions, and 600 MAD for 12 sessions. All lessons are 1-on-1 with a TESOL-certified coach.",
+  },
+  {
+    question: "Can I learn English online in Morocco?",
+    answer: "Yes! Fluentry offers 100% online 1-on-1 English coaching for students and professionals in Morocco. Sessions are conducted via video call, flexible to your schedule.",
+  },
+  {
+    question: "How do I know my English level before starting?",
+    answer: "Fluentry offers a free CEFR English level test that takes only 5 minutes. It assesses your level from A1 (beginner) to C2 (mastery) and gives you a personalized learning recommendation.",
+  },
+  {
+    question: "Is Mr. Ibrahim K. a certified English teacher?",
+    answer: "Yes. Mr. Ibrahim K. holds a TESOL certification and has helped hundreds of Moroccan students and professionals improve their English for work, travel, and academic purposes.",
+  },
+  {
+    question: "What types of English courses does Fluentry offer?",
+    answer: "Fluentry offers General English, Business English, IELTS Preparation, TOEFL Preparation, Conversation Practice, and Pronunciation Coaching — all tailored to your specific goals.",
+  },
+  {
+    question: "How quickly can I improve my English?",
+    answer: "With consistent 1-on-1 coaching, most students see noticeable improvement within 4–8 weeks. The pace depends on your starting level, goals, and practice outside sessions.",
+  },
+];
+
 export default function Home() {
-  const title = "1-on-1 English Coaching Online | Fluentry Morocco";
-  const description = "Achieve fluency with personalized 1-on-1 English coaching from Morocco's TESOL-certified expert. Take a free CEFR level test, explore Business English, IELTS/TOEFL prep, and book your first lesson today. From 62.50 MAD/lesson.";
+  const title = "English Coaching Online Morocco | 1-on-1 TESOL-Certified Lessons from 62.50 MAD";
+  const description = "Personalized English coaching in Morocco with TESOL-certified Mr. Ibrahim K. Free CEFR test, Business English, IELTS prep. Book your first lesson today.";
   const [bannerVisible, setBannerVisible] = useState(true);
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://fluentry-english-platform.vercel.app"
+      }
+    ]
+  };
 
   return (
     <>
-      <SEO title={title} description={description} path="/" />
+      <SEO title={title} description={description} path="/" faqItems={homeFAQ} />
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
       <div className="min-h-screen">
 
       {/* Bilingual Moroccan Banner */}

@@ -4,13 +4,56 @@ import { CheckCircle, Clock, Users, Zap, Star } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 
+const pricingFAQ = [
+  {
+    question: "How much does a private English lesson cost in Morocco?",
+    answer: "At Fluentry, private English lessons start from 62.50 MAD per session. The Starter Pack (4 sessions) is 250 MAD, the Growth Pack (8 sessions) is 450 MAD, and the Intensive Pack (12 sessions) is 600 MAD.",
+  },
+  {
+    question: "Is there a free trial or consultation available?",
+    answer: "Yes! Fluentry offers a free CEFR English level test online. You can also book a free consultation to discuss your goals before committing to a package.",
+  },
+  {
+    question: "Can I pay per lesson instead of a package?",
+    answer: "Yes, individual sessions are available. However, packages offer better value — saving you up to 20% compared to paying per lesson.",
+  },
+  {
+    question: "What payment methods are accepted?",
+    answer: "Fluentry accepts payment via bank transfer, CIH, Barid Bank, and other local Moroccan payment methods. Contact Mr. Ibrahim on WhatsApp for details.",
+  },
+];
+
 export default function Pricing() {
-  const title = "Affordable English Lesson Pricing & Packages | Fluentry";
-  const description = "View Fluentry's clear and affordable pricing for 1-on-1 English coaching in Morocco. Choose from Starter (500 MAD/month), Standard (720 MAD/month), Premium (960 MAD/month), or Group Study (200 MAD/month) packages.";
+  const title = "English Lesson Pricing Morocco | Affordable Packages from 62.50 MAD | Fluentry";
+  const description = "Transparent, affordable English lesson pricing in Morocco. Starter (250 MAD), Growth (450 MAD), Intensive (600 MAD) packages. 1-on-1 with TESOL coach.";
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fluentry-english-platform.vercel.app" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://fluentry-english-platform.vercel.app/pricing" }
+    ]
+  };
 
   return (
     <>
-      <SEO title={title} description={description} path="/pricing" />
+      <SEO
+        title={title}
+        description={description}
+        path="/pricing"
+        faqItems={pricingFAQ}
+        courseData={{
+          name: "1-on-1 English Coaching — Fluentry Morocco",
+          description: "Personalized online English coaching for Moroccan students and professionals. TESOL-certified instructor. CEFR levels A1–C2.",
+          provider: "Fluentry",
+          price: "250",
+          priceCurrency: "MAD",
+        }}
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+      </script>
       <div className="min-h-screen">
 
       {/* Hero Section */}
