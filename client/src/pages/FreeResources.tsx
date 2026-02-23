@@ -4,11 +4,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GrammarChallenge from "@/components/games/GrammarChallenge";
 import IdiomMatcher from "@/components/games/IdiomMatcher";
 import VocabularyQuiz from "@/components/games/VocabularyQuiz";
+import IdiomGuide from "@/components/IdiomGuide";
+import ListeningPractice from "@/components/ListeningPractice";
+import PracticeExercises from "@/components/PracticeExercises";
 import { BookOpen, Download, FileText, GamepadIcon, Headphones, PenTool } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function FreeResources() {
+  const [activeTab, setActiveTab] = useState("games");
+
   return (
     <>
       <Helmet>
@@ -106,13 +112,45 @@ export default function FreeResources() {
           </div>
         </section>
 
-        {/* Free Resources Grid */}
+        {/* Free Resources Tabs */}
         <section className="py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">More Free Resources</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Download guides, practice exercises, and learning materials to support your English journey
+              </p>
+            </div>
+
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+              <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="exercises">Practice Exercises</TabsTrigger>
+                <TabsTrigger value="listening">Listening Practice</TabsTrigger>
+                <TabsTrigger value="idioms">Idiom Guide</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="exercises" className="mt-8">
+                <PracticeExercises />
+              </TabsContent>
+
+              <TabsContent value="listening" className="mt-8">
+                <ListeningPractice />
+              </TabsContent>
+
+              <TabsContent value="idioms" className="mt-8">
+                <IdiomGuide />
+              </TabsContent>
+            </Tabs>
+          </div>
+        </section>
+
+        {/* Additional Resources Grid */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Additional Resources</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Download guides and explore more learning materials
               </p>
             </div>
 
@@ -134,54 +172,6 @@ export default function FreeResources() {
                     <li>• Business Email Templates</li>
                     <li>• IELTS Speaking Success Guide</li>
                     <li>• Essential Travel Phrases</li>
-                  </ul>
-                  <Button variant="outline" className="w-full" disabled>
-                    Coming Soon
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Practice Exercises */}
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <PenTool className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <CardTitle>Practice Exercises</CardTitle>
-                  <CardDescription>
-                    Worksheets and exercises to practice grammar, vocabulary, and writing
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-gray-600 mb-4">
-                    <li>• Grammar worksheets with answers</li>
-                    <li>• Daily conversation practice</li>
-                    <li>• Writing prompts and tips</li>
-                    <li>• Pronunciation exercises</li>
-                  </ul>
-                  <Button variant="outline" className="w-full" disabled>
-                    Coming Soon
-                  </Button>
-                </CardContent>
-              </Card>
-
-              {/* Listening Practice */}
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Headphones className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <CardTitle>Listening Practice</CardTitle>
-                  <CardDescription>
-                    Audio lessons and comprehension exercises to improve your listening skills
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm text-gray-600 mb-4">
-                    <li>• Real conversation examples</li>
-                    <li>• Listening comprehension tests</li>
-                    <li>• Pronunciation tutorials</li>
-                    <li>• Accent training exercises</li>
                   </ul>
                   <Button variant="outline" className="w-full" disabled>
                     Coming Soon
