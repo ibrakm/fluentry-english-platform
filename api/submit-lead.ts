@@ -61,31 +61,39 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // ── Sanitize and whitelist fields — never forward raw user input ─────────
+    // Map frontend field names to what we need for Google Sheets
     const name = sanitize(body.name, 100);
-    const whatsapp = sanitize(body.whatsapp, 30);
-    const source = sanitize(body.source, 100);
+    const email = sanitize(body.email, 100);
+    const phone = sanitize(body.phone, 30);  // Frontend sends 'phone', not 'whatsapp'
     const level = sanitize(body.level, 50);
+    const levelTitle = sanitize(body.levelTitle, 100);
     const score = sanitize(body.score, 20);
-    const testType = sanitize(body.testType, 50);
-    const ageGroup = sanitize(body.ageGroup, 20);
+    const total = sanitize(body.total, 20);
+    const percentage = sanitize(body.percentage, 20);
+    const testType = sanitize(body.testType, 100);
+    const recommendation = sanitize(body.recommendation, 200);
 
     if (!name) {
       return res.status(400).json({ error: "Name is required" });
     }
 
-    if (whatsapp && !isValidPhone(whatsapp)) {
+    if (phone && !isValidPhone(phone)) {
       return res.status(400).json({ error: "Invalid phone number format" });
     }
 
     // ── Build a clean, controlled payload — no spread of raw body ────────────
+    // Include all fields that the Google Apps Script expects
     const safePayload = {
       name,
-      whatsapp,
-      source: source || "Fluentry Website",
+      email: email || "Not provided",
+      phone: phone || "Not provided",
       level,
+      levelTitle,
       score,
+      total,
+      percentage,
       testType,
-      ageGroup,
+      recommendation,
       timestamp: new Date().toISOString(),
     };
 
