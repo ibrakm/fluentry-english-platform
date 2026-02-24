@@ -16,9 +16,6 @@ import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
-// Lazy load the redesigned home page
-const HomeRedesigned = lazy(() => import("./pages/HomeRedesigned"));
-
 // Lazy load all other pages — they are only downloaded when the user navigates to them
 const About = lazy(() => import("./pages/About"));
 const Courses = lazy(() => import("./pages/Courses"));
@@ -66,8 +63,7 @@ function Router() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
-        <Route path={"/"} component={HomeRedesigned} />
-        <Route path={"/home"} component={Home} />
+        <Route path={"/"} component={Home} />
         <Route path={"/about"} component={About} />
         <Route path={"/courses"} component={Courses} />
         <Route path={"/free-test"} component={FreeTest} />
