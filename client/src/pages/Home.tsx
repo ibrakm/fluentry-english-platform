@@ -349,6 +349,97 @@ export default function Home() {
 
 <Testimonials />
 
+      {/* Featured Blog Posts Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <BookOpen className="w-4 h-4" />
+              English Learning Blog
+            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              Expert Tips & Strategies
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Learn from TESOL-certified coach Mr. Ibrahim K. Practical advice to help you master English faster.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                slug: "online-english-classes-morocco-2026-guide",
+                title: "Online English Classes for Moroccans",
+                excerpt: "Compare prices and methods to find the best way to learn English online.",
+                category: "Learning Guide",
+                readTime: "12 min"
+              },
+              {
+                slug: "a2-to-b1-english-6-month-plan-morocco",
+                title: "From A2 to B1 in 6 Months",
+                excerpt: "A practical 6-month plan with weekly schedule to improve your English.",
+                category: "Learning Plan",
+                readTime: "10 min"
+              },
+              {
+                slug: "best-apps-websites-learn-english-morocco",
+                title: "15 Best Apps & Websites for Learning English",
+                excerpt: "Discover the top digital tools for vocabulary, listening, and reading.",
+                category: "Tool Review",
+                readTime: "14 min"
+              },
+              {
+                slug: "challenges-moroccan-english-learners-face",
+                title: "5 Challenges Moroccan Learners Face",
+                excerpt: "Understand the unique obstacles and practical solutions for Moroccan learners.",
+                category: "Learning Insights",
+                readTime: "11 min"
+              }
+            ].map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer h-full flex flex-col">
+                  <div className="relative h-40 bg-gradient-to-br from-blue-100 to-blue-50">
+                    <img
+                      src="/hero-illustration.png"
+                      alt={post.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4 flex flex-col flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-gray-500">{post.readTime}</span>
+                    </div>
+                    <h3 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2 hover:text-blue-600">
+                      {post.title}
+                    </h3>
+                    <p className="text-xs text-gray-600 line-clamp-2 flex-1">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-1 text-blue-600 font-semibold mt-3 text-xs">
+                      Read More
+                      <ArrowRight className="w-3 h-3" />
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/blog">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+                View All Blog Posts
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup */}
       <NewsletterSignup />
 
