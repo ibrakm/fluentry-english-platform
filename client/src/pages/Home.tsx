@@ -125,16 +125,20 @@ export default function Home() {
                     Book Free 10-Min Consultation
                   </Button>
                 </a>
+                <Link href="/assessment">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
+                  >
+                    Take Interactive Assessment
+                  </Button>
+                </Link>
                 <Link href="/free-test">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
-                    onClick={() => {
-                      if (typeof window !== "undefined" && (window as any).plausible) {
-                        (window as any).plausible("Start Free Test");
-                      }
-                    }}
                   >
                     Take Free CEFR Test
                   </Button>
