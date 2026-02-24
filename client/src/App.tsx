@@ -8,6 +8,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
 import { ExitIntentPopup } from "./components/ExitIntentPopup";
+import { AIChatbot } from "./components/AIChatbot";
+import { SocialProofNotification } from "./components/SocialProofNotification";
 import { HelmetProvider } from "react-helmet-async";
 
 // Eagerly load the home page for fast initial render
@@ -22,6 +24,8 @@ const BookLesson = lazy(() => import("./pages/BookLesson"));
 const Pricing = lazy(() => import("./pages/Pricing"));
 const FreeResources = lazy(() => import("./pages/FreeResources"));
 const Blog = lazy(() => import("./pages/Blog"));
+const Certificate = lazy(() => import("./pages/Certificate"));
+const Community = lazy(() => import("./pages/Community"));
 
 // Blog articles — lazy loaded
 const HowToThinkInEnglish = lazy(() => import("./pages/blog/HowToThinkInEnglish"));
@@ -31,6 +35,9 @@ const IeltsSpeakingTestSuccessGuide = lazy(() => import("./pages/blog/IeltsSpeak
 const BusinessEnglishEmailWritingGuide = lazy(() => import("./pages/blog/BusinessEnglishEmailWritingGuide"));
 const ImproveEnglishPronunciationArabicSpeakers = lazy(() => import("./pages/blog/ImproveEnglishPronunciationArabicSpeakers"));
 const HowToPassIeltsInMorocco = lazy(() => import("./pages/blog/HowToPassIeltsInMorocco"));
+const HowToGetCallCenterJobMorocco = lazy(() => import("./pages/blog/HowToGetCallCenterJobMorocco"));
+const EnglishForTourismMorocco = lazy(() => import("./pages/blog/EnglishForTourismMorocco"));
+const HowToPassToeicTestMorocco = lazy(() => import("./pages/blog/HowToPassToeicTestMorocco"));
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
@@ -59,6 +66,8 @@ function Router() {
         <Route path={"/pricing"} component={Pricing} />
         <Route path={"/free-resources"} component={FreeResources} />
         <Route path={"/blog"} component={Blog} />
+        <Route path={"/certificate"} component={Certificate} />
+        <Route path={"/community"} component={Community} />
         <Route path={"/blog/how-to-think-in-english"} component={HowToThinkInEnglish} />
         <Route path={"/blog/common-mistakes-moroccan-english-learners"} component={CommonMistakesMoroccanLearners} />
         <Route path={"/blog/best-techniques-improve-english-speaking"} component={BestTechniquesImproveEnglishSpeaking} />
@@ -66,6 +75,9 @@ function Router() {
         <Route path={"/blog/business-english-email-writing-guide"} component={BusinessEnglishEmailWritingGuide} />
         <Route path={"/blog/improve-english-pronunciation-arabic-speakers"} component={ImproveEnglishPronunciationArabicSpeakers} />
         <Route path={"/blog/how-to-pass-ielts-in-morocco"} component={HowToPassIeltsInMorocco} />
+        <Route path={"/blog/how-to-get-a-call-center-job-in-morocco"} component={HowToGetCallCenterJobMorocco} />
+        <Route path={"/blog/english-for-tourism-morocco"} component={EnglishForTourismMorocco} />
+        <Route path={"/blog/how-to-pass-toeic-test-in-morocco"} component={HowToPassToeicTestMorocco} />
         <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />
@@ -93,6 +105,8 @@ function App() {
               <Footer />
               <WhatsAppSticky />
               <ExitIntentPopup />
+              <AIChatbot />
+              <SocialProofNotification />
             </div>
           </TooltipProvider>
         </ThemeProvider>

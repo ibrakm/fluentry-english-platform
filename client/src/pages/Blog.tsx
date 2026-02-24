@@ -7,6 +7,36 @@ import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 const publishedArticles = [
   {
+    slug: "how-to-get-a-call-center-job-in-morocco",
+    published: true,
+    title: "How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)",
+    excerpt: "Your step-by-step guide to landing a high-paying call center job in Casablanca, Rabat, or Tangier. Learn the required English level, interview questions, salary expectations, and top companies hiring now.",
+    category: "Career Guide",
+    readTime: "10 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
+    slug: "english-for-tourism-morocco",
+    published: true,
+    title: "English for Tourism in Morocco: The Ultimate Guide for Hotel Staff & Tour Guides",
+    excerpt: "Learn the essential English phrases and skills needed for the tourism and hospitality sector in Morocco. Boost your career and earn more with better English.",
+    category: "Career Guide",
+    readTime: "9 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
+    slug: "how-to-pass-toeic-test-in-morocco",
+    published: true,
+    title: "How to Pass the TOEIC Test in Morocco (2026 Guide)",
+    excerpt: "Your complete guide to passing the TOEIC Listening & Reading test in Morocco. Learn about test centers (AMIDEAST), required scores for engineers and professionals, and preparation strategies.",
+    category: "Exam Preparation",
+    readTime: "11 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
     slug: "how-to-pass-ielts-in-morocco",
     published: true,
     title: "How to Pass IELTS in Morocco: The Ultimate 2026 Guide",
