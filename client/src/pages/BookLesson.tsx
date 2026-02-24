@@ -3,10 +3,32 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { CheckCircle, Users, Zap } from "lucide-react";
+import { useEffect } from "react";
 
 export default function BookLesson() {
   const title = "Book Your English Lesson - Fluentry";
   const description = "Schedule your free 10-minute consultation or book your first 1-on-1 English lesson with Mr. Ibrahim K. today. Take the next step towards fluency.";
+
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Reinitialize Calendly widget after script loads
+    script.onload = () => {
+      if (typeof (window as any).Calendly !== 'undefined') {
+        (window as any).Calendly.initInlineWidgets();
+      }
+    };
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <>
@@ -62,11 +84,11 @@ export default function BookLesson() {
 
               {/* Right Side: Calendly Embed */}
               <div className="lg:order-1">
-                <div className="calendly-inline-widget w-full h-[700px] rounded-lg overflow-hidden shadow-2xl border-4 border-blue-600" 
-                     data-url="https://calendly.com/ibrahimkabaikm/30min"
-                     style={{ minWidth: '320px' }}>
+                <div 
+                  className="calendly-inline-widget w-full rounded-lg overflow-hidden shadow-2xl border-4 border-blue-600" 
+                  data-url="https://calendly.com/ibrahimkabaikm/30min"
+                  style={{ minWidth: '320px', minHeight: '700px' }}>
                 </div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
               </div>
             </div>
           </div>
