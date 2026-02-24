@@ -7,6 +7,46 @@ import { BookOpen, Clock, ArrowRight } from "lucide-react";
 
 const publishedArticles = [
   {
+    slug: "online-english-classes-morocco-2026-guide",
+    published: true,
+    title: "Online English Classes for Moroccans: The Complete 2026 Guide",
+    excerpt: "The ultimate 2026 guide to online English classes in Morocco. Compare prices, methods (apps, group classes, 1-on-1 coaching), and find the best way to learn English online.",
+    category: "Learning Guide",
+    readTime: "12 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
+    slug: "a2-to-b1-english-6-month-plan-morocco",
+    published: true,
+    title: "From A2 to B1 in 6 Months: A Realistic Step-by-Step Plan",
+    excerpt: "A practical 6-month plan for Moroccan learners to advance from A2 to B1 English. Follow our weekly schedule and expert tips to improve your fluency and confidence.",
+    category: "Learning Plan",
+    readTime: "10 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
+    slug: "best-apps-websites-learn-english-morocco",
+    published: true,
+    title: "The 15 Best Apps & Websites for Learning English in Morocco (2026 Review)",
+    excerpt: "Our 2026 review of the 15 best apps and websites for Moroccan English learners. Discover the top tools for vocabulary, listening, and reading, and how to use them effectively.",
+    category: "Tool Review",
+    readTime: "14 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
+    slug: "challenges-moroccan-english-learners-face",
+    published: true,
+    title: "The 5 Real Challenges Every Moroccan Faces When Learning English",
+    excerpt: "An empathetic look at the 5 unique challenges Moroccan learners face with English and practical solutions to overcome them.",
+    category: "Learning Insights",
+    readTime: "11 min read",
+    date: "February 24, 2026",
+    image: "/hero-illustration.png"
+  },
+  {
     slug: "how-to-get-a-call-center-job-in-morocco",
     published: true,
     title: "How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)",
@@ -216,4 +256,3 @@ export default function Blog() {
     </>
   );
 }
-

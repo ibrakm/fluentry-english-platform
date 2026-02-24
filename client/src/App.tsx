@@ -38,6 +38,10 @@ const HowToPassIeltsInMorocco = lazy(() => import("./pages/blog/HowToPassIeltsIn
 const HowToGetCallCenterJobMorocco = lazy(() => import("./pages/blog/HowToGetCallCenterJobMorocco"));
 const EnglishForTourismMorocco = lazy(() => import("./pages/blog/EnglishForTourismMorocco"));
 const HowToPassToeicTestMorocco = lazy(() => import("./pages/blog/HowToPassToeicTestMorocco"));
+const OnlineEnglishClassesMorocco = lazy(() => import("./pages/blog/OnlineEnglishClassesMorocco"));
+const A2ToB1SixMonthPlan = lazy(() => import("./pages/blog/A2ToB1SixMonthPlan"));
+const Top15AppsWebsitesLearnEnglish = lazy(() => import("./pages/blog/Top15AppsWebsitesLearnEnglish"));
+const ChallengesMoroccanEnglishLearners = lazy(() => import("./pages/blog/ChallengesMoroccanEnglishLearners"));
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
@@ -78,6 +82,10 @@ function Router() {
         <Route path={"/blog/how-to-get-a-call-center-job-in-morocco"} component={HowToGetCallCenterJobMorocco} />
         <Route path={"/blog/english-for-tourism-morocco"} component={EnglishForTourismMorocco} />
         <Route path={"/blog/how-to-pass-toeic-test-in-morocco"} component={HowToPassToeicTestMorocco} />
+        <Route path={"/blog/online-english-classes-morocco-2026-guide"} component={OnlineEnglishClassesMorocco} />
+        <Route path={"/blog/a2-to-b1-english-6-month-plan-morocco"} component={A2ToB1SixMonthPlan} />
+        <Route path={"/blog/best-apps-websites-learn-english-morocco"} component={Top15AppsWebsitesLearnEnglish} />
+        <Route path={"/blog/challenges-moroccan-english-learners-face"} component={ChallengesMoroccanEnglishLearners} />
         <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />
