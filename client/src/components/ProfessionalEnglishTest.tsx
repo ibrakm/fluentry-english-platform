@@ -547,15 +547,14 @@ export default function ProfessionalEnglishTest() {
       recommendation: levelInfo.package,
     };
 
-    try {
-      // Use the Vercel serverless API route — runs server-side, no CORS issues
-      await fetch(SUBMIT_LEAD_API, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-    } catch (_) { /* silent fail — WhatsApp notification still works */ }
+    // Submit lead data in background without blocking results
+    fetch(SUBMIT_LEAD_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    }).catch(() => { /* silent fail */ });
 
+    // Show results immediately
     setLeadSubmitted(true);
     setIsSubmitting(false);
     setStage("results");
