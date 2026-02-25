@@ -27,6 +27,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const Certificate = lazy(() => import("./pages/Certificate"));
 const Community = lazy(() => import("./pages/Community"));
 const Assessment = lazy(() => import("./pages/Assessment"));
+const OnboardingTest = lazy(() => import("./pages/OnboardingTest"));
 
 // Blog articles — lazy loaded
 const HowToThinkInEnglish = lazy(() => import("./pages/blog/HowToThinkInEnglish"));
@@ -46,6 +47,7 @@ const ChallengesMoroccanEnglishLearners = lazy(() => import("./pages/blog/Challe
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
+const OnboardingTestPage = lazy(() => import("./pages/OnboardingTest"));
 
 // Loading fallback — minimal spinner shown while a page chunk loads
 function PageLoader() {
@@ -74,6 +76,7 @@ function Router() {
         <Route path={"/certificate"} component={Certificate} />
         <Route path={"/community"} component={Community} />
         <Route path={"/assessment"} component={Assessment} />
+        <Route path={"/onboarding-test"} component={OnboardingTest} />
         <Route path={"/blog/how-to-think-in-english"} component={HowToThinkInEnglish} />
         <Route path={"/blog/common-mistakes-moroccan-english-learners"} component={CommonMistakesMoroccanLearners} />
         <Route path={"/blog/best-techniques-improve-english-speaking"} component={BestTechniquesImproveEnglishSpeaking} />
