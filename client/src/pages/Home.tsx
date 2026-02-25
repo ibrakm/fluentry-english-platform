@@ -86,9 +86,9 @@ export default function Home() {
       )}
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4 shadow-xl">
+      <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 md:py-24 px-4 shadow-xl">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start md:items-center">
             <div className="text-center md:text-left">
               {/* Trust badge */}
               <div className="inline-flex items-center gap-2 bg-blue-800/60 border border-blue-500/40 text-blue-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -125,13 +125,13 @@ export default function Home() {
                     Book Free 10-Min Consultation
                   </Button>
                 </a>
-                <Link href="/assessment">
+                <Link href="/onboarding-test">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
                   >
-                    Take Interactive Assessment
+                    Tell Us About You
                   </Button>
                 </Link>
                 <Link href="/free-test">
@@ -166,11 +166,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center justify-center">
               <img
                 src="/hero-illustration.png"
                 alt="Online English lesson with Mr. Ibrahim K. — Fluentry Morocco"
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="w-full h-auto rounded-lg shadow-2xl max-w-md"
                 loading="eager"
                 width="600"
                 height="450"

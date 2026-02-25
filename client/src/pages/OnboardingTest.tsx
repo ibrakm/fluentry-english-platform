@@ -1,429 +1,555 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ChevronRight, AlertCircle } from "lucide-react";
-import { SEO } from "@/components/SEO";
+'use client';
 
-type Stage = "level" | "goals" | "experience" | "email" | "results";
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'wouter';
 
-interface LevelOption {
-  id: string;
-  title: string;
-  cefr: string;
-  description: string;
+interface AssessmentData {
+  currentLevel?: string;
+  goals: string[];
+  experience?: string;
+  focusAreas: string[];
+  challenges: string[];
+  timeCommitment?: string;
+  learningStyle?: string;
+  previousExperience?: string;
+  targetExams?: string[];
+  motivationLevel?: string;
+  name: string;
+  whatsapp: string;
+  email: string;
 }
 
-interface GoalOption {
-  id: string;
-  title: string;
-  icon: string;
-}
-
-interface ExperienceOption {
-  id: string;
-  title: string;
-  description: string;
-}
-
-const levelOptions: LevelOption[] = [
-  {
-    id: "beginner",
-    title: "Beginner",
-    cefr: "A1-A2",
-    description: "I can buy things & order food",
-  },
-  {
-    id: "intermediate",
-    title: "Intermediate",
-    cefr: "B1",
-    description: "I can have simple conversations about everyday topics",
-  },
-  {
-    id: "upper-intermediate",
-    title: "Upper-Intermediate",
-    cefr: "B2",
-    description: "I can participate in discussions and explain my opinions.",
-  },
-  {
-    id: "advanced",
-    title: "Advanced",
-    cefr: "C1-C2",
-    description: "I speak confidently in any situation, including work and social settings.",
-  },
+const CEFR_LEVELS = [
+  { id: 'a1', label: 'Beginner', description: 'I can buy things & order food', cefr: 'A1-A2' },
+  { id: 'b1', label: 'Intermediate', description: 'I can have simple conversations about everyday topics', cefr: 'B1' },
+  { id: 'b2', label: 'Upper-Intermediate', description: 'I can participate in discussions and explain my opinions', cefr: 'B2' },
+  { id: 'c1', label: 'Advanced', description: 'I speak confidently in any situation, including work and social settings', cefr: 'C1-C2' },
 ];
 
-const goalOptions: GoalOption[] = [
-  { id: "career", title: "Career Growth", icon: "💼" },
-  { id: "travel", title: "Travel", icon: "✈️" },
-  { id: "exam", title: "Pass an Exam", icon: "📝" },
-  { id: "fluency", title: "Fluency", icon: "🗣️" },
-  { id: "confidence", title: "Confidence", icon: "💪" },
-  { id: "other", title: "Other", icon: "🎯" },
+const GOALS = [
+  { id: 'career', emoji: '💼', label: 'Career Growth', description: 'Advance in my job' },
+  { id: 'travel', emoji: '✈️', label: 'Travel', description: 'Communicate while traveling' },
+  { id: 'exam', emoji: '📝', label: 'Pass an Exam', description: 'IELTS, TOEFL, TOEIC' },
+  { id: 'fluency', emoji: '🗣️', label: 'Fluency', description: 'Speak naturally and confidently' },
+  { id: 'confidence', emoji: '💪', label: 'Confidence', description: 'Feel less anxious speaking' },
+  { id: 'other', emoji: '🎯', label: 'Other', description: 'Something else' },
 ];
 
-const experienceOptions: ExperienceOption[] = [
-  {
-    id: "0-6",
-    title: "0-6 months",
-    description: "Just starting my English journey",
-  },
-  {
-    id: "6-12",
-    title: "6-12 months",
-    description: "Learning for less than a year",
-  },
-  {
-    id: "1-3",
-    title: "1-3 years",
-    description: "Learning for 1-3 years",
-  },
-  {
-    id: "3-5",
-    title: "3-5 years",
-    description: "Learning for 3-5 years",
-  },
-  {
-    id: "5plus",
-    title: "5+ years",
-    description: "Learning for 5+ years",
-  },
+const EXPERIENCE = [
+  { id: '0-6', label: '0-6 months', description: 'Just starting my English journey' },
+  { id: '6-12', label: '6-12 months', description: 'Learning for less than a year' },
+  { id: '1-3', label: '1-3 years', description: 'Learning for 1-3 years' },
+  { id: '3-5', label: '3-5 years', description: 'Learning for 3-5 years' },
+  { id: '5+', label: '5+ years', description: 'Learning for 5+ years' },
+];
+
+const FOCUS_AREAS = [
+  { id: 'speaking', emoji: '🗣️', label: 'Speaking', description: 'Improve my speaking skills' },
+  { id: 'listening', emoji: '👂', label: 'Listening', description: 'Understand native speakers' },
+  { id: 'writing', emoji: '✍️', label: 'Writing', description: 'Write emails and essays' },
+  { id: 'grammar', emoji: '📚', label: 'Grammar', description: 'Master grammar rules' },
+  { id: 'vocabulary', emoji: '📖', label: 'Vocabulary', description: 'Learn new words' },
+  { id: 'pronunciation', emoji: '🎤', label: 'Pronunciation', description: 'Sound more natural' },
+];
+
+const CHALLENGES = [
+  { id: 'fear', label: 'Fear of making mistakes', description: 'I\'m afraid to speak because I might make errors' },
+  { id: 'accent', label: 'Accent/Pronunciation', description: 'People don\'t understand my accent' },
+  { id: 'speed', label: 'Speaking too slowly', description: 'I can\'t keep up with native speakers' },
+  { id: 'vocabulary', label: 'Limited vocabulary', description: 'I don\'t know enough words' },
+  { id: 'confidence', label: 'Lack of confidence', description: 'I\'m not confident in my abilities' },
+  { id: 'fluency', label: 'Not fluent enough', description: 'I pause too much when speaking' },
+];
+
+const TIME_COMMITMENT = [
+  { id: '15min', label: '15 min/day', description: 'Very flexible' },
+  { id: '30min', label: '30 min/day', description: 'Moderate commitment' },
+  { id: '1hour', label: '1 hour/day', description: 'Serious learner' },
+  { id: '2hour', label: '2+ hours/day', description: 'Very committed' },
+];
+
+const LEARNING_STYLE = [
+  { id: 'conversation', label: 'Conversation Practice', description: 'Learn by talking' },
+  { id: 'structured', label: 'Structured Lessons', description: 'Follow a curriculum' },
+  { id: 'immersion', label: 'Immersion', description: 'Learn through real content' },
+  { id: 'mixed', label: 'Mixed Approach', description: 'Combination of methods' },
 ];
 
 export default function OnboardingTest() {
-  const [stage, setStage] = useState<Stage>("level");
-  const [selectedLevel, setSelectedLevel] = useState<string>("");
-  const [selectedGoals, setSelectedGoals] = useState<string[]>([]);
-  const [selectedExperience, setSelectedExperience] = useState<string>("");
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [error, setError] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [step, setStep] = useState(0);
+  const [data, setData] = useState<AssessmentData>({
+    goals: [],
+    focusAreas: [],
+    challenges: [],
+    name: '',
+    whatsapp: '',
+    email: '',
+  });
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleLevelSelect = (levelId: string) => {
-    setSelectedLevel(levelId);
-    setStage("goals");
+  const totalSteps = 12;
+  const progress = ((step + 1) / totalSteps) * 100;
+
+  const handleNext = () => {
+    if (step < totalSteps - 1) {
+      setStep(step + 1);
+    }
   };
 
-  const handleGoalToggle = (goalId: string) => {
-    setSelectedGoals((prev) =>
-      prev.includes(goalId) ? prev.filter((g) => g !== goalId) : [...prev, goalId]
+  const handlePrevious = () => {
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch('/api/assessments', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      }
+    } catch (error) {
+      console.error('Error submitting assessment:', error);
+      setSubmitted(true);
+    }
+  };
+
+  if (submitted) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 flex items-center justify-center p-4">
+        <Card className="w-full max-w-2xl bg-purple-800/50 border-purple-600 p-8 text-white">
+          <div className="text-center">
+            <div className="text-6xl mb-4">🎉</div>
+            <h2 className="text-3xl font-bold mb-4">Assessment Complete!</h2>
+            <p className="text-lg text-purple-100 mb-6">
+              We've received your information and will send your personalized learning plan shortly.
+            </p>
+
+            <div className="bg-purple-700/50 rounded-lg p-6 mb-8">
+              <p className="text-sm text-purple-200 mb-4">Your Assessment Summary:</p>
+              <div className="space-y-2 text-left">
+                <p><strong>Level:</strong> {data.currentLevel || 'Not specified'}</p>
+                <p><strong>Goals:</strong> {data.goals.join(', ') || 'Not specified'}</p>
+                <p><strong>Focus Areas:</strong> {data.focusAreas.join(', ') || 'Not specified'}</p>
+                <p><strong>Main Challenges:</strong> {data.challenges.join(', ') || 'Not specified'}</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href={`https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%20just%20completed%20the%20assessment%20on%20Fluentry.%20My%20level%20is%20${data.currentLevel || 'beginner'}%20and%20I%27m%20interested%20in%20${data.goals.join('%20and%20')}.%20Can%20we%20discuss%20a%20learning%20plan%3F`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-green-500 hover:bg-green-600 text-white w-full sm:w-auto">
+                  💬 Message Mr. Ibrahim on WhatsApp
+                </Button>
+              </a>
+              <Link href="/book-lesson">
+                <Button className="bg-purple-600 hover:bg-purple-700 text-white w-full sm:w-auto">
+                  📅 Book Your First Lesson
+                </Button>
+              </Link>
+            </div>
+
+            <p className="text-sm text-purple-300 mt-6">
+              Check your email for your personalized learning recommendations!
+            </p>
+          </div>
+        </Card>
+      </div>
     );
-  };
-
-  const handleGoalsNext = () => {
-    if (selectedGoals.length === 0) {
-      setError("Please select at least one goal");
-      return;
-    }
-    setError("");
-    setStage("experience");
-  };
-
-  const handleExperienceSelect = (expId: string) => {
-    setSelectedExperience(expId);
-    setStage("email");
-  };
-
-  const handleEmailSubmit = async () => {
-    if (!name.trim()) {
-      setError("Please enter your name");
-      return;
-    }
-    if (!email.trim() && !phone.trim()) {
-      setError("Please enter your email or WhatsApp number");
-      return;
-    }
-
-    setError("");
-    setIsSubmitting(true);
-
-    const levelInfo = levelOptions.find((l) => l.id === selectedLevel);
-    const payload = {
-      name,
-      email: email || "Not provided",
-      phone: phone || "Not provided",
-      level: levelInfo?.cefr || "Unknown",
-      goals: selectedGoals.join(", "),
-      experience: selectedExperience,
-      testType: "Onboarding Assessment",
-    };
-
-    // Submit in background without blocking
-    fetch("/api/submit-lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).catch(() => {
-      /* silent fail */
-    });
-
-    setIsSubmitting(false);
-    setStage("results");
-  };
-
-  const currentProgress = {
-    level: 25,
-    goals: 50,
-    experience: 75,
-    email: 90,
-    results: 100,
-  };
-
-  const progress = currentProgress[stage];
+  }
 
   return (
-    <>
-      <SEO
-        title="English Level Assessment - Fluentry Morocco"
-        description="Quick interactive assessment to discover your English level and personalized learning path. Get started in 2 minutes!"
-        path="/onboarding-test"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-        <div className="w-full max-w-2xl">
-          {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-purple-300">Step {Math.ceil(progress / 25)} of 4</span>
-              <span className="text-sm text-purple-300">{progress}%</span>
-            </div>
-            <div className="w-full bg-purple-950 rounded-full h-1.5">
-              <div
-                className="bg-gradient-to-r from-blue-500 to-purple-500 h-1.5 rounded-full transition-all duration-300"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 flex items-center justify-center p-4 py-8">
+      <Card className="w-full max-w-2xl bg-purple-800/50 border-purple-600 p-8 text-white">
+        {/* Progress Bar */}
+        <div className="mb-8">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-sm font-medium">Step {step + 1} of {totalSteps}</span>
+            <span className="text-sm font-medium">{Math.round(progress)}%</span>
           </div>
+          <div className="w-full bg-purple-700 rounded-full h-2">
+            <div
+              className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        </div>
 
-          {/* Level Selection */}
-          {stage === "level" && (
-            <Card className="p-8 bg-slate-800/50 border-purple-500/20 backdrop-blur">
-              <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h2 className="text-3xl font-bold text-white">What's your current language level?</h2>
-                  <p className="text-purple-200">Select the option that best describes you</p>
-                </div>
-
-                <div className="space-y-3">
-                  {levelOptions.map((level) => (
-                    <button
-                      key={level.id}
-                      onClick={() => handleLevelSelect(level.id)}
-                      className="w-full p-4 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 border border-purple-500/30 hover:border-purple-500/60 transition-all text-left group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors">
-                            {level.title}
-                          </h3>
-                          <p className="text-sm text-purple-200">{level.description}</p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-lg font-bold text-purple-400">{level.cefr}</span>
-                          <ChevronRight className="w-5 h-5 text-purple-400 mt-1" />
-                        </div>
-                      </div>
-                    </button>
-                  ))}
-                </div>
+        {/* Step Content */}
+        <div className="mb-8">
+          {step === 0 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What's your current language level?</h2>
+              <p className="text-purple-200 mb-6">Select the option that best describes you</p>
+              <div className="space-y-3">
+                {CEFR_LEVELS.map((level) => (
+                  <button
+                    key={level.id}
+                    onClick={() => {
+                      setData({ ...data, currentLevel: level.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{level.label}</div>
+                    <div className="text-sm text-purple-200">{level.description}</div>
+                    <div className="text-xs text-purple-300 mt-1">{level.cefr}</div>
+                  </button>
+                ))}
               </div>
-            </Card>
+            </div>
           )}
 
-          {/* Goals Selection */}
-          {stage === "goals" && (
-            <Card className="p-8 bg-slate-800/50 border-purple-500/20 backdrop-blur">
-              <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h2 className="text-3xl font-bold text-white">What are your goals?</h2>
-                  <p className="text-purple-200">Select all that apply</p>
-                </div>
+          {step === 1 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What are your goals?</h2>
+              <p className="text-purple-200 mb-6">Select all that apply</p>
+              <div className="grid grid-cols-2 gap-3">
+                {GOALS.map((goal) => (
+                  <button
+                    key={goal.id}
+                    onClick={() => {
+                      const newGoals = data.goals.includes(goal.label)
+                        ? data.goals.filter((g) => g !== goal.label)
+                        : [...data.goals, goal.label];
+                      setData({ ...data, goals: newGoals });
+                    }}
+                    className={`p-4 border-2 border-dashed rounded-lg transition text-left ${
+                      data.goals.includes(goal.label)
+                        ? 'bg-purple-700/50 border-green-400'
+                        : 'border-purple-500 hover:bg-purple-700/30'
+                    }`}
+                  >
+                    <div className="text-2xl mb-2">{goal.emoji}</div>
+                    <div className="font-semibold text-sm">{goal.label}</div>
+                    <div className="text-xs text-purple-200">{goal.description}</div>
+                  </button>
+                ))}
+              </div>
+              <Button
+                onClick={handleNext}
+                disabled={data.goals.length === 0}
+                className="w-full mt-6 bg-green-500 hover:bg-green-600"
+              >
+                Continue <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
 
-                <div className="grid grid-cols-2 gap-3">
-                  {goalOptions.map((goal) => (
-                    <button
-                      key={goal.id}
-                      onClick={() => handleGoalToggle(goal.id)}
-                      className={`p-4 rounded-lg border-2 transition-all ${
-                        selectedGoals.includes(goal.id)
-                          ? "bg-purple-600/50 border-purple-500"
-                          : "bg-slate-700/50 border-purple-500/30 hover:border-purple-500/60"
-                      }`}
-                    >
-                      <div className="text-2xl mb-2">{goal.icon}</div>
-                      <h3 className="font-semibold text-white text-sm">{goal.title}</h3>
-                    </button>
-                  ))}
-                </div>
+          {step === 2 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">How long have you been learning English?</h2>
+              <p className="text-purple-200 mb-6">This helps us personalize your learning path</p>
+              <div className="space-y-3">
+                {EXPERIENCE.map((exp) => (
+                  <button
+                    key={exp.id}
+                    onClick={() => {
+                      setData({ ...data, experience: exp.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{exp.label}</div>
+                    <div className="text-sm text-purple-200">{exp.description}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
-                {error && (
-                  <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                    {error}
-                  </div>
-                )}
+          {step === 3 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What areas do you want to focus on?</h2>
+              <p className="text-purple-200 mb-6">Select all that apply</p>
+              <div className="grid grid-cols-2 gap-3">
+                {FOCUS_AREAS.map((area) => (
+                  <button
+                    key={area.id}
+                    onClick={() => {
+                      const newAreas = data.focusAreas.includes(area.label)
+                        ? data.focusAreas.filter((a) => a !== area.label)
+                        : [...data.focusAreas, area.label];
+                      setData({ ...data, focusAreas: newAreas });
+                    }}
+                    className={`p-4 border-2 border-dashed rounded-lg transition text-left ${
+                      data.focusAreas.includes(area.label)
+                        ? 'bg-purple-700/50 border-green-400'
+                        : 'border-purple-500 hover:bg-purple-700/30'
+                    }`}
+                  >
+                    <div className="text-2xl mb-2">{area.emoji}</div>
+                    <div className="font-semibold text-sm">{area.label}</div>
+                  </button>
+                ))}
+              </div>
+              <Button
+                onClick={handleNext}
+                disabled={data.focusAreas.length === 0}
+                className="w-full mt-6 bg-green-500 hover:bg-green-600"
+              >
+                Continue <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
 
+          {step === 4 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What are your main challenges?</h2>
+              <p className="text-purple-200 mb-6">Select all that apply</p>
+              <div className="space-y-3">
+                {CHALLENGES.map((challenge) => (
+                  <button
+                    key={challenge.id}
+                    onClick={() => {
+                      const newChallenges = data.challenges.includes(challenge.label)
+                        ? data.challenges.filter((c) => c !== challenge.label)
+                        : [...data.challenges, challenge.label];
+                      setData({ ...data, challenges: newChallenges });
+                    }}
+                    className={`w-full p-4 border-2 border-dashed rounded-lg transition text-left ${
+                      data.challenges.includes(challenge.label)
+                        ? 'bg-purple-700/50 border-green-400'
+                        : 'border-purple-500 hover:bg-purple-700/30'
+                    }`}
+                  >
+                    <div className="font-semibold">{challenge.label}</div>
+                    <div className="text-sm text-purple-200">{challenge.description}</div>
+                  </button>
+                ))}
+              </div>
+              <Button
+                onClick={handleNext}
+                disabled={data.challenges.length === 0}
+                className="w-full mt-6 bg-green-500 hover:bg-green-600"
+              >
+                Continue <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
+
+          {step === 5 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">How much time can you commit daily?</h2>
+              <p className="text-purple-200 mb-6">Be honest about your availability</p>
+              <div className="space-y-3">
+                {TIME_COMMITMENT.map((time) => (
+                  <button
+                    key={time.id}
+                    onClick={() => {
+                      setData({ ...data, timeCommitment: time.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{time.label}</div>
+                    <div className="text-sm text-purple-200">{time.description}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {step === 6 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What's your preferred learning style?</h2>
+              <p className="text-purple-200 mb-6">How do you learn best?</p>
+              <div className="space-y-3">
+                {LEARNING_STYLE.map((style) => (
+                  <button
+                    key={style.id}
+                    onClick={() => {
+                      setData({ ...data, learningStyle: style.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{style.label}</div>
+                    <div className="text-sm text-purple-200">{style.description}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {step === 7 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Have you studied English before?</h2>
+              <p className="text-purple-200 mb-6">Tell us about your previous experience</p>
+              <div className="space-y-3">
+                {[
+                  { id: 'none', label: 'No formal study', description: 'Self-taught or minimal exposure' },
+                  { id: 'school', label: 'School/University', description: 'Studied in academic settings' },
+                  { id: 'courses', label: 'Online courses', description: 'Took online English courses' },
+                  { id: 'tutor', label: 'Private tutoring', description: 'Had a private tutor before' },
+                  { id: 'abroad', label: 'Studied abroad', description: 'Lived in an English-speaking country' },
+                ].map((exp) => (
+                  <button
+                    key={exp.id}
+                    onClick={() => {
+                      setData({ ...data, previousExperience: exp.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{exp.label}</div>
+                    <div className="text-sm text-purple-200">{exp.description}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {step === 8 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Are you preparing for any exams?</h2>
+              <p className="text-purple-200 mb-6">Select if applicable</p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { id: 'ielts', label: 'IELTS' },
+                  { id: 'toefl', label: 'TOEFL' },
+                  { id: 'toeic', label: 'TOEIC' },
+                  { id: 'cambridge', label: 'Cambridge' },
+                  { id: 'none', label: 'None' },
+                ].map((exam) => (
+                  <button
+                    key={exam.id}
+                    onClick={() => {
+                      if (exam.id === 'none') {
+                        setData({ ...data, targetExams: [] });
+                      } else {
+                        const newExams = data.targetExams?.includes(exam.label)
+                          ? data.targetExams.filter((e) => e !== exam.label)
+                          : [...(data.targetExams || []), exam.label];
+                        setData({ ...data, targetExams: newExams });
+                      }
+                    }}
+                    className={`p-4 border-2 border-dashed rounded-lg transition ${
+                      data.targetExams?.includes(exam.label)
+                        ? 'bg-purple-700/50 border-green-400'
+                        : 'border-purple-500 hover:bg-purple-700/30'
+                    }`}
+                  >
+                    <div className="font-semibold text-sm">{exam.label}</div>
+                  </button>
+                ))}
+              </div>
+              <Button
+                onClick={handleNext}
+                className="w-full mt-6 bg-green-500 hover:bg-green-600"
+              >
+                Continue <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
+
+          {step === 9 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What's your motivation level?</h2>
+              <p className="text-purple-200 mb-6">How committed are you to improving?</p>
+              <div className="space-y-3">
+                {[
+                  { id: 'high', label: 'Very motivated', description: 'I\'m determined to improve' },
+                  { id: 'medium', label: 'Moderately motivated', description: 'I want to improve but have other priorities' },
+                  { id: 'exploring', label: 'Just exploring', description: 'I\'m curious but not fully committed yet' },
+                ].map((level) => (
+                  <button
+                    key={level.id}
+                    onClick={() => {
+                      setData({ ...data, motivationLevel: level.label });
+                      handleNext();
+                    }}
+                    className="w-full p-4 border-2 border-dashed border-purple-500 rounded-lg hover:bg-purple-700/50 hover:border-green-400 transition text-left"
+                  >
+                    <div className="font-semibold">{level.label}</div>
+                    <div className="text-sm text-purple-200">{level.description}</div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {step === 10 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">What's your name?</h2>
+              <p className="text-purple-200 mb-6">We'd love to know who we're helping</p>
+              <input
+                type="text"
+                placeholder="e.g. Ahmed Hassan"
+                value={data.name}
+                onChange={(e) => setData({ ...data, name: e.target.value })}
+                className="w-full p-3 bg-purple-700/50 border border-purple-500 rounded-lg text-white placeholder-purple-300 mb-4"
+              />
+              <Button
+                onClick={handleNext}
+                disabled={!data.name}
+                className="w-full bg-green-500 hover:bg-green-600"
+              >
+                Continue <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          )}
+
+          {step === 11 && (
+            <div>
+              <h2 className="text-2xl font-bold mb-4">Get your personalized plan</h2>
+              <p className="text-purple-200 mb-6">Enter your details to receive your learning recommendations</p>
+              <div className="space-y-4">
+                <input
+                  type="tel"
+                  placeholder="e.g. +212 6XX XXX XXX"
+                  value={data.whatsapp}
+                  onChange={(e) => setData({ ...data, whatsapp: e.target.value })}
+                  className="w-full p-3 bg-purple-700/50 border border-purple-500 rounded-lg text-white placeholder-purple-300"
+                />
+                <input
+                  type="email"
+                  placeholder="e.g. ahmed@gmail.com"
+                  value={data.email}
+                  onChange={(e) => setData({ ...data, email: e.target.value })}
+                  className="w-full p-3 bg-purple-700/50 border border-purple-500 rounded-lg text-white placeholder-purple-300"
+                />
                 <Button
-                  size="lg"
-                  onClick={handleGoalsNext}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-6"
+                  onClick={handleSubmit}
+                  disabled={!data.email}
+                  className="w-full bg-green-500 hover:bg-green-600"
                 >
-                  Continue
-                  <ChevronRight className="ml-2 h-5 w-5" />
+                  Get My Personalized Plan <ChevronRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
-            </Card>
-          )}
-
-          {/* Experience Selection */}
-          {stage === "experience" && (
-            <Card className="p-8 bg-slate-800/50 border-purple-500/20 backdrop-blur">
-              <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h2 className="text-3xl font-bold text-white">How long have you been learning English?</h2>
-                  <p className="text-purple-200">This helps us personalize your learning path</p>
-                </div>
-
-                <div className="space-y-3">
-                  {experienceOptions.map((exp) => (
-                    <button
-                      key={exp.id}
-                      onClick={() => handleExperienceSelect(exp.id)}
-                      className="w-full p-4 rounded-lg bg-slate-700/50 hover:bg-slate-600/50 border border-purple-500/30 hover:border-purple-500/60 transition-all text-left group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors">
-                            {exp.title}
-                          </h3>
-                          <p className="text-sm text-purple-200">{exp.description}</p>
-                        </div>
-                        <ChevronRight className="w-5 h-5 text-purple-400" />
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          )}
-
-          {/* Email Capture */}
-          {stage === "email" && (
-            <Card className="p-8 bg-slate-800/50 border-purple-500/20 backdrop-blur">
-              <div className="space-y-6">
-                <div className="text-center space-y-2">
-                  <h2 className="text-3xl font-bold text-white">Get your personalized plan</h2>
-                  <p className="text-purple-200">Enter your details to receive your results</p>
-                </div>
-
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-semibold text-white mb-2">Your Name *</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Ahmed Hassan"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-700/50 border border-purple-500/30 focus:border-purple-500 focus:outline-none text-white placeholder-purple-300/50 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-white mb-2">WhatsApp Number</label>
-                    <input
-                      type="tel"
-                      placeholder="e.g. +212 6XX XXX XXX"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-700/50 border border-purple-500/30 focus:border-purple-500 focus:outline-none text-white placeholder-purple-300/50 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-white mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      placeholder="e.g. ahmed@gmail.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full px-4 py-3 rounded-lg bg-slate-700/50 border border-purple-500/30 focus:border-purple-500 focus:outline-none text-white placeholder-purple-300/50 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                {error && (
-                  <div className="bg-red-500/20 border border-red-500/50 text-red-200 px-4 py-3 rounded-lg flex items-center gap-2">
-                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                    {error}
-                  </div>
-                )}
-
-                <Button
-                  size="lg"
-                  onClick={handleEmailSubmit}
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-6"
-                >
-                  {isSubmitting ? "Submitting..." : "Get My Personalized Plan"}
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Button>
-
-                <p className="text-center text-xs text-purple-300">
-                  🔒 Your information is private and will only be used to send your results.
-                </p>
-              </div>
-            </Card>
-          )}
-
-          {/* Results */}
-          {stage === "results" && (
-            <Card className="p-8 bg-gradient-to-br from-purple-600/50 to-blue-600/50 border-purple-500/50 backdrop-blur">
-              <div className="space-y-6 text-center">
-                <div className="space-y-2">
-                  <h2 className="text-4xl font-bold text-white">🎉 Assessment Complete!</h2>
-                  <p className="text-purple-100">
-                    We've received your information and will send your personalized learning plan shortly.
-                  </p>
-                </div>
-
-                <div className="bg-slate-800/50 rounded-lg p-6 space-y-4">
-                  <div>
-                    <p className="text-purple-200 text-sm">Your Level</p>
-                    <p className="text-2xl font-bold text-white">
-                      {levelOptions.find((l) => l.id === selectedLevel)?.cefr}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-purple-200 text-sm">Your Goals</p>
-                    <p className="text-white">
-                      {selectedGoals
-                        .map((g) => goalOptions.find((go) => go.id === g)?.title)
-                        .join(", ")}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="space-y-3 pt-4">
-                  <a href={`https://wa.me/212672580932?text=Hi%20Mr.%20Ibrahim!%20I%20just%20completed%20your%20English%20assessment.%20My%20level%20is%20${levelOptions.find((l) => l.id === selectedLevel)?.cefr}.%20I'm%20ready%20to%20start%20learning!`} target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-6">
-                      💬 Message Mr. Ibrahim on WhatsApp
-                    </Button>
-                  </a>
-                  <a href="/book-lesson">
-                    <Button size="lg" variant="outline" className="w-full border-white text-white hover:bg-white/10 font-bold py-6">
-                      📅 Book Your First Lesson
-                    </Button>
-                  </a>
-                </div>
-
-                <p className="text-purple-200 text-sm">
-                  Check your email for your personalized learning recommendations!
-                </p>
-              </div>
-            </Card>
+              <p className="text-xs text-purple-300 mt-4 text-center">
+                🔒 Your information is private and will only be used to send your results.
+              </p>
+            </div>
           )}
         </div>
-      </div>
-    </>
+
+        {/* Navigation Buttons */}
+        {step < totalSteps - 1 && step !== 1 && step !== 3 && step !== 4 && step !== 8 && (
+          <div className="flex gap-4">
+            {step > 0 && (
+              <Button
+                onClick={handlePrevious}
+                variant="outline"
+                className="flex-1 border-purple-500 text-white hover:bg-purple-700/50"
+              >
+                Previous
+              </Button>
+            )}
+          </div>
+        )}
+      </Card>
+    </div>
   );
 }
