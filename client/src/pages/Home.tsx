@@ -131,7 +131,7 @@ export default function Home() {
                     variant="outline"
                     className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
                   >
-                    Tell Us About You
+                    Begin Your Journey
                   </Button>
                 </Link>
                 <Link href="/free-test">
