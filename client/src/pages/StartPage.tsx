@@ -4,11 +4,15 @@
  * Optimised for Facebook ad traffic from Morocco.
  * - NO navigation menu (reduces distraction, maximises conversions)
  * - Bilingual: French + Darija (Arabic) + English
- * - Single goal: Get visitor to take the free test OR message on WhatsApp
+ * - Single goal: Get visitor to send a WhatsApp message to Mr. Ibrahim
+ * - Conversion-first structure: Hook → Pain → Solution → Proof → CTA → Urgency
  */
 
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Star, Award, MessageCircle, Clock, Users, ArrowRight, Zap, Shield, Download, BookOpen, Mic } from "lucide-react";
+import {
+  CheckCircle, Star, Award, MessageCircle, Clock, Users,
+  ArrowRight, Zap, Shield, Download, BookOpen, Mic, TrendingUp, Target
+} from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
@@ -19,23 +23,26 @@ const testimonials = [
     role: "HR Manager — Casablanca",
     roleAr: "مديرة موارد بشرية — الدار البيضاء",
     text: "Après 2 mois avec Mr. Ibrahim, j'ai obtenu 7.5 à l'IELTS. Sa méthode est unique !",
-    textAr: "بعد شهرين مع المعلم إبراهيم، حصلت على 7.5 في IELTS. طريقته مختلفة تماماً!",
+    textAr: "بعد شهرين مع الأستاذ إبراهيم، حصلت على 7.5 في IELTS. طريقته مختلفة تماماً!",
+    result: "IELTS 7.5 ✅",
     stars: 5,
   },
   {
     name: "Youssef A.",
-    role: "Ingénieur Logiciel — Rabat",
+    role: "Software Engineer — Rabat",
     roleAr: "مهندس برمجيات — الرباط",
     text: "Je dirige maintenant des réunions en anglais avec des clients internationaux. De B1 à C1 en 4 mois !",
     textAr: "الآن أقود اجتماعات بالإنجليزية مع عملاء دوليين. من B1 إلى C1 في 4 أشهر!",
+    result: "B1 → C1 in 4 months ✅",
     stars: 5,
   },
   {
     name: "Nadia B.",
-    role: "Étudiante — Marrakech",
+    role: "Student — Marrakech",
     roleAr: "طالبة — مراكش",
     text: "Les cours sont pratiques et amusants. J'ai arrêté d'avoir peur de parler anglais !",
     textAr: "الدروس عملية وممتعة. توقفت عن الخوف من التحدث بالإنجليزية!",
+    result: "Confidence unlocked ✅",
     stars: 5,
   },
 ];
@@ -87,15 +94,27 @@ function LeadMagnetForm() {
       <div className="bg-white rounded-2xl shadow-lg p-8 text-center border-2 border-green-400">
         <div className="text-5xl mb-4">🎉</div>
         <h3 className="text-xl font-bold text-green-700 mb-2">مبروك! الدليل جاهز ليك</h3>
-        <p className="text-gray-600 mb-6">Félicitations ! Votre guide est prêt à télécharger.</p>
+        <p className="text-gray-600 mb-4">Félicitations ! Votre guide est prêt à télécharger.</p>
         <a
           href="/50_Common_Mistakes_Fluentry.pdf"
           download="50_Common_Mistakes_Fluentry.pdf"
-          className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors"
+          className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors mb-4"
         >
           <Download className="w-5 h-5" />
           حمّل الدليل الآن — Télécharger
         </a>
+        <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
+          <p className="text-sm font-semibold text-blue-800 mb-2">الخطوة الجاية — Prochaine étape :</p>
+          <a
+            href="https://wa.me/212672580932?text=السلام%20عليكم%20أستاذ%20إبراهيم%2C%20حملت%20الدليل%20وبغيت%20نبدأ%20الدروس"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl text-sm shadow-lg transition-colors"
+          >
+            <MessageCircle className="w-4 h-4" />
+            راسلني على واتساب لنبدأ — Contacte-moi sur WhatsApp
+          </a>
+        </div>
         <p className="text-xs text-gray-400 mt-4">سيتواصل معك الأستاذ إبراهيم قريباً على واتساب 📱</p>
       </div>
     );
@@ -173,22 +192,27 @@ export default function StartPage() {
   return (
     <>
       <SEO
-        title="Coaching Anglais en Ligne Maroc | تعلم الإنجليزية — Fluentry"
-        description="Coaching anglais personnalisé en ligne au Maroc. Parle anglais avec confiance en 60 jours. Test de niveau gratuit. تعلم الإنجليزية مع كوتش متخصص."
+        title="كوتش إنجليزية أونلاين بالمغرب | نتائج مضمونة — Fluentry"
+        description="تعلم الإنجليزية مع كوتش متخصص بالمغرب. نتائج مضمونة خلال 8 أسابيع. IELTS، إنجليزية الأعمال، والمحادثة. احجز استشارتك المجانية الآن."
         path="/start"
       />
 
       {/* NO Header — intentional for ad landing pages */}
       <div className="min-h-screen bg-white">
 
-        {/* TOP BAR — Trust signal */}
+        {/* URGENCY TOP BAR */}
+        <div className="bg-red-600 text-white text-center py-2 px-4 text-sm font-bold">
+          ⚡ عدد الأماكن المتاحة هذا الشهر محدود — Places limitées ce mois-ci · <span className="underline">احجز الآن</span>
+        </div>
+
+        {/* TRUST BAR */}
         <div className="bg-green-700 text-white text-center py-2 px-4 text-sm font-medium">
           🇲🇦 &nbsp;
           <span className="text-yellow-300">تعلم الإنجليزية بالمغرب</span>
           &nbsp;·&nbsp;
           <span>Coaching Anglais en Ligne au Maroc</span>
           &nbsp;·&nbsp;
-          <span className="text-yellow-300">100% Online · 100% Personnalisé</span>
+          <span className="text-yellow-300">100% Online · Résultats Garantis</span>
         </div>
 
         {/* HERO SECTION */}
@@ -198,7 +222,7 @@ export default function StartPage() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
               <Award className="w-4 h-4" />
-              TESOL-Certified · +100 Étudiants Formés · Maroc
+              TESOL-Certified · +100 Students · Morocco
             </div>
 
             {/* Pain point headline — bilingual */}
@@ -208,25 +232,28 @@ export default function StartPage() {
               <span className="text-white text-2xl md:text-4xl">Tu bloques quand tu parles anglais ?</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100 mb-4 max-w-2xl mx-auto">
-              مع المعلم إبراهيم، تتعلم الإنجليزية بطريقة عملية وممتعة — بدون حفظ وبدون ملل.
-            </p>
-            <p className="text-base text-blue-200 mb-8 max-w-2xl mx-auto">
-              Avec Mr. Ibrahim, apprends l'anglais de façon pratique et efficace — sans mémorisation, sans ennui.
-            </p>
+            {/* Outcome promise */}
+            <div className="bg-white/10 border border-white/20 rounded-2xl p-5 mb-6 max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl font-bold text-yellow-300 mb-1">
+                خلال 8 أسابيع فقط — En seulement 8 semaines :
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3">
+                {[
+                  { ar: "تتكلم بثقة", fr: "Tu parles avec confiance", icon: "🗣️" },
+                  { ar: "تحقق IELTS 7.5+", fr: "Tu atteins IELTS 7.5+", icon: "🎯" },
+                  { ar: "تقود اجتماعاتك", fr: "Tu diriges tes réunions", icon: "💼" },
+                ].map((item, i) => (
+                  <div key={i} className="bg-white/10 rounded-xl p-3 text-center">
+                    <div className="text-2xl mb-1">{item.icon}</div>
+                    <p className="text-sm font-bold text-white">{item.ar}</p>
+                    <p className="text-xs text-blue-200 italic">{item.fr}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            {/* MAIN CTA — Test */}
+            {/* MAIN CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-              <Link href="/free-test">
-                <Button
-                  size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-5 sm:px-8 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto animate-pulse"
-                >
-                  <Zap className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  <span className="truncate">اكتشف مستواك مجاناً — Test Gratuit</span>
-                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
-                </Button>
-              </Link>
               <a
                 href="https://wa.me/212672580932?text=السلام%20عليكم%20أستاذ%20إبراهيم%2C%20شفت%20الإعلان%20ديالك%20وبغيت%20نعرف%20أكثر%20على%20الدروس"
                 target="_blank"
@@ -234,46 +261,48 @@ export default function StartPage() {
               >
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-sm sm:text-lg px-5 sm:px-8 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-5 sm:px-10 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto"
                 >
-                  <MessageCircle className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  راسلني على واتساب
+                  <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                  <span>راسلني على واتساب — WhatsApp</span>
+                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
               </a>
+              <Link href="/free-test">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-blue-700 font-bold text-sm sm:text-lg px-5 sm:px-8 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
+                >
+                  <Zap className="w-4 h-4 mr-2 flex-shrink-0" />
+                  اكتشف مستواك مجاناً
+                </Button>
+              </Link>
             </div>
 
             <p className="text-sm text-blue-300">
-              ✅ Test gratuit · ✅ Sans engagement · ✅ Résultat immédiat
+              ✅ استشارة مجانية 10 دقائق · ✅ بدون التزام · ✅ نتائج مضمونة
             </p>
 
-            {/* Quick stats */}
+            {/* Stats */}
             <div className="flex flex-wrap justify-center gap-8 mt-10 pt-8 border-t border-blue-700">
-              <div className="text-center">
-                <p className="text-3xl font-bold text-yellow-300">100+</p>
-                <p className="text-sm text-blue-300">طالب تدرب معنا</p>
-                <p className="text-xs text-blue-400">Étudiants formés</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-yellow-300">4.9★</p>
-                <p className="text-sm text-blue-300">تقييم الطلاب</p>
-                <p className="text-xs text-blue-400">Note moyenne</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-yellow-300">60</p>
-                <p className="text-sm text-blue-300">يوم للنتائج</p>
-                <p className="text-xs text-blue-400">Jours pour des résultats</p>
-              </div>
-              <div className="text-center">
-                <p className="text-3xl font-bold text-yellow-300">3+</p>
-                <p className="text-sm text-blue-300">سنوات خبرة</p>
-                <p className="text-xs text-blue-400">Années d'expérience</p>
-              </div>
+              {[
+                { stat: "100+", ar: "طالب تدرب معنا", fr: "Étudiants formés" },
+                { stat: "4.9★", ar: "تقييم الطلاب", fr: "Note moyenne" },
+                { stat: "90%", ar: "يحققون هدفهم", fr: "Atteignent leur objectif" },
+                { stat: "8 أسابيع", ar: "للنتائج", fr: "Pour des résultats" },
+              ].map((item, i) => (
+                <div key={i} className="text-center">
+                  <p className="text-3xl font-bold text-yellow-300">{item.stat}</p>
+                  <p className="text-sm text-blue-300">{item.ar}</p>
+                  <p className="text-xs text-blue-400 italic">{item.fr}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* PAIN POINTS SECTION */}
+        {/* PAIN POINTS */}
         <section className="py-12 px-4 bg-gray-50">
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">
@@ -291,15 +320,43 @@ export default function StartPage() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 p-6 bg-green-50 rounded-2xl border border-green-200">
               <p className="text-xl font-bold text-green-700 mb-2">✅ عندي الحل ليك!</p>
-              <p className="text-gray-600 mb-6">J'ai la solution pour toi — coaching 1-sur-1 personnalisé.</p>
-              <Link href="/free-test">
-                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-base px-5 sm:px-8 py-5 rounded-xl shadow-lg">
-                  ابدأ بالتيست المجاني — Commence par le test gratuit
-                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
+              <p className="text-gray-600 mb-6 text-sm">J'ai la solution — coaching 1-sur-1 personnalisé avec résultats garantis.</p>
+              <a
+                href="https://wa.me/212672580932?text=السلام%20عليكم%20أستاذ%20إبراهيم%2C%20شفت%20الإعلان%20ديالك%20وبغيت%20نعرف%20أكثر%20على%20الدروس"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm sm:text-base px-5 sm:px-8 py-5 rounded-xl shadow-lg">
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  راسلني على واتساب الآن
+                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
-              </Link>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT MR. IBRAHIM — builds trust */}
+        <section className="py-12 px-4 bg-white">
+          <div className="container mx-auto max-w-3xl">
+            <div className="flex flex-col md:flex-row gap-8 items-center bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                IK
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-gray-900 mb-1">Mr. Ibrahim K.</h2>
+                <p className="text-blue-600 font-semibold text-sm mb-3">TESOL-Certified English Coach · Tangier, Morocco</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  أستاذ إبراهيم متخصص في تعليم الإنجليزية للمغاربة منذ أكثر من 3 سنوات. ساعد أكثر من 100 طالب على تحقيق أهدافهم — من IELTS إلى إنجليزية الأعمال. طريقته مبنية على التواصل الحقيقي، لا الحفظ.
+                </p>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["TESOL Certified", "+100 Students", "4.9★ Rating", "3+ Years"].map((badge) => (
+                    <span key={badge} className="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">{badge}</span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -320,7 +377,6 @@ export default function StartPage() {
                 دليل مجاني مخصص للمتعلمين المغاربة — يشرح كل خطأ بوضوح ويقدّم الصيغة الصحيحة. حمّله الآن مجاناً!
               </p>
             </div>
-
             <LeadMagnetForm />
           </div>
         </section>
@@ -334,9 +390,9 @@ export default function StartPage() {
             <p className="text-center text-gray-500 mb-10">Comment ça marche ?</p>
             <div className="grid sm:grid-cols-3 gap-6">
               {[
-                { step: "1", ar: "دير التيست المجاني", fr: "Fais le test gratuit", icon: "📝", desc: "اكتشف مستواك الحقيقي في 10 دقايق" },
-                { step: "2", ar: "تواصل مع الأستاذ", fr: "Contacte le coach", icon: "💬", desc: "راسلني على واتساب وتناقشنا على برنامجك" },
-                { step: "3", ar: "ابدأ الدروس", fr: "Commence les cours", icon: "🚀", desc: "دروس مخصصة ليك 100% أونلاين" },
+                { step: "1", ar: "راسلني على واتساب", fr: "Envoie-moi un message WhatsApp", icon: "💬", desc: "نتناقشو على هدفك ومستواك في 10 دقائق مجاناً" },
+                { step: "2", ar: "احصل على خطتك", fr: "Reçois ton plan personnalisé", icon: "📋", desc: "خطة مخصصة ليك 100% مع أهداف واضحة وأسابيع محددة" },
+                { step: "3", ar: "حقق هدفك", fr: "Atteins ton objectif", icon: "🏆", desc: "دروس مخصصة أونلاين مع ضمان النتائج" },
               ].map((item) => (
                 <div key={item.step} className="text-center p-6 bg-blue-50 rounded-2xl border border-blue-100">
                   <div className="text-4xl mb-3">{item.icon}</div>
@@ -352,20 +408,23 @@ export default function StartPage() {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
+        {/* TESTIMONIALS — with results */}
         <section className="py-12 px-4 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-2">
               شنو قالو الطلاب
             </h2>
-            <p className="text-center text-gray-500 mb-8">Ce que disent nos étudiants</p>
+            <p className="text-center text-gray-500 mb-8">Ce que disent nos étudiants — نتائج حقيقية</p>
             <div className="grid md:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <div key={i} className="bg-white rounded-2xl p-6 shadow-md border border-gray-100">
-                  <div className="flex mb-3">
-                    {[...Array(t.stars)].map((_, j) => (
-                      <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    ))}
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="flex">
+                      {[...Array(t.stars)].map((_, j) => (
+                        <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                      ))}
+                    </div>
+                    <span className="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded-full">{t.result}</span>
                   </div>
                   <p className="text-gray-700 text-sm mb-3 font-medium leading-relaxed">"{t.textAr}"</p>
                   <p className="text-gray-400 text-xs italic mb-4">"{t.text}"</p>
@@ -386,12 +445,12 @@ export default function StartPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               الأثمنة — Les Tarifs
             </h2>
-            <p className="text-gray-500 mb-8">من 62.50 درهم للحصة · À partir de 62,50 MAD/séance</p>
+            <p className="text-gray-500 mb-8">من 500 درهم/شهر · À partir de 500 MAD/mois</p>
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               {[
-                { name: "Starter", nameAr: "المبتدئ", price: "500 MAD", period: "/شهر", lessons: "4 حصص", duration: "45 دقيقة", color: "border-green-400" },
-                { name: "Standard", nameAr: "الاحترافي", price: "800 MAD", period: "/شهر", lessons: "8 حصص", duration: "ساعة كاملة", color: "border-blue-500", popular: true },
-                { name: "Premium", nameAr: "المتميز", price: "1,400 MAD", period: "/شهر", lessons: "16 حصة", duration: "ساعة كاملة", color: "border-purple-500" },
+                { name: "Starter", nameAr: "المبتدئ", price: "500 MAD", period: "/شهر", lessons: "8 حصص", duration: "45 دقيقة", color: "border-green-400" },
+                { name: "Standard", nameAr: "الاحترافي", price: "720 MAD", period: "/شهر", lessons: "8 حصص", duration: "ساعة كاملة", color: "border-blue-500", popular: true },
+                { name: "Premium", nameAr: "المتميز", price: "960 MAD", period: "/شهر", lessons: "12 حصة", duration: "ساعة كاملة", color: "border-purple-500" },
               ].map((pkg) => (
                 <div key={pkg.name} className={`relative border-2 ${pkg.color} rounded-2xl p-4 sm:p-5 ${pkg.popular ? "bg-blue-50 shadow-lg" : "bg-white"}`}>
                   {pkg.popular && (
@@ -406,11 +465,26 @@ export default function StartPage() {
                 </div>
               ))}
             </div>
+            <p className="text-sm text-gray-500 mb-4">كذلك متوفر: برنامج IELTS 8 أسابيع (12,000 MAD) مع ضمان النتائج</p>
             <Link href="/pricing">
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 text-sm sm:text-base px-4">
                 شوف كل الأثمنة — Voir tous les tarifs
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
+          </div>
+        </section>
+
+        {/* GUARANTEE SECTION */}
+        <section className="py-10 px-4 bg-green-50 border-y-2 border-green-200">
+          <div className="container mx-auto max-w-3xl text-center">
+            <div className="text-4xl mb-3">🛡️</div>
+            <h2 className="text-2xl font-bold text-green-800 mb-2">ضمان النتائج — Garantie de Résultats</h2>
+            <p className="text-green-700 text-sm max-w-xl mx-auto">
+              إذا ما حققتش هدفك بعد إتمام البرنامج، الأستاذ إبراهيم سيكمل معك الدروس مجاناً حتى تصل لهدفك. صفر مخاطرة.
+              <br />
+              <span className="italic text-green-600 text-xs">Si tu ne reaches pas ton objectif après le programme, Mr. Ibrahim continue à te coacher gratuitement jusqu'à ce que tu y arrives.</span>
+            </p>
           </div>
         </section>
 
@@ -421,22 +495,20 @@ export default function StartPage() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               جاهز تبدأ؟ — Prêt à commencer ?
             </h2>
-            <p className="text-blue-200 mb-8 text-lg">
-              ابدأ بالتيست المجاني واكتشف مستواك الحقيقي — ثم نتناقشو على الخطوة الجاية.
+            <p className="text-blue-200 mb-6 text-lg">
+              راسلني على واتساب الآن — استشارة مجانية 10 دقائق وبنبنيو خطتك معاً.
               <br />
-              <span className="text-sm italic">Commence par le test gratuit, découvre ton niveau, puis on discute de la suite.</span>
+              <span className="text-sm italic">Contacte-moi sur WhatsApp — consultation gratuite de 10 min et on construit ton plan ensemble.</span>
             </p>
+
+            {/* Urgency */}
+            <div className="bg-red-500/20 border border-red-400/40 rounded-xl p-4 mb-6">
+              <p className="text-red-300 font-bold text-sm">
+                ⚡ تحذير: الأماكن المتاحة هذا الشهر محدودة جداً — Attention : places très limitées ce mois-ci
+              </p>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/free-test">
-                <Button
-                  size="lg"
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto"
-                >
-                  <Zap className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  ابدأ التيست المجاني الآن
-                  <ArrowRight className="w-4 h-4 ml-1 sm:ml-2 flex-shrink-0" />
-                </Button>
-              </Link>
               <a
                 href="https://wa.me/212672580932?text=السلام%20عليكم%20أستاذ%20إبراهيم%2C%20شفت%20الإعلان%20ديالك%20وبغيت%20نعرف%20أكثر%20على%20الدروس"
                 target="_blank"
@@ -444,19 +516,30 @@ export default function StartPage() {
               >
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="border-green-400 text-green-300 hover:bg-green-700 hover:text-white font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
+                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl shadow-2xl shadow-orange-500/40 w-full sm:w-auto"
                 >
-                  <MessageCircle className="w-4 h-4 mr-1 sm:mr-2 flex-shrink-0" />
-                  راسلني على واتساب
+                  <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                  راسلني على واتساب الآن
+                  <ArrowRight className="w-4 h-4 ml-2 flex-shrink-0" />
                 </Button>
               </a>
+              <Link href="/free-test">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-blue-700 font-bold text-sm sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-xl w-full sm:w-auto"
+                >
+                  <Zap className="w-4 h-4 mr-2 flex-shrink-0" />
+                  اكتشف مستواك مجاناً
+                </Button>
+              </Link>
             </div>
+
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-blue-300">
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> بدون تسجيل</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> مجاني 100%</span>
-              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> نتيجة فورية</span>
-              <span className="flex items-center gap-1"><Shield className="w-4 h-4 text-green-400" /> بدون التزام</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> استشارة مجانية</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> بدون التزام</span>
+              <span className="flex items-center gap-1"><Shield className="w-4 h-4 text-green-400" /> نتائج مضمونة</span>
+              <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4 text-green-400" /> 100% أونلاين</span>
             </div>
           </div>
         </section>

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock, X } from "lucide-react";
+import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock, X, TrendingUp, Shield, Target } from "lucide-react";
 import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { Testimonials } from "@/components/Testimonials";
@@ -10,11 +10,11 @@ import { SEO } from "@/components/SEO";
 const homeFAQ = [
   {
     question: "How much does English coaching cost in Morocco?",
-    answer: "Fluentry offers English coaching from 62.50 MAD per lesson. Packages start at 250 MAD for 4 sessions, 450 MAD for 8 sessions, and 600 MAD for 12 sessions. All lessons are 1-on-1 with a TESOL-certified coach.",
+    answer: "Fluentry offers outcome-based English coaching programs starting from 500 MAD/month. For serious learners, the 8-Week IELTS Accelerator program is 12,000 MAD and includes a results guarantee. All lessons are 1-on-1 with a TESOL-certified coach.",
   },
   {
     question: "Can I learn English online in Morocco?",
-    answer: "Yes! Fluentry offers 100% online 1-on-1 English coaching for students and professionals in Morocco. Sessions are conducted via video call, flexible to your schedule.",
+    answer: "Yes! Fluentry offers 100% online 1-on-1 English coaching for students and professionals in Morocco. Sessions are conducted via Google Meet, flexible to your schedule.",
   },
   {
     question: "How do I know my English level before starting?",
@@ -22,21 +22,21 @@ const homeFAQ = [
   },
   {
     question: "Is Mr. Ibrahim K. a certified English teacher?",
-    answer: "Yes. Mr. Ibrahim K. holds a TESOL certification and has helped hundreds of Moroccan students and professionals improve their English for work, travel, and academic purposes.",
+    answer: "Yes. Mr. Ibrahim K. holds a TESOL certification and has helped 100+ Moroccan students and professionals improve their English for work, travel, and academic purposes.",
   },
   {
     question: "What types of English courses does Fluentry offer?",
-    answer: "Fluentry offers General English, Business English, IELTS Preparation, TOEFL Preparation, Conversation Practice, and Pronunciation Coaching — all tailored to your specific goals.",
+    answer: "Fluentry offers the 8-Week IELTS Accelerator, 12-Week Business English Mastery, General English, Conversation Practice, and Pronunciation Coaching — all tailored to your specific goals.",
   },
   {
     question: "How quickly can I improve my English?",
-    answer: "With consistent 1-on-1 coaching, most students see noticeable improvement within 4–8 weeks. The pace depends on your starting level, goals, and practice outside sessions.",
+    answer: "With consistent 1-on-1 coaching, 90% of our students achieve their target score or fluency goal within 8 weeks. The pace depends on your starting level, goals, and practice outside sessions.",
   },
 ];
 
 export default function Home() {
-  const title = "English Coaching Online Morocco | 1-on-1 TESOL-Certified Lessons from 62.50 MAD";
-  const description = "Personalized English coaching in Morocco with TESOL-certified Mr. Ibrahim K. Free CEFR test, Business English, IELTS prep. Book your first lesson today.";
+  const title = "IELTS Coaching Morocco | Business English | TESOL-Certified | Fluentry";
+  const description = "Morocco's #1 outcome-based English coaching. 8-Week IELTS Accelerator — achieve 7.5+ or your money back. Business English for professionals. TESOL-certified Mr. Ibrahim K.";
   const [bannerVisible, setBannerVisible] = useState(true);
 
   const breadcrumbSchema = {
@@ -96,16 +96,25 @@ export default function Home() {
                 TESOL-Certified Coach · Based in Morocco
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Speak English with Confidence.<br className="hidden md:block" /> Start Fluently Today.
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                From Frozen to Fluent.<br className="hidden md:block" />
+                <span className="text-yellow-300">Achieve 7.5+ IELTS</span><br className="hidden md:block" />
+                in 8 Weeks.
               </h1>
+
               {/* Bilingual subtitle for Moroccan audience */}
               <p className="text-base text-yellow-300 font-medium mb-2 italic">
                 تجمد وأنت تتكلم الإنجليزية؟ — Vous bloquez quand vous parlez anglais ?
               </p>
-              <p className="text-lg md:text-xl text-blue-100 mb-8">
-                Personalized online coaching from Morocco's passionate English expert, Mr. Ibrahim K. Real-world fluency, not just textbook grammar.
+              <p className="text-lg md:text-xl text-blue-100 mb-4">
+                Morocco's outcome-focused English coach. Mr. Ibrahim K. delivers real results — not just lessons. <strong className="text-white">90% of students reach their goal in 8 weeks.</strong>
               </p>
+
+              {/* Money-back guarantee badge */}
+              <div className="inline-flex items-center gap-2 bg-green-600/30 border border-green-400/40 text-green-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <Shield className="w-4 h-4 text-green-400" />
+                Results Guaranteed — or we coach you for free until you succeed
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a
@@ -122,31 +131,22 @@ export default function Home() {
                       }
                     }}
                   >
-                    Book Free 10-Min Consultation
+                    Book Free 10-Min Strategy Call
                   </Button>
                 </a>
-                <Link href="/onboarding-test">
+                <Link href="/pricing">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
                   >
-                    Begin Your Journey
-                  </Button>
-                </Link>
-                <Link href="/free-test">
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
-                  >
-                    Take Free CEFR Test
+                    View Programs & Pricing
                   </Button>
                 </Link>
               </div>
 
               <p className="mt-4 text-sm text-blue-200">
-                No credit card required · Lessons from 62.50 MAD · Cancel anytime
+                No commitment required · Free 10-min consultation · Results guaranteed
               </p>
 
               {/* Quick stats */}
@@ -154,6 +154,10 @@ export default function Home() {
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">100+</p>
                   <p className="text-xs text-blue-200">Students Coached</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-white">90%</p>
+                  <p className="text-xs text-blue-200">Reach Their Goal</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">4.9★</p>
@@ -180,62 +184,224 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Results Proof Bar */}
+      <section className="bg-blue-950 text-white py-6 px-4">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            {[
+              { stat: "+1.5 Bands", label: "Average IELTS Improvement" },
+              { stat: "90%", label: "Students Achieve Target Score" },
+              { stat: "8 Weeks", label: "Average Time to Results" },
+              { stat: "4.9 / 5", label: "Student Satisfaction" },
+            ].map((item) => (
+              <div key={item.label} className="border-r border-blue-700 last:border-0 px-2">
+                <p className="text-2xl font-extrabold text-yellow-300">{item.stat}</p>
+                <p className="text-xs text-blue-300 mt-1">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quick Intro */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Stop Translating. Start Communicating.
+              Stop Buying Lessons. Start Buying Results.
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Fluentry is more than just English lessons — it's a mindset shift. Based in Morocco, we connect students, professionals, and adults with a dedicated coach who is passionate about helping you achieve true fluency. We focus on real-world communication, not just textbooks.
+              Most English teachers sell you hours. Fluentry sells you outcomes. Mr. Ibrahim K. works with a select group of motivated students in Morocco to deliver one thing: <strong>measurable, guaranteed progress</strong> — whether that's an IELTS band score, a promotion, or the confidence to lead meetings in English.
             </p>
             <blockquote className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded text-left">
               <p className="text-xl font-semibold text-blue-900">
-                "English isn't just grammar and vocabulary. It's confidence, clarity, and connection."
+                "English isn't just grammar and vocabulary. It's confidence, clarity, and connection — and I guarantee you'll feel all three."
               </p>
-              <footer className="text-sm text-gray-600 mt-2">— Mr. Ibrahim K., Founder & Coach</footer>
+              <footer className="text-sm text-gray-600 mt-2">— Mr. Ibrahim K., TESOL-Certified Coach & Founder of Fluentry</footer>
             </blockquote>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Fluentry */}
-      <section className="py-16 px-4">
+      {/* Signature Programs */}
+      <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Why Choose Fluentry?
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Outcome-Based Programs
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Not just lessons — complete transformation programs with clear goals, structured milestones, and a results guarantee.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            {/* IELTS Accelerator */}
+            <Card className="p-8 border-2 border-blue-600 hover:shadow-xl transition-shadow relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                MOST POPULAR
+              </div>
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">8-Week IELTS Accelerator</h3>
+              <p className="text-blue-600 font-semibold text-sm mb-3">For students seeking to study abroad</p>
+              <p className="text-gray-600 text-sm mb-4">
+                Achieve 7.5+ band score in 8 weeks with our proven methodology. Personalized study plan, weekly mock tests, and direct feedback on all 4 skills.
+              </p>
+              <div className="bg-blue-50 rounded-lg p-4 mb-4">
+                <p className="text-2xl font-bold text-blue-600">12,000 MAD</p>
+                <p className="text-xs text-gray-500">Full 8-week program · Results guaranteed</p>
+              </div>
+              <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
+                <Shield className="w-4 h-4" />
+                Money-back guarantee if you don't reach your target
+              </div>
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%208-Week%20IELTS%20Accelerator%20program" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                  Book Free Strategy Call
+                </Button>
+              </a>
+            </Card>
+
+            {/* Business English Mastery */}
+            <Card className="p-8 border-2 border-purple-600 hover:shadow-xl transition-shadow relative">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                HIGH INCOME
+              </div>
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">12-Week Business English Mastery</h3>
+              <p className="text-purple-600 font-semibold text-sm mb-3">For professionals in Casablanca & Rabat</p>
+              <p className="text-gray-600 text-sm mb-4">
+                Lead international meetings, write compelling emails, and present with authority. Designed for professionals in finance, tech, and management.
+              </p>
+              <div className="bg-purple-50 rounded-lg p-4 mb-4">
+                <p className="text-2xl font-bold text-purple-600">15,000 MAD</p>
+                <p className="text-xs text-gray-500">Full 12-week program · Results guaranteed</p>
+              </div>
+              <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
+                <Shield className="w-4 h-4" />
+                Guaranteed fluency for professional settings
+              </div>
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%2012-Week%20Business%20English%20Mastery%20program" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
+                  Book Free Strategy Call
+                </Button>
+              </a>
+            </Card>
+
+            {/* VIP Concierge */}
+            <Card className="p-8 border-2 border-yellow-500 hover:shadow-xl transition-shadow relative bg-gradient-to-b from-yellow-50 to-white">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
+                VIP ELITE
+              </div>
+              <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-yellow-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">VIP Concierge Coaching</h3>
+              <p className="text-yellow-700 font-semibold text-sm mb-3">For executives & serious investors</p>
+              <p className="text-gray-600 text-sm mb-4">
+                Unlimited 1-on-1 sessions, 24/7 WhatsApp access, fully bespoke curriculum, and direct involvement in every aspect of your English journey.
+              </p>
+              <div className="bg-yellow-50 rounded-lg p-4 mb-4">
+                <p className="text-2xl font-bold text-yellow-700">25,000 MAD</p>
+                <p className="text-xs text-gray-500">Complete VIP program · Unlimited access</p>
+              </div>
+              <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
+                <Shield className="w-4 h-4" />
+                Full results guarantee — no exceptions
+              </div>
+              <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%20VIP%20Concierge%20Coaching%20program" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
+                  Apply for VIP Program
+                </Button>
+              </a>
+            </Card>
+
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-gray-500 text-sm mb-4">Prefer a flexible monthly plan? <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">View all pricing options →</Link></p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Fluentry — Differentiators */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+            Why Fluentry is Different
           </h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            There are hundreds of English teachers in Morocco. Here is why serious learners choose Fluentry.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
-              <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-7 h-7 text-blue-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Personalized 1-on-1 Coaching
+                The Fluency Bridge Method™
               </h3>
               <p className="text-gray-600">
-                Every lesson is tailored to your goals, level, and interests. No crowded classrooms — just you and your coach.
+                Our proprietary conversation-first, confidence-building approach. We don't teach grammar rules — we build real communication skills that transfer to real life.
               </p>
             </Card>
 
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
-              <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-7 h-7 text-green-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Real-World Fluency
+                Results Guarantee
               </h3>
               <p className="text-gray-600">
-                We don't just teach English — we help you think in English. Practice conversations, presentations, and real-life scenarios.
+                If you don't achieve your target IELTS score or fluency goal within the program duration, we continue coaching you for free until you do. Zero risk.
               </p>
             </Card>
 
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
-              <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-7 h-7 text-purple-600" />
+              </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Flexible Online Learning
+                Morocco-Specific Expertise
               </h3>
               <p className="text-gray-600">
-                Learn from anywhere in Morocco or abroad. Schedule lessons that fit your life, not the other way around.
+                Mr. Ibrahim K. understands the exact challenges Moroccan learners face — from French interference to Arabic pronunciation patterns — and addresses them directly.
               </p>
             </Card>
+          </div>
+
+          {/* Differentiator table */}
+          <div className="mt-12 overflow-x-auto">
+            <table className="w-full max-w-3xl mx-auto text-sm border-collapse">
+              <thead>
+                <tr className="bg-blue-600 text-white">
+                  <th className="p-4 text-left rounded-tl-lg">Feature</th>
+                  <th className="p-4 text-center text-yellow-300 font-bold">Fluentry</th>
+                  <th className="p-4 text-center rounded-tr-lg">Typical Tutor</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Outcome-based programs", "✅ Yes", "❌ Hourly lessons"],
+                  ["Results guarantee", "✅ Yes", "❌ No"],
+                  ["Morocco-specific curriculum", "✅ Yes", "❌ Generic"],
+                  ["TESOL-certified coach", "✅ Yes", "⚠️ Often not"],
+                  ["Structured progress tracking", "✅ Yes", "❌ No"],
+                  ["Fluency Bridge Method™", "✅ Exclusive", "❌ No"],
+                ].map(([feature, fluentry, other], i) => (
+                  <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                    <td className="p-4 font-medium text-gray-700 border-b border-gray-100">{feature}</td>
+                    <td className="p-4 text-center font-semibold text-green-600 border-b border-gray-100">{fluentry}</td>
+                    <td className="p-4 text-center text-gray-500 border-b border-gray-100">{other}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -248,9 +414,9 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: "1", icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "Take the Free Test", desc: "Find your CEFR level in minutes with our free English proficiency test." },
-              { step: "2", icon: <Clock className="w-6 h-6 text-blue-600" />, title: "Book Your Lesson", desc: "Choose a time that works for you via Calendly or WhatsApp." },
-              { step: "3", icon: <Star className="w-6 h-6 text-blue-600" />, title: "Start Learning", desc: "Join your personalized lesson on Google Meet and start improving from day one." },
+              { step: "1", icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "Book a Free Strategy Call", desc: "10 minutes with Mr. Ibrahim to discuss your goals, current level, and the right program for you." },
+              { step: "2", icon: <Clock className="w-6 h-6 text-blue-600" />, title: "Get Your Custom Roadmap", desc: "Receive a personalized week-by-week plan with clear milestones and measurable outcomes." },
+              { step: "3", icon: <Star className="w-6 h-6 text-blue-600" />, title: "Achieve Your Goal", desc: "Follow the program, track your progress, and reach your target — guaranteed." },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -262,11 +428,15 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="/free-test">
+            <a
+              href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20strategy%20call"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                Start with the Free Test
+                Book Your Free Strategy Call
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -275,10 +445,10 @@ export default function Home() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            Courses Designed for Your Success
+            All Course Offerings
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Whether you're a student, professional, or lifelong learner, we have a course for you.
+            Whether you're a student, professional, or lifelong learner, we have a program for you.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -351,7 +521,7 @@ export default function Home() {
         </div>
       </section>
 
-<Testimonials />
+      <Testimonials />
 
       {/* Featured Blog Posts Section */}
       <section className="py-16 px-4 bg-white">
@@ -450,28 +620,27 @@ export default function Home() {
       {/* Final CTA Section */}
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Start Your English Journey?
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Stop Struggling and Start Achieving?
           </h2>
-          <p className="text-lg text-orange-100 mb-8">
-            Book a free 10-minute consultation to discuss your goals and find the perfect course for you. No commitment required.
+          <p className="text-lg text-orange-100 mb-4">
+            Book a free 10-minute strategy call. No commitment, no pressure — just a clear plan to reach your English goals.
           </p>
+          <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-8">
+            <Shield className="w-4 h-4" />
+            Results guaranteed — or we coach you for free
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20consultation"
+              href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20strategy%20call"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-orange-50 font-semibold shadow-xl w-full sm:w-auto"
-                onClick={() => {
-                  if (typeof window !== "undefined" && (window as any).plausible) {
-                    (window as any).plausible("CTA Free Consultation Click");
-                  }
-                }}
               >
-                Book Your Free Consultation Now
+                Book Your Free Strategy Call
               </Button>
             </a>
             <Link href="/pricing">
@@ -480,7 +649,7 @@ export default function Home() {
                 variant="outline"
                 className="border-white text-white hover:bg-orange-600 w-full sm:w-auto"
               >
-                View Pricing
+                View All Programs
               </Button>
             </Link>
           </div>
