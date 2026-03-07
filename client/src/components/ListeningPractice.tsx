@@ -43,6 +43,7 @@ interface Exercise {
   emoji: string;
   duration: string;
   audioSrc: string;
+  imageSrc: string;
   transcript: string;
   questions: Question[];
   vocabulary: VocabItem[];
@@ -58,6 +59,7 @@ const exercises: Exercise[] = [
     emoji: "☕",
     duration: "~1 min",
     audioSrc: "/audio/ordering-coffee.mp3",
+    imageSrc: "/audio/scene-ordering-coffee.jpg",
     transcript: `Customer: Hi, I'd like to order a coffee, please.
 Barista: Sure! What size would you like? Small, medium, or large?
 Customer: I'll have a medium, please.
@@ -105,6 +107,7 @@ Barista: Thank you! Your coffee will be ready in just a moment.`,
     emoji: "🏨",
     duration: "~2 min",
     audioSrc: "/audio/hotel-reservation.mp3",
+    imageSrc: "/audio/scene-hotel-reservation.jpg",
     transcript: `Receptionist: Good morning! Welcome to the Grand Hotel. How can I help you?
 Guest: Hi, I'd like to make a reservation for next week.
 Receptionist: Of course! What dates would you like to stay?
@@ -167,6 +170,7 @@ Guest: Great! Here's my credit card.`,
     emoji: "💼",
     duration: "~3 min",
     audioSrc: "/audio/job-interview.mp3",
+    imageSrc: "/audio/scene-job-interview.jpg",
     transcript: `Interviewer: Good morning! Thank you for coming in today. I'm Sarah, the HR manager. How are you?
 Candidate: Good morning! I'm doing well, thank you for having me.
 Interviewer: Great! Can you tell me about your previous work experience?
@@ -226,6 +230,7 @@ Candidate: Yes, could you tell me more about the team I'd be working with?`,
     emoji: "✈️",
     duration: "~2.5 min",
     audioSrc: "/audio/travel-plans.mp3",
+    imageSrc: "/audio/scene-travel-plans.jpg",
     transcript: `Friend 1: I'm thinking about taking a vacation next month. Do you have any suggestions?
 Friend 2: That's exciting! Where are you thinking of going?
 Friend 1: I'm considering either Thailand or Portugal. I want somewhere warm with beautiful beaches.
@@ -584,6 +589,15 @@ function ExerciseView({ exercise, onBack }: { exercise: Exercise; onBack: () => 
           </div>
           <h2 className="text-xl md:text-2xl font-bold text-gray-900">{exercise.title}</h2>
         </div>
+      </div>
+
+      {/* Scene Image */}
+      <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100">
+        <img
+          src={exercise.imageSrc}
+          alt={`Scene: ${exercise.title}`}
+          className="w-full h-48 md:h-64 object-cover"
+        />
       </div>
 
       {/* Audio Player */}
