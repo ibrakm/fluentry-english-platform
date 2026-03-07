@@ -59,7 +59,7 @@ const exercises: Exercise[] = [
     emoji: "☕",
     duration: "~1 min",
     audioSrc: "/audio/ordering-coffee.mp3",
-    imageSrc: "/audio/scene-ordering-coffee.jpg",
+    imageSrc: "/audio/scene-ordering-coffee.webp",
     transcript: `Customer: Hi, I'd like to order a coffee, please.
 Barista: Sure! What size would you like? Small, medium, or large?
 Customer: I'll have a medium, please.
@@ -107,7 +107,7 @@ Barista: Thank you! Your coffee will be ready in just a moment.`,
     emoji: "🏨",
     duration: "~2 min",
     audioSrc: "/audio/hotel-reservation.mp3",
-    imageSrc: "/audio/scene-hotel-reservation.jpg",
+    imageSrc: "/audio/scene-hotel-reservation.webp",
     transcript: `Receptionist: Good morning! Welcome to the Grand Hotel. How can I help you?
 Guest: Hi, I'd like to make a reservation for next week.
 Receptionist: Of course! What dates would you like to stay?
@@ -170,7 +170,7 @@ Guest: Great! Here's my credit card.`,
     emoji: "💼",
     duration: "~3 min",
     audioSrc: "/audio/job-interview.mp3",
-    imageSrc: "/audio/scene-job-interview.jpg",
+    imageSrc: "/audio/scene-job-interview.webp",
     transcript: `Interviewer: Good morning! Thank you for coming in today. I'm Sarah, the HR manager. How are you?
 Candidate: Good morning! I'm doing well, thank you for having me.
 Interviewer: Great! Can you tell me about your previous work experience?
@@ -230,7 +230,7 @@ Candidate: Yes, could you tell me more about the team I'd be working with?`,
     emoji: "✈️",
     duration: "~2.5 min",
     audioSrc: "/audio/travel-plans.mp3",
-    imageSrc: "/audio/scene-travel-plans.jpg",
+    imageSrc: "/audio/scene-travel-plans.webp",
     transcript: `Friend 1: I'm thinking about taking a vacation next month. Do you have any suggestions?
 Friend 2: That's exciting! Where are you thinking of going?
 Friend 1: I'm considering either Thailand or Portugal. I want somewhere warm with beautiful beaches.
@@ -350,7 +350,7 @@ function AudioPlayer({ src, title }: { src: string; title: string }) {
 
   return (
     <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-5 text-white shadow-lg">
-      <audio ref={audioRef} src={src} preload="metadata" />
+      <audio ref={audioRef} src={src} preload="auto" />
       <div className="flex items-center gap-3 mb-4">
         <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
           <Headphones className="w-5 h-5" />
@@ -764,6 +764,16 @@ export default function ListeningPractice() {
 
   return (
     <div className="space-y-8">
+      {/* Preload all audio + images in background so they're instant when clicked */}
+      <div className="hidden" aria-hidden="true">
+        {exercises.map((ex) => (
+          <span key={ex.id}>
+            <audio src={ex.audioSrc} preload="auto" />
+            <img src={ex.imageSrc} alt="" />
+          </span>
+        ))}
+      </div>
+
       {/* Header */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
