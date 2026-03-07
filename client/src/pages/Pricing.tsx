@@ -259,7 +259,7 @@ export default function Pricing() {
                 <p className="text-gray-500 text-sm mb-4">Small groups of 3–6 students. 2 sessions/week.</p>
                 <p className="text-3xl font-bold text-green-600 mb-1">200 MAD</p>
                 <p className="text-gray-500 text-xs mb-1">per month · 8 sessions</p>
-                <p className="text-green-700 text-xs font-semibold mb-4">= 25 MAD per lesson</p>
+                <p className="text-green-700 text-xs font-semibold mb-4">= 30 MAD per lesson</p>
                 <ul className="space-y-1 mb-4 text-sm">
                   {["8 sessions/month (2/week)", "1-hour sessions", "Max 6 students per group", "Live via Google Meet"].map((f, i) => (
                     <li key={i} className="flex gap-2">
