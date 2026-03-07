@@ -280,6 +280,250 @@ Friend 2: Absolutely! I'd definitely visit Bangkok, Phuket, and the Phi Phi Isla
       { word: "Crowded", meaning: "Filled with many people" },
     ],
   },
+
+  // ── Exercise 5: At the Doctor's Office (A2) ──────────────────────────────────
+  {
+    id: "doctor-visit",
+    title: "At the Doctor's Office",
+    level: "A2",
+    topic: "Health",
+    emoji: "🏥",
+    duration: "~3 min",
+    audioSrc: "/audio/doctor-visit.mp3",
+    imageSrc: "/audio/scene-doctor-visit.webp",
+    transcript: `Doctor: Good morning! I'm Dr. Carter. What brings you in today?
+Patient: Good morning, Doctor. I've had a sore throat and a headache for the past three days.
+Doctor: I see. Have you had a fever?
+Patient: Yes, a mild one. Around 37.8 degrees.
+Doctor: Any coughing or difficulty swallowing?
+Patient: A little coughing, yes. And swallowing is slightly painful.
+Doctor: Let me take a look. Open your mouth and say 'ah', please.
+Patient: Ahh.
+Doctor: Your throat is a bit red. It looks like a mild throat infection. I'll prescribe some antibiotics and a throat spray.
+Patient: Should I stay home from work?
+Doctor: I'd recommend resting for two days. Drink plenty of fluids and avoid cold drinks. Come back if you don't feel better in five days.
+Patient: Thank you, Doctor. How many times a day should I take the antibiotics?
+Doctor: Twice a day — once in the morning and once in the evening, after meals. Do you have any allergies to medication?
+Patient: No, none that I know of.
+Doctor: Perfect. Take care and feel better soon!`,
+    questions: [
+      {
+        id: "dq1",
+        question: "How long has the patient had symptoms?",
+        options: ["One day", "Two days", "Three days", "A week"],
+        correctAnswer: 2,
+        explanation: "The patient says 'I've had a sore throat and a headache for the past three days.'",
+      },
+      {
+        id: "dq2",
+        question: "What does the doctor prescribe?",
+        options: ["Vitamins and rest", "Antibiotics and a throat spray", "Painkillers and cough syrup", "Only rest and fluids"],
+        correctAnswer: 1,
+        explanation: "The doctor says 'I'll prescribe some antibiotics and a throat spray.'",
+      },
+      {
+        id: "dq3",
+        question: "How many times a day should the patient take the antibiotics?",
+        options: ["Once a day", "Twice a day", "Three times a day", "Four times a day"],
+        correctAnswer: 1,
+        explanation: "The doctor says 'Twice a day — once in the morning and once in the evening.'",
+      },
+      {
+        id: "dq4",
+        question: "When should the patient return if not better?",
+        options: ["After two days", "After three days", "After five days", "After one week"],
+        correctAnswer: 2,
+        explanation: "The doctor says 'Come back if you don't feel better in five days.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Prescription", meaning: "A doctor's written instruction to get medicine" },
+      { word: "Antibiotics", meaning: "Medicine that kills bacteria and treats infections" },
+      { word: "Symptoms", meaning: "Signs of illness, like a fever or sore throat" },
+      { word: "Fluids", meaning: "Liquids — water, juice, soup — important when sick" },
+    ],
+  },
+
+  // ── Exercise 6: Renting an Apartment (B1) ────────────────────────────────────
+  {
+    id: "renting-apartment",
+    title: "Renting an Apartment",
+    level: "B1",
+    topic: "Housing",
+    emoji: "🏠",
+    duration: "~3 min",
+    audioSrc: "/audio/renting-apartment.mp3",
+    imageSrc: "/audio/scene-renting-apartment.webp",
+    transcript: `Caller: Hi, I'm calling about the apartment you have listed online. Is it still available?
+Agent: Yes, it is! It's a two-bedroom apartment on the fourth floor. Would you like to arrange a viewing?
+Caller: Absolutely. Can you tell me a bit more about it first? What's the monthly rent?
+Agent: It's 4,500 dirhams per month, utilities not included. The apartment is fully furnished with a modern kitchen and two bathrooms.
+Caller: That sounds good. Is there parking available?
+Agent: Yes, there's one covered parking space included in the rent. The building also has a lift and a security guard.
+Caller: Great. What's the minimum lease period?
+Agent: We require a minimum of six months. There's also a two-month security deposit required upfront.
+Caller: I see. Is the neighbourhood quiet? I work from home and need a calm environment.
+Agent: It's a very quiet residential area. Most neighbours are professionals or families. There's also a supermarket and a pharmacy just five minutes away on foot.
+Caller: That's perfect. When can I come to see it?
+Agent: How about tomorrow afternoon at four o'clock?
+Caller: That works for me. I'll see you then. Thank you!
+Agent: See you tomorrow. Don't forget to bring your ID and a recent pay slip if you have one.`,
+    questions: [
+      {
+        id: "rq1",
+        question: "What is the monthly rent for the apartment?",
+        options: ["3,500 dirhams", "4,000 dirhams", "4,500 dirhams", "5,000 dirhams"],
+        correctAnswer: 2,
+        explanation: "The agent says 'It's 4,500 dirhams per month.'",
+      },
+      {
+        id: "rq2",
+        question: "What is included in the rent?",
+        options: ["Utilities", "Covered parking", "Furniture and utilities", "A gym membership"],
+        correctAnswer: 1,
+        explanation: "The agent says 'there's one covered parking space included in the rent.'",
+      },
+      {
+        id: "rq3",
+        question: "What is the minimum lease period?",
+        options: ["Three months", "Four months", "Six months", "One year"],
+        correctAnswer: 2,
+        explanation: "The agent says 'We require a minimum of six months.'",
+      },
+      {
+        id: "rq4",
+        question: "What should the caller bring to the viewing?",
+        options: ["A bank statement", "ID and a recent pay slip", "References from previous landlord", "A deposit cheque"],
+        correctAnswer: 1,
+        explanation: "The agent says 'Don't forget to bring your ID and a recent pay slip.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Lease", meaning: "A rental agreement for a fixed period of time" },
+      { word: "Security deposit", meaning: "Money paid upfront to cover any damage — returned when you leave" },
+      { word: "Utilities", meaning: "Electricity, water, and gas bills" },
+      { word: "Residential area", meaning: "A neighbourhood where people live, not a business district" },
+    ],
+  },
+
+  // ── Exercise 7: Phone Call to Customer Support (A2) ───────────────────────────
+  {
+    id: "customer-support",
+    title: "A Call to Customer Support",
+    level: "A2",
+    topic: "Everyday Life",
+    emoji: "📞",
+    duration: "~2.5 min",
+    audioSrc: "/audio/customer-support.mp3",
+    imageSrc: "/audio/scene-customer-support.webp",
+    transcript: `Agent: Thank you for calling Bright Mobile. My name is Sarah. How can I help you today?
+Customer: Hi Sarah. I'm calling because I've been charged twice for my monthly subscription this month.
+Agent: I'm sorry to hear that. I'd be happy to look into that for you. Can I have your account number or the phone number linked to your account?
+Customer: Sure, it's 0661 234 567.
+Agent: Thank you. And can you confirm your full name and date of birth for security purposes?
+Customer: Yes, it's Karim Benali, and my date of birth is the fifteenth of March, nineteen ninety.
+Agent: Thank you, Karim. I can see your account here. You're right — there are two charges of 99 dirhams on the third of this month. That's definitely an error on our side.
+Customer: Yes, exactly. I'd like a refund for the duplicate charge.
+Agent: Of course. I'll process the refund right now. It should appear in your account within three to five business days.
+Customer: Will I receive a confirmation by email?
+Agent: Yes, you'll receive an email confirmation within the next hour. Is there anything else I can help you with today?
+Customer: No, that's all. Thank you for sorting it out so quickly.
+Agent: You're welcome, Karim. Have a great day!`,
+    questions: [
+      {
+        id: "cq1",
+        question: "Why is the customer calling?",
+        options: ["To cancel his subscription", "Because he was charged twice", "To change his phone plan", "To report a lost phone"],
+        correctAnswer: 1,
+        explanation: "The customer says 'I've been charged twice for my monthly subscription this month.'",
+      },
+      {
+        id: "cq2",
+        question: "How much was the duplicate charge?",
+        options: ["49 dirhams", "79 dirhams", "99 dirhams", "119 dirhams"],
+        correctAnswer: 2,
+        explanation: "The agent says 'there are two charges of 99 dirhams.'",
+      },
+      {
+        id: "cq3",
+        question: "How long will the refund take?",
+        options: ["Same day", "1-2 business days", "3-5 business days", "7-10 business days"],
+        correctAnswer: 2,
+        explanation: "The agent says 'It should appear in your account within three to five business days.'",
+      },
+      {
+        id: "cq4",
+        question: "How will the customer receive confirmation of the refund?",
+        options: ["By SMS", "By phone call", "By email", "By post"],
+        correctAnswer: 2,
+        explanation: "The agent says 'you'll receive an email confirmation within the next hour.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Subscription", meaning: "A regular payment for a service (monthly or yearly)" },
+      { word: "Duplicate charge", meaning: "Being billed twice for the same thing by mistake" },
+      { word: "Refund", meaning: "Money returned to you after an incorrect or cancelled payment" },
+      { word: "Security purposes", meaning: "To verify your identity and protect your account" },
+    ],
+  },
+
+  // ── Exercise 8: Discussing a News Article (B2) ────────────────────────────────
+  {
+    id: "news-discussion",
+    title: "Discussing a News Article",
+    level: "B2",
+    topic: "Current Affairs",
+    emoji: "📰",
+    duration: "~3.5 min",
+    audioSrc: "/audio/news-discussion.mp3",
+    imageSrc: "/audio/scene-news-discussion.webp",
+    transcript: `Friend 1: Did you read that article about electric cars becoming mandatory by 2035 in the EU?
+Friend 2: Yes, I did! It's a big step. Personally, I think it's necessary. We can't keep relying on petrol cars if we want to meet climate targets.
+Friend 1: I agree with the goal, but I'm worried about the transition. Not everyone can afford an electric car right now. They're still quite expensive.
+Friend 2: That's a fair point. But the article mentioned that prices are expected to drop significantly over the next decade as battery technology improves.
+Friend 1: True. And governments are offering subsidies and tax incentives to make them more accessible. But what about charging infrastructure? In rural areas, there are barely any charging stations.
+Friend 2: That's probably the biggest challenge. The infrastructure needs to catch up with the policy. It would be pointless to ban petrol cars if people can't charge their electric ones conveniently.
+Friend 1: Exactly. And what about countries outside the EU? If they don't follow suit, it might just shift the pollution problem elsewhere.
+Friend 2: That's a global issue. But I think the EU taking a strong stance could push other major economies to follow. It happened with data privacy laws — the GDPR influenced regulations worldwide.
+Friend 1: That's a good comparison. I suppose change has to start somewhere. I just hope the transition is managed fairly so that lower-income families aren't left behind.
+Friend 2: Absolutely. Policy needs to be both ambitious and equitable. It'll be interesting to see how it unfolds over the next ten years.`,
+    questions: [
+      {
+        id: "nq1",
+        question: "What is the main topic of the article they are discussing?",
+        options: ["Climate change in Africa", "Electric cars becoming mandatory in the EU by 2035", "Rising petrol prices in Europe", "New battery technology breakthroughs"],
+        correctAnswer: 1,
+        explanation: "Friend 1 asks about 'electric cars becoming mandatory by 2035 in the EU.'",
+      },
+      {
+        id: "nq2",
+        question: "What does Friend 1 identify as the biggest practical challenge?",
+        options: ["The high cost of electric cars", "Lack of government support", "Charging infrastructure in rural areas", "Battery technology limitations"],
+        correctAnswer: 2,
+        explanation: "Friend 1 asks 'what about charging infrastructure? In rural areas, there are barely any charging stations.'",
+      },
+      {
+        id: "nq3",
+        question: "What example does Friend 2 use to argue that EU policy can influence the world?",
+        options: ["The Paris Climate Agreement", "GDPR data privacy laws", "The Euro currency adoption", "EU trade agreements"],
+        correctAnswer: 1,
+        explanation: "Friend 2 says 'It happened with data privacy laws — the GDPR influenced regulations worldwide.'",
+      },
+      {
+        id: "nq4",
+        question: "What is Friend 1 most concerned about regarding the transition?",
+        options: ["Speed of the change", "Impact on car manufacturers", "Lower-income families being left behind", "Loss of jobs in the oil industry"],
+        correctAnswer: 2,
+        explanation: "Friend 1 says 'I just hope the transition is managed fairly so that lower-income families aren't left behind.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Mandatory", meaning: "Required by law — you must do it" },
+      { word: "Infrastructure", meaning: "The basic systems a society needs — roads, power, internet, etc." },
+      { word: "Subsidy", meaning: "Money given by the government to reduce the cost of something" },
+      { word: "Equitable", meaning: "Fair and just — giving everyone what they need" },
+    ],
+  },
 ];
 
 // ─── Level badge colours ───────────────────────────────────────────────────────
@@ -778,7 +1022,7 @@ export default function ListeningPractice() {
       <div className="text-center">
         <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
           <Headphones className="w-4 h-4" />
-          4 Real Conversations · All Levels
+          8 Real Conversations · All Levels
         </div>
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Listening Practice</h2>
         <p className="text-gray-500 max-w-xl mx-auto">
