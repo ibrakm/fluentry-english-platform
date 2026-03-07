@@ -79,12 +79,12 @@ const Assessment: React.FC = () => {
               <p className="text-purple-100">Here's what you can do next:</p>
 
               <a
-                href="/book-lesson"
+                href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-r from-green-400 to-cyan-400 text-white font-bold hover:shadow-lg transition"
               >
                 <Calendar className="w-5 h-5" />
                 <div className="text-left">
-                  <p className="text-sm font-semibold">Book Your First Lesson</p>
+                  <p className="text-sm font-semibold">Book a Free Strategy Call</p>
                   <p className="text-xs opacity-90">Start practicing with our expert coach</p>
                 </div>
                 <ChevronRight className="w-5 h-5 ml-auto" />

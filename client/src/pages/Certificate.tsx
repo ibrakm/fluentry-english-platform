@@ -348,7 +348,7 @@ export default function Certificate() {
                   Book a personalised lesson with Mr. Ibrahim and get a structured plan to reach {selectedLevel.value === "C2" ? "C2 mastery" : `${CEFR_LEVELS[CEFR_LEVELS.findIndex(l => l.value === level) + 1]?.value || "C2"}`}.
                 </p>
                 <a
-                  href="/book-lesson"
+                  href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer"
                   className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold px-8 py-3 rounded-xl transition-all hover:shadow-lg"
                 >
                   Book a Free Trial Lesson →

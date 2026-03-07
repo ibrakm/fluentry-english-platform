@@ -238,11 +238,11 @@ export default function Blog() {
                 These tips are just the beginning. Get one-on-one coaching tailored to your specific goals and challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/book-lesson">
+                <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Book Free Consultation
                   </Button>
-                </Link>
+                </a>
                 <Link href="/courses">
                   <Button size="lg" variant="outline">
                     View Courses

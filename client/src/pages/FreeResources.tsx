@@ -53,11 +53,11 @@ export default function FreeResources() {
                     Start Playing
                   </Button>
                 </a>
-                <Link href="/book-lesson">
+                <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-white/90 font-semibold px-8">
                     Book Free Consultation
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -299,11 +299,11 @@ export default function FreeResources() {
                 These free resources are just the beginning. Book a free 10-minute consultation with Mr. Ibrahim K. to create your personalized learning plan.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href="/book-lesson">
+                <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8">
                     Book Free Consultation
                   </Button>
-                </Link>
+                </a>
                 <Link href="/pricing">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-white/90 font-semibold px-8">
                     View Pricing

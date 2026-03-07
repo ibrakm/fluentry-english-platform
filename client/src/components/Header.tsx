@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers, Calendar } from "lucide-react";
+import { Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers, MessageCircle } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -11,6 +11,9 @@ const navLinks = [
   { href: "/free-test", label: "Free Test", icon: ClipboardList },
   { href: "/free-resources", label: "Free Resources", icon: Layers },
 ];
+
+const WA_URL =
+  "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,11 +44,12 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/book-lesson">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+            <a href={WA_URL} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">
+                <MessageCircle className="w-4 h-4 mr-2" />
                 Book a Lesson
               </Button>
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -80,17 +84,22 @@ export default function Header() {
               );
             })}
 
-            {/* Book a Lesson CTA */}
+            {/* Book a Lesson CTA — WhatsApp direct */}
             <div className="px-5 py-3 border-t border-gray-100 mt-1">
-              <Link href="/book-lesson" onClick={() => setIsOpen(false)}>
+              <a
+                href={WA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
                 <Button
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 text-base rounded-xl"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 text-base rounded-xl"
                   style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent", minHeight: "52px" }}
                 >
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <MessageCircle className="w-5 h-5 mr-2" />
                   Book a Lesson
                 </Button>
-              </Link>
+              </a>
             </div>
           </nav>
         </div>
