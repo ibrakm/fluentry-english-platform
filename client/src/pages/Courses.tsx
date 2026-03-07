@@ -125,9 +125,11 @@ export default function Courses() {
   return (
     <>
       <SEO
-        title="English Courses Morocco | IELTS, Business English, Conversation | Fluentry"
-        description="Outcome-based English courses in Morocco. IELTS Accelerator (12,000 MAD, results guaranteed), Business English Mastery (15,000 MAD), Conversation Practice, and General English. TESOL-certified coach Mr. Ibrahim K."
+        title="English Courses Morocco | IELTS Prep, Business English & Conversation | Fluentry"
+        description="Outcome-based English courses in Morocco: 8-Week IELTS Accelerator (7.5+ guaranteed), 12-Week Business English Mastery, Conversation & Pronunciation. 1-on-1 with TESOL-certified Mr. Ibrahim K."
         path="/courses"
+        keywords="English courses Morocco, IELTS preparation Morocco, IELTS coaching Morocco, Business English course Morocco, English conversation course Morocco, TOEFL preparation Morocco, pronunciation coaching Morocco, cours anglais Maroc, دورات إنجليزية المغرب, online English course Morocco, English program Morocco 2026"
+        breadcrumbs={[{ name: "Courses", item: "https://fluentry.com/courses" }]}
       />
       <div className="min-h-screen">
 

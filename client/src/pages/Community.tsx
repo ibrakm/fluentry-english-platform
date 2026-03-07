@@ -29,9 +29,10 @@ export default function Community() {
     <>
       <SEO
         path="/community"
-        title="Fluentry Community — Join 500+ Moroccan English Learners"
-        description="Join the Fluentry WhatsApp community for Moroccan English learners. Get free resources, study partners, and refer friends to earn free lessons."
-        keywords={'english community morocco, english learners whatsapp group morocco, learn english with friends morocco, fluentry community'}
+        title="Fluentry Community | 500+ Moroccan English Learners | Free Resources"
+        description="Join Fluentry's free WhatsApp community for Moroccan English learners. Daily tips, study partners, free resources & group sessions. Refer a friend and earn a free lesson."
+        keywords="English community Morocco, English learners WhatsApp group Morocco, learn English with friends Morocco, Fluentry community, مجتمع تعلم الإنجليزية المغرب, groupe WhatsApp anglais Maroc, English study group Morocco, free English resources Morocco"
+        breadcrumbs={[{ name: "Community", item: "https://fluentry.com/community" }]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50 dark:from-gray-900 dark:to-gray-800">

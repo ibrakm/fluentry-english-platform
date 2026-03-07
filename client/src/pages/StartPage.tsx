@@ -14,7 +14,17 @@ import {
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+// ─── Facebook Pixel Helper ─────────────────────────────────────────────────────
+declare global {
+  interface Window { fbq?: (...args: unknown[]) => void; }
+}
+function trackPixel(event: string, params?: Record<string, unknown>) {
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    window.fbq("track", event, params);
+  }
+}
 
 // ─── Testimonials ─────────────────────────────────────────────────────────────
 const testimonials = [
@@ -80,6 +90,8 @@ function LeadMagnetForm() {
     } catch (_) { /* Don't block download if API fails */ }
     setSubmitted(true);
     setLoading(false);
+    // Facebook Pixel: Lead event — user submitted form to get the PDF
+    trackPixel("Lead", { content_name: "50 Mistakes PDF Lead Magnet", content_category: "English Coaching" });
   };
 
   if (submitted) {
@@ -91,6 +103,7 @@ function LeadMagnetForm() {
         <a
           href="/50_Common_Mistakes_Fluentry.pdf"
           download="50_Common_Mistakes_Fluentry.pdf"
+          onClick={() => trackPixel("CompleteRegistration", { content_name: "50 Mistakes PDF Downloaded", value: 0, currency: "MAD" })}
           className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors mb-6"
         >
           <Download className="w-5 h-5" />
@@ -185,6 +198,15 @@ function LeadMagnetForm() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function StartPage() {
+  // Facebook Pixel: ViewContent event when the /start page loads
+  useEffect(() => {
+    trackPixel("ViewContent", {
+      content_name: "Start Page — Facebook Ad Landing Page",
+      content_category: "English Coaching",
+      content_type: "landing_page",
+    });
+  }, []);
+
   return (
     <>
       <SEO

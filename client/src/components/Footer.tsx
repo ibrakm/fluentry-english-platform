@@ -31,6 +31,7 @@ export default function Footer() {
               <li><Link href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link></li>
               <li><Link href="/free-test" className="hover:text-blue-400 transition-colors">Free Level Test</Link></li>
               <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
+              <li><Link href="/success-stories" className="hover:text-blue-400 transition-colors">Success Stories</Link></li>
             </ul>
           </div>
 
@@ -40,6 +41,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/courses" className="hover:text-blue-400 transition-colors">IELTS Preparation</Link></li>
               <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Business English</Link></li>
+              <li><Link href="/group-coaching" className="hover:text-blue-400 transition-colors">Group Coaching</Link></li>
               <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Conversation Practice</Link></li>
               <li><Link href="/courses" className="hover:text-blue-400 transition-colors">General English</Link></li>
               <li><Link href="/free-resources" className="hover:text-blue-400 transition-colors">Free Resources</Link></li>

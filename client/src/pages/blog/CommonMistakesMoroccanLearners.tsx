@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function CommonMistakesMoroccanLearners() {
   return (
     <>
-      <Helmet>
-        <title>10 Common Mistakes Moroccan English Learners Make | Fluentry Blog</title>
-        <meta name="description" content="Learn about the most frequent errors Arabic and French speakers make when learning English, with practical solutions for each one." />
-      </Helmet>
+      <SEO
+        title="10 Common Mistakes Moroccan English Learners Make (and How to Fix Them) | Fluentry"
+        description="Discover the 10 most common English mistakes made by Moroccan Arabic and French speakers — with clear explanations and practical fixes. By TESOL-certified coach Mr. Ibrahim K."
+        path="/blog/common-mistakes-moroccan-english-learners"
+        type="article"
+        publishedDate="2026-01-10"
+        modifiedDate="2026-03-07"
+        keywords="common English mistakes Moroccan learners, English mistakes Arabic speakers, English mistakes French speakers Morocco, أخطاء الإنجليزية المغاربة, erreurs anglais apprenants marocains, English grammar mistakes Morocco, how to improve English Morocco"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "10 Common Mistakes Moroccan English Learners Make", item: "https://fluentry.com/blog/common-mistakes-moroccan-english-learners" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">

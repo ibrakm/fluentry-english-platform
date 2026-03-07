@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function BusinessEnglishEmailWritingGuide() {
   return (
     <>
-      <Helmet>
-        <title>Business English Email Writing: Professional Templates and Tips | Fluentry</title>
-        <meta name="description" content="Learn how to write professional business emails in English with templates, phrases, and examples for common workplace situations." />
-      </Helmet>
+      <SEO
+        title="Business English Email Writing: Templates & Tips for Moroccan Professionals | Fluentry"
+        description="Learn to write professional business emails in English with 5 ready-to-use templates. Essential guide for Moroccan professionals. TESOL-certified coach Mr. Ibrahim K."
+        path="/blog/business-english-email-writing-guide"
+        type="article"
+        publishedDate="2026-01-20"
+        modifiedDate="2026-03-07"
+        keywords="Business English email writing Morocco, professional email English Morocco, كتابة البريد الإلكتروني بالإنجليزية, rédiger email professionnel anglais Maroc, Business English Morocco, email templates English work Morocco"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "Business English Email Writing Guide", item: "https://fluentry.com/blog/business-english-email-writing-guide" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">

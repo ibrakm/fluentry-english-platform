@@ -48,6 +48,8 @@ const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassp
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
 const OnboardingTestPage = lazy(() => import("./pages/OnboardingTest"));
+const SuccessStories = lazy(() => import("./pages/SuccessStories"));
+const GroupCoaching = lazy(() => import("./pages/GroupCoaching"));
 
 // Loading fallback — minimal spinner shown while a page chunk loads
 function PageLoader() {
@@ -92,6 +94,8 @@ function Router() {
         <Route path={"/blog/best-apps-websites-learn-english-morocco"} component={Top15AppsWebsitesLearnEnglish} />
         <Route path={"/blog/challenges-moroccan-english-learners-face"} component={ChallengesMoroccanEnglishLearners} />
         <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
+        <Route path={"/success-stories"} component={SuccessStories} />
+        <Route path={"/group-coaching"} component={GroupCoaching} />
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />
         <Route path={"/audio-audit"} component={AudioAudit} />

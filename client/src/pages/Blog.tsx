@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const publishedArticles = [
   {
@@ -21,7 +22,7 @@ const publishedArticles = [
     published: true,
     title: "From A2 to B1 in 6 Months: A Realistic Step-by-Step Plan",
     excerpt: "A practical 6-month plan for Moroccan learners to advance from A2 to B1 English. Follow our weekly schedule and expert tips to improve your fluency and confidence.",
-    category: "Learning Plan",
+    category: "Learning Guide",
     readTime: "10 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -31,7 +32,7 @@ const publishedArticles = [
     published: true,
     title: "The 15 Best Apps & Websites for Learning English in Morocco (2026 Review)",
     excerpt: "Our 2026 review of the 15 best apps and websites for Moroccan English learners. Discover the top tools for vocabulary, listening, and reading, and how to use them effectively.",
-    category: "Tool Review",
+    category: "Learning Guide",
     readTime: "14 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -41,7 +42,7 @@ const publishedArticles = [
     published: true,
     title: "The 5 Real Challenges Every Moroccan Faces When Learning English",
     excerpt: "An empathetic look at the 5 unique challenges Moroccan learners face with English and practical solutions to overcome them.",
-    category: "Learning Insights",
+    category: "Learning Guide",
     readTime: "11 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -51,7 +52,7 @@ const publishedArticles = [
     published: true,
     title: "How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)",
     excerpt: "Your step-by-step guide to landing a high-paying call center job in Casablanca, Rabat, or Tangier. Learn the required English level, interview questions, salary expectations, and top companies hiring now.",
-    category: "Career Guide",
+    category: "Career English",
     readTime: "10 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -61,7 +62,7 @@ const publishedArticles = [
     published: true,
     title: "English for Tourism in Morocco: The Ultimate Guide for Hotel Staff & Tour Guides",
     excerpt: "Learn the essential English phrases and skills needed for the tourism and hospitality sector in Morocco. Boost your career and earn more with better English.",
-    category: "Career Guide",
+    category: "Career English",
     readTime: "9 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -71,7 +72,7 @@ const publishedArticles = [
     published: true,
     title: "How to Pass the TOEIC Test in Morocco (2026 Guide)",
     excerpt: "Your complete guide to passing the TOEIC Listening & Reading test in Morocco. Learn about test centers (AMIDEAST), required scores for engineers and professionals, and preparation strategies.",
-    category: "Exam Preparation",
+    category: "IELTS & Exams",
     readTime: "11 min read",
     date: "February 24, 2026",
     image: "/hero-illustration.png"
@@ -81,7 +82,7 @@ const publishedArticles = [
     published: true,
     title: "How to Pass IELTS in Morocco: The Ultimate 2026 Guide",
     excerpt: "Your complete guide to acing the IELTS test in Morocco. Find test centers, fees, dates, and expert strategies for Listening, Reading, Writing, and Speaking sections.",
-    category: "Exam Preparation",
+    category: "IELTS & Exams",
     readTime: "15 min read",
     date: "February 23, 2026",
     image: "/hero-illustration.png"
@@ -91,7 +92,7 @@ const publishedArticles = [
     published: true,
     title: "How to Think in English: Stop Translating in Your Head",
     excerpt: "Discover proven techniques to stop translating from your native language and start thinking directly in English for more natural, fluent communication.",
-    category: "Learning Strategies",
+    category: "Speaking Skills",
     readTime: "8 min read",
     date: "January 15, 2025",
     image: "/hero-illustration.png"
@@ -121,7 +122,7 @@ const publishedArticles = [
     published: true,
     title: "IELTS Speaking Test: Complete Success Guide for Moroccan Students",
     excerpt: "Everything you need to know to ace the IELTS Speaking test, including common questions, scoring criteria, and expert tips from a TESOL-certified coach.",
-    category: "Exam Preparation",
+    category: "IELTS & Exams",
     readTime: "12 min read",
     date: "December 28, 2024",
     image: "/hero-illustration.png"
@@ -148,13 +149,48 @@ const publishedArticles = [
   }
 ];
 
+const FILTER_CATEGORIES = [
+  "All Topics",
+  "IELTS & Exams",
+  "Business English",
+  "Speaking Skills",
+  "Pronunciation",
+  "Grammar & Vocabulary",
+  "Learning Guide",
+  "Career English",
+];
+
+const CATEGORY_COLORS: Record<string, string> = {
+  "IELTS & Exams": "bg-purple-100 text-purple-700",
+  "Business English": "bg-blue-100 text-blue-700",
+  "Speaking Skills": "bg-green-100 text-green-700",
+  "Pronunciation": "bg-orange-100 text-orange-700",
+  "Grammar & Vocabulary": "bg-yellow-100 text-yellow-700",
+  "Learning Guide": "bg-teal-100 text-teal-700",
+  "Career English": "bg-rose-100 text-rose-700",
+};
+
 export default function Blog() {
-  const title = "English Learning Blog - Tips, Strategies & Success Stories";
-  const description = "Expert English learning tips, strategies, and success stories from TESOL-certified coach Mr. Ibrahim K. Practical advice for Moroccan English learners.";
-  
+  const [activeCategory, setActiveCategory] = useState("All Topics");
+
+  const filteredArticles =
+    activeCategory === "All Topics"
+      ? publishedArticles
+      : publishedArticles.filter((a) => a.category === activeCategory);
+
+  const title = "English Learning Blog — Tips, Strategies & Success Stories | Fluentry Morocco";
+  const description =
+    "Expert English learning tips, strategies, and success stories from TESOL-certified coach Mr. Ibrahim K. Practical advice for Moroccan English learners.";
+
   return (
     <>
-      <SEO title={title} description={description} path="/blog" />
+      <SEO
+        title={title}
+        description={description}
+        path="/blog"
+        keywords="English learning blog Morocco, IELTS tips Morocco, Business English Morocco, English pronunciation Arabic speakers, English speaking skills Morocco, تعلم الإنجليزية المغرب, blog anglais Maroc"
+        breadcrumbs={[{ name: "Blog", item: "https://fluentry.com/blog" }]}
+      />
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-16">
@@ -165,7 +201,7 @@ export default function Blog() {
                 <span className="font-medium">English Learning Blog</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Tips, Strategies & Success Stories
+                Tips, Strategies &amp; Success Stories
               </h1>
               <p className="text-xl text-white/90 max-w-2xl mx-auto">
                 Expert advice from TESOL-certified coach Mr. Ibrahim K. to help you master English faster and with more confidence.
@@ -174,55 +210,98 @@ export default function Blog() {
           </div>
         </section>
 
+        {/* Category Filter Bar */}
+        <section className="sticky top-0 z-10 bg-white border-b border-gray-200 shadow-sm">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-2 overflow-x-auto py-3 scrollbar-hide">
+              {FILTER_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`flex-shrink-0 px-4 py-1.5 rounded-full text-sm font-semibold transition-all duration-200 border ${
+                    activeCategory === cat
+                      ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                      : "bg-white text-gray-600 border-gray-300 hover:border-blue-400 hover:text-blue-600"
+                  }`}
+                  style={{ WebkitTapHighlightColor: "transparent" }}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Blog Articles Grid */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {publishedArticles.map((article) => (
-                  <Card key={article.slug} className="hover:shadow-lg transition-shadow flex flex-col">
-                    <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-t-lg overflow-hidden">
-                      <img 
-                        src={article.image} 
-                        alt={article.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <CardHeader className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Badge variant="secondary">{article.category}</Badge>
-                        <span className="text-sm text-gray-500 flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {article.readTime}
-                        </span>
+              {/* Results count */}
+              <p className="text-sm text-gray-500 mb-6">
+                {filteredArticles.length === publishedArticles.length
+                  ? `${publishedArticles.length} articles`
+                  : `${filteredArticles.length} article${filteredArticles.length !== 1 ? "s" : ""} in "${activeCategory}"`}
+              </p>
+
+              {filteredArticles.length === 0 ? (
+                <div className="text-center py-20 text-gray-400">
+                  <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-40" />
+                  <p className="text-lg font-medium">No articles in this category yet.</p>
+                  <p className="text-sm mt-1">Check back soon — new content is added every week.</p>
+                </div>
+              ) : (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {filteredArticles.map((article) => (
+                    <Card key={article.slug} className="hover:shadow-lg transition-shadow flex flex-col">
+                      <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-t-lg overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <CardTitle className="text-xl mb-2 line-clamp-2">
-                        {article.title}
-                      </CardTitle>
-                      <CardDescription className="line-clamp-3">
-                        {article.excerpt}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500">{article.date}</span>
-                        {article.published ? (
-                          <Link href={`/blog/${article.slug}`}>
-                            <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
-                              Read More
-                              <ArrowRight className="w-4 h-4 ml-1" />
+                      <CardHeader className="flex-1">
+                        <div className="flex items-center gap-3 mb-3">
+                          <span
+                            className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+                              CATEGORY_COLORS[article.category] ?? "bg-gray-100 text-gray-700"
+                            }`}
+                          >
+                            {article.category}
+                          </span>
+                          <span className="text-sm text-gray-500 flex items-center gap-1">
+                            <Clock className="w-4 h-4" />
+                            {article.readTime}
+                          </span>
+                        </div>
+                        <CardTitle className="text-xl mb-2 line-clamp-2">
+                          {article.title}
+                        </CardTitle>
+                        <CardDescription className="line-clamp-3">
+                          {article.excerpt}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-500">{article.date}</span>
+                          {article.published ? (
+                            <Link href={`/blog/${article.slug}`}>
+                              <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
+                                Read More
+                                <ArrowRight className="w-4 h-4 ml-1" />
+                              </Button>
+                            </Link>
+                          ) : (
+                            <Button variant="ghost" size="sm" disabled className="text-gray-400">
+                              Coming Soon
                             </Button>
-                          </Link>
-                        ) : (
-                          <Button variant="ghost" size="sm" disabled className="text-gray-400">
-                            Coming Soon
-                          </Button>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -238,7 +317,11 @@ export default function Blog() {
                 These tips are just the beginning. Get one-on-one coaching tailored to your specific goals and challenges.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     Book Free Consultation
                   </Button>

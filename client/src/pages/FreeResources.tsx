@@ -7,7 +7,7 @@ import IdiomGuide from "@/components/IdiomGuide";
 import ListeningPractice from "@/components/ListeningPractice";
 import PracticeExercises from "@/components/PracticeExercises";
 import { BookOpen, Download, FileText, GamepadIcon, Headphones, PenTool, BookMarked } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
 
@@ -29,11 +29,13 @@ export default function FreeResources() {
 
   return (
     <>
-      <Helmet>
-        <title>Free English Learning Resources - Games, Guides & Exercises | Fluentry Morocco</title>
-        <meta name="description" content="Practice English for free with interactive games, downloadable guides, and expert exercises. Learn English online with Fluentry - Morocco's trusted English coaching platform." />
-        <meta name="keywords" content="free English resources Morocco, English learning games, English practice online, IELTS preparation Morocco, business English Morocco, English teacher Tangier" />
-      </Helmet>
+      <SEO
+        title="Free English Resources Morocco | Listening Exercises, Games & Guides | Fluentry"
+        description="Practice English for free: 8 listening exercises (A1–B2), interactive vocabulary & grammar games, idiom guides, and downloadable worksheets. Fluentry — Morocco's English coaching platform."
+        path="/free-resources"
+        keywords="free English resources Morocco, English listening exercises Morocco, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب"
+        breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.com/free-resources" }]}
+      />
 
       <div className="min-h-screen flex flex-col bg-background">
 

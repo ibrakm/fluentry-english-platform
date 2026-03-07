@@ -143,9 +143,11 @@ export default function Pricing() {
   return (
     <>
       <SEO
-        title="English Coaching Prices Morocco | 100 MAD/hour | Fluentry"
-        description="Transparent English coaching prices in Morocco. 100 MAD per hour. Choose 2, 4, or 6 sessions per week. IELTS and Business English programs available. TESOL-certified coach Mr. Ibrahim K."
+        title="English Lesson Prices Morocco | From 100 MAD/hr | Fluentry"
+        description="Affordable English coaching in Morocco from 100 MAD/hr. Standard (800 MAD/mo), Intensive (1,600 MAD/mo) & Accelerator (2,400 MAD/mo) plans. IELTS & Business English programs. TESOL-certified."
         path="/pricing"
+        keywords="English lesson price Morocco, affordable English tutor Morocco, English coaching cost Morocco, cours anglais prix Maroc, تكلفة دروس الإنجليزية المغرب, English lesson packages Morocco, 100 MAD English lesson Morocco, IELTS program price Morocco, Business English program price Morocco"
+        breadcrumbs={[{ name: "Pricing", item: "https://fluentry.com/pricing" }]}
       />
       <div className="min-h-screen">
 

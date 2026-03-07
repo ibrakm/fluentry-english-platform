@@ -38,7 +38,7 @@ interface VocabItem {
 interface Exercise {
   id: string;
   title: string;
-  level: "A1" | "A2" | "B1" | "B2";
+  level: "A1" | "A2" | "B1" | "B2" | "C1";
   topic: string;
   emoji: string;
   duration: string;
@@ -524,6 +524,334 @@ Friend 2: Absolutely. Policy needs to be both ambitious and equitable. It'll be 
       { word: "Equitable", meaning: "Fair and just — giving everyone what they need" },
     ],
   },
+  // ─── B2: Academic Discussion ─────────────────────────────────────────────────
+  {
+    id: "academic-discussion",
+    title: "University Lecture: Carbon Tax & Climate Policy",
+    level: "B2",
+    topic: "Academic English",
+    emoji: "🎓",
+    duration: "~3 min",
+    audioSrc: "/audio/academic-discussion.mp3",
+    imageSrc: "/audio/scene-academic-discussion.webp",
+    transcript: `Professor: Good morning everyone. Today we're continuing our discussion on climate change and its economic implications. Last week we looked at the science. Today I want to focus on policy responses. Can anyone summarise the key arguments for a carbon tax?
+
+Student: Yes, Professor. The main argument is that a carbon tax internalises the external costs of carbon emissions. Basically, it forces companies and consumers to pay the true cost of their pollution, which currently falls on society as a whole.
+
+Professor: Excellent. And what are the counterarguments?
+
+Student: Critics argue that a carbon tax is regressive — it hits lower-income households harder because they spend a larger proportion of their income on energy and transport. There's also the competitiveness issue: if one country imposes a carbon tax and others don't, domestic industries may be disadvantaged.
+
+Professor: Good. So how do economists propose to address the regressivity problem?
+
+Student: One solution is to use the revenue from the carbon tax to fund direct cash transfers to lower-income households — sometimes called a carbon dividend. This way, the poorest households actually come out ahead financially, even though they pay more for energy.
+
+Professor: Precisely. This is the approach Canada has taken. Studies show that British Columbia's carbon tax, introduced in 2008, reduced fuel consumption by 15 percent compared to the rest of Canada, with no measurable negative impact on GDP. What does this tell us?
+
+Student: It suggests that well-designed carbon pricing can achieve environmental goals without harming economic growth — at least in the short to medium term.`,
+    questions: [
+      {
+        id: "adq1",
+        question: "What is the main economic argument FOR a carbon tax?",
+        options: [
+          "It raises government revenue for public services",
+          "It forces polluters to pay the true cost of their emissions",
+          "It makes domestic industries more competitive globally",
+          "It reduces income inequality between households",
+        ],
+        correctAnswer: 1,
+        explanation: "The student explains that a carbon tax 'internalises the external costs of carbon emissions' — making companies pay the true cost of their pollution.",
+      },
+      {
+        id: "adq2",
+        question: "Why do critics call a carbon tax 'regressive'?",
+        options: [
+          "It slows economic growth",
+          "It is difficult to enforce internationally",
+          "It takes a larger share of income from lower-income households",
+          "It does not reduce carbon emissions effectively",
+        ],
+        correctAnswer: 2,
+        explanation: "The student says it 'hits lower-income households harder because they spend a larger proportion of their income on energy and transport.'",
+      },
+      {
+        id: "adq3",
+        question: "What is a 'carbon dividend'?",
+        options: [
+          "A fine paid by companies that exceed emission limits",
+          "A cash transfer to lower-income households funded by carbon tax revenue",
+          "A government subsidy for renewable energy companies",
+          "A tax rebate for businesses that reduce their emissions",
+        ],
+        correctAnswer: 1,
+        explanation: "The student defines it as using carbon tax revenue 'to fund direct cash transfers to lower-income households.'",
+      },
+      {
+        id: "adq4",
+        question: "What did British Columbia's carbon tax achieve, according to the professor?",
+        options: [
+          "A 15% increase in GDP",
+          "A 15% reduction in fuel consumption with no negative GDP impact",
+          "A 15% reduction in carbon emissions across Canada",
+          "A 15% increase in renewable energy adoption",
+        ],
+        correctAnswer: 1,
+        explanation: "The professor states it 'reduced fuel consumption by 15 percent compared to the rest of Canada, with no measurable negative impact on GDP.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Internalise", meaning: "To include an external cost within the price of a product or activity" },
+      { word: "Regressive", meaning: "A tax that takes a larger percentage of income from lower earners than higher earners" },
+      { word: "Carbon dividend", meaning: "Cash payments to citizens funded by carbon tax revenue" },
+      { word: "Competitiveness", meaning: "The ability of a business or country to compete effectively in the market" },
+    ],
+  },
+  // ─── C1: Business Negotiation ───────────────────────────────────────────────
+  {
+    id: "business-negotiation",
+    title: "Business Negotiation: Partnership Deal",
+    level: "C1",
+    topic: "Business English",
+    emoji: "🤝",
+    duration: "~3 min",
+    audioSrc: "/audio/business-negotiation.mp3",
+    imageSrc: "/audio/scene-business-negotiation.webp",
+    transcript: `Sarah: Thank you for coming in today, Mr. Benali. We've reviewed your proposal and we're genuinely interested in moving forward with a partnership.
+
+Mr. Benali: Thank you, Sarah. We're equally enthusiastic. We believe our logistics network in North Africa would complement your distribution capabilities in Europe very well.
+
+Sarah: Absolutely. Now, before we get into the specifics, I want to address the revenue-sharing model you proposed. You suggested a 60-40 split in your favour. Our board feels that doesn't adequately reflect the investment we'd be making in technology and infrastructure.
+
+Mr. Benali: I understand your concern. However, we're bringing an established client base of over 200 companies across Morocco, Algeria, and Tunisia. Building that from scratch would take your company years and significant capital.
+
+Sarah: That's a fair point. What if we proposed a tiered model? For the first two years, we accept a 55-45 split in your favour while we build the client relationships. After year two, once our technology platform is fully integrated, we move to a 50-50 split.
+
+Mr. Benali: That's an interesting proposal. I could accept the 55-45 for the first eighteen months, but I'd want to revisit the split at the eighteen-month mark rather than waiting two full years.
+
+Sarah: We could work with that. I'd also want to include a performance clause — if the combined revenue exceeds our projections by more than 20 percent, we revisit the split immediately.
+
+Mr. Benali: Agreed. That seems fair to both parties. Shall we have our legal teams draft a heads of agreement?
+
+Sarah: Let's do that. I'll have our lawyers send over a draft by end of week.`,
+    questions: [
+      {
+        id: "bnq1",
+        question: "What revenue split did Mr. Benali originally propose?",
+        options: ["50-50", "55-45 in his favour", "60-40 in his favour", "70-30 in his favour"],
+        correctAnswer: 2,
+        explanation: "Sarah says 'You suggested a 60-40 split in your favour.'",
+      },
+      {
+        id: "bnq2",
+        question: "What is Mr. Benali's main argument for a higher share?",
+        options: [
+          "His company has superior technology",
+          "He is taking on more financial risk",
+          "He brings an established client base of 200+ companies",
+          "His logistics network is more efficient",
+        ],
+        correctAnswer: 2,
+        explanation: "Mr. Benali says 'we're bringing an established client base of over 200 companies across Morocco, Algeria, and Tunisia.'",
+      },
+      {
+        id: "bnq3",
+        question: "What tiered model does Sarah propose?",
+        options: [
+          "55-45 for 1 year, then 50-50",
+          "55-45 for 2 years, then 50-50",
+          "60-40 for 1 year, then 55-45",
+          "50-50 from the start with a performance bonus",
+        ],
+        correctAnswer: 1,
+        explanation: "Sarah proposes '55-45 split in your favour' for the first two years, then a '50-50 split' after year two.",
+      },
+      {
+        id: "bnq4",
+        question: "What does the 'performance clause' Sarah proposes mean?",
+        options: [
+          "The deal is cancelled if targets are missed",
+          "The split is revisited immediately if revenue exceeds projections by 20%",
+          "Mr. Benali receives a bonus if he exceeds his sales targets",
+          "The contract is extended automatically if performance is strong",
+        ],
+        correctAnswer: 1,
+        explanation: "Sarah says 'if the combined revenue exceeds our projections by more than 20 percent, we revisit the split immediately.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Revenue-sharing model", meaning: "An agreement on how profits or income will be divided between partners" },
+      { word: "Tiered model", meaning: "A structure with different levels or stages, each with different terms" },
+      { word: "Performance clause", meaning: "A contract condition that triggers a change based on results" },
+      { word: "Heads of agreement", meaning: "A preliminary document outlining the key terms of a deal before the final contract" },
+    ],
+  },
+  // ─── C1: University Presentation ───────────────────────────────────────────────
+  {
+    id: "university-presentation",
+    title: "Academic Presentation: Social Media & Mental Health",
+    level: "C1",
+    topic: "Academic English",
+    emoji: "📊",
+    duration: "~4 min",
+    audioSrc: "/audio/university-presentation.mp3",
+    imageSrc: "/audio/scene-university-presentation.webp",
+    transcript: `Presenter: Good afternoon. My presentation today is on the psychological impact of social media on adolescent mental health, with a specific focus on the mechanisms behind the correlation between heavy social media use and increased rates of anxiety and depression in teenagers.
+
+I'll structure my talk in three parts: first, the current evidence base; second, the proposed psychological mechanisms; and third, the implications for policy and parental guidance.
+
+Starting with the evidence. A landmark longitudinal study by Twenge and colleagues, published in 2018, analysed data from over half a million American adolescents and found a significant increase in depressive symptoms and suicidal ideation correlating with the rise of smartphone adoption after 2012. Crucially, the effect was stronger for girls than boys.
+
+However, I want to be careful about causality here. Correlation does not imply causation. A competing hypothesis is that adolescents who are already anxious or depressed are more likely to use social media heavily — what researchers call a selection effect.
+
+Moving to mechanisms. The most compelling explanation is social comparison theory. Social media platforms are optimised to show users idealised, curated versions of other people's lives. This constant upward social comparison triggers feelings of inadequacy and low self-worth.
+
+A second mechanism is sleep disruption. Studies show that teenagers who use their phones after 10 PM sleep on average 45 minutes less per night, and sleep deprivation is one of the strongest predictors of adolescent depression.
+
+In terms of policy implications, the evidence supports three interventions: age verification requirements for social media platforms, digital literacy education in schools, and parental guidance programmes that focus on sleep hygiene rather than blanket bans.
+
+Audience Member: How do you account for the positive effects of social media, such as community building for marginalised groups?
+
+Presenter: That's an excellent point. The evidence suggests a dose-response relationship — moderate use, particularly for passive consumption, is harmful, while active, community-oriented use can be beneficial.`,
+    questions: [
+      {
+        id: "upq1",
+        question: "According to the 2018 Twenge study, when did depressive symptoms among adolescents increase significantly?",
+        options: [
+          "After the introduction of Facebook in 2004",
+          "After the rise of smartphone adoption after 2012",
+          "After the COVID-19 pandemic in 2020",
+          "After the launch of TikTok in 2018",
+        ],
+        correctAnswer: 1,
+        explanation: "The presenter says the study found 'a significant increase in depressive symptoms correlating with the rise of smartphone adoption after 2012.'",
+      },
+      {
+        id: "upq2",
+        question: "What is the 'selection effect' mentioned by the presenter?",
+        options: [
+          "Social media algorithms select content that increases anxiety",
+          "Adolescents who are already anxious are more likely to use social media heavily",
+          "Social media companies select which users to target with advertising",
+          "Schools select which students receive digital literacy education",
+        ],
+        correctAnswer: 1,
+        explanation: "The presenter explains it as 'adolescents who are already anxious or depressed are more likely to use social media heavily.'",
+      },
+      {
+        id: "upq3",
+        question: "How much less sleep do teenagers who use phones after 10 PM get, on average?",
+        options: ["15 minutes", "30 minutes", "45 minutes", "60 minutes"],
+        correctAnswer: 2,
+        explanation: "The presenter states 'teenagers who use their phones after 10 PM sleep on average 45 minutes less per night.'",
+      },
+      {
+        id: "upq4",
+        question: "According to the presenter, what type of social media use can actually be BENEFICIAL?",
+        options: [
+          "Passive scrolling through news feeds",
+          "Watching short-form video content",
+          "Active, community-oriented use",
+          "Following celebrity accounts",
+        ],
+        correctAnswer: 2,
+        explanation: "The presenter says 'active, community-oriented use can be beneficial,' contrasting it with passive consumption.",
+      },
+    ],
+    vocabulary: [
+      { word: "Longitudinal study", meaning: "Research that follows the same subjects over a long period of time" },
+      { word: "Suicidal ideation", meaning: "Thoughts about or an unusual preoccupation with suicide" },
+      { word: "Social comparison theory", meaning: "The idea that people determine their own worth by comparing themselves to others" },
+      { word: "Dose-response relationship", meaning: "A relationship where the effect changes proportionally with the amount of exposure" },
+    ],
+  },
+  // ─── B2: Performance Review ───────────────────────────────────────────────────
+  {
+    id: "performance-review",
+    title: "Six-Month Performance Review",
+    level: "B2",
+    topic: "Business English",
+    emoji: "📈",
+    duration: "~3 min",
+    audioSrc: "/audio/performance-review.mp3",
+    imageSrc: "/audio/scene-performance-review.webp",
+    transcript: `Manager: Come in, Youssef. Thanks for making time. As you know, this is your six-month performance review. Overall, I have to say the feedback has been very positive.
+
+Youssef: Thank you. I've really enjoyed the role and I feel like I've grown a lot since joining.
+
+Manager: It shows. Your client retention rate is 94 percent — that's 8 points above the team average. And the feedback from the Casablanca account was particularly strong. They specifically mentioned your ability to anticipate their needs before they even raise them.
+
+Youssef: I spent a lot of time in the first two months just listening and mapping their processes. I think understanding their workflow made it much easier to add value proactively.
+
+Manager: That's exactly the kind of strategic thinking we want to see more of. Now, I also want to be honest about one area for development. Your written reports — the monthly summaries you send to senior management — they're accurate, but they tend to be quite long. Senior managers are time-poor. They need the key insight in the first paragraph, not buried on page three.
+
+Youssef: That's fair feedback. I think I've been trying to show all the work behind the conclusion rather than leading with the conclusion itself.
+
+Manager: Exactly. I'd suggest looking at the Pyramid Principle — it's a communication framework that teaches you to lead with the recommendation and then provide supporting evidence.
+
+Youssef: I'd really appreciate that. Is there anything else I should be focusing on in the next six months?
+
+Manager: Yes. We're considering you for the senior account manager role that's opening up in Q3. To be competitive for that position, you'll need to demonstrate you can manage a small team. I'd like to give you the opportunity to mentor our two new analysts starting next month.
+
+Youssef: That sounds like a fantastic opportunity. I'm very interested.
+
+Manager: Good. Let's set a follow-up in three months to review how the mentoring is going.`,
+    questions: [
+      {
+        id: "prq1",
+        question: "How does Youssef's client retention rate compare to the team average?",
+        options: [
+          "It is 8 points below the team average",
+          "It is equal to the team average",
+          "It is 8 points above the team average",
+          "It is 14 points above the team average",
+        ],
+        correctAnswer: 2,
+        explanation: "The manager says 'Your client retention rate is 94 percent — that's 8 points above the team average.'",
+      },
+      {
+        id: "prq2",
+        question: "What is the main criticism the manager has of Youssef's written reports?",
+        options: [
+          "They contain factual errors",
+          "They are too short and lack detail",
+          "The key insight is buried — reports are too long",
+          "They are not submitted on time",
+        ],
+        correctAnswer: 2,
+        explanation: "The manager says the reports 'tend to be quite long' and that 'the key insight' is 'buried on page three' instead of in the first paragraph.",
+      },
+      {
+        id: "prq3",
+        question: "What is the 'Pyramid Principle' the manager recommends?",
+        options: [
+          "A management framework for building teams",
+          "A communication framework: lead with the recommendation, then provide evidence",
+          "A sales technique for presenting to senior clients",
+          "A time management system for busy professionals",
+        ],
+        correctAnswer: 1,
+        explanation: "The manager describes it as 'a communication framework that teaches you to lead with the recommendation and then provide supporting evidence.'",
+      },
+      {
+        id: "prq4",
+        question: "What opportunity does the manager offer Youssef to prepare for the senior role?",
+        options: [
+          "Lead a client presentation in Casablanca",
+          "Attend a management training course",
+          "Mentor two new analysts starting next month",
+          "Manage the Rabat office for three months",
+        ],
+        correctAnswer: 2,
+        explanation: "The manager says 'I'd like to give you the opportunity to mentor our two new analysts starting next month.'",
+      },
+    ],
+    vocabulary: [
+      { word: "Client retention rate", meaning: "The percentage of clients a business keeps over a given period" },
+      { word: "Proactively", meaning: "Acting in advance to deal with an expected situation, rather than waiting for it to happen" },
+      { word: "Pyramid Principle", meaning: "A communication method where you state the conclusion first, then support it with evidence" },
+      { word: "Mentor", meaning: "To guide and support a less experienced person in their professional development" },
+    ],
+  },
 ];
 
 // ─── Level badge colours ───────────────────────────────────────────────────────
@@ -532,6 +860,7 @@ const levelColors: Record<string, string> = {
   A2: "bg-green-100 text-green-800 border-green-300",
   B1: "bg-yellow-100 text-yellow-800 border-yellow-300",
   B2: "bg-orange-100 text-orange-800 border-orange-300",
+  C1: "bg-red-100 text-red-800 border-red-300",
 };
 
 // ─── Audio Player ─────────────────────────────────────────────────────────────

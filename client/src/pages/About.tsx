@@ -92,9 +92,11 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Mr. Ibrahim K. — TESOL-Certified English Coach Morocco | Fluentry"
-        description="Meet Mr. Ibrahim K., TESOL-certified English coach based in Tangier, Morocco. 100+ students coached, 4.9★ rating, results guaranteed. Specialising in IELTS, Business English, and conversational fluency."
+        title="Mr. Ibrahim K. — TESOL-Certified English Coach Tangier, Morocco | Fluentry"
+        description="Meet Mr. Ibrahim K., TESOL-certified English coach in Tangier. 100+ students, 4.9★ rating. Expert in IELTS prep, Business English & fluency for Moroccan learners. Results guaranteed."
         path="/about"
+        keywords="English coach Tangier Morocco, TESOL certified English teacher Morocco, Ibrahim English coach, IELTS coach Morocco, Business English coach Tangier, professeur anglais Tanger, مدرب الإنجليزية طنجة, English tutor Morocco biography, about Fluentry coach"
+        breadcrumbs={[{ name: "About", item: "https://fluentry.com/about" }]}
       />
       <div className="min-h-screen">
 

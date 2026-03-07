@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function IeltsSpeakingTestSuccessGuide() {
   return (
     <>
-      <Helmet>
-        <title>IELTS Speaking Test: Complete Success Guide for Moroccan Students | Fluentry</title>
-        <meta name="description" content="Everything you need to know to ace the IELTS Speaking test, including common questions, scoring criteria, and expert tips from a TESOL-certified coach." />
-      </Helmet>
+      <SEO
+        title="IELTS Speaking Test: Complete Success Guide for Moroccan Students | Fluentry"
+        description="Ace the IELTS Speaking test with this complete guide: Part 1, 2 & 3 strategies, scoring criteria, common questions, and expert tips from TESOL-certified coach Mr. Ibrahim K."
+        path="/blog/ielts-speaking-test-success-guide"
+        type="article"
+        publishedDate="2026-02-01"
+        modifiedDate="2026-03-07"
+        keywords="IELTS speaking test Morocco, IELTS speaking tips Morocco, IELTS preparation Morocco, اختبار آيلتس المغرب, IELTS band 7 Morocco, IELTS speaking strategies, IELTS coach Morocco, IELTS speaking Part 1 2 3"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "IELTS Speaking Test Success Guide", item: "https://fluentry.com/blog/ielts-speaking-test-success-guide" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">

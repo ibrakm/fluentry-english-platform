@@ -1,5 +1,10 @@
 import { Helmet } from "react-helmet-async";
 
+interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
 interface SEOProps {
   title: string;
   description: string;
@@ -18,6 +23,7 @@ interface SEOProps {
     price?: string;
     priceCurrency?: string;
   };
+  breadcrumbs?: BreadcrumbItem[];
 }
 
 const BASE_URL = "https://fluentry.com";
@@ -37,6 +43,7 @@ export const SEO = ({
   authorName = "Mr. Ibrahim K.",
   faqItems,
   courseData,
+  breadcrumbs,
 }: SEOProps) => {
   const fullUrl = `${BASE_URL}${path}`;
   const fullTitle = title.includes("Fluentry") ? title : `${title} | Fluentry`;
@@ -174,6 +181,26 @@ export const SEO = ({
     inLanguage: "en",
   };
 
+  // ── Structured Data: BreadcrumbList ────────────────────────────────────
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: BASE_URL,
+      },
+      ...(breadcrumbs || []).map((crumb, index) => ({
+        "@type": "ListItem",
+        position: index + 2,
+        name: crumb.name,
+        item: crumb.item,
+      })),
+    ],
+  };
+
   // ── Structured Data: FAQ (optional) ─────────────────────────────────────
   const faqSchema =
     faqItems && faqItems.length > 0
@@ -288,6 +315,11 @@ export const SEO = ({
       {/* Structured Data — WebPage / Article */}
       <script type="application/ld+json">
         {JSON.stringify(webPageSchema)}
+      </script>
+
+      {/* Structured Data — BreadcrumbList */}
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
       </script>
 
       {/* Structured Data — FAQ (if provided) */}

@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function ImproveEnglishPronunciationArabicSpeakers() {
   return (
     <>
-      <Helmet>
-        <title>How to Improve English Pronunciation for Arabic Speakers | Fluentry</title>
-        <meta name="description" content="Tackle the most challenging English sounds for Arabic speakers with practical exercises and pronunciation tips from an expert coach." />
-      </Helmet>
+      <SEO
+        title="How to Improve English Pronunciation for Arabic Speakers | Fluentry Morocco"
+        description="Master the hardest English sounds for Arabic speakers: P vs B, TH, V, short vowels. Practical exercises and expert tips from TESOL-certified coach Mr. Ibrahim K. in Morocco."
+        path="/blog/improve-english-pronunciation-arabic-speakers"
+        type="article"
+        publishedDate="2026-02-05"
+        modifiedDate="2026-03-07"
+        keywords="English pronunciation Arabic speakers Morocco, improve English pronunciation Morocco, تحسين نطق الإنجليزية للعرب, pronunciation coach Morocco, English sounds Arabic speakers, English accent Morocco, pronunciation exercises Morocco"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "Improve English Pronunciation for Arabic Speakers", item: "https://fluentry.com/blog/improve-english-pronunciation-arabic-speakers" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">

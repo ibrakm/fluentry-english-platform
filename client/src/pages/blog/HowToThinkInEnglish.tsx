@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function HowToThinkInEnglish() {
   return (
     <>
-      <Helmet>
-        <title>How to Think in English: Stop Translating in Your Head | Fluentry Blog</title>
-        <meta name="description" content="Discover proven techniques to stop translating from your native language and start thinking directly in English for more natural, fluent communication." />
-      </Helmet>
+      <SEO
+        title="How to Think in English: Stop Translating in Your Head | Fluentry Blog"
+        description="Stop translating from Arabic or French in your head. Discover 5 proven techniques to start thinking directly in English for natural, fluent communication. For Moroccan learners."
+        path="/blog/how-to-think-in-english"
+        type="article"
+        publishedDate="2026-01-25"
+        modifiedDate="2026-03-07"
+        keywords="how to think in English Morocco, stop translating English Arabic, stop translating English French Morocco, كيف تفكر بالإنجليزية, penser en anglais Maroc, English fluency Morocco, think in English not translate"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "How to Think in English", item: "https://fluentry.com/blog/how-to-think-in-english" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         {/* Header */}

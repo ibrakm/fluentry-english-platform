@@ -1,14 +1,16 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers, MessageCircle } from "lucide-react";
+import { Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers, MessageCircle, Users, Star } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/about", label: "About", icon: Info },
   { href: "/courses", label: "Courses", icon: BookOpen },
+  { href: "/group-coaching", label: "Group Coaching", icon: Users },
   { href: "/pricing", label: "Pricing", icon: Tag },
   { href: "/free-test", label: "Free Test", icon: ClipboardList },
+  { href: "/success-stories", label: "Success Stories", icon: Star },
   { href: "/free-resources", label: "Free Resources", icon: Layers },
 ];
 

@@ -35,29 +35,20 @@ const homeFAQ = [
 ];
 
 export default function Home() {
-  const title = "IELTS Coaching Morocco | Business English | TESOL-Certified | Fluentry";
-  const description = "Morocco's #1 outcome-based English coaching. 8-Week IELTS Accelerator — achieve 7.5+ or your money back. Business English for professionals. TESOL-certified Mr. Ibrahim K.";
+  const title = "English Coaching Morocco | IELTS Prep & Business English | Fluentry";
+  const description = "Learn English online in Morocco with TESOL-certified coach Mr. Ibrahim K. IELTS 7.5+ guaranteed, Business English & conversation. 1-on-1 lessons from 100 MAD/hr. Free level test.";
+  const homeKeywords = "English coaching Morocco, cours anglais en ligne Maroc, IELTS preparation Morocco, تعلم الإنجليزية المغرب, English teacher Tangier, online English lessons Morocco, Business English Morocco, IELTS coaching Casablanca, English tutor Morocco, professeur anglais Maroc, TESOL certified coach Morocco, learn English online Morocco, English for work Morocco, IELTS 7.5 Morocco, English fluency Morocco, cours anglais Casablanca, cours anglais Rabat, cours anglais Marrakech, English lessons Morocco online, 1-on-1 English coaching Morocco";
   const [bannerVisible, setBannerVisible] = useState(true);
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://fluentry-english-platform.vercel.app"
-      }
-    ]
-  };
 
   return (
     <>
-      <SEO title={title} description={description} path="/" faqItems={homeFAQ} />
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
+      <SEO
+        title={title}
+        description={description}
+        path="/"
+        keywords={homeKeywords}
+        faqItems={homeFAQ}
+      />
       <div className="min-h-screen">
 
       {/* Bilingual Moroccan Banner */}

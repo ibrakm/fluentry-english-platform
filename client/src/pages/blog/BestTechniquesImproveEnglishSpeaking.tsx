@@ -1,16 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Helmet } from "react-helmet-async";
+import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 
 export default function BestTechniquesImproveEnglishSpeaking() {
   return (
     <>
-      <Helmet>
-        <title>5 Best Techniques to Improve Your English Speaking Skills | Fluentry Blog</title>
-        <meta name="description" content="Master these five powerful techniques used by successful English learners to dramatically improve your speaking confidence and fluency." />
-      </Helmet>
+      <SEO
+        title="5 Best Techniques to Improve English Speaking Skills | Fluentry Blog"
+        description="Master 5 proven techniques to improve your English speaking confidence and fluency. Practical tips for Moroccan learners from TESOL-certified coach Mr. Ibrahim K."
+        path="/blog/best-techniques-improve-english-speaking"
+        type="article"
+        publishedDate="2026-01-15"
+        modifiedDate="2026-03-07"
+        keywords="improve English speaking Morocco, English speaking techniques, how to speak English fluently Morocco, English fluency tips, parler anglais couramment Maroc, تحسين مهارات التحدث بالإنجليزية, shadow speaking technique, English speaking practice Morocco"
+        breadcrumbs={[
+          { name: "Blog", item: "https://fluentry.com/blog" },
+          { name: "5 Best Techniques to Improve English Speaking", item: "https://fluentry.com/blog/best-techniques-improve-english-speaking" }
+        ]}
+      />
 
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">

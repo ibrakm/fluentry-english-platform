@@ -66,9 +66,11 @@ export default function BookLesson() {
   return (
     <>
       <SEO
-        title="Book an English Lesson | Fluentry — Mr. Ibrahim K."
-        description="Book a 1-on-1 English lesson with TESOL-certified coach Mr. Ibrahim K. in Morocco. 100 MAD per hour. Free 10-minute strategy call. Online via Google Meet."
+        title="Book an English Lesson Online in Morocco | Fluentry"
+        description="Book a 1-on-1 English lesson with TESOL-certified coach Mr. Ibrahim K. in Morocco. 100 MAD/hr. Free 10-min strategy call. Flexible scheduling via Google Meet. IELTS & Business English."
         path="/book-lesson"
+        keywords="book English lesson Morocco, online English tutor booking Morocco, English lesson appointment Morocco, réserver cours anglais Maroc, حجز درس إنجليزي المغرب, schedule English lesson Morocco, English lesson WhatsApp Morocco, English tutor contact Morocco"
+        breadcrumbs={[{ name: "Book a Lesson", item: "https://fluentry.com/book-lesson" }]}
       />
       <div className="min-h-screen">
 
