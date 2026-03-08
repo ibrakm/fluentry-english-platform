@@ -163,7 +163,7 @@ export default function Home() {
 
             <div className="hidden md:flex items-center justify-center">
               <img
-                src="/hero-illustration.png"
+                src="/hero-illustration.webp"
                 alt="Online English lesson with Mr. Ibrahim K. — Fluentry Morocco"
                 className="w-full h-auto rounded-lg shadow-2xl max-w-md"
                 loading="eager"
@@ -480,7 +480,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-auto">
                   <img
-                    src="/images/the-unspoken-passport.png"
+                    src="/images/the-unspoken-passport.webp"
                     alt="The Unspoken Passport — Why English Still Shapes the World"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -565,7 +565,7 @@ export default function Home() {
                 <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer h-full flex flex-col">
                   <div className="relative h-40 bg-gradient-to-br from-blue-100 to-blue-50">
                     <img
-                      src="/hero-illustration.png"
+                      src="/hero-illustration.webp"
                       alt={post.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                       loading="lazy"

@@ -39,7 +39,7 @@ const idioms: Idiom[] = [
         { speaker: "Bob", text: "No problem, we'll have it done in minutes!" },
       ],
     },
-    image: "/idioms/piece-of-cake.png",
+    image: "/idioms/piece-of-cake.webp",
     difficulty: "Beginner",
   },
   {
@@ -62,7 +62,7 @@ const idioms: Idiom[] = [
         { speaker: "Mike", text: "We're good. Let's move forward together." },
       ],
     },
-    image: "/idioms/water-under-bridge.png",
+    image: "/idioms/water-under-bridge.webp",
     difficulty: "Beginner",
   },
   {
@@ -85,7 +85,7 @@ const idioms: Idiom[] = [
         { speaker: "Lisa", text: "Send the correct file and apologize quickly." },
       ],
     },
-    image: "/idioms/dont-cry-spilled-milk.png",
+    image: "/idioms/dont-cry-spilled-milk.webp",
     difficulty: "Beginner",
   },
   {
@@ -108,7 +108,7 @@ const idioms: Idiom[] = [
         { speaker: "Emma", text: "At least three hours. It's a tough subject!" },
       ],
     },
-    image: "/idioms/hit-the-books.png",
+    image: "/idioms/hit-the-books.webp",
     difficulty: "Beginner",
   },
   {
@@ -131,7 +131,7 @@ const idioms: Idiom[] = [
         { speaker: "David", text: "So, what did you want to talk about?" },
       ],
     },
-    image: "/idioms/speak-of-the-devil.png",
+    image: "/idioms/speak-of-the-devil.webp",
     difficulty: "Intermediate",
   },
   {
@@ -154,7 +154,7 @@ const idioms: Idiom[] = [
         { speaker: "Nina", text: "That's very efficient planning!" },
       ],
     },
-    image: "/idioms/two-birds-one-stone.png",
+    image: "/idioms/two-birds-one-stone.webp",
     difficulty: "Intermediate",
   },
   {
@@ -177,7 +177,7 @@ const idioms: Idiom[] = [
         { speaker: "Susan", text: "Yeah, I don't see it happening anytime soon." },
       ],
     },
-    image: "/idioms/when-pigs-fly.png",
+    image: "/idioms/when-pigs-fly.webp",
     difficulty: "Intermediate",
   },
   {
@@ -200,7 +200,7 @@ const idioms: Idiom[] = [
         { speaker: "Jessica", text: "Maybe wait for a sale or buy a used one?" },
       ],
     },
-    image: "/idioms/arm-and-leg.png",
+    image: "/idioms/arm-and-leg.webp",
     difficulty: "Beginner",
   },
   {
@@ -223,7 +223,7 @@ const idioms: Idiom[] = [
         { speaker: "Jordan", text: "I'll review it and get back to you by Friday." },
       ],
     },
-    image: "/idioms/ball-in-your-court.png",
+    image: "/idioms/ball-in-your-court.webp",
     difficulty: "Intermediate",
   },
   {
@@ -246,7 +246,7 @@ const idioms: Idiom[] = [
         { speaker: "Amy", text: "You'll do great. Confidence is key!" },
       ],
     },
-    image: "/idioms/bite-the-bullet.png",
+    image: "/idioms/bite-the-bullet.webp",
     difficulty: "Intermediate",
   },
   {
@@ -269,7 +269,7 @@ const idioms: Idiom[] = [
         { speaker: "Kevin", text: "I know. Maybe I'll plan a trip soon." },
       ],
     },
-    image: "/idioms/blue-moon.png",
+    image: "/idioms/blue-moon.webp",
     difficulty: "Beginner",
   },
   {
@@ -292,7 +292,7 @@ const idioms: Idiom[] = [
         { speaker: "Dana", text: "You're lucky to have found such a perfect role!" },
       ],
     },
-    image: "/idioms/both-worlds.png",
+    image: "/idioms/both-worlds.webp",
     difficulty: "Intermediate",
   },
   {
@@ -315,7 +315,7 @@ const idioms: Idiom[] = [
         { speaker: "Sarah", text: "You're going to be amazing. I know it!" },
       ],
     },
-    image: "/idioms/break-a-leg.png",
+    image: "/idioms/break-a-leg.webp",
     difficulty: "Beginner",
   },
   {
@@ -338,7 +338,7 @@ const idioms: Idiom[] = [
         { speaker: "Patricia", text: "It's the best decision for our company's future." },
       ],
     },
-    image: "/idioms/eye-to-eye.png",
+    image: "/idioms/eye-to-eye.webp",
     difficulty: "Intermediate",
   },
   // --- 16 NEW IDIOMS ---
@@ -362,7 +362,7 @@ const idioms: Idiom[] = [
         { speaker: "Omar", text: "I will. Thanks for your concern!" },
       ],
     },
-    image: "/idioms/under-the-weather.png",
+    image: "/idioms/under-the-weather.webp",
     difficulty: "Beginner",
   },
   {
@@ -385,7 +385,7 @@ const idioms: Idiom[] = [
         { speaker: "Youssef", text: "I'll make it up to you. I promise!" },
       ],
     },
-    image: "/idioms/spill-the-beans.png",
+    image: "/idioms/spill-the-beans.webp",
     difficulty: "Beginner",
   },
   {
@@ -408,7 +408,7 @@ const idioms: Idiom[] = [
         { speaker: "Layla", text: "Exactly. Leave professionally, even if you're frustrated." },
       ],
     },
-    image: "/idioms/burning-bridges.png",
+    image: "/idioms/burning-bridges.webp",
     difficulty: "Intermediate",
   },
   {
@@ -431,7 +431,7 @@ const idioms: Idiom[] = [
         { speaker: "Amina", text: "Try to renegotiate deadlines before it's too late." },
       ],
     },
-    image: "/idioms/bite-off-more.png",
+    image: "/idioms/bite-off-more.webp",
     difficulty: "Intermediate",
   },
   {
@@ -454,7 +454,7 @@ const idioms: Idiom[] = [
         { speaker: "Salma", text: "Absolutely. Let's start with weekly updates." },
       ],
     },
-    image: "/idioms/hit-the-nail.png",
+    image: "/idioms/hit-the-nail.webp",
     difficulty: "Intermediate",
   },
   {
@@ -477,7 +477,7 @@ const idioms: Idiom[] = [
         { speaker: "Bilal", text: "One has a better program, the other is closer to home." },
       ],
     },
-    image: "/idioms/on-the-fence.png",
+    image: "/idioms/on-the-fence.webp",
     difficulty: "Intermediate",
   },
   {
@@ -500,7 +500,7 @@ const idioms: Idiom[] = [
         { speaker: "Samir", text: "Sorry! I couldn't resist the joke." },
       ],
     },
-    image: "/idioms/pull-leg.png",
+    image: "/idioms/pull-leg.webp",
     difficulty: "Beginner",
   },
   {
@@ -523,7 +523,7 @@ const idioms: Idiom[] = [
         { speaker: "Mehdi", text: "I hope so. I need to get back to my routine." },
       ],
     },
-    image: "/idioms/raining-cats-dogs.png",
+    image: "/idioms/raining-cats-dogs.webp",
     difficulty: "Beginner",
   },
   {
@@ -546,7 +546,7 @@ const idioms: Idiom[] = [
         { speaker: "Amine", text: "Exactly. Everyone has a limit." },
       ],
     },
-    image: "/idioms/the-last-straw.png",
+    image: "/idioms/the-last-straw.webp",
     difficulty: "Intermediate",
   },
   {
@@ -569,7 +569,7 @@ const idioms: Idiom[] = [
         { speaker: "Khalid", text: "Give it time, but don't ignore what you see." },
       ],
     },
-    image: "/idioms/actions-speak.png",
+    image: "/idioms/actions-speak.webp",
     difficulty: "Beginner",
   },
   {
@@ -592,7 +592,7 @@ const idioms: Idiom[] = [
         { speaker: "Rachid", text: "Good idea. Timing is everything." },
       ],
     },
-    image: "/idioms/add-fuel.png",
+    image: "/idioms/add-fuel.webp",
     difficulty: "Intermediate",
   },
   {
@@ -615,7 +615,7 @@ const idioms: Idiom[] = [
         { speaker: "Houda", text: "Let's schedule a brainstorming session tomorrow." },
       ],
     },
-    image: "/idioms/back-to-basics.png",
+    image: "/idioms/back-to-basics.webp",
     difficulty: "Intermediate",
   },
   {
@@ -638,7 +638,7 @@ const idioms: Idiom[] = [
         { speaker: "Driss", text: "Some things are better left unknown." },
       ],
     },
-    image: "/idioms/curiosity-killed-cat.png",
+    image: "/idioms/curiosity-killed-cat.webp",
     difficulty: "Intermediate",
   },
   {
@@ -661,7 +661,7 @@ const idioms: Idiom[] = [
         { speaker: "Younes", text: "We can visit that museum you wanted to see!" },
       ],
     },
-    image: "/idioms/every-cloud.png",
+    image: "/idioms/every-cloud.webp",
     difficulty: "Beginner",
   },
   {
@@ -684,7 +684,7 @@ const idioms: Idiom[] = [
         { speaker: "Fouad", text: "Exactly. Quality over trend!" },
       ],
     },
-    image: "/idioms/jump-on-bandwagon.png",
+    image: "/idioms/jump-on-bandwagon.webp",
     difficulty: "Intermediate",
   },
   {
@@ -707,7 +707,7 @@ const idioms: Idiom[] = [
         { speaker: "Badr", text: "I'll set a reminder next time. Lesson learned!" },
       ],
     },
-    image: "/idioms/miss-the-boat.png",
+    image: "/idioms/miss-the-boat.webp",
     difficulty: "Intermediate",
   },
   {
@@ -730,7 +730,7 @@ const idioms: Idiom[] = [
         { speaker: "Adil", text: "You'll thank yourself when you see the results." },
       ],
     },
-    image: "/idioms/no-pain-no-gain.png",
+    image: "/idioms/no-pain-no-gain.webp",
     difficulty: "Beginner",
   },
   {
@@ -753,7 +753,7 @@ const idioms: Idiom[] = [
         { speaker: "Hamza", text: "Talk to her about it. She probably didn't mean any harm." },
       ],
     },
-    image: "/idioms/steal-thunder.png",
+    image: "/idioms/steal-thunder.webp",
     difficulty: "Advanced",
   },
 ];

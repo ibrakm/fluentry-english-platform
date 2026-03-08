@@ -72,7 +72,7 @@ export default function FreeResources() {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <img
-                    src="/ibrahim-photo.jpg"
+                    src="/ibrahim-photo.webp"
                     alt="Mr. Ibrahim K. - TESOL Certified English Coach"
                     className="rounded-xl shadow-lg w-full"
                   />

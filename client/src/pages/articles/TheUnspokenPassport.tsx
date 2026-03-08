@@ -15,7 +15,7 @@ export default function TheUnspokenPassport() {
         <meta name="description" content="Explore how English connects cultures, careers, and ideas across the modern world — a thoughtful essay by TESOL-certified coach Mr. Ibrahim K. from Fluentry." />
         <meta property="og:title" content="The Unspoken Passport: The Enduring Significance of English" />
         <meta property="og:description" content="A powerful reflection on how English empowers global communication, opportunity, and cultural understanding." />
-        <meta property="og:image" content="https://fluentry.online/images/the-unspoken-passport.png" />
+        <meta property="og:image" content="https://fluentry.online/images/the-unspoken-passport.webp" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://fluentry.online/articles/the-unspoken-passport" />
       </Helmet>
@@ -24,7 +24,7 @@ export default function TheUnspokenPassport() {
         {/* Hero Section with Featured Image */}
         <div className="relative h-[60vh] md:h-[70vh] bg-gray-900">
           <img
-            src="/images/the-unspoken-passport.png"
+            src="/images/the-unspoken-passport.webp"
             alt="The Unspoken Passport"
             className="w-full h-full object-cover opacity-90"
           />
