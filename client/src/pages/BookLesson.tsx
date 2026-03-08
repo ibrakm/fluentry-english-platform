@@ -71,6 +71,13 @@ export default function BookLesson() {
         path="/book-lesson"
         keywords="book English lesson Morocco, online English tutor booking Morocco, English lesson appointment Morocco, réserver cours anglais Maroc, حجز درس إنجليزي المغرب, schedule English lesson Morocco, English lesson WhatsApp Morocco, English tutor contact Morocco"
         breadcrumbs={[{ name: "Book a Lesson", item: "https://fluentry.online/book-lesson" }]}
+        faqItems={[
+          { question: "How do I book an English lesson with Fluentry in Morocco?", answer: "Booking is simple: click the WhatsApp button on this page, send a message to Mr. Ibrahim K., and he will schedule your free 10-minute strategy call within 24 hours. No forms, no waiting — just a direct conversation about your goals." },
+          { question: "Is the first lesson free?", answer: "Fluentry offers a free 10-minute strategy call — not a full lesson, but a focused conversation to understand your goals, assess your current level, and recommend the right programme. There is no obligation to continue after the call." },
+          { question: "What platform do you use for online English lessons?", answer: "All lessons are conducted via Google Meet or Zoom. You only need a smartphone or laptop with a stable internet connection. No special software installation is required." },
+          { question: "How quickly can I start my English lessons?", answer: "Most students start within 48 hours of their first WhatsApp message. After the free strategy call, Mr. Ibrahim will send you a personalised lesson plan and you can choose your preferred session times." },
+          { question: "What happens if I need to cancel or reschedule a lesson?", answer: "You can reschedule any lesson with at least 24 hours notice via WhatsApp. Fluentry offers flexible scheduling to accommodate work and study commitments across Morocco." }
+        ]}
       />
       <div className="min-h-screen">
 

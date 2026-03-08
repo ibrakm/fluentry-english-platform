@@ -135,14 +135,21 @@ export default function GroupCoaching() {
     <>
       <SEO
         title="Group English Coaching in Morocco | IELTS, Business & Speaking Groups — Fluentry"
-        description="Join a small-group English coaching programme in Morocco. IELTS preparation, Business English, and Speaking Confidence groups. 200–250 MAD per session. 4–6 students. Online via Zoom."
-        keywords="group English coaching Morocco, IELTS group class Morocco, Business English group Morocco, online English group lessons Morocco, affordable English classes Morocco, cours anglais groupe Maroc"
+        description="Join a small-group English coaching programme in Morocco. IELTS preparation, Business English, and Speaking Confidence groups. From 35 MAD per session. 4–6 students. Online via Zoom. Saturdays & Sundays."
+        keywords="group English coaching Morocco, IELTS group class Morocco, Business English group Morocco, online English group lessons Morocco, affordable English classes Morocco, cours anglais groupe Maroc, group English lessons Tangier, affordable IELTS class Morocco"
         path="/group-coaching"
         breadcrumbs={[
           { name: "Home", item: "https://fluentry.online/" },
           { name: "Group Coaching", item: "https://fluentry.online/group-coaching" },
         ]}
         type="website"
+        faqItems={[
+          { question: "How much does group English coaching cost in Morocco?", answer: "Fluentry group coaching starts from 35 MAD per session for the Speaking Confidence group (280 MAD/month), 40 MAD for IELTS Preparation (320 MAD/month), and 50 MAD for Business English (360 MAD/month). Sessions run on Saturdays and Sundays, twice a week." },
+          { question: "How many students are in each group?", answer: "Each group has a maximum of 4 to 6 students. This keeps the class small enough for personalised attention while still being affordable. Mr. Ibrahim K. ensures every student gets speaking time in every session." },
+          { question: "What is the difference between group coaching and 1-on-1 lessons at Fluentry?", answer: "1-on-1 lessons are fully personalised to your specific goals and schedule at 100 MAD per hour. Group coaching follows a structured programme with 4–6 students at a much lower cost (35–50 MAD per session). Group coaching is ideal for students who want structured learning at an affordable price." },
+          { question: "When do the group English sessions take place?", answer: "All group coaching sessions take place on Saturdays and Sundays, twice per week. This schedule is designed for working professionals and students who are busy during the week." },
+          { question: "Can I join a group class if I am a beginner?", answer: "The Speaking Confidence group is suitable for B1 level and above. The IELTS Preparation group requires at least B1 level. The Business English group is for B2 level and above. If you are a beginner, Fluentry recommends starting with 1-on-1 lessons to build a foundation first." }
+        ]}
       />
 
       {/* ── Hero ── */}

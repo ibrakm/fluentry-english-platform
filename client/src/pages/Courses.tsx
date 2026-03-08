@@ -130,6 +130,13 @@ export default function Courses() {
         path="/courses"
         keywords="English courses Morocco, IELTS preparation Morocco, IELTS coaching Morocco, Business English course Morocco, English conversation course Morocco, TOEFL preparation Morocco, pronunciation coaching Morocco, cours anglais Maroc, دورات إنجليزية المغرب, online English course Morocco, English program Morocco 2026"
         breadcrumbs={[{ name: "Courses", item: "https://fluentry.online/courses" }]}
+        faqItems={[
+          { question: "What English courses does Fluentry offer in Morocco?", answer: "Fluentry offers four programmes: the 8-Week IELTS Accelerator (targeting band 7.5+), the 12-Week Business English Mastery programme for professionals, the Conversation & Fluency course for everyday speaking confidence, and General English for beginners. All courses are 100% online, 1-on-1 with TESOL-certified coach Mr. Ibrahim K." },
+          { question: "How long does it take to improve my English with Fluentry?", answer: "Most students see measurable improvement within 4–6 weeks of consistent lessons. The IELTS Accelerator runs for 8 weeks with 3 sessions per week. The Business English programme runs for 12 weeks. Progress depends on your starting level and how much you practise between sessions." },
+          { question: "Are the English courses suitable for beginners in Morocco?", answer: "Yes. Fluentry accepts students from A1 (complete beginner) to C1 (advanced) level. Every student starts with a free placement test to identify their current level and set personalised goals before the first lesson." },
+          { question: "Can I take English lessons online from anywhere in Morocco?", answer: "Yes. All lessons are conducted online via Google Meet or Zoom, so you can join from Tangier, Casablanca, Rabat, Marrakech, Fes, Agadir, or anywhere in Morocco with an internet connection." },
+          { question: "What is the price of English courses at Fluentry?", answer: "Fluentry charges 100 MAD per hour for 1-on-1 lessons. Monthly packages start from 800 MAD (Standard: 2 sessions/week) up to 2,400 MAD (Accelerator: 6 sessions/week). Group coaching starts from 35 MAD per session. All prices are transparent with no hidden fees." }
+        ]}
       />
       <div className="min-h-screen">
 

@@ -31,3 +31,4 @@ Disallow: /
 
 # ── Sitemaps ───────────────────────────────────────────────────────────────
 Sitemap: https://fluentry.online/sitemap.xml
+Sitemap: https://www.fluentry.online/sitemap.xml

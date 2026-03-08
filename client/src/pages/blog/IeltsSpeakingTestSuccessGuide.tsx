@@ -19,6 +19,13 @@ export default function IeltsSpeakingTestSuccessGuide() {
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "IELTS Speaking Test Success Guide", item: "https://fluentry.online/blog/ielts-speaking-test-success-guide" }
         ]}
+        faqItems={[
+          { question: "What is the IELTS Speaking test format?", answer: "The IELTS Speaking test has three parts. Part 1 is a 4–5 minute introduction and interview about familiar topics. Part 2 is a 3–4 minute individual long turn where you speak about a topic on a cue card. Part 3 is a 4–5 minute two-way discussion on abstract topics related to Part 2. The total test lasts 11–14 minutes." },
+          { question: "What band score do I need for IELTS Speaking to study abroad?", answer: "Most universities in the UK, Canada, Australia, and the USA require an overall IELTS band of 6.0 to 7.0. For the Speaking component specifically, a band of 6.0 to 6.5 is typically acceptable. Some competitive programmes require 7.0 or above. Mr. Ibrahim K. at Fluentry specialises in helping Moroccan students reach their target band score." },
+          { question: "What are the most common mistakes Moroccan students make in IELTS Speaking?", answer: "The most common mistakes include translating from Arabic or French instead of thinking in English, giving very short answers without development, using memorised phrases that sound unnatural, poor pronunciation of specific English sounds that do not exist in Arabic, and not using a range of vocabulary and grammar structures." },
+          { question: "How can I improve my IELTS Speaking score quickly?", answer: "The fastest improvements come from: practising speaking for 15–20 minutes every day, recording yourself and listening back, learning to extend your answers using the PEEL method (Point, Explain, Example, Link), and working with a qualified IELTS coach who can give you real-time feedback on your pronunciation and grammar." },
+          { question: "How long does it take to prepare for IELTS Speaking in Morocco?", answer: "With consistent practice and professional coaching, most students improve by 0.5 to 1.5 bands within 6–8 weeks. Fluentry's 8-Week IELTS Accelerator programme is specifically designed to help Moroccan students reach their target band score with a results guarantee." }
+        ]}
       />
 
       <div className="min-h-screen bg-background">

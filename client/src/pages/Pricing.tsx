@@ -148,6 +148,13 @@ export default function Pricing() {
         path="/pricing"
         keywords="English lesson price Morocco, affordable English tutor Morocco, English coaching cost Morocco, cours anglais prix Maroc, تكلفة دروس الإنجليزية المغرب, English lesson packages Morocco, 100 MAD English lesson Morocco, IELTS program price Morocco, Business English program price Morocco"
         breadcrumbs={[{ name: "Pricing", item: "https://fluentry.online/pricing" }]}
+        faqItems={[
+          { question: "How much does an English lesson cost in Morocco with Fluentry?", answer: "Fluentry charges 100 MAD per hour for 1-on-1 English lessons. Monthly packages range from 800 MAD (Standard: 2 sessions/week) to 1,600 MAD (Intensive: 4 sessions/week) and 2,400 MAD (Accelerator: 6 sessions/week). Group coaching starts from 35 MAD per session." },
+          { question: "Is there a free trial lesson available?", answer: "Yes. Fluentry offers a free 10-minute strategy call to discuss your goals and recommend the right programme. There is no commitment required and no payment needed for the initial consultation." },
+          { question: "Can I pay monthly for English lessons in Morocco?", answer: "Yes. All Fluentry plans are billed monthly. You can start with the Standard plan at 800 MAD per month and upgrade or downgrade at any time based on your schedule and goals." },
+          { question: "What is included in the price of English lessons at Fluentry?", answer: "Every lesson includes personalised lesson planning, progress tracking, homework and practice materials, WhatsApp support between sessions, and a monthly progress report. There are no hidden fees." },
+          { question: "Do you offer group English lessons at a lower price?", answer: "Yes. Fluentry offers group coaching programmes starting from 35 MAD per session for the Speaking Confidence group, 40 MAD for IELTS Preparation, and 50 MAD for Business English. Groups run on Saturdays and Sundays with 4–6 students per group." }
+        ]}
       />
       <div className="min-h-screen">
 
