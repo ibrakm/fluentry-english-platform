@@ -22,24 +22,24 @@ export default function EnglishForTourismMorocco() {
     "@type": "BlogPosting",
     "headline": "English for Tourism in Morocco: The Ultimate Guide for Hotel Staff & Tour Guides",
     "description": "Learn the essential English phrases and skills needed for the tourism and hospitality sector in Morocco. Boost your career and earn more with better English.",
-    "image": "https://fluentry.com/assets/images/blog/tourism-morocco.jpg",
+    "image": "https://fluentry.online/assets/images/blog/tourism-morocco.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/english-for-tourism-morocco"
+      "@id": "https://fluentry.online/blog/english-for-tourism-morocco"
     }
   };
 

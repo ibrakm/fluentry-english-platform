@@ -22,24 +22,24 @@ export default function Top15AppsWebsitesLearnEnglish() {
     "@type": "BlogPosting",
     "headline": "The 15 Best Apps & Websites for Learning English in Morocco (2026 Review)",
     "description": "Our 2026 review of the 15 best apps and websites for Moroccan English learners. Discover the top tools for vocabulary, listening, and reading, and how to use them effectively.",
-    "image": "https://fluentry.com/assets/images/blog/apps-websites-learn-english.jpg",
+    "image": "https://fluentry.online/assets/images/blog/apps-websites-learn-english.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/best-apps-websites-learn-english-morocco"
+      "@id": "https://fluentry.online/blog/best-apps-websites-learn-english-morocco"
     }
   };
 

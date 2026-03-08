@@ -96,7 +96,7 @@ export default function About() {
         description="Meet Mr. Ibrahim K., TESOL-certified English coach in Tangier. 100+ students, 4.9★ rating. Expert in IELTS prep, Business English & fluency for Moroccan learners. Results guaranteed."
         path="/about"
         keywords="English coach Tangier Morocco, TESOL certified English teacher Morocco, Ibrahim English coach, IELTS coach Morocco, Business English coach Tangier, professeur anglais Tanger, مدرب الإنجليزية طنجة, English tutor Morocco biography, about Fluentry coach"
-        breadcrumbs={[{ name: "About", item: "https://fluentry.com/about" }]}
+        breadcrumbs={[{ name: "About", item: "https://fluentry.online/about" }]}
       />
       <div className="min-h-screen">
 

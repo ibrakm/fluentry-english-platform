@@ -1,7 +1,7 @@
 // This file generates sitemap.xml dynamically
 // Vercel will serve this at /sitemap.xml
 
-const BASE_URL = "https://fluentry-english-platform.vercel.app";
+const BASE_URL = "https://fluentry.online";
 
 const pages = [
   { path: "/", priority: "1.0", changefreq: "weekly" },

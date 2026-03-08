@@ -34,7 +34,7 @@ export default function FreeResources() {
         description="Practice English for free: 8 listening exercises (A1–B2), interactive vocabulary & grammar games, idiom guides, and downloadable worksheets. Fluentry — Morocco's English coaching platform."
         path="/free-resources"
         keywords="free English resources Morocco, English listening exercises Morocco, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب"
-        breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.com/free-resources" }]}
+        breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.online/free-resources" }]}
       />
 
       <div className="min-h-screen flex flex-col bg-background">

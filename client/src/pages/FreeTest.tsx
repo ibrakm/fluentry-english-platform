@@ -19,7 +19,7 @@ export default function FreeTest() {
         description="Take Fluentry's free 5-minute English level test and discover your CEFR level (A1–C2). Get a personalised learning plan from TESOL-certified coach Mr. Ibrahim K. in Morocco. 100% free."
         path="/free-test"
         keywords="free English level test Morocco, CEFR test Morocco, English proficiency test free, test niveau anglais gratuit Maroc, اختبار مستوى الإنجليزية مجاني, English assessment Morocco, CEFR level test online Morocco, English test A1 B1 B2 C1 Morocco"
-        breadcrumbs={[{ name: "Free Level Test", item: "https://fluentry.com/free-test" }]}
+        breadcrumbs={[{ name: "Free Level Test", item: "https://fluentry.online/free-test" }]}
       />
       <div className="min-h-screen">
         {/* Hero Section */}

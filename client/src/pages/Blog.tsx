@@ -189,7 +189,7 @@ export default function Blog() {
         description={description}
         path="/blog"
         keywords="English learning blog Morocco, IELTS tips Morocco, Business English Morocco, English pronunciation Arabic speakers, English speaking skills Morocco, تعلم الإنجليزية المغرب, blog anglais Maroc"
-        breadcrumbs={[{ name: "Blog", item: "https://fluentry.com/blog" }]}
+        breadcrumbs={[{ name: "Blog", item: "https://fluentry.online/blog" }]}
       />
       <div className="min-h-screen bg-background">
         {/* Hero Section */}

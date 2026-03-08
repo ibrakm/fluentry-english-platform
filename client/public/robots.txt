@@ -1,5 +1,5 @@
 # Fluentry English Coaching — robots.txt
-# https://fluentry.com
+# https://fluentry.online
 
 # ── Allow all legitimate crawlers ──────────────────────────────────────────
 User-agent: *
@@ -30,4 +30,4 @@ User-agent: BLEXBot
 Disallow: /
 
 # ── Sitemaps ───────────────────────────────────────────────────────────────
-Sitemap: https://fluentry.com/sitemap.xml
+Sitemap: https://fluentry.online/sitemap.xml

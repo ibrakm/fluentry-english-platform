@@ -22,24 +22,24 @@ export default function HowToPassToeicTestMorocco() {
     "@type": "BlogPosting",
     "headline": "How to Pass the TOEIC Test in Morocco (2026 Guide)",
     "description": "Your complete guide to passing the TOEIC Listening & Reading test in Morocco. Learn about test centers (AMIDEAST), required scores, and preparation strategies.",
-    "image": "https://fluentry.com/assets/images/blog/toeic-morocco.jpg",
+    "image": "https://fluentry.online/assets/images/blog/toeic-morocco.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/how-to-pass-toeic-test-in-morocco"
+      "@id": "https://fluentry.online/blog/how-to-pass-toeic-test-in-morocco"
     }
   };
 

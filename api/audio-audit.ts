@@ -16,9 +16,9 @@ const GOOGLE_SHEET_WEBHOOK =
   "https://script.google.com/macros/s/AKfycbzhG3jRJnkgYlr9Cvuzu94zhfOKF9TzPYOztESLVb5ToSa2lWU6cGuzADxIM6PGkj41cg/exec";
 
 const ALLOWED_ORIGINS = [
-  "https://fluentry-english-platform.vercel.app",
-  "https://fluentry.com",
-  "https://www.fluentry.com",
+  "https://fluentry.online",
+  "https://fluentry.online",
+  "https://www.fluentry.online",
 ];
 
 const ALLOWED_LEVELS = [

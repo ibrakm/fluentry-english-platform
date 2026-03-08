@@ -22,24 +22,24 @@ export default function ChallengesMoroccanEnglishLearners() {
     "@type": "BlogPosting",
     "headline": "The 5 Real Challenges Every Moroccan Faces When Learning English (And How to Beat Them)",
     "description": "An empathetic look at the 5 unique challenges Moroccan learners face with English and practical solutions to overcome them.",
-    "image": "https://fluentry.com/assets/images/blog/moroccan-challenges.jpg",
+    "image": "https://fluentry.online/assets/images/blog/moroccan-challenges.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/challenges-moroccan-english-learners-face"
+      "@id": "https://fluentry.online/blog/challenges-moroccan-english-learners-face"
     }
   };
 

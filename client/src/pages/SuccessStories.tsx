@@ -112,8 +112,8 @@ export default function SuccessStories() {
         keywords="Fluentry success stories, IELTS results Morocco, English improvement Morocco, English coaching testimonials, learn English Tangier, IELTS 7 Morocco"
         path="/success-stories"
         breadcrumbs={[
-          { name: "Home", item: "https://fluentry.com/" },
-          { name: "Success Stories", item: "https://fluentry.com/success-stories" },
+          { name: "Home", item: "https://fluentry.online/" },
+          { name: "Success Stories", item: "https://fluentry.online/success-stories" },
         ]}
         type="website"
       />

@@ -13,9 +13,9 @@ export default function HowToPassIeltsInMorocco() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fluentry-english-platform.vercel.app" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fluentry-english-platform.vercel.app/blog" },
-      { "@type": "ListItem", "position": 3, "name": title, "item": `https://fluentry-english-platform.vercel.app/blog/how-to-pass-ielts-in-morocco` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fluentry.online" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fluentry.online/blog" },
+      { "@type": "ListItem", "position": 3, "name": title, "item": `https://fluentry.online/blog/how-to-pass-ielts-in-morocco` }
     ]
   };
 

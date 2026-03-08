@@ -100,7 +100,7 @@ const faqs = [
   },
   {
     q: "What level do I need to join?",
-    a: "Each programme has a recommended level (shown above). If you're unsure of your level, take our free CEFR test at fluentry-english-platform.vercel.app/free-test — it takes 15 minutes and gives you an accurate A1–C2 result. You can also message Mr. Ibrahim on WhatsApp and he will assess your level in a 5-minute voice message exchange.",
+    a: "Each programme has a recommended level (shown above). If you're unsure of your level, take our free CEFR test at fluentry.online/free-test — it takes 15 minutes and gives you an accurate A1–C2 result. You can also message Mr. Ibrahim on WhatsApp and he will assess your level in a 5-minute voice message exchange.",
   },
   {
     q: "How many students are in each group?",
@@ -139,8 +139,8 @@ export default function GroupCoaching() {
         keywords="group English coaching Morocco, IELTS group class Morocco, Business English group Morocco, online English group lessons Morocco, affordable English classes Morocco, cours anglais groupe Maroc"
         path="/group-coaching"
         breadcrumbs={[
-          { name: "Home", item: "https://fluentry.com/" },
-          { name: "Group Coaching", item: "https://fluentry.com/group-coaching" },
+          { name: "Home", item: "https://fluentry.online/" },
+          { name: "Group Coaching", item: "https://fluentry.online/group-coaching" },
         ]}
         type="website"
       />

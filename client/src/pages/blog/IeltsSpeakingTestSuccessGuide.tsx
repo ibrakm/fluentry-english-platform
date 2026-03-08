@@ -16,8 +16,8 @@ export default function IeltsSpeakingTestSuccessGuide() {
         modifiedDate="2026-03-07"
         keywords="IELTS speaking test Morocco, IELTS speaking tips Morocco, IELTS preparation Morocco, اختبار آيلتس المغرب, IELTS band 7 Morocco, IELTS speaking strategies, IELTS coach Morocco, IELTS speaking Part 1 2 3"
         breadcrumbs={[
-          { name: "Blog", item: "https://fluentry.com/blog" },
-          { name: "IELTS Speaking Test Success Guide", item: "https://fluentry.com/blog/ielts-speaking-test-success-guide" }
+          { name: "Blog", item: "https://fluentry.online/blog" },
+          { name: "IELTS Speaking Test Success Guide", item: "https://fluentry.online/blog/ielts-speaking-test-success-guide" }
         ]}
       />
 

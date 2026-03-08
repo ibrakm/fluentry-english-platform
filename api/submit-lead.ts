@@ -5,9 +5,9 @@ const GOOGLE_SHEET_WEBHOOK =
 
 // Allowed origins — only accept requests from the Fluentry domain
 const ALLOWED_ORIGINS = [
-  "https://fluentry-english-platform.vercel.app",
-  "https://fluentry.com",
-  "https://www.fluentry.com",
+  "https://fluentry.online",
+  "https://fluentry.online",
+  "https://www.fluentry.online",
 ];
 
 // Strip HTML tags and control characters to prevent injection

@@ -169,7 +169,7 @@ export default function Certificate() {
     ctx.fillStyle = selectedLevel.color;
     ctx.font = "bold 13px Arial, sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("www.fluentry.com", W / 2, 570);
+    ctx.fillText("www.fluentry.online", W / 2, 570);
 
     // Decorative corner elements
     const drawCornerStar = (x: number, y: number) => {

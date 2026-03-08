@@ -85,7 +85,7 @@ export function AdvancedSchema({ faqs, howTo, course, breadcrumbs }: Props) {
       "@type": "ListItem",
       "position": index + 1,
       "name": crumb.name,
-      "item": `https://fluentry.com${crumb.url}`
+      "item": `https://fluentry.online${crumb.url}`
     }))
   } : null;
 

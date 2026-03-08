@@ -22,24 +22,24 @@ export default function OnlineEnglishClassesMorocco() {
     "@type": "BlogPosting",
     "headline": "Online English Classes for Moroccans: The Complete 2026 Guide to Prices, Methods, and Real Results",
     "description": "The ultimate 2026 guide to online English classes in Morocco. Compare prices, methods (apps, group classes, 1-on-1 coaching), and find the best way to learn English online.",
-    "image": "https://fluentry.com/assets/images/blog/online-english-classes.jpg",
+    "image": "https://fluentry.online/assets/images/blog/online-english-classes.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/online-english-classes-morocco-2026-guide"
+      "@id": "https://fluentry.online/blog/online-english-classes-morocco-2026-guide"
     }
   };
 

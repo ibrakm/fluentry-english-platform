@@ -17,7 +17,7 @@ import { SEO } from "@/components/SEO";
 
 export default function Community() {
   const [copied, setCopied] = useState(false);
-  const referralLink = "https://fluentry.com/?ref=friend";
+  const referralLink = "https://fluentry.online/?ref=friend";
 
   const copyLink = () => {
     navigator.clipboard.writeText(referralLink);
@@ -32,7 +32,7 @@ export default function Community() {
         title="Fluentry Community | 500+ Moroccan English Learners | Free Resources"
         description="Join Fluentry's free WhatsApp community for Moroccan English learners. Daily tips, study partners, free resources & group sessions. Refer a friend and earn a free lesson."
         keywords="English community Morocco, English learners WhatsApp group Morocco, learn English with friends Morocco, Fluentry community, مجتمع تعلم الإنجليزية المغرب, groupe WhatsApp anglais Maroc, English study group Morocco, free English resources Morocco"
-        breadcrumbs={[{ name: "Community", item: "https://fluentry.com/community" }]}
+        breadcrumbs={[{ name: "Community", item: "https://fluentry.online/community" }]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50 dark:from-gray-900 dark:to-gray-800">
@@ -142,7 +142,7 @@ export default function Community() {
                 </button>
               </div>
               <p className="text-xs text-gray-400 mt-3">
-                Or simply send this message on WhatsApp: "Check out Fluentry — the best English coaching in Morocco! fluentry.com"
+                Or simply send this message on WhatsApp: "Check out Fluentry — the best English coaching in Morocco! fluentry.online"
               </p>
             </div>
           </div>

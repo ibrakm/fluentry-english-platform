@@ -16,8 +16,8 @@ export default function BestTechniquesImproveEnglishSpeaking() {
         modifiedDate="2026-03-07"
         keywords="improve English speaking Morocco, English speaking techniques, how to speak English fluently Morocco, English fluency tips, parler anglais couramment Maroc, تحسين مهارات التحدث بالإنجليزية, shadow speaking technique, English speaking practice Morocco"
         breadcrumbs={[
-          { name: "Blog", item: "https://fluentry.com/blog" },
-          { name: "5 Best Techniques to Improve English Speaking", item: "https://fluentry.com/blog/best-techniques-improve-english-speaking" }
+          { name: "Blog", item: "https://fluentry.online/blog" },
+          { name: "5 Best Techniques to Improve English Speaking", item: "https://fluentry.online/blog/best-techniques-improve-english-speaking" }
         ]}
       />
 

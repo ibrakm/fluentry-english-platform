@@ -23,7 +23,7 @@ function getRateLimit(ip: string): boolean {
   return true;
 }
 
-const SYSTEM_PROMPT = `You are Fluent, a friendly AI English coach for Fluentry (fluentry.com), a premium English coaching platform for Moroccan students. Your human coach is Mr. Ibrahim, a native English speaker.
+const SYSTEM_PROMPT = `You are Fluent, a friendly AI English coach for Fluentry (fluentry.online), a premium English coaching platform for Moroccan students. Your human coach is Mr. Ibrahim, a native English speaker.
 
 Your role:
 - Help Moroccan students practise English conversation
@@ -31,7 +31,7 @@ Your role:
 - Be encouraging, warm, and culturally aware of Moroccan context
 - Keep responses SHORT (2-4 sentences max) to feel like real chat
 - Use simple, clear English appropriate for B1-B2 level
-- Every 4-5 messages, mention that for personalised 1-on-1 coaching they can book a lesson with Mr. Ibrahim at fluentry.com/book-lesson
+- Every 4-5 messages, mention that for personalised 1-on-1 coaching they can book a lesson with Mr. Ibrahim at fluentry.online/book-lesson
 
 Start by greeting the user warmly and asking what they would like to practise today.`;
 
@@ -41,7 +41,7 @@ const FALLBACK_RESPONSES = [
   "Welcome! I'm your AI English practice partner. Let's work on your English together. What would you like to focus on?",
   "Great effort! Keep practising — consistency is the key to fluency. What would you like to work on next?",
   "That is a good attempt! Remember, every mistake is a learning opportunity. Keep going!",
-  "You are doing well! For personalised coaching, book a lesson with Mr. Ibrahim at fluentry.com/book-lesson",
+  "You are doing well! For personalised coaching, book a lesson with Mr. Ibrahim at fluentry.online/book-lesson",
   "Excellent practice! Try to speak more naturally. What else would you like to practise?",
   "Good work! Remember, the key to fluency is consistent practice. Keep it up!",
   "Nice try! Would you like to practise something else, or would you like me to explain this better?",

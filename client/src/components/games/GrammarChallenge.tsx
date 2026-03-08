@@ -136,7 +136,7 @@ export default function GrammarChallenge() {
               Try Again
             </Button>
             <Button variant="outline" asChild>
-              <a href="https://fluentry-english-platform.vercel.app/book">Book a Lesson</a>
+              <a href="https://fluentry.online/book">Book a Lesson</a>
             </Button>
           </div>
         </CardContent>

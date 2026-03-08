@@ -22,24 +22,24 @@ export default function HowToGetCallCenterJobMorocco() {
     "@type": "BlogPosting",
     "headline": "How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)",
     "description": "Your step-by-step guide to getting a high-paying call center job in Morocco. Learn the required English level, interview questions, salary expectations, and top companies hiring now.",
-    "image": "https://fluentry.com/assets/images/blog/call-center-morocco.jpg",
+    "image": "https://fluentry.online/assets/images/blog/call-center-morocco.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/how-to-get-a-call-center-job-in-morocco"
+      "@id": "https://fluentry.online/blog/how-to-get-a-call-center-job-in-morocco"
     },
     "articleBody": `...` // Full article text here
   };

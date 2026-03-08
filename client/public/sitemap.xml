@@ -6,44 +6,44 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- ── Core Pages ── -->
-  <url><loc>https://fluentry.com/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://fluentry.com/about</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/courses</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/pricing</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/book-lesson</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/community</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/certificate</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fluentry.online/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://fluentry.online/about</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/courses</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/pricing</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/book-lesson</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/community</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/certificate</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- ── High-Value Lead Gen & Resource Pages ── -->
-  <url><loc>https://fluentry.com/free-test</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/free-resources</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/start</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/audio-audit</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/free-test</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/free-resources</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/start</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/audio-audit</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- ── New Pages (March 2026) ── -->
-  <url><loc>https://fluentry.com/success-stories</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://fluentry.com/group-coaching</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/success-stories</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://fluentry.online/group-coaching</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 
   <!-- ── Blog Index ── -->
-  <url><loc>https://fluentry.com/blog</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
 
   <!-- ── Blog Posts (Newest First) ── -->
-  <url><loc>https://fluentry.com/blog/online-english-classes-morocco-2026-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/a2-to-b1-english-6-month-plan-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/best-apps-websites-learn-english-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/challenges-moroccan-english-learners-face</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/how-to-get-a-call-center-job-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/english-for-tourism-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/how-to-pass-toeic-test-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/how-to-pass-ielts-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://fluentry.com/blog/ielts-speaking-test-success-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/blog/business-english-email-writing-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/blog/common-mistakes-moroccan-english-learners</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/blog/best-techniques-improve-english-speaking</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/blog/improve-english-pronunciation-arabic-speakers</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://fluentry.com/blog/how-to-think-in-english</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://fluentry.online/blog/online-english-classes-morocco-2026-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/a2-to-b1-english-6-month-plan-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/best-apps-websites-learn-english-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/challenges-moroccan-english-learners-face</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/how-to-get-a-call-center-job-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/english-for-tourism-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/how-to-pass-toeic-test-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/how-to-pass-ielts-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://fluentry.online/blog/ielts-speaking-test-success-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/blog/business-english-email-writing-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/blog/common-mistakes-moroccan-english-learners</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/blog/best-techniques-improve-english-speaking</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/blog/improve-english-pronunciation-arabic-speakers</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://fluentry.online/blog/how-to-think-in-english</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
   <!-- ── Articles ── -->
-  <url><loc>https://fluentry.com/articles/the-unspoken-passport</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://fluentry.online/articles/the-unspoken-passport</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
 </urlset>

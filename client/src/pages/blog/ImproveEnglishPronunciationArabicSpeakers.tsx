@@ -16,8 +16,8 @@ export default function ImproveEnglishPronunciationArabicSpeakers() {
         modifiedDate="2026-03-07"
         keywords="English pronunciation Arabic speakers Morocco, improve English pronunciation Morocco, تحسين نطق الإنجليزية للعرب, pronunciation coach Morocco, English sounds Arabic speakers, English accent Morocco, pronunciation exercises Morocco"
         breadcrumbs={[
-          { name: "Blog", item: "https://fluentry.com/blog" },
-          { name: "Improve English Pronunciation for Arabic Speakers", item: "https://fluentry.com/blog/improve-english-pronunciation-arabic-speakers" }
+          { name: "Blog", item: "https://fluentry.online/blog" },
+          { name: "Improve English Pronunciation for Arabic Speakers", item: "https://fluentry.online/blog/improve-english-pronunciation-arabic-speakers" }
         ]}
       />
 

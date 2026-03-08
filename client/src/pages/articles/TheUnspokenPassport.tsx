@@ -15,9 +15,9 @@ export default function TheUnspokenPassport() {
         <meta name="description" content="Explore how English connects cultures, careers, and ideas across the modern world — a thoughtful essay by TESOL-certified coach Mr. Ibrahim K. from Fluentry." />
         <meta property="og:title" content="The Unspoken Passport: The Enduring Significance of English" />
         <meta property="og:description" content="A powerful reflection on how English empowers global communication, opportunity, and cultural understanding." />
-        <meta property="og:image" content="https://fluentry-english-platform.vercel.app/images/the-unspoken-passport.png" />
+        <meta property="og:image" content="https://fluentry.online/images/the-unspoken-passport.png" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://fluentry-english-platform.vercel.app/articles/the-unspoken-passport" />
+        <meta property="og:url" content="https://fluentry.online/articles/the-unspoken-passport" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">

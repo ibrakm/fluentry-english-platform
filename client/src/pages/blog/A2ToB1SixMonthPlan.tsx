@@ -22,24 +22,24 @@ export default function A2ToB1SixMonthPlan() {
     "@type": "BlogPosting",
     "headline": "From A2 to B1 in 6 Months: A Realistic Step-by-Step Plan for Moroccan English Learners",
     "description": "A practical 6-month plan for Moroccan learners to advance from A2 to B1 English. Follow our weekly schedule and expert tips to improve your fluency and confidence.",
-    "image": "https://fluentry.com/assets/images/blog/a2-to-b1-plan.jpg",
+    "image": "https://fluentry.online/assets/images/blog/a2-to-b1-plan.jpg",
     "author": {
       "@type": "Person",
       "name": "Mr. Ibrahim",
-      "url": "https://fluentry.com/about"
+      "url": "https://fluentry.online/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Fluentry English Coaching",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://fluentry.com/assets/logo.png"
+        "url": "https://fluentry.online/assets/logo.png"
       }
     },
     "datePublished": "2026-02-24",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://fluentry.com/blog/a2-to-b1-english-6-month-plan-morocco"
+      "@id": "https://fluentry.online/blog/a2-to-b1-english-6-month-plan-morocco"
     }
   };
 
