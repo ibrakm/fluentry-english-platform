@@ -1166,7 +1166,7 @@ function ExerciseView({ exercise, onBack }: { exercise: Exercise; onBack: () => 
 
       {/* Scene Image */}
       <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100">
-        <img
+        <img loading="lazy"
           src={exercise.imageSrc}
           alt={`Scene: ${exercise.title}`}
           className="w-full h-48 md:h-64 object-cover"
@@ -1342,7 +1342,7 @@ export default function ListeningPractice() {
         {exercises.map((ex) => (
           <span key={ex.id}>
             <audio src={ex.audioSrc} preload="auto" />
-            <img src={ex.imageSrc} alt="" />
+            <img loading="lazy" src={ex.imageSrc} alt="" />
           </span>
         ))}
       </div>

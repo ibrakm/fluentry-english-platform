@@ -54,7 +54,7 @@ export function Testimonials() {
                 <p className="text-gray-700 italic text-lg mb-6">"{testimonial.quote}"</p>
               </div>
               <div className="flex items-center mt-auto">
-                <img src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full mr-4 object-cover bg-gray-200" />
+                <img loading="lazy" src={testimonial.avatar} alt={testimonial.name} className="w-14 h-14 rounded-full mr-4 object-cover bg-gray-200" />
                 <div>
                   <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
                   <p className="text-gray-500">{testimonial.location}</p>

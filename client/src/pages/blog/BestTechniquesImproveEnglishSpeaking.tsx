@@ -229,7 +229,7 @@ export default function BestTechniquesImproveEnglishSpeaking() {
 
               <div className="mt-12 p-6 bg-slate-50 rounded-lg">
                 <div className="flex items-start gap-4">
-                  <img 
+                  <img loading="lazy" 
                     src="/ibrahim-photo.webp" 
                     alt="Mr. Ibrahim K." 
                     className="w-20 h-20 rounded-full object-cover"

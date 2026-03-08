@@ -138,7 +138,7 @@ export default function About() {
               {/* Photo / Stats card */}
               <div className="flex flex-col gap-4">
                 <div className="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
-                  <img
+                  <img loading="lazy"
                     src="/ibrahim-photo.webp"
                     alt="Mr. Ibrahim K. — English Language Coach, Tangier Morocco"
                     className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-yellow-400 shadow-xl"

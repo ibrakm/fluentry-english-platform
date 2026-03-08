@@ -254,7 +254,7 @@ export default function Blog() {
                   {filteredArticles.map((article) => (
                     <Card key={article.slug} className="hover:shadow-lg transition-shadow flex flex-col">
                       <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-t-lg overflow-hidden">
-                        <img
+                        <img loading="lazy"
                           src={article.image}
                           alt={article.title}
                           className="w-full h-full object-cover"

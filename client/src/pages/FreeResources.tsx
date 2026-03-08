@@ -71,7 +71,7 @@ export default function FreeResources() {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <img
+                  <img loading="lazy"
                     src="/ibrahim-photo.webp"
                     alt="Mr. Ibrahim K. - TESOL Certified English Coach"
                     className="rounded-xl shadow-lg w-full"

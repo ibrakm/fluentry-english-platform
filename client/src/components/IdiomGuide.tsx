@@ -779,7 +779,7 @@ function IdiomCard({ idiom }: { idiom: Idiom }) {
         style={{ WebkitTapHighlightColor: "transparent" }}
       >
         <div className="flex items-center gap-4 p-4">
-          <img
+          <img loading="lazy"
             src={idiom.image}
             alt={idiom.title}
             className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-xl flex-shrink-0"
@@ -807,7 +807,7 @@ function IdiomCard({ idiom }: { idiom: Idiom }) {
         <div className="border-t border-gray-100">
           {/* Large image on expand */}
           <div className="px-4 pt-4">
-            <img
+            <img loading="lazy"
               src={idiom.image}
               alt={idiom.title}
               className="w-full max-h-56 object-cover rounded-xl"

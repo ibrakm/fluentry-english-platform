@@ -51,6 +51,12 @@ const OnboardingTestPage = lazy(() => import("./pages/OnboardingTest"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const GroupCoaching = lazy(() => import("./pages/GroupCoaching"));
 
+// SEO landing pages
+const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
+const EnglishCoachCasablanca = lazy(() => import("./pages/EnglishCoachCasablanca"));
+const EnglishCoachRabat = lazy(() => import("./pages/EnglishCoachRabat"));
+const EnglishCoachTangier = lazy(() => import("./pages/EnglishCoachTangier"));
+
 // Loading fallback — minimal spinner shown while a page chunk loads
 function PageLoader() {
   return (
@@ -99,6 +105,11 @@ function Router() {
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />
         <Route path={"/audio-audit"} component={AudioAudit} />
+        {/* SEO landing pages */}
+        <Route path={"/ielts-preparation-morocco"} component={IELTSPreparationMorocco} />
+        <Route path={"/english-coach-casablanca"} component={EnglishCoachCasablanca} />
+        <Route path={"/english-coach-rabat"} component={EnglishCoachRabat} />
+        <Route path={"/english-coach-tangier"} component={EnglishCoachTangier} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

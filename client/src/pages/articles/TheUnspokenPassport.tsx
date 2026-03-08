@@ -23,7 +23,7 @@ export default function TheUnspokenPassport() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section with Featured Image */}
         <div className="relative h-[60vh] md:h-[70vh] bg-gray-900">
-          <img
+          <img loading="lazy"
             src="/images/the-unspoken-passport.webp"
             alt="The Unspoken Passport"
             className="w-full h-full object-cover opacity-90"
