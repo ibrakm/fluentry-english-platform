@@ -40,7 +40,7 @@ export default function Home() {
   const title = "English Coaching Morocco | IELTS Prep & Business English | Fluentry";
   const description = "Learn English online in Morocco with TESOL-certified coach Mr. Ibrahim K. IELTS 7.5+ guaranteed, Business English & conversation. 1-on-1 lessons from 100 MAD/hr. Free level test.";
   const homeKeywords = "English coaching Morocco, cours anglais en ligne Maroc, IELTS preparation Morocco, تعلم الإنجليزية المغرب, English teacher Tangier, online English lessons Morocco, Business English Morocco, IELTS coaching Casablanca, English tutor Morocco, professeur anglais Maroc, TESOL certified coach Morocco, learn English online Morocco, English for work Morocco, IELTS 7.5 Morocco, English fluency Morocco, cours anglais Casablanca, cours anglais Rabat, cours anglais Marrakech, English lessons Morocco online, 1-on-1 English coaching Morocco";
-  const [bannerVisible, setBannerVisible] = useState(true);
+
 
   return (
     <>
@@ -53,30 +53,7 @@ export default function Home() {
       />
       <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 
-      {/* Bilingual Moroccan Banner */}
-      {bannerVisible && (
-        <div className="bg-gradient-to-r from-green-700 to-green-600 text-white py-3 px-4 relative">
-          <div className="container mx-auto max-w-6xl flex items-center justify-between gap-4">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left flex-1">
-              <span className="text-lg">🇲🇦</span>
-              <span className="text-sm sm:text-base font-semibold">
-                <span className="text-yellow-300">بالعربية:</span> تعلم الإنجليزية مع كوتش متخصص — نتائج مضمونة
-              </span>
-              <span className="hidden sm:block text-green-300">|</span>
-              <span className="text-sm sm:text-base font-semibold">
-                <span className="text-yellow-300">En français:</span> Coaching anglais en ligne — Résultats garantis
-              </span>
-            </div>
-            <button
-              onClick={() => setBannerVisible(false)}
-              className="text-green-200 hover:text-white transition-colors flex-shrink-0"
-              aria-label="Close banner"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      )}
+      {/* Bilingual Moroccan Banner - REMOVED */}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 md:py-24 px-4 shadow-xl">
