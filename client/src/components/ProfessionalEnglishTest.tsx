@@ -556,6 +556,13 @@ export default function ProfessionalEnglishTest() {
       body: JSON.stringify(payload),
     }).catch(() => { /* silent fail */ });
 
+    // Build WhatsApp message and auto-redirect the student
+    const levelInfoForWA = getLevelInfo(testResult!.level);
+    const waMessage = encodeURIComponent(
+      `Hi Mr. Ibrahim! 👋\n\nMy name is ${leadData.name.trim()} and I just completed your English test on Fluentry.\n\n📊 My Level: ${testResult!.level} — ${levelInfoForWA.title}\n✅ Score: ${testResult!.score}/${testResult!.totalQuestions} (${testResult!.percentage}%)\n${leadData.phone ? `📱 My WhatsApp: ${leadData.phone}\n` : ""}${leadData.email ? `📧 My Email: ${leadData.email}\n` : ""}\nCould you please send me my detailed results and your recommendation for which package suits me best? I'd love to start as soon as possible! 😊`
+    );
+    window.open(`https://wa.me/212672580932?text=${waMessage}`, "_blank");
+
     // Show results immediately
     setLeadSubmitted(true);
     setIsSubmitting(false);
@@ -850,15 +857,15 @@ export default function ProfessionalEnglishTest() {
 
             <Button
               size="lg"
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-bold py-6 shadow-lg"
+              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-lg font-bold py-6 shadow-lg"
               onClick={handleLeadSubmit}
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Unlocking..." : "🔓 Unlock My Results Now!"}
+              {isSubmitting ? "Opening WhatsApp..." : "💬 See My Results & Message Mr. Ibrahim"}
             </Button>
 
             <p className="text-center text-xs text-gray-400">
-              🔒 Your information is private and will only be used to send you your results and coaching recommendation.
+              📱 WhatsApp will open automatically with your results pre-filled. Mr. Ibrahim will reply with your full score and personalized recommendation.
             </p>
           </div>
         </Card>

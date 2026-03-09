@@ -1,6 +1,6 @@
-# Google Apps Script Fix — Complete Replacement
+# Google Apps Script — Complete Code (Updated)
 
-## How to apply this fix
+## How to apply this update
 
 1. Go to [script.google.com](https://script.google.com)
 2. Open your Fluentry project (or go to the Google Sheet → Extensions → Apps Script)
@@ -8,7 +8,7 @@
 4. **Paste the code below** (everything inside the code block)
 5. Click **Save** (Ctrl+S)
 6. Click **Deploy → Manage Deployments → Edit (pencil icon) → New Version → Deploy**
-7. Done — all three tests will now send correct emails
+7. Done — all three tests will now send clear, professional email notifications
 
 ---
 
@@ -17,11 +17,11 @@
 ```javascript
 // ─── FLUENTRY LEADS — Google Apps Script ─────────────────────────────────────
 // Receives POST from Vercel API, saves to Sheet, sends email to Ibrahim
-// Fixed: handles all field name variants, always sends email notification
+// Updated: clearer email format, always sends notification
 // ─────────────────────────────────────────────────────────────────────────────
 
-var NOTIFY_EMAIL = "abirkabajani@gmail.com"; // ← Mr. Ibrahim's email
-var SHEET_NAME   = "Leads";                  // ← Sheet tab name (change if different)
+var NOTIFY_EMAIL = "ibrahimkabaikm@gmail.com"; // ← Mr. Ibrahim's notification email
+var SHEET_NAME   = "Leads";                    // ← Sheet tab name (change if different)
 
 function doPost(e) {
   try {
@@ -79,18 +79,45 @@ function doPost(e) {
 
     // ── 2. Send email notification to Mr. Ibrahim ───────────────────────────
     // Always send — regardless of whether the student provided their email
-    var subject = "New Fluentry Lead: " + name + " — " + levelDisplay;
+    var subject = "🎓 New Student Lead — " + name + " | Level: " + levelDisplay;
+
+    // Build a WhatsApp reply link pre-filled with the student's number
+    var waReplyLink = "";
+    if (whatsapp && whatsapp !== "Not provided") {
+      var cleanPhone = whatsapp.replace(/[\s\-\(\)]/g, "");
+      if (cleanPhone.charAt(0) === "+") cleanPhone = cleanPhone.substring(1);
+      var waMsg = encodeURIComponent(
+        "Hi " + name + "! 👋\n\nThank you for completing the Fluentry English test.\n\n" +
+        "Your result: " + levelDisplay + " — Score: " + scoreDisplay + "\n\n" +
+        "Based on your level, I recommend the " + (recommendation || "Standard Package") + ".\n\n" +
+        "Would you like to book your first free strategy call? I'm available this week! 😊"
+      );
+      waReplyLink = "https://wa.me/" + cleanPhone + "?text=" + waMsg;
+    }
 
     var body =
-      "Name: "       + name           + "\n" +
-      "Email: "      + email          + "\n" +
-      "WhatsApp: "   + whatsapp       + "\n" +
-      "Level: "      + levelDisplay   + "\n" +
-      "Score: "      + scoreDisplay   + "\n" +
-      "Test: "       + testType       + "\n" +
-      "\nRecommendation: " + (recommendation || "N/A") + "\n" +
-      "\nView leads: https://docs.google.com/spreadsheets/d/" +
-        ss.getId() + "/edit\n";
+      "═══════════════════════════════════════\n" +
+      "  NEW STUDENT LEAD — FLUENTRY.ONLINE\n" +
+      "═══════════════════════════════════════\n\n" +
+      "👤 Name:        " + name + "\n" +
+      "📧 Email:       " + email + "\n" +
+      "📱 WhatsApp:    " + whatsapp + "\n\n" +
+      "───────────────────────────────────────\n" +
+      "📊 TEST RESULTS\n" +
+      "───────────────────────────────────────\n" +
+      "🎯 Level:       " + levelDisplay + "\n" +
+      "✅ Score:       " + scoreDisplay + "\n" +
+      "📝 Test:        " + testType + "\n" +
+      "📦 Recommended: " + (recommendation || "N/A") + "\n\n" +
+      "───────────────────────────────────────\n" +
+      "⚡ QUICK ACTIONS\n" +
+      "───────────────────────────────────────\n" +
+      (waReplyLink ? "💬 Reply on WhatsApp:\n" + waReplyLink + "\n\n" : "") +
+      "📊 View All Leads (Google Sheet):\nhttps://docs.google.com/spreadsheets/d/" + ss.getId() + "/edit\n\n" +
+      "───────────────────────────────────────\n" +
+      "🕐 Submitted: " + timestamp + "\n" +
+      "🌐 Source: " + source + "\n" +
+      "═══════════════════════════════════════\n";
 
     MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
 
@@ -118,33 +145,48 @@ function doGet(e) {
 
 ---
 
-## What this fixes
-
-| Bug | Root Cause | Fix Applied |
-|---|---|---|
-| Quick Test — no email sent | GAS only emailed when `data.email` was a real address | Now **always** sends email to Mr. Ibrahim regardless of student's email |
-| Full Assessment — `Email: undefined` | GAS read `data.Email` (capital E) but API sent `data.email` | Now reads both `data.email` and `data.Email` |
-| Full Assessment — `WhatsApp: undefined` | GAS read `data.whatsapp` but API sent `data.phone` | Now reads `data.whatsapp`, `data.WhatsApp`, and `data.phone` |
-| Full Assessment — `Score: / (%)` | GAS read `data.score`/`data.total` as strings but they were empty | Now uses `sanitizeNumber()` in API + fallback chain in GAS |
-| Speaking Test — `Level: A2 — undefined` | GAS appended `data.levelTitle` separately but it was `undefined` | Now builds `levelDisplay` safely with null check |
-
----
-
-## After applying the fix
-
-All three tests will produce emails like this:
+## What the new email looks like
 
 ```
-Subject: New Fluentry Lead: Youssef El Amrani — B2 — Upper Intermediate
+Subject: 🎓 New Student Lead — Youssef El Amrani | Level: B2 — Upper Intermediate
 
-Name: Youssef El Amrani
-Email: youssef@gmail.com
-WhatsApp: +212612345678
-Level: B2 — Upper Intermediate
-Score: 8/10 (80%)
-Test: Quick Test (10 questions)
+═══════════════════════════════════════
+  NEW STUDENT LEAD — FLUENTRY.ONLINE
+═══════════════════════════════════════
 
-Recommendation: Standard Package — 3 lessons/week
+👤 Name:        Youssef El Amrani
+📧 Email:       youssef@gmail.com
+📱 WhatsApp:    +212612345678
 
-View leads: https://docs.google.com/spreadsheets/d/...
+───────────────────────────────────────
+📊 TEST RESULTS
+───────────────────────────────────────
+🎯 Level:       B2 — Upper Intermediate
+✅ Score:       8/10 (80%)
+📝 Test:        Quick Test (10 questions)
+📦 Recommended: Standard Package (1 hour/lesson)
+
+───────────────────────────────────────
+⚡ QUICK ACTIONS
+───────────────────────────────────────
+💬 Reply on WhatsApp:
+https://wa.me/212612345678?text=Hi+Youssef...
+
+📊 View All Leads (Google Sheet):
+https://docs.google.com/spreadsheets/d/.../edit
+
+───────────────────────────────────────
+🕐 Submitted: 2026-03-09T15:30:00.000Z
+🌐 Source: Fluentry Website
+═══════════════════════════════════════
 ```
+
+## Key improvements in this version
+
+| Improvement | Details |
+|---|---|
+| **Clearer subject line** | Now reads: `🎓 New Student Lead — [Name] | Level: [Level]` — instantly scannable |
+| **Structured sections** | Separated into Student Info, Test Results, and Quick Actions |
+| **One-click WhatsApp reply** | A pre-filled WhatsApp link lets you reply to the student in one click |
+| **Correct email address** | Fixed to `ibrahimkabaikm@gmail.com` |
+| **All field variants handled** | Reads `email`/`Email`, `phone`/`whatsapp`/`WhatsApp` — no more undefined values |

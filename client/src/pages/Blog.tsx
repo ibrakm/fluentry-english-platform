@@ -9,6 +9,36 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
+    slug: "how-to-find-english-speaking-partner-morocco",
+    published: true,
+    title: "How to Find an English Speaking Partner in Morocco (for Free)",
+    excerpt: "The ultimate guide to finding a language exchange partner in Morocco to practice your English speaking skills for free. Discover online platforms, local meetups, and expert tips.",
+    category: "Speaking Skills",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/speaking-partner.webp"
+  },
+  {
+    slug: "english-for-call-centers-morocco",
+    published: true,
+    title: "English for Call Centers in Morocco: The Ultimate Guide",
+    excerpt: "Your complete guide to mastering the English skills needed for a high-paying call center job in Morocco. Learn about required levels, key vocabulary, and interview tips.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/call-center.webp"
+  },
+  {
+    slug: "ielts-vs-toeic-morocco",
+    published: true,
+    title: "IELTS vs. TOEIC in Morocco: Which English Test is Right for You?",
+    excerpt: "A clear comparison of IELTS and TOEIC in Morocco. Understand the differences in format, cost, and purpose to choose the right English exam for your academic or professional goals.",
+    category: "IELTS & Exams",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/ielts-vs-toeic.webp"
+  },
+  {
     slug: "online-english-classes-morocco-2026-guide",
     published: true,
     title: "Online English Classes for Moroccans: The Complete 2026 Guide",
