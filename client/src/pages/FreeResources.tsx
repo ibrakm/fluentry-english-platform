@@ -10,6 +10,7 @@ import { BookOpen, Download, FileText, GamepadIcon, Headphones, PenTool, BookMar
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const gameTabs = [
   { id: "vocabulary", label: "Vocabulary", icon: BookOpen },
@@ -24,6 +25,7 @@ const resourceTabs = [
 ];
 
 export default function FreeResources() {
+  const { langPrefix } = useLanguage();
   const [activeGameTab, setActiveGameTab] = useState("vocabulary");
   const [activeResourceTab, setActiveResourceTab] = useState("exercises");
 
@@ -86,7 +88,7 @@ export default function FreeResources() {
                   <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-500 mb-5 text-sm sm:text-base">
                     "Fluency comes from confidence, not perfection."
                   </blockquote>
-                  <Link href="/about">
+                  <Link href={`${langPrefix}/about`}>
                     <Button className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
                       Learn More About Mr. Ibrahim
                     </Button>
@@ -256,7 +258,7 @@ export default function FreeResources() {
                     <li>• Skill breakdown report</li>
                     <li>• Course recommendations</li>
                   </ul>
-                  <Link href="/free-test">
+                  <Link href={`${langPrefix}/free-test`}>
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-xs">
                       Take Free Test
                     </Button>
@@ -279,7 +281,7 @@ export default function FreeResources() {
                     <li>• Student success stories</li>
                     <li>• Weekly learning tips</li>
                   </ul>
-                  <Link href="/blog">
+                  <Link href={`${langPrefix}/blog`}>
                     <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white text-xs">
                       Read Blog
                     </Button>
@@ -306,7 +308,7 @@ export default function FreeResources() {
                     Book Free Consultation
                   </Button>
                 </a>
-                <Link href="/pricing">
+                <Link href={`${langPrefix}/pricing`}>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-white/90 font-semibold px-8">
                     View Pricing
                   </Button>

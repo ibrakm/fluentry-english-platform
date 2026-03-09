@@ -6,6 +6,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export interface CityPageProps {
   city: string;                  // e.g. "Casablanca"
@@ -55,6 +56,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function CityPage({
   city, cityAr, cityFr, region, slug, description, localContext, industries, nearbyAreas, waMsg,
 }: CityPageProps) {
+  const { langPrefix } = useLanguage();
   const cityFaqs = faqs(city);
 
   return (
@@ -100,7 +102,7 @@ export default function CityPage({
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </a>
-                  <Link href="/free-test">
+                  <Link href={`${langPrefix}/free-test`}>
                     <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 w-full sm:w-auto">
                       Take Free Level Test
                     </Button>
@@ -168,7 +170,7 @@ export default function CityPage({
                     <p className="text-gray-600 text-sm">{prog.desc}</p>
                   </div>
                 ))}
-                <Link href="/pricing">
+                <Link href={`${langPrefix}/pricing`}>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-2">
                     View All Plans & Prices <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -274,7 +276,7 @@ export default function CityPage({
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
-              <Link href="/pricing">
+              <Link href={`${langPrefix}/pricing`}>
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 w-full sm:w-auto">
                   View Pricing
                 </Button>

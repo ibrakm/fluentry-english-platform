@@ -15,8 +15,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, Calendar, Target, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function A2ToB1SixMonthPlan() {
+  const { langPrefix } = useLanguage();
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -199,7 +201,7 @@ export default function A2ToB1SixMonthPlan() {
                 Don't just dream about speaking English confidently. Start your journey today. Book a free consultation with a Fluentry coach and get your personalized plan to reach B1 and beyond.
               </p>
               <Link
-                href="/book-lesson"
+                href={`${langPrefix}/book-lesson`}
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-lg"
               >
                 Book Your Free Consultation <ArrowRight size={18} />

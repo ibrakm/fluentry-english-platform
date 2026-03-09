@@ -16,6 +16,7 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, User, BookOpen } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Message {
   role: "user" | "assistant";
@@ -35,6 +36,7 @@ Your role:
 Start by greeting the user warmly and asking what they'd like to practise today (speaking, grammar, vocabulary, IELTS, business English, etc.).`;
 
 export function AIChatbot() {
+  const { langPrefix } = useLanguage();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -214,7 +216,7 @@ export function AIChatbot() {
                   Ready for personalised coaching?
                 </p>
                 <Link
-                  href="/book-lesson"
+                  href={`${langPrefix}/book-lesson`}
                   className="inline-block bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full transition-colors"
                   onClick={() => setOpen(false)}
                 >

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, RotateCcw, Volume2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Question {
   id: number;
@@ -273,6 +274,7 @@ const getQuestionTypeLabel = (
 };
 
 export default function ComprehensiveEnglishTest() {
+  const { langPrefix } = useLanguage();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
@@ -499,7 +501,7 @@ export default function ComprehensiveEnglishTest() {
                   </div>
                 </div>
               </div>
-              <a href="/book-lesson">
+              <a href={`${langPrefix}/book-lesson`}>
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full">
                   Book Your First Coaching Lesson Now
                 </Button>

@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'wouter';
 import { ArrowLeft, BookOpen } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function TheUnspokenPassport() {
+  const { langPrefix } = useLanguage();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -30,7 +32,7 @@ export default function TheUnspokenPassport() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent flex items-end">
             <div className="container mx-auto px-4 pb-12 md:pb-16">
-              <Link href="/" className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
+              <Link href={`${langPrefix}`} className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
               </Link>
@@ -166,7 +168,7 @@ export default function TheUnspokenPassport() {
                 Take the Free CEFR Test and discover your level today.
               </p>
               <div className="flex justify-center">
-                <Link href="/test">
+                <Link href={`${langPrefix}/test`}>
                   <a className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">
                     Take Free Test
                   </a>
@@ -181,19 +183,19 @@ export default function TheUnspokenPassport() {
           <div className="container mx-auto px-4 max-w-4xl">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Continue Your English Journey</h3>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/courses">
+              <Link href={`${langPrefix}/courses`}>
                 <a className="block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200">
                   <h4 className="font-semibold text-gray-900 mb-2">Explore Courses</h4>
                   <p className="text-sm text-gray-600">Discover personalized learning paths</p>
                 </a>
               </Link>
-              <Link href="/pricing">
+              <Link href={`${langPrefix}/pricing`}>
                 <a className="block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200">
                   <h4 className="font-semibold text-gray-900 mb-2">View Pricing</h4>
                   <p className="text-sm text-gray-600">Affordable packages for every learner</p>
                 </a>
               </Link>
-              <Link href="/book">
+              <Link href={`${langPrefix}/book`}>
                 <a className="block p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors border border-gray-200">
                   <h4 className="font-semibold text-gray-900 mb-2">Book a Lesson</h4>
                   <p className="text-sm text-gray-600">Start learning with Mr. Ibrahim K.</p>

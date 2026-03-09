@@ -15,8 +15,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HowToGetCallCenterJobMorocco() {
+  const { langPrefix } = useLanguage();
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -99,7 +101,7 @@ export default function HowToGetCallCenterJobMorocco() {
                 Take our free 10-minute placement test to find out your CEFR level instantly.
               </p>
               <Link
-                href="/free-test"
+                href={`${langPrefix}/free-test`}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl transition-all"
               >
                 Take the Free Test <ArrowRight size={16} />
@@ -158,7 +160,7 @@ export default function HowToGetCallCenterJobMorocco() {
                 The single best investment you can make is improving your English. With personalised coaching from a native speaker, you can reach C1 level in months, not years. This will double your salary potential and open doors to leadership roles.
               </p>
               <Link
-                href="/book-lesson"
+                href={`${langPrefix}/book-lesson`}
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-lg"
               >
                 Book a Free Trial Lesson with Mr. Ibrahim <ArrowRight size={18} />

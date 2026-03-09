@@ -5,6 +5,7 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
@@ -171,6 +172,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function Blog() {
+  const { langPrefix } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("All Topics");
 
   const filteredArticles =
@@ -326,7 +328,7 @@ export default function Blog() {
                     Book Free Consultation
                   </Button>
                 </a>
-                <Link href="/courses">
+                <Link href={`${langPrefix}/courses`}>
                   <Button size="lg" variant="outline">
                     View Courses
                   </Button>

@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, RotateCcw, BookOpen, Zap, Headphones, FileText, AlertCircle, Lock, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Question {
   id: number;
@@ -451,6 +452,7 @@ const SUBMIT_LEAD_API = "/api/submit-lead";
 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 export default function ProfessionalEnglishTest() {
+  const { langPrefix } = useLanguage();
   const [stage, setStage] = useState<"selection" | "testing" | "lead_capture" | "results">("selection");
   const [testType, setTestType] = useState<"quick" | "comprehensive" | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -918,7 +920,7 @@ export default function ProfessionalEnglishTest() {
                 💬 Message Mr. Ibrahim on WhatsApp
               </Button>
             </a>
-            <a href="/book-lesson">
+            <a href={`${langPrefix}/book-lesson`}>
               <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-gray-100 font-bold text-sm sm:text-lg py-5 sm:py-6">
                 📅 Book Your First Lesson Now
               </Button>

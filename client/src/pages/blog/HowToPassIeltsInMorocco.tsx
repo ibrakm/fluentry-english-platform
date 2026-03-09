@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, MapPin, DollarSign, Mic, Pencil, Ear, Book, Clock, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HowToPassIeltsInMorocco() {
+  const { langPrefix } = useLanguage();
   const title = "How to Pass IELTS in Morocco: The Ultimate 2026 Guide";
   const description = "Your complete guide to acing the IELTS test in Morocco. Find test centers, fees, dates, and expert strategies for Listening, Reading, Writing, and Speaking sections.";
 
@@ -166,10 +168,10 @@ export default function HowToPassIeltsInMorocco() {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Achieve Your Target Score?</h3>
               <p className="text-lg text-gray-600 mb-8">Don't leave your future to chance. Take the first step by understanding your current level with our free CEFR test, or book a consultation to create your personalized IELTS preparation plan.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/free-test">
+                <Link href={`${langPrefix}/free-test`}>
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white w-full sm:w-auto">Take the Free English Test</Button>
                 </Link>
-                <Link href="/book-lesson">
+                <Link href={`${langPrefix}/book-lesson`}>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto">Book a Free Consultation</Button>
                 </Link>
               </div>

@@ -2,6 +2,7 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { Star, ArrowRight, MessageCircle, TrendingUp, Award, Clock, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const stories = [
   {
@@ -104,6 +105,7 @@ const stats = [
 ];
 
 export default function SuccessStories() {
+  const { langPrefix } = useLanguage();
   return (
     <>
       <SEO
@@ -270,7 +272,7 @@ export default function SuccessStories() {
                 Book Free Diagnostic Call
               </Button>
             </a>
-            <Link href="/pricing">
+            <Link href={`${langPrefix}/pricing`}>
               <Button
                 size="lg"
                 variant="outline"

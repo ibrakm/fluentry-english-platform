@@ -15,8 +15,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Zap, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function EnglishForTourismMorocco() {
+  const { langPrefix } = useLanguage();
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -97,7 +99,7 @@ export default function EnglishForTourismMorocco() {
                 </div>
               </div>
               <Link
-                href="/courses"
+                href={`${langPrefix}/courses`}
                 className="mt-4 block text-center bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-xl transition-all"
               >
                 View Hospitality English Courses <ArrowRight size={16} className="inline-block" />
@@ -129,7 +131,7 @@ export default function EnglishForTourismMorocco() {
                 Don't let language be a barrier to your success. With personalised coaching from a native English speaker, you can master the specific vocabulary and cultural nuances needed for the tourism industry. This is the fastest way to increase your tips, get promoted, and build a successful career.
               </p>
               <Link
-                href="/book-lesson"
+                href={`${langPrefix}/book-lesson`}
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-lg"
               >
                 Book a Free Trial Lesson <ArrowRight size={18} />

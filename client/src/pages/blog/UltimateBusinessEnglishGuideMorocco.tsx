@@ -1,8 +1,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { CheckCircle, Briefcase, Mail, Mic, Users, TrendingUp, Award, ChevronRight, Star, Target, Clock, BookOpen } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function UltimateBusinessEnglishGuideMorocco() {
+  const { langPrefix } = useLanguage();
   const title = "The Ultimate Business English Guide for Moroccan Professionals (2026)";
   const description = "Master Business English in Morocco. Emails, meetings, presentations, negotiations, LinkedIn — the complete guide for Moroccan professionals who want to advance their careers internationally.";
 
@@ -474,12 +476,12 @@ export default function UltimateBusinessEnglishGuideMorocco() {
                 <h2 className="text-3xl font-extrabold mb-4">Ready to Advance Your Career with Business English?</h2>
                 <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">Mr. Ibrahim's 12-Week Business English Mastery programme is designed specifically for Moroccan professionals. Book a free strategy call and get a personalised plan built around your industry and career goals.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/book-lesson">
+                  <Link href={`${langPrefix}/book-lesson`}>
                     <button className="bg-green-400 text-green-900 font-bold px-8 py-4 rounded-xl hover:bg-green-300 transition-colors text-lg">
                       Book Free Strategy Call
                     </button>
                   </Link>
-                  <Link href="/pricing">
+                  <Link href={`${langPrefix}/pricing`}>
                     <button className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors text-lg">
                       View Business English Programme
                     </button>

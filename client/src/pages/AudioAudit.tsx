@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Mic, MicOff, Play, Pause, Send, CheckCircle, ArrowRight, RotateCcw, Star, AlertCircle } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // ── Longer, realistic reading passages for each level ─────────────────────────
 const LEVELS = [
@@ -73,6 +74,7 @@ interface AuditResult {
 }
 
 export default function AudioAudit() {
+  const { langPrefix } = useLanguage();
   const [selectedLevel, setSelectedLevel] = useState(0);
   const [recordingState, setRecordingState] = useState<RecordingState>("idle");
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
@@ -571,7 +573,7 @@ export default function AudioAudit() {
           {/* Bottom nav */}
           <div className="text-center mt-8">
             <p className="text-gray-400 text-sm mb-3">تريد اختبار مستواك الكامل؟</p>
-            <Link href="/free-test">
+            <Link href={`${langPrefix}/free-test`}>
               <Button variant="outline" className="border-blue-500 text-blue-600 hover:bg-blue-50 font-semibold">
                 اختبار المستوى الكامل
                 <ArrowRight className="w-4 h-4 ml-2" />

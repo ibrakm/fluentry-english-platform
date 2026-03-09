@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   MessageCircle, CheckCircle, Clock, Users, Star,
   ArrowRight, Shield, Target, Zap
@@ -63,6 +64,7 @@ const plans = [
 ];
 
 export default function BookLesson() {
+  const { langPrefix } = useLanguage();
   return (
     <>
       <SEO
@@ -171,7 +173,7 @@ export default function BookLesson() {
               ))}
             </div>
             <div className="text-center mt-8">
-              <Link href="/pricing">
+              <Link href={`${langPrefix}/pricing`}>
                 <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                   See Full Pricing Details
                   <ArrowRight className="w-4 h-4 ml-2" />

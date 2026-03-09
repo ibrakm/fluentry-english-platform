@@ -15,8 +15,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, Zap, BookOpen } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HowToPassToeicTestMorocco() {
+  const { langPrefix } = useLanguage();
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -97,7 +99,7 @@ export default function HowToPassToeicTestMorocco() {
                 Fluentry offers a specialised TOEIC preparation course focused on test strategies and business vocabulary to help you get 850+.
               </p>
               <Link
-                href="/courses"
+                href={`${langPrefix}/courses`}
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-xl transition-all"
               >
                 View TOEIC Prep Course <ArrowRight size={16} />
@@ -131,7 +133,7 @@ export default function HowToPassToeicTestMorocco() {
                 A high TOEIC score is a powerful asset on your CV. With personalised coaching from a native speaker, you can master the strategies needed to ace the test and secure your dream job in Morocco.
               </p>
               <Link
-                href="/book-lesson"
+                href={`${langPrefix}/book-lesson`}
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-lg"
               >
                 Book a Free TOEIC Consultation <ArrowRight size={18} />

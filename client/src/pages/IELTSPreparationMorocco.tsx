@@ -6,6 +6,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const faqs = [
   {
@@ -61,6 +62,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function IELTSPreparationMorocco() {
+  const { langPrefix } = useLanguage();
   return (
     <>
       <SEO
@@ -117,7 +119,7 @@ export default function IELTSPreparationMorocco() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </a>
-                  <Link href="/free-test">
+                  <Link href={`${langPrefix}/free-test`}>
                     <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 w-full sm:w-auto">
                       Take Free Level Test
                     </Button>
@@ -365,7 +367,7 @@ export default function IELTSPreparationMorocco() {
                     Book Free Strategy Call
                   </Button>
                 </a>
-                <Link href="/pricing">
+                <Link href={`${langPrefix}/pricing`}>
                   <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 w-full sm:w-auto">
                     View All Plans
                   </Button>

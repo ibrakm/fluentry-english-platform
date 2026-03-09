@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight, CheckCircle, MessageCircle, Mail, Calendar, Phone } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface OnboardingStep {
   id: string;
@@ -257,7 +258,7 @@ export const EnglishLevelOnboarding: React.FC<OnboardingProps> = ({
               <div className="space-y-3">
                 {/* Book a Lesson CTA */}
                 <a
-                  href="/book-lesson"
+                  href={`${langPrefix}/book-lesson`}
                   className="flex items-center gap-3 p-4 rounded-lg bg-gradient-to-r from-green-400 to-cyan-400 text-white font-bold hover:shadow-lg hover:shadow-green-400/50 transition transform hover:scale-105"
                 >
                   <Calendar className="w-5 h-5" />
@@ -285,7 +286,7 @@ export const EnglishLevelOnboarding: React.FC<OnboardingProps> = ({
 
                 {/* Explore Resources CTA */}
                 <a
-                  href="/free-resources"
+                  href={`${langPrefix}/free-resources`}
                   className="flex items-center gap-3 p-4 rounded-lg border-2 border-white/30 text-white font-bold hover:bg-white/10 transition"
                 >
                   <MessageCircle className="w-5 h-5" />

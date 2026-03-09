@@ -15,6 +15,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // ─── Facebook Pixel Helper ─────────────────────────────────────────────────────
 declare global {
@@ -101,7 +102,7 @@ function LeadMagnetForm() {
         <h3 className="text-xl font-bold text-green-700 mb-1">مبروك! الدليل جاهز ليك</h3>
         <p className="text-gray-500 text-sm mb-5">Félicitations ! Votre guide est prêt à télécharger.</p>
         <a
-          href="/50_Common_Mistakes_Fluentry.pdf"
+          href={`${langPrefix}/50_Common_Mistakes_Fluentry.pdf`}
           download="50_Common_Mistakes_Fluentry.pdf"
           onClick={() => trackPixel("CompleteRegistration", { content_name: "50 Mistakes PDF Downloaded", value: 0, currency: "MAD" })}
           className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-colors mb-6"
@@ -198,6 +199,7 @@ function LeadMagnetForm() {
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 export default function StartPage() {
+  const { langPrefix } = useLanguage();
   // Facebook Pixel: ViewContent event when the /start page loads
   useEffect(() => {
     trackPixel("ViewContent", {
@@ -277,7 +279,7 @@ export default function StartPage() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
-              <Link href="/free-test">
+              <Link href={`${langPrefix}/free-test`}>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700 font-bold text-base px-8 py-6 rounded-xl w-full sm:w-auto">
                   <Zap className="w-4 h-4 mr-2" />
                   اكتشف مستواك مجاناً
@@ -469,7 +471,7 @@ export default function StartPage() {
                 </div>
               ))}
             </div>
-            <Link href="/pricing">
+            <Link href={`${langPrefix}/pricing`}>
               <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 شوف كل الأثمنة
                 <ArrowRight className="w-4 h-4 mr-2" />
@@ -518,7 +520,7 @@ export default function StartPage() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>
-              <Link href="/free-test">
+              <Link href={`${langPrefix}/free-test`}>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700 font-bold text-base px-8 py-6 rounded-xl w-full sm:w-auto">
                   <Zap className="w-4 h-4 mr-2" />
                   اكتشف مستواك مجاناً
@@ -545,7 +547,7 @@ export default function StartPage() {
               <p className="text-blue-300 text-sm mb-6 max-w-lg mx-auto">
                 سجّل صوتك وأنت تقرأ جملة واحدة. الأستاذ إبراهيم سيرسل لك تقييماً شخصياً على واتساب خلال 24 ساعة.
               </p>
-              <Link href="/audio-audit">
+              <Link href={`${langPrefix}/audio-audit`}>
                 <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl shadow-lg" dir="ltr">
                   <Mic className="w-4 h-4 mr-2" />
                   ابدأ اختبار النطق المجاني
@@ -560,9 +562,9 @@ export default function StartPage() {
         <footer className="bg-gray-900 text-gray-400 py-6 px-4 text-center text-sm" dir="ltr">
           <p>© 2026 Fluentry — Coaching Anglais en Ligne au Maroc</p>
           <p className="mt-1">
-            <Link href="/" className="text-blue-400 hover:text-blue-300 mx-2">Accueil</Link>
-            <Link href="/pricing" className="text-blue-400 hover:text-blue-300 mx-2">Tarifs</Link>
-            <Link href="/free-test" className="text-blue-400 hover:text-blue-300 mx-2">Test Gratuit</Link>
+            <Link href={`${langPrefix}`} className="text-blue-400 hover:text-blue-300 mx-2">Accueil</Link>
+            <Link href={`${langPrefix}/pricing`} className="text-blue-400 hover:text-blue-300 mx-2">Tarifs</Link>
+            <Link href={`${langPrefix}/free-test`} className="text-blue-400 hover:text-blue-300 mx-2">Test Gratuit</Link>
           </p>
         </footer>
 

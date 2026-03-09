@@ -2,6 +2,7 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
 import { Download, Mail, CheckCircle, BookOpen, Mic, Briefcase, Star, Award, FileText, Video, Headphones, ChevronRight, Lock, Unlock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FREE_RESOURCES = [
   {
@@ -129,6 +130,7 @@ const FREE_RESOURCES = [
 const CATEGORIES = ["All", "Guide", "IELTS", "Business English", "Vocabulary", "Speaking", "Pronunciation"];
 
 export default function ResourceLibrary() {
+  const { langPrefix } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("All");
   const [email, setEmail] = useState("");
   const [downloadingId, setDownloadingId] = useState<string | null>(null);
@@ -366,7 +368,7 @@ export default function ResourceLibrary() {
                   <h2 className="text-2xl font-extrabold mb-3">Go Deeper with Our Ultimate Guides</h2>
                   <p className="text-blue-100 mb-6 text-sm">The most comprehensive English learning guides written specifically for Moroccan students. Free to read online.</p>
                   <div className="space-y-3">
-                    <Link href="/blog/ultimate-ielts-guide-morocco">
+                    <Link href={`${langPrefix}/blog/ultimate-ielts-guide-morocco`}>
                       <div className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl p-3 cursor-pointer transition-colors">
                         <Award className="w-5 h-5 text-yellow-400 flex-shrink-0" />
                         <div>
@@ -376,7 +378,7 @@ export default function ResourceLibrary() {
                         <ChevronRight className="w-4 h-4 text-blue-300 ml-auto flex-shrink-0" />
                       </div>
                     </Link>
-                    <Link href="/blog/ultimate-business-english-guide-morocco">
+                    <Link href={`${langPrefix}/blog/ultimate-business-english-guide-morocco`}>
                       <div className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl p-3 cursor-pointer transition-colors">
                         <Briefcase className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <div>
@@ -393,7 +395,7 @@ export default function ResourceLibrary() {
                     <div className="text-4xl font-extrabold text-yellow-400 mb-2">Free</div>
                     <div className="text-blue-100 text-sm mb-4">All resources are completely free. No hidden costs, no subscriptions.</div>
                     <div className="text-xs text-blue-200 mb-4">Want personalised coaching instead?</div>
-                    <Link href="/book-lesson">
+                    <Link href={`${langPrefix}/book-lesson`}>
                       <button className="bg-yellow-400 text-yellow-900 font-bold px-6 py-3 rounded-xl hover:bg-yellow-300 transition-colors text-sm w-full">
                         Book Free Strategy Call
                       </button>

@@ -15,8 +15,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, Star, Zap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Top15AppsWebsitesLearnEnglish() {
+  const { langPrefix } = useLanguage();
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -265,7 +267,7 @@ export default function Top15AppsWebsitesLearnEnglish() {
                 Book a free consultation with Fluentry, and we will help you choose the right tools and create a plan that works for you.
               </p>
               <Link
-                href="/book-lesson"
+                href={`${langPrefix}/book-lesson`}
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:shadow-lg"
               >
                 Book Your Free Consultation <ArrowRight size={18} />

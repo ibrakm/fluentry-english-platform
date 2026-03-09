@@ -2,9 +2,10 @@ import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import {
   Users, Star, CheckCircle, MessageCircle, Clock, Calendar,
-  TrendingUp, Award, Zap, BookOpen, Mic, Target
+  TrendingUp, Award, Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const programmes = [
   {
@@ -100,7 +101,7 @@ const faqs = [
   },
   {
     q: "What level do I need to join?",
-    a: "Each programme has a recommended level (shown above). If you're unsure of your level, take our free CEFR test at fluentry.online/free-test — it takes 15 minutes and gives you an accurate A1–C2 result. You can also message Mr. Ibrahim on WhatsApp and he will assess your level in a 5-minute voice message exchange.",
+    a: "Each programme has a recommended level (shown above). If you're unsure of your level, take our free CEFR test — it takes 15 minutes and gives you an accurate A1–C2 result. You can also message Mr. Ibrahim on WhatsApp and he will assess your level in a 5-minute voice message exchange.",
   },
   {
     q: "How many students are in each group?",
@@ -131,6 +132,8 @@ const comparison = [
 ];
 
 export default function GroupCoaching() {
+  const { langPrefix } = useLanguage();
+
   return (
     <>
       <SEO
@@ -182,7 +185,7 @@ export default function GroupCoaching() {
                 Join the Waiting List
               </Button>
             </a>
-            <Link href="/pricing">
+            <Link href={`${langPrefix}/pricing`}>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-full">
                 Compare with 1-on-1
               </Button>
@@ -385,7 +388,7 @@ export default function GroupCoaching() {
                 Reserve My Spot on WhatsApp
               </Button>
             </a>
-            <Link href="/success-stories">
+            <Link href={`${langPrefix}/success-stories`}>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg rounded-full w-full sm:w-auto">
                 <Star className="w-4 h-4 mr-2" />
                 Read Student Stories

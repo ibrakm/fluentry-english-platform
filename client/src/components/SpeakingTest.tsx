@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mic, MicOff, RotateCcw, ChevronRight, Volume2, CheckCircle, AlertCircle, Lock } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // ─── SPEAKING PROMPTS (General, relevant content — not about Mr. Ibrahim) ────
 const speakingPrompts = [
@@ -132,6 +133,7 @@ async function submitSpeakingLead(lead: LeadData, score: number, level: string, 
 
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────────────
 export default function SpeakingTest() {
+  const { langPrefix } = useLanguage();
   const [stage, setStage] = useState<"intro" | "testing" | "lead_capture" | "results">("intro");
   const [currentPromptIndex, setCurrentPromptIndex] = useState(0);
   const [isRecording, setIsRecording] = useState(false);
@@ -668,7 +670,7 @@ export default function SpeakingTest() {
                 </span>
               </Button>
             </a>
-            <a href="/book-lesson" className="block">
+            <a href={`${langPrefix}/book-lesson`} className="block">
               <Button size="lg" className="w-full bg-white text-orange-600 hover:bg-gray-100 font-bold py-5 text-sm md:text-base">
                 <span className="flex items-center justify-center gap-2">
                   📅 <span>Book Your First Lesson</span>

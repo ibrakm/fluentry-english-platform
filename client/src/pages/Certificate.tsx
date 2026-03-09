@@ -12,6 +12,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Download, Award, Share2, CheckCircle } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CEFR_LEVELS = [
   { value: "A1", label: "A1 — Beginner", color: "#10b981", bg: "#ecfdf5" },
@@ -23,6 +24,7 @@ const CEFR_LEVELS = [
 ];
 
 export default function Certificate() {
+  const { langPrefix } = useLanguage();
   const [name, setName] = useState("");
   const [level, setLevel] = useState("B1");
   const [generated, setGenerated] = useState(false);
@@ -281,7 +283,7 @@ export default function Certificate() {
                   </div>
                   <p className="text-xs text-gray-400 mt-2">
                     Not sure of your level?{" "}
-                    <a href="/free-test" className="text-blue-600 hover:underline">
+                    <a href={`${langPrefix}/free-test`} className="text-blue-600 hover:underline">
                       Take the free test →
                     </a>
                   </p>

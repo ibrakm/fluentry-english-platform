@@ -1,8 +1,10 @@
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { CheckCircle, Clock, BookOpen, Mic, Pencil, Ear, Star, AlertCircle, Target, TrendingUp, Award, Users, ChevronRight } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function UltimateIELTSGuideMorocco() {
+  const { langPrefix } = useLanguage();
   const title = "The Ultimate IELTS Guide for Moroccan Students (2026) — Band 7+ Guaranteed";
   const description = "The most complete IELTS preparation guide for Moroccan students. Covers all 4 sections, Morocco-specific strategies, test centres, fees, common mistakes Arabic speakers make, and a week-by-week 8-week study plan.";
 
@@ -568,12 +570,12 @@ export default function UltimateIELTSGuideMorocco() {
                 <h2 className="text-3xl font-extrabold mb-4">Ready to Start Your IELTS Journey?</h2>
                 <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">Mr. Ibrahim has helped 100+ Moroccan students achieve Band 7+ in 8 weeks. Book a free 10-minute strategy call and get a personalised IELTS plan built around your specific weaknesses.</p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/book-lesson">
+                  <Link href={`${langPrefix}/book-lesson`}>
                     <button className="bg-yellow-400 text-yellow-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition-colors text-lg">
                       Book Free Strategy Call
                     </button>
                   </Link>
-                  <Link href="/ielts-preparation-morocco">
+                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
                     <button className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors text-lg">
                       View IELTS Programme
                     </button>

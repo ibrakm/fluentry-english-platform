@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HowToThinkInEnglish() {
+  const { langPrefix } = useLanguage();
   return (
     <>
       <SEO
@@ -25,7 +27,7 @@ export default function HowToThinkInEnglish() {
         {/* Header */}
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">
           <div className="container mx-auto px-4">
-            <Link href="/blog">
+            <Link href={`${langPrefix}/blog`}>
               <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
@@ -227,7 +229,7 @@ export default function HowToThinkInEnglish() {
                   <p className="mb-6">
                     These techniques work even better with personalized coaching. I can help you identify your specific challenges and create a custom plan for your English goals.
                   </p>
-                  <Link href="/book-lesson">
+                  <Link href={`${langPrefix}/book-lesson`}>
                     <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                       Book Your Free 10-Minute Consultation
                     </Button>

@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function BestTechniquesImproveEnglishSpeaking() {
+  const { langPrefix } = useLanguage();
   return (
     <>
       <SEO
@@ -24,7 +26,7 @@ export default function BestTechniquesImproveEnglishSpeaking() {
       <div className="min-h-screen bg-background">
         <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">
           <div className="container mx-auto px-4">
-            <Link href="/blog">
+            <Link href={`${langPrefix}/blog`}>
               <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
@@ -219,7 +221,7 @@ export default function BestTechniquesImproveEnglishSpeaking() {
                   <p className="mb-6">
                     These techniques work even better with feedback from an experienced coach. I can help you implement them correctly and track your progress.
                   </p>
-                  <Link href="/book-lesson">
+                  <Link href={`${langPrefix}/book-lesson`}>
                     <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                       Book Your Free Consultation
                     </Button>

@@ -13,10 +13,12 @@ import { useEffect, useState, useCallback } from "react";
 import { X, Star, ArrowRight, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const SESSION_KEY = "fluentry_exit_popup_shown";
 
 export function ExitIntentPopup() {
+  const { langPrefix } = useLanguage();
   const [visible, setVisible] = useState(false);
   const [hasBeenOnPageLong, setHasBeenOnPageLong] = useState(false);
 
@@ -168,7 +170,7 @@ export function ExitIntentPopup() {
             </div>
 
             {/* CTA */}
-            <Link href="/free-test" onClick={close}>
+            <Link href={`${langPrefix}/free-test`} onClick={close}>
               <Button
                 size="lg"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold text-base py-5 rounded-xl shadow-lg shadow-orange-500/30 mb-3"
