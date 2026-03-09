@@ -11,9 +11,9 @@ export default function EnglishForEngineersMorocco() {
   return (
     <>
       <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/english-for-engineers-morocco"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/english-for-engineers-morocco.jpg","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/english-for-engineers-morocco.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
       <div className="min-h-screen bg-gray-50">
-        <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-for-engineers-morocco.jpg')" }}>
+        <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-for-engineers-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative container mx-auto max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">

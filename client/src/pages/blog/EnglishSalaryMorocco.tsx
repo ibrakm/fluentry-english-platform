@@ -20,7 +20,7 @@ export default function EnglishSalaryMorocco() {
           "@type": "BlogPosting",
           "headline": title,
           "description": description,
-          "image": "https://fluentry.online/images/blog/english-salary-morocco.jpg",
+          "image": "https://fluentry.online/images/blog/english-salary-morocco.webp",
           "author": { "@type": "Person", "name": "Ibrahim K." },
           "publisher": { "@type": "Organization", "name": "Fluentry" },
           "datePublished": "2026-03-10",
@@ -29,7 +29,7 @@ export default function EnglishSalaryMorocco() {
       <div className="min-h-screen bg-gray-50">
         <header
           className="relative bg-cover bg-center text-white py-24 px-4 text-center"
-          style={{ backgroundImage: "url('/images/blog/english-salary-morocco.jpg')" }}
+          style={{ backgroundImage: "url('/images/blog/english-salary-morocco.webp')" }}
         >
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative container mx-auto max-w-4xl">
