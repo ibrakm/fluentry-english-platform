@@ -14,7 +14,7 @@ const LANGUAGES: { code: Language; label: string; flag: string }[] = [
 ];
 
 export default function Header() {
-  const { t, lang, setLang, isRTL } = useLanguage();
+  const { t, lang, setLang, isRTL, langPrefix } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
@@ -32,14 +32,14 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: t("nav.home"), icon: Home },
-    { href: "/about", label: t("nav.about"), icon: Info },
-    { href: "/courses", label: t("nav.courses"), icon: BookOpen },
-    { href: "/group-coaching", label: t("nav.groupCoaching"), icon: Users },
-    { href: "/pricing", label: t("nav.pricing"), icon: Tag },
-    { href: "/free-test", label: t("nav.freeTest"), icon: ClipboardList },
-    { href: "/success-stories", label: t("nav.successStories"), icon: Star },
-    { href: "/free-resources", label: t("nav.freeResources"), icon: Layers },
+    { href: `${langPrefix}`, label: t("nav.home"), icon: Home },
+    { href: `${langPrefix}/about`, label: t("nav.about"), icon: Info },
+    { href: `${langPrefix}/courses`, label: t("nav.courses"), icon: BookOpen },
+    { href: `${langPrefix}/group-coaching`, label: t("nav.groupCoaching"), icon: Users },
+    { href: `${langPrefix}/pricing`, label: t("nav.pricing"), icon: Tag },
+    { href: `${langPrefix}/free-test`, label: t("nav.freeTest"), icon: ClipboardList },
+    { href: `${langPrefix}/success-stories`, label: t("nav.successStories"), icon: Star },
+    { href: `${langPrefix}/free-resources`, label: t("nav.freeResources"), icon: Layers },
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang) || LANGUAGES[0];
@@ -50,7 +50,7 @@ export default function Header() {
         <div className={`flex items-center justify-between ${isRTL ? "flex-row-reverse" : ""}`}>
           {/* Logo */}
           <Link
-            href="/"
+            href={langPrefix}
             className="flex items-center gap-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
             style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
           >

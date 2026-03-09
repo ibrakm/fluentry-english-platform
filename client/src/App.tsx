@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Route, Switch } from "wouter";
-import { lazy, Suspense } from "react";
+import { Route, Switch, Redirect, useLocation } from "wouter";
+import { lazy, Suspense, useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -48,7 +48,6 @@ const ChallengesMoroccanEnglishLearners = lazy(() => import("./pages/blog/Challe
 const TheUnspokenPassport = lazy(() => import("./pages/articles/TheUnspokenPassport"));
 const StartPage = lazy(() => import("./pages/StartPage"));
 const AudioAudit = lazy(() => import("./pages/AudioAudit"));
-const OnboardingTestPage = lazy(() => import("./pages/OnboardingTest"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const GroupCoaching = lazy(() => import("./pages/GroupCoaching"));
 
@@ -75,52 +74,67 @@ function PageLoader() {
   );
 }
 
+// Root redirect: / → /en
+function RootRedirect() {
+  const [location, setLocation] = useLocation();
+  useEffect(() => {
+    if (location === "/") {
+      setLocation("/en");
+    }
+  }, [location, setLocation]);
+  return null;
+}
+
 function Router() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
-        <Route path={"/"} component={Home} />
-        <Route path={"/about"} component={About} />
-        <Route path={"/courses"} component={Courses} />
-        <Route path={"/free-test"} component={FreeTest} />
-        <Route path={"/book-lesson"} component={BookLesson} />
-        <Route path={"/pricing"} component={Pricing} />
-        <Route path={"/free-resources"} component={FreeResources} />
-        <Route path={"/blog"} component={Blog} />
-        <Route path={"/certificate"} component={Certificate} />
-        <Route path={"/community"} component={Community} />
-        <Route path={"/assessment"} component={Assessment} />
-        <Route path={"/onboarding-test"} component={OnboardingTest} />
-        <Route path={"/blog/how-to-think-in-english"} component={HowToThinkInEnglish} />
-        <Route path={"/blog/common-mistakes-moroccan-english-learners"} component={CommonMistakesMoroccanLearners} />
-        <Route path={"/blog/best-techniques-improve-english-speaking"} component={BestTechniquesImproveEnglishSpeaking} />
-        <Route path={"/blog/ielts-speaking-test-success-guide"} component={IeltsSpeakingTestSuccessGuide} />
-        <Route path={"/blog/business-english-email-writing-guide"} component={BusinessEnglishEmailWritingGuide} />
-        <Route path={"/blog/improve-english-pronunciation-arabic-speakers"} component={ImproveEnglishPronunciationArabicSpeakers} />
-        <Route path={"/blog/how-to-pass-ielts-in-morocco"} component={HowToPassIeltsInMorocco} />
-        <Route path={"/blog/how-to-get-a-call-center-job-in-morocco"} component={HowToGetCallCenterJobMorocco} />
-        <Route path={"/blog/english-for-tourism-morocco"} component={EnglishForTourismMorocco} />
-        <Route path={"/blog/how-to-pass-toeic-test-in-morocco"} component={HowToPassToeicTestMorocco} />
-        <Route path={"/blog/online-english-classes-morocco-2026-guide"} component={OnlineEnglishClassesMorocco} />
-        <Route path={"/blog/a2-to-b1-english-6-month-plan-morocco"} component={A2ToB1SixMonthPlan} />
-        <Route path={"/blog/best-apps-websites-learn-english-morocco"} component={Top15AppsWebsitesLearnEnglish} />
-        <Route path={"/blog/challenges-moroccan-english-learners-face"} component={ChallengesMoroccanEnglishLearners} />
-        <Route path={"/articles/the-unspoken-passport"} component={TheUnspokenPassport} />
-        <Route path={"/success-stories"} component={SuccessStories} />
-        <Route path={"/group-coaching"} component={GroupCoaching} />
-        <Route path={"/start"} component={StartPage} />
-        <Route path={"/fb"} component={StartPage} />
-        <Route path={"/audio-audit"} component={AudioAudit} />
+        {/* Root redirect */}
+        <Route path="/" component={RootRedirect} />
+
+        {/* Language-prefixed routes */}
+        <Route path="/:lang" component={Home} />
+        <Route path="/:lang/about" component={About} />
+        <Route path="/:lang/courses" component={Courses} />
+        <Route path="/:lang/free-test" component={FreeTest} />
+        <Route path="/:lang/book-lesson" component={BookLesson} />
+        <Route path="/:lang/pricing" component={Pricing} />
+        <Route path="/:lang/free-resources" component={FreeResources} />
+        <Route path="/:lang/blog" component={Blog} />
+        <Route path="/:lang/certificate" component={Certificate} />
+        <Route path="/:lang/community" component={Community} />
+        <Route path="/:lang/assessment" component={Assessment} />
+        <Route path="/:lang/onboarding-test" component={OnboardingTest} />
+        <Route path="/:lang/blog/how-to-think-in-english" component={HowToThinkInEnglish} />
+        <Route path="/:lang/blog/common-mistakes-moroccan-english-learners" component={CommonMistakesMoroccanLearners} />
+        <Route path="/:lang/blog/best-techniques-improve-english-speaking" component={BestTechniquesImproveEnglishSpeaking} />
+        <Route path="/:lang/blog/ielts-speaking-test-success-guide" component={IeltsSpeakingTestSuccessGuide} />
+        <Route path="/:lang/blog/business-english-email-writing-guide" component={BusinessEnglishEmailWritingGuide} />
+        <Route path="/:lang/blog/improve-english-pronunciation-arabic-speakers" component={ImproveEnglishPronunciationArabicSpeakers} />
+        <Route path="/:lang/blog/how-to-pass-ielts-in-morocco" component={HowToPassIeltsInMorocco} />
+        <Route path="/:lang/blog/how-to-get-a-call-center-job-in-morocco" component={HowToGetCallCenterJobMorocco} />
+        <Route path="/:lang/blog/english-for-tourism-morocco" component={EnglishForTourismMorocco} />
+        <Route path="/:lang/blog/how-to-pass-toeic-test-in-morocco" component={HowToPassToeicTestMorocco} />
+        <Route path="/:lang/blog/online-english-classes-morocco-2026-guide" component={OnlineEnglishClassesMorocco} />
+        <Route path="/:lang/blog/a2-to-b1-english-6-month-plan-morocco" component={A2ToB1SixMonthPlan} />
+        <Route path="/:lang/blog/best-apps-websites-learn-english-morocco" component={Top15AppsWebsitesLearnEnglish} />
+        <Route path="/:lang/blog/challenges-moroccan-english-learners-face" component={ChallengesMoroccanEnglishLearners} />
+        <Route path="/:lang/articles/the-unspoken-passport" component={TheUnspokenPassport} />
+        <Route path="/:lang/success-stories" component={SuccessStories} />
+        <Route path="/:lang/group-coaching" component={GroupCoaching} />
+        <Route path="/:lang/start" component={StartPage} />
+        <Route path="/:lang/fb" component={StartPage} />
+        <Route path="/:lang/audio-audit" component={AudioAudit} />
         {/* Content Marketing Engine */}
-        <Route path={"/resource-library"} component={ResourceLibrary} />
-        <Route path={"/blog/ultimate-ielts-guide-morocco"} component={UltimateIELTSGuideMorocco} />
-        <Route path={"/blog/ultimate-business-english-guide-morocco"} component={UltimateBusinessEnglishGuideMorocco} />
+        <Route path="/:lang/resource-library" component={ResourceLibrary} />
+        <Route path="/:lang/blog/ultimate-ielts-guide-morocco" component={UltimateIELTSGuideMorocco} />
+        <Route path="/:lang/blog/ultimate-business-english-guide-morocco" component={UltimateBusinessEnglishGuideMorocco} />
         {/* SEO landing pages */}
-        <Route path={"/ielts-preparation-morocco"} component={IELTSPreparationMorocco} />
-        <Route path={"/english-coach-casablanca"} component={EnglishCoachCasablanca} />
-        <Route path={"/english-coach-rabat"} component={EnglishCoachRabat} />
-        <Route path={"/english-coach-tangier"} component={EnglishCoachTangier} />
-        <Route path={"/404"} component={NotFound} />
+        <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
+        <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />
+        <Route path="/:lang/english-coach-rabat" component={EnglishCoachRabat} />
+        <Route path="/:lang/english-coach-tangier" component={EnglishCoachTangier} />
+        <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
       </Switch>

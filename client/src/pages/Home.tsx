@@ -6,6 +6,7 @@ import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { Testimonials } from "@/components/Testimonials";
 import { SEO } from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const homeFAQ = [
   {
@@ -35,6 +36,7 @@ const homeFAQ = [
 ];
 
 export default function Home() {
+  const { t, langPrefix, isRTL } = useLanguage();
   const title = "English Coaching Morocco | IELTS Prep & Business English | Fluentry";
   const description = "Learn English online in Morocco with TESOL-certified coach Mr. Ibrahim K. IELTS 7.5+ guaranteed, Business English & conversation. 1-on-1 lessons from 100 MAD/hr. Free level test.";
   const homeKeywords = "English coaching Morocco, cours anglais en ligne Maroc, IELTS preparation Morocco, تعلم الإنجليزية المغرب, English teacher Tangier, online English lessons Morocco, Business English Morocco, IELTS coaching Casablanca, English tutor Morocco, professeur anglais Maroc, TESOL certified coach Morocco, learn English online Morocco, English for work Morocco, IELTS 7.5 Morocco, English fluency Morocco, cours anglais Casablanca, cours anglais Rabat, cours anglais Marrakech, English lessons Morocco online, 1-on-1 English coaching Morocco";
@@ -49,7 +51,7 @@ export default function Home() {
         keywords={homeKeywords}
         faqItems={homeFAQ}
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 
       {/* Bilingual Moroccan Banner */}
       {bannerVisible && (
@@ -79,35 +81,35 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 md:py-24 px-4 shadow-xl">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start md:items-center">
-            <div className="text-center md:text-left">
+          <div className={`grid md:grid-cols-2 gap-12 md:gap-16 items-start md:items-center ${isRTL ? "md:grid-flow-col-dense" : ""}`}>
+            <div className={`text-center ${isRTL ? "md:text-right" : "md:text-left"}`}>
               {/* Trust badge */}
               <div className="inline-flex items-center gap-2 bg-blue-800/60 border border-blue-500/40 text-blue-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Award className="w-4 h-4 text-yellow-400" />
-                TESOL-Certified Coach · Based in Morocco
+                {t("home.hero.badge2")}
               </div>
 
               <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-                From Frozen to Fluent.<br className="hidden md:block" />
-                <span className="text-yellow-300">Achieve 7.5+ IELTS</span><br className="hidden md:block" />
-                in 8 Weeks.
+                {t("home.hero.h1a")}<br className="hidden md:block" />
+                <span className="text-yellow-300">{t("home.hero.h1b")}</span><br className="hidden md:block" />
+                {t("home.hero.h1c")}
               </h1>
 
               {/* Bilingual subtitle for Moroccan audience */}
               <p className="text-base text-yellow-300 font-medium mb-2 italic">
-                تجمد وأنت تتكلم الإنجليزية؟ — Vous bloquez quand vous parlez anglais ?
+                {t("home.hero.bilingual")}
               </p>
               <p className="text-lg md:text-xl text-blue-100 mb-4">
-                Morocco's outcome-focused English coach. Mr. Ibrahim K. delivers real results — not just lessons. <strong className="text-white">90% of students reach their goal in 8 weeks.</strong>
+                {t("home.hero.desc")} <strong className="text-white">{t("home.hero.desc2")}</strong>
               </p>
 
               {/* Money-back guarantee badge */}
               <div className="inline-flex items-center gap-2 bg-green-600/30 border border-green-400/40 text-green-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <Shield className="w-4 h-4 text-green-400" />
-                Results Guaranteed — or we coach you for free until you succeed
+                {t("home.hero.guarantee2")}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center ${isRTL ? "md:justify-end" : "md:justify-start"}`}>
                 <a
                   href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%2010-minute%20consultation"
                   target="_blank"
@@ -122,41 +124,41 @@ export default function Home() {
                       }
                     }}
                   >
-                    Book Free 10-Min Strategy Call
+                    {t("home.hero.cta1")}
                   </Button>
                 </a>
-                <Link href="/pricing">
+                <Link href={`${langPrefix}/pricing`}>
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-white text-white hover:bg-blue-700 w-full sm:w-auto"
                   >
-                    View Programs & Pricing
+                    {t("home.hero.cta2")}
                   </Button>
                 </Link>
               </div>
 
               <p className="mt-4 text-sm text-blue-200">
-                No commitment required · Free 10-min consultation · Results guaranteed
+                {t("home.hero.noCommit")}
               </p>
 
               {/* Quick stats */}
-              <div className="flex flex-wrap gap-6 mt-8 justify-center md:justify-start">
+              <div className={`flex flex-wrap gap-6 mt-8 justify-center ${isRTL ? "md:justify-end" : "md:justify-start"}`}>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">100+</p>
-                  <p className="text-xs text-blue-200">Students Coached</p>
+                  <p className="text-xs text-blue-200">{t("home.hero.studentsCoached")}</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">90%</p>
-                  <p className="text-xs text-blue-200">Reach Their Goal</p>
+                  <p className="text-xs text-blue-200">{t("home.hero.reachGoal")}</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">4.9★</p>
-                  <p className="text-xs text-blue-200">Average Rating</p>
+                  <p className="text-xs text-blue-200">{t("home.hero.avgRating")}</p>
                 </div>
                 <div className="text-center">
                   <p className="text-2xl font-bold text-white">3+</p>
-                  <p className="text-xs text-blue-200">Years Experience</p>
+                  <p className="text-xs text-blue-200">{t("home.hero.yearsExp")}</p>
                 </div>
               </div>
             </div>
@@ -180,10 +182,10 @@ export default function Home() {
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { stat: "+1.5 Bands", label: "Average IELTS Improvement" },
-              { stat: "90%", label: "Students Achieve Target Score" },
-              { stat: "8 Weeks", label: "Average Time to Results" },
-              { stat: "4.9 / 5", label: "Student Satisfaction" },
+              { stat: "+1.5 Bands", label: t("home.results.ieltsBands") },
+              { stat: "90%", label: t("home.results.achieve") },
+              { stat: "8 Weeks", label: t("home.results.time") },
+              { stat: "4.9 / 5", label: t("home.results.satisfaction") },
             ].map((item) => (
               <div key={item.label} className="border-r border-blue-700 last:border-0 px-2">
                 <p className="text-2xl font-extrabold text-yellow-300">{item.stat}</p>
@@ -199,16 +201,16 @@ export default function Home() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Stop Buying Lessons. Start Buying Results.
+              {t("home.intro.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Most English teachers sell you hours. Fluentry sells you outcomes. Mr. Ibrahim K. works with a select group of motivated students in Morocco to deliver one thing: <strong>measurable, guaranteed progress</strong> — whether that's an IELTS band score, a promotion, or the confidence to lead meetings in English.
+              {t("home.intro.desc")} <strong>{t("home.intro.strong")}</strong>{t("home.intro.desc2")}
             </p>
-            <blockquote className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded text-left">
+            <blockquote className={`bg-blue-50 border-l-4 border-blue-600 p-6 rounded ${isRTL ? "text-right border-l-0 border-r-4" : "text-left"}`}>
               <p className="text-xl font-semibold text-blue-900">
-                "English isn't just grammar and vocabulary. It's confidence, clarity, and connection — and I guarantee you'll feel all three."
+                {t("home.intro.quote")}
               </p>
-              <footer className="text-sm text-gray-600 mt-2">— Mr. Ibrahim K., TESOL-Certified Coach & Founder of Fluentry</footer>
+              <footer className="text-sm text-gray-600 mt-2">{t("home.intro.quoteAuthor")}</footer>
             </blockquote>
           </div>
         </div>
@@ -219,10 +221,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Outcome-Based Programs
+              {t("home.programs.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Not just lessons — complete transformation programs with clear goals, structured milestones, and a results guarantee.
+              {t("home.programs.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -230,27 +232,27 @@ export default function Home() {
             {/* IELTS Accelerator */}
             <Card className="p-8 border-2 border-blue-600 hover:shadow-xl transition-shadow relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
-                MOST POPULAR
+                {t("home.programs.ielts.badge")}
               </div>
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">8-Week IELTS Accelerator</h3>
-              <p className="text-blue-600 font-semibold text-sm mb-3">For students seeking to study abroad</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t("home.programs.ielts.title")}</h3>
+              <p className="text-blue-600 font-semibold text-sm mb-3">{t("home.programs.ielts.for")}</p>
               <p className="text-gray-600 text-sm mb-4">
-                Achieve 7.5+ band score in 8 weeks with our proven methodology. Personalized study plan, weekly mock tests, and direct feedback on all 4 skills.
+                {t("home.programs.ielts.desc")}
               </p>
               <div className="bg-blue-50 rounded-lg p-4 mb-4">
-                <p className="text-2xl font-bold text-blue-600">12,000 MAD</p>
-                <p className="text-xs text-gray-500">Full 8-week program · Results guaranteed</p>
+                <p className="text-2xl font-bold text-blue-600">{t("home.programs.ielts.price")}</p>
+                <p className="text-xs text-gray-500">{t("home.programs.ielts.priceNote")}</p>
               </div>
               <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4" />
-                Money-back guarantee if you don't reach your target
+                {t("home.programs.ielts.guarantee")}
               </div>
               <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%208-Week%20IELTS%20Accelerator%20program" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                  Book Free Strategy Call
+                  {t("home.programs.bookCall")}
                 </Button>
               </a>
             </Card>
@@ -258,27 +260,27 @@ export default function Home() {
             {/* Business English Mastery */}
             <Card className="p-8 border-2 border-purple-600 hover:shadow-xl transition-shadow relative">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
-                HIGH INCOME
+                {t("home.programs.business.badge")}
               </div>
               <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">12-Week Business English Mastery</h3>
-              <p className="text-purple-600 font-semibold text-sm mb-3">For professionals in Casablanca & Rabat</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t("home.programs.business.title")}</h3>
+              <p className="text-purple-600 font-semibold text-sm mb-3">{t("home.programs.business.for")}</p>
               <p className="text-gray-600 text-sm mb-4">
-                Lead international meetings, write compelling emails, and present with authority. Designed for professionals in finance, tech, and management.
+                {t("home.programs.business.desc")}
               </p>
               <div className="bg-purple-50 rounded-lg p-4 mb-4">
-                <p className="text-2xl font-bold text-purple-600">15,000 MAD</p>
-                <p className="text-xs text-gray-500">Full 12-week program · Results guaranteed</p>
+                <p className="text-2xl font-bold text-purple-600">{t("home.programs.business.price")}</p>
+                <p className="text-xs text-gray-500">{t("home.programs.business.priceNote")}</p>
               </div>
               <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4" />
-                Guaranteed fluency for professional settings
+                {t("home.programs.business.guarantee")}
               </div>
               <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%2012-Week%20Business%20English%20Mastery%20program" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-                  Book Free Strategy Call
+                  {t("home.programs.bookCall")}
                 </Button>
               </a>
             </Card>
@@ -286,27 +288,27 @@ export default function Home() {
             {/* VIP Concierge */}
             <Card className="p-8 border-2 border-yellow-500 hover:shadow-xl transition-shadow relative bg-gradient-to-b from-yellow-50 to-white">
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-white px-5 py-1 rounded-full text-xs font-bold whitespace-nowrap">
-                VIP ELITE
+                {t("home.programs.vip.badge")}
               </div>
               <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
                 <Star className="w-6 h-6 text-yellow-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">VIP Concierge Coaching</h3>
-              <p className="text-yellow-700 font-semibold text-sm mb-3">For executives & serious investors</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t("home.programs.vip.title")}</h3>
+              <p className="text-yellow-700 font-semibold text-sm mb-3">{t("home.programs.vip.for")}</p>
               <p className="text-gray-600 text-sm mb-4">
-                Unlimited 1-on-1 sessions, 24/7 WhatsApp access, fully bespoke curriculum, and direct involvement in every aspect of your English journey.
+                {t("home.programs.vip.desc")}
               </p>
               <div className="bg-yellow-50 rounded-lg p-4 mb-4">
-                <p className="text-2xl font-bold text-yellow-700">25,000 MAD</p>
-                <p className="text-xs text-gray-500">Complete VIP program · Unlimited access</p>
+                <p className="text-2xl font-bold text-yellow-700">{t("home.programs.vip.price")}</p>
+                <p className="text-xs text-gray-500">{t("home.programs.vip.priceNote")}</p>
               </div>
               <div className="flex items-center gap-2 text-green-600 text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4" />
-                Full results guarantee — no exceptions
+                {t("home.programs.vip.guarantee")}
               </div>
               <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%20VIP%20Concierge%20Coaching%20program" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white">
-                  Apply for VIP Program
+                  {t("home.programs.vip.cta")}
                 </Button>
               </a>
             </Card>
@@ -314,7 +316,12 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-gray-500 text-sm mb-4">Prefer a flexible monthly plan? <Link href="/pricing" className="text-blue-600 font-semibold hover:underline">View all pricing options →</Link></p>
+            <p className="text-gray-500 text-sm mb-4">
+              {t("home.programs.flexible")}{" "}
+              <Link href={`${langPrefix}/pricing`} className="text-blue-600 font-semibold hover:underline">
+                {t("home.programs.viewPricing")}
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -323,10 +330,10 @@ export default function Home() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            Why Fluentry is Different
+            {t("home.why.title")}
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            There are hundreds of English teachers in Morocco. Here is why serious learners choose Fluentry.
+            {t("home.why.subtitle")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 text-center hover:shadow-lg transition-shadow">
@@ -334,10 +341,10 @@ export default function Home() {
                 <Target className="w-7 h-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                The Fluency Bridge Method™
+                {t("home.why.method.title")}
               </h3>
               <p className="text-gray-600">
-                Our proprietary conversation-first, confidence-building approach. We don't teach grammar rules — we build real communication skills that transfer to real life.
+                {t("home.why.method.desc")}
               </p>
             </Card>
 
@@ -346,10 +353,10 @@ export default function Home() {
                 <Shield className="w-7 h-7 text-green-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Results Guarantee
+                {t("home.why.guarantee.title")}
               </h3>
               <p className="text-gray-600">
-                If you don't achieve your target IELTS score or fluency goal within the program duration, we continue coaching you for free until you do. Zero risk.
+                {t("home.why.guarantee.desc")}
               </p>
             </Card>
 
@@ -358,10 +365,10 @@ export default function Home() {
                 <Users className="w-7 h-7 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Morocco-Specific Expertise
+                {t("home.why.morocco.title")}
               </h3>
               <p className="text-gray-600">
-                Mr. Ibrahim K. understands the exact challenges Moroccan learners face — from French interference to Arabic pronunciation patterns — and addresses them directly.
+                {t("home.why.morocco.desc")}
               </p>
             </Card>
           </div>
@@ -371,19 +378,19 @@ export default function Home() {
             <table className="w-full max-w-3xl mx-auto text-sm border-collapse">
               <thead>
                 <tr className="bg-blue-600 text-white">
-                  <th className="p-4 text-left rounded-tl-lg">Feature</th>
-                  <th className="p-4 text-center text-yellow-300 font-bold">Fluentry</th>
-                  <th className="p-4 text-center rounded-tr-lg">Typical Tutor</th>
+                  <th className="p-4 text-left rounded-tl-lg">{t("home.why.table.feature")}</th>
+                  <th className="p-4 text-center text-yellow-300 font-bold">{t("home.why.table.fluentry")}</th>
+                  <th className="p-4 text-center rounded-tr-lg">{t("home.why.table.typical")}</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ["Outcome-based programs", "✅ Yes", "❌ Hourly lessons"],
-                  ["Results guarantee", "✅ Yes", "❌ No"],
-                  ["Morocco-specific curriculum", "✅ Yes", "❌ Generic"],
-                  ["TESOL-certified coach", "✅ Yes", "⚠️ Often not"],
-                  ["Structured progress tracking", "✅ Yes", "❌ No"],
-                  ["Fluency Bridge Method™", "✅ Exclusive", "❌ No"],
+                  [t("home.why.table.outcome"), t("home.why.table.outcomeF"), t("home.why.table.outcomeT")],
+                  [t("home.why.table.resultsG"), t("home.why.table.resultsFY"), t("home.why.table.resultsTN")],
+                  [t("home.why.table.moroccan"), t("home.why.table.moroccanF"), t("home.why.table.moroccanT")],
+                  [t("home.why.table.tesol"), t("home.why.table.tesolF"), t("home.why.table.tesolT")],
+                  [t("home.why.table.tracking"), t("home.why.table.trackingF"), t("home.why.table.trackingT")],
+                  [t("home.why.table.method"), t("home.why.table.methodF"), t("home.why.table.methodT")],
                 ].map(([feature, fluentry, other], i) => (
                   <tr key={i} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
                     <td className="p-4 font-medium text-gray-700 border-b border-gray-100">{feature}</td>
@@ -401,13 +408,13 @@ export default function Home() {
       <section className="py-16 px-4 bg-blue-50">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            How It Works
+            {t("home.how.title")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: "1", icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: "Book a Free Strategy Call", desc: "10 minutes with Mr. Ibrahim to discuss your goals, current level, and the right program for you." },
-              { step: "2", icon: <Clock className="w-6 h-6 text-blue-600" />, title: "Get Your Custom Roadmap", desc: "Receive a personalized week-by-week plan with clear milestones and measurable outcomes." },
-              { step: "3", icon: <Star className="w-6 h-6 text-blue-600" />, title: "Achieve Your Goal", desc: "Follow the program, track your progress, and reach your target — guaranteed." },
+              { step: "1", icon: <CheckCircle className="w-6 h-6 text-blue-600" />, title: t("home.how.step1.title"), desc: t("home.how.step1.desc") },
+              { step: "2", icon: <Clock className="w-6 h-6 text-blue-600" />, title: t("home.how.step2.title"), desc: t("home.how.step2.desc") },
+              { step: "3", icon: <Star className="w-6 h-6 text-blue-600" />, title: t("home.how.step3.title"), desc: t("home.how.step3.desc") },
             ].map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
@@ -425,7 +432,7 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                Book Your Free Strategy Call
+                {t("home.how.cta")}
               </Button>
             </a>
           </div>
@@ -436,24 +443,24 @@ export default function Home() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-            All Course Offerings
+            {t("home.courses.title")}
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Whether you're a student, professional, or lifelong learner, we have a program for you.
+            {t("home.courses.subtitle")}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "General English", desc: "Build a strong foundation in speaking, listening, reading, and writing." },
-              { title: "Business English", desc: "Master professional communication for meetings, emails, and presentations." },
-              { title: "IELTS & TOEFL Prep", desc: "Achieve your target score with focused test strategies and practice." },
-              { title: "Conversation Practice", desc: "Improve fluency and confidence through natural, engaging conversations." },
+              { titleKey: "home.courses.general.title", descKey: "home.courses.general.desc" },
+              { titleKey: "home.courses.business.title", descKey: "home.courses.business.desc" },
+              { titleKey: "home.courses.ielts.title", descKey: "home.courses.ielts.desc" },
+              { titleKey: "home.courses.conversation.title", descKey: "home.courses.conversation.desc" },
             ].map((course) => (
-              <Card key={course.title} className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{course.title}</h3>
-                <p className="text-sm text-gray-600 mb-4">{course.desc}</p>
-                <Link href="/courses">
+              <Card key={course.titleKey} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{t(course.titleKey)}</h3>
+                <p className="text-sm text-gray-600 mb-4">{t(course.descKey)}</p>
+                <Link href={`${langPrefix}/courses`}>
                   <Button variant="outline" size="sm" className="w-full">
-                    Learn More
+                    {t("home.courses.learnMore")}
                   </Button>
                 </Link>
               </Card>
@@ -468,14 +475,14 @@ export default function Home() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <BookOpen className="w-4 h-4" />
-              Featured Article
+              {t("home.article.badge")}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Latest from Fluentry
+              {t("home.article.title")}
             </h2>
           </div>
 
-          <Link href="/articles/the-unspoken-passport">
+          <Link href={`${langPrefix}/articles/the-unspoken-passport`}>
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group">
               <div className="grid md:grid-cols-2 gap-0">
                 <div className="relative h-64 md:h-auto">
@@ -489,20 +496,20 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:hidden" />
                 </div>
-                <div className="p-8 md:p-10 flex flex-col justify-center">
+                <div className={`p-8 md:p-10 flex flex-col justify-center ${isRTL ? "text-right" : ""}`}>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    The Unspoken Passport: Why English Still Shapes the World
+                    {t("home.article.h3")}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
-                    Explore how English connects cultures, careers, and opportunities in our global era. A thoughtful reflection on the enduring significance of English in the modern world.
+                    {t("home.article.desc")}
                   </p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                    <span>By Mr. Ibrahim K.</span>
+                    <span>{t("home.article.by")}</span>
                     <span>·</span>
-                    <span>5 min read</span>
+                    <span>{t("home.article.read")}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all">
-                    Read Article
+                  <div className={`flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-4 transition-all ${isRTL ? "flex-row-reverse justify-end" : ""}`}>
+                    {t("home.article.readArticle")}
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>
@@ -520,13 +527,13 @@ export default function Home() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <BookOpen className="w-4 h-4" />
-              English Learning Blog
+              {t("home.blog.badge")}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Expert Tips & Strategies
+              {t("home.blog.title")}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Learn from TESOL-certified coach Mr. Ibrahim K. Practical advice to help you master English faster.
+              {t("home.blog.subtitle")}
             </p>
           </div>
 
@@ -561,7 +568,7 @@ export default function Home() {
                 readTime: "11 min"
               }
             ].map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`}>
+              <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}>
                 <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer h-full flex flex-col">
                   <div className="relative h-40 bg-gradient-to-br from-blue-100 to-blue-50">
                     <img
@@ -584,8 +591,8 @@ export default function Home() {
                     <p className="text-xs text-gray-600 line-clamp-2 flex-1">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center gap-1 text-blue-600 font-semibold mt-3 text-xs">
-                      Read More
+                    <div className={`flex items-center gap-1 text-blue-600 font-semibold mt-3 text-xs ${isRTL ? "flex-row-reverse justify-end" : ""}`}>
+                      {t("home.blog.readMore")}
                       <ArrowRight className="w-3 h-3" />
                     </div>
                   </div>
@@ -595,9 +602,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/blog">
+            <Link href={`${langPrefix}/blog`}>
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                View All Blog Posts
+                {t("home.blog.viewAll")}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
@@ -612,14 +619,14 @@ export default function Home() {
       <section className="bg-gradient-to-r from-orange-600 to-orange-500 text-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Stop Struggling and Start Achieving?
+            {t("home.cta.title")}
           </h2>
           <p className="text-lg text-orange-100 mb-4">
-            Book a free 10-minute strategy call. No commitment, no pressure — just a clear plan to reach your English goals.
+            {t("home.cta.subtitle")}
           </p>
           <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold mb-8">
             <Shield className="w-4 h-4" />
-            Results guaranteed — or we coach you for free
+            {t("home.cta.guarantee")}
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -631,16 +638,16 @@ export default function Home() {
                 size="lg"
                 className="bg-white text-orange-600 hover:bg-orange-50 font-semibold shadow-xl w-full sm:w-auto"
               >
-                Book Your Free Strategy Call
+                {t("home.cta.button")}
               </Button>
             </a>
-            <Link href="/pricing">
+            <Link href={`${langPrefix}/pricing`}>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-orange-600 w-full sm:w-auto"
               >
-                View All Programs
+                {t("home.cta.viewPrograms")}
               </Button>
             </Link>
           </div>

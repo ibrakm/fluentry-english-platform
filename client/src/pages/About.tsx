@@ -6,6 +6,7 @@ import {
   CheckCircle, Star, MessageCircle, Shield, TrendingUp, ArrowRight
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const credentials = [
   {
@@ -35,10 +36,10 @@ const credentials = [
 ];
 
 const results = [
-  { stat: "100+", label: "Students Coached" },
-  { stat: "4.9★", label: "Average Rating" },
-  { stat: "90%", label: "Achieve Their Goal" },
-  { stat: "3+", label: "Years of Experience" },
+  { stat: "100+", labelKey: "home.hero.studentsCoached" },
+  { stat: "4.9★", labelKey: "home.hero.avgRating" },
+  { stat: "90%", labelKey: "home.hero.reachGoal" },
+  { stat: "3+", labelKey: "home.hero.yearsExp" },
 ];
 
 const testimonials = [
@@ -89,6 +90,8 @@ const methodSteps = [
 ];
 
 export default function About() {
+  const { t, langPrefix, isRTL } = useLanguage();
+
   return (
     <>
       <SEO
@@ -98,38 +101,38 @@ export default function About() {
         keywords="English coach Tangier Morocco, TESOL certified English teacher Morocco, Ibrahim English coach, IELTS coach Morocco, Business English coach Tangier, professeur anglais Tanger, مدرب الإنجليزية طنجة, English tutor Morocco biography, about Fluentry coach"
         breadcrumbs={[{ name: "About", item: "https://fluentry.online/about" }]}
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 
         {/* Hero */}
         <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-16 px-4">
           <div className="container mx-auto max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className={`grid md:grid-cols-2 gap-12 items-center ${isRTL ? "md:grid-flow-col-dense" : ""}`}>
               {/* Text */}
-              <div>
+              <div className={isRTL ? "text-right" : ""}>
                 <div className="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold mb-6">
                   <Award className="w-4 h-4" />
-                  TESOL-Certified · Based in Morocco
+                  {t("about.hero.badge")}
                 </div>
                 <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-                  Meet Mr. Ibrahim K.
+                  {t("about.hero.title")}
                 </h1>
                 <p className="text-xl text-blue-200 mb-6">
-                  Morocco's outcome-focused English coach — helping students and professionals achieve real, measurable results since 2022.
+                  {t("about.hero.subtitle")}
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className={`flex flex-wrap gap-4 ${isRTL ? "justify-end" : ""}`}>
                   <a
                     href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20free%20strategy%20call"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Book Free Strategy Call
+                      <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
+                      {t("about.hero.cta1")}
                     </Button>
                   </a>
-                  <Link href="/free-test">
+                  <Link href={`${langPrefix}/free-test`}>
                     <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
-                      Take Free Level Test
+                      {t("about.hero.cta2")}
                     </Button>
                   </Link>
                 </div>
@@ -155,15 +158,15 @@ export default function About() {
                     }}
                   />
                   <h2 className="text-xl font-bold text-white">Mr. Ibrahim K.</h2>
-                  <p className="text-blue-300 text-sm">TESOL-Certified English Coach</p>
-                  <p className="text-blue-400 text-xs mt-1">Tangier, Morocco 🇲🇦</p>
+                  <p className="text-blue-300 text-sm">{t("about.hero.role")}</p>
+                  <p className="text-blue-400 text-xs mt-1">{t("about.hero.location")}</p>
                 </div>
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-3">
                   {results.map((r) => (
-                    <div key={r.label} className="bg-white/10 border border-white/20 rounded-xl p-4 text-center">
+                    <div key={r.labelKey} className="bg-white/10 border border-white/20 rounded-xl p-4 text-center">
                       <p className="text-2xl font-extrabold text-yellow-300">{r.stat}</p>
-                      <p className="text-xs text-blue-300 mt-1">{r.label}</p>
+                      <p className="text-xs text-blue-300 mt-1">{t(r.labelKey)}</p>
                     </div>
                   ))}
                 </div>
@@ -177,7 +180,7 @@ export default function About() {
           <div className="container mx-auto max-w-4xl flex items-center justify-center gap-3 text-center flex-wrap">
             <Shield className="w-5 h-5 text-green-300 flex-shrink-0" />
             <p className="font-semibold text-sm">
-              Results Guaranteed on all signature programs — if you don't reach your goal, Mr. Ibrahim coaches you for free until you do.
+              {t("about.guarantee")}
             </p>
           </div>
         </section>
@@ -185,26 +188,18 @@ export default function About() {
         {/* Story Section */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Story Behind Fluentry</h2>
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-2xl mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">{t("about.story.title")}</h2>
+            <div className={`bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-2xl mb-8 ${isRTL ? "border-l-0 border-r-4 rounded-r-none rounded-l-2xl text-right" : ""}`}>
               <p className="text-xl italic text-blue-900 font-semibold mb-3">
-                "Fluency comes from confidence, not perfection. My goal is to make English learning practical, enjoyable, and personal to every student."
+                {t("about.story.quote")}
               </p>
-              <p className="text-blue-700 font-bold">— Mr. Ibrahim K.</p>
+              <p className="text-blue-700 font-bold">{t("about.story.quoteBy")}</p>
             </div>
-            <div className="prose prose-lg max-w-none text-gray-700 space-y-5">
-              <p>
-                Mr. Ibrahim K. is a <strong>TESOL-certified English language coach</strong> with a <strong>Bachelor's degree in English Studies</strong> and over three years of experience teaching learners across Morocco and internationally.
-              </p>
-              <p>
-                He currently teaches English at a <strong>private school in Morocco</strong> while also running <strong>Fluentry</strong> — his online coaching practice dedicated to helping motivated students and professionals achieve specific, measurable English goals.
-              </p>
-              <p>
-                What makes Mr. Ibrahim different is his deep understanding of the <strong>unique challenges Moroccan learners face</strong> — the interference of French and Darija, the difficulty of English sounds that don't exist in Arabic, and the confidence barrier that stops so many people from speaking even when they know the grammar. He addresses all of these directly, in every session.
-              </p>
-              <p>
-                Fluentry was built on a simple belief: <strong>students deserve to pay for results, not just hours</strong>. Every program is structured around a clear outcome — an IELTS band score, a professional fluency milestone, or the confidence to lead meetings in English — and backed by a results guarantee.
-              </p>
+            <div className={`prose prose-lg max-w-none text-gray-700 space-y-5 ${isRTL ? "text-right" : ""}`}>
+              <p>{t("about.story.p1")}</p>
+              <p>{t("about.story.p2")}</p>
+              <p>{t("about.story.p3")}</p>
+              <p>{t("about.story.p4")}</p>
             </div>
           </div>
         </section>
@@ -213,14 +208,14 @@ export default function About() {
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Professional Qualifications
+              {t("about.credentials.title")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {credentials.map((c) => {
                 const Icon = c.icon;
                 return (
-                  <Card key={c.title} className="p-6 hover:shadow-lg transition-shadow border-l-4 border-blue-600">
-                    <div className="flex items-start gap-4">
+                  <Card key={c.title} className={`p-6 hover:shadow-lg transition-shadow ${isRTL ? "border-r-4 border-blue-600" : "border-l-4 border-blue-600"}`}>
+                    <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse text-right" : ""}`}>
                       <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon className="w-6 h-6 text-blue-600" />
                       </div>
@@ -242,13 +237,13 @@ export default function About() {
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
-                Proprietary Methodology
+                {t("about.method.badge")}
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                The Fluency Bridge Method™
+                {t("about.method.title")}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                A conversation-first, confidence-building approach that bridges the gap between knowing English and using it naturally — developed specifically for Moroccan learners.
+                {t("about.method.subtitle")}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -256,7 +251,7 @@ export default function About() {
                 const Icon = step.icon;
                 return (
                   <Card key={step.title} className="p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-start gap-4">
+                    <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse text-right" : ""}`}>
                       <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
                         <Icon className="w-6 h-6 text-blue-600" />
                       </div>
@@ -275,9 +270,9 @@ export default function About() {
         {/* Who I Teach */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Who Mr. Ibrahim Teaches</h2>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">{t("about.who.title")}</h2>
             <p className="text-center text-gray-600 mb-10">
-              Students, professionals, and lifelong learners from across Morocco — online and in Tangier.
+              {t("about.who.subtitle")}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
@@ -303,25 +298,25 @@ export default function About() {
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              What Students Say
+              {t("about.testimonials.title")}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {testimonials.map((t) => (
-                <Card key={t.name} className="p-6 bg-blue-50 border-0">
+              {testimonials.map((item) => (
+                <Card key={item.name} className="p-6 bg-blue-50 border-0">
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex">
-                      {[...Array(t.stars)].map((_, i) => (
+                      {[...Array(item.stars)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                       ))}
                     </div>
                     <span className="text-xs font-bold text-green-700 bg-green-100 px-2 py-1 rounded-full">
-                      {t.result}
+                      {item.result}
                     </span>
                   </div>
-                  <p className="text-gray-700 text-sm italic mb-4">"{t.text}"</p>
+                  <p className="text-gray-700 text-sm italic mb-4">"{item.text}"</p>
                   <div className="border-t border-blue-200 pt-3">
-                    <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                    <p className="text-gray-500 text-xs">{t.role}</p>
+                    <p className="font-bold text-gray-900 text-sm">{item.name}</p>
+                    <p className="text-gray-500 text-xs">{item.role}</p>
                   </div>
                 </Card>
               ))}
@@ -333,9 +328,9 @@ export default function About() {
         <section className="py-12 px-4 bg-blue-950 text-white">
           <div className="container mx-auto max-w-3xl text-center">
             <Target className="w-10 h-10 text-yellow-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+            <h2 className="text-2xl font-bold mb-4">{t("about.mission.title")}</h2>
             <p className="text-blue-200 text-lg leading-relaxed">
-              To provide accessible, high-quality, and personalised online English coaching in Morocco that transforms learners into confident, natural communicators — ready to thrive in a global environment. Every student deserves to pay for results, not just hours.
+              {t("about.mission.text")}
             </p>
           </div>
         </section>
@@ -343,9 +338,9 @@ export default function About() {
         {/* CTA */}
         <section className="py-16 px-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white">
           <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Work with Mr. Ibrahim?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("about.cta.title")}</h2>
             <p className="text-lg text-orange-100 mb-8">
-              Book a free 10-minute strategy call. No commitment, no pressure — just a clear plan to reach your English goals.
+              {t("about.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -354,20 +349,20 @@ export default function About() {
                 rel="noopener noreferrer"
               >
                 <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 font-bold w-full sm:w-auto">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Book Free Strategy Call
+                  <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
+                  {t("about.cta.button")}
                 </Button>
               </a>
-              <Link href="/pricing">
+              <Link href={`${langPrefix}/pricing`}>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-orange-600 w-full sm:w-auto">
-                  View Programs & Pricing
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  {t("about.cta.viewPricing")}
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? "mr-2" : "ml-2"}`} />
                 </Button>
               </Link>
             </div>
             <p className="text-sm text-orange-200 mt-4">
               <Shield className="w-4 h-4 inline mr-1" />
-              Results guaranteed on all signature programs
+              {t("about.cta.guarantee")}
             </p>
           </div>
         </section>

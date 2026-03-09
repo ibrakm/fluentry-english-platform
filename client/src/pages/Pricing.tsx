@@ -6,6 +6,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────────
 const faqs = [
@@ -67,6 +68,8 @@ function SaveBadge({ text }: { text: string }) {
 }
 
 export default function Pricing() {
+  const { t, langPrefix, isRTL } = useLanguage();
+
   return (
     <>
       <SEO
@@ -78,7 +81,7 @@ export default function Pricing() {
         faqItems={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white" dir={isRTL ? "rtl" : "ltr"}>
 
         {/* ── HERO ─────────────────────────────────────────────────────────── */}
         <section className="relative bg-gradient-to-br from-[#0f172a] via-[#1e3a5f] to-[#1d4ed8] text-white overflow-hidden">
@@ -90,25 +93,23 @@ export default function Pricing() {
             {/* Urgency nudge */}
             <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-400/40 px-4 py-2 rounded-full text-sm font-medium mb-5 text-red-200">
               <AlertCircle className="w-4 h-4" />
-              Only 3 spots available this month — prices may increase in April
+              {t("pricing.hero.urgency")}
             </div>
 
             <h1 className="text-4xl md:text-6xl font-extrabold mb-5 leading-tight">
-              The More You Practise,<br />
-              <span className="text-yellow-400">The Less You Pay Per Hour.</span>
+              {t("pricing.hero.h1a")}<br />
+              <span className="text-yellow-400">{t("pricing.hero.h1b")}</span>
             </h1>
-
             <p className="text-blue-100 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              Unlike language schools that charge a flat rate regardless of commitment,
-              Fluentry rewards students who are serious. Book more sessions — pay less per hour — progress faster.
+              {t("pricing.hero.subtitle")}
             </p>
 
             {/* Rate comparison bar — anchoring */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {[
-                { label: "Standard", rate: "80 MAD/hr", color: "bg-white/10 border-white/20" },
-                { label: "Intensive", rate: "75 MAD/hr", color: "bg-blue-500/30 border-blue-400/40", badge: "Save 80 MAD/mo" },
-                { label: "Accelerator", rate: "65 MAD/hr", color: "bg-yellow-400/20 border-yellow-400/40 text-yellow-200", badge: "Save 360 MAD/mo" },
+                { label: t("pricing.plan.standard"), rate: "80 MAD/hr", color: "bg-white/10 border-white/20" },
+                { label: t("pricing.plan.intensive"), rate: "75 MAD/hr", color: "bg-blue-500/30 border-blue-400/40", badge: "Save 80 MAD/mo" },
+                { label: t("pricing.plan.accelerator"), rate: "65 MAD/hr", color: "bg-yellow-400/20 border-yellow-400/40 text-yellow-200", badge: "Save 360 MAD/mo" },
               ].map((item) => (
                 <div key={item.label} className={`flex flex-col items-center px-5 py-3 rounded-xl border ${item.color}`}>
                   <span className="text-xs text-blue-200 mb-1">{item.label}</span>
@@ -123,10 +124,10 @@ export default function Pricing() {
             {/* Trust bar */}
             <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-100">
               {[
-                { icon: Trophy, label: "100+ Students Coached" },
-                { icon: Star, label: "4.9★ Average Rating" },
-                { icon: Clock, label: "Results in 8 Weeks" },
-                { icon: Shield, label: "Results Guaranteed" },
+                { icon: Trophy, label: t("pricing.trust.students") },
+                { icon: Star, label: t("pricing.trust.rating") },
+                { icon: Clock, label: t("pricing.trust.results") },
+                { icon: Shield, label: t("pricing.trust.guarantee") },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2">
                   <Icon className="w-4 h-4 text-yellow-400" />
@@ -141,13 +142,12 @@ export default function Pricing() {
         <section className="py-20 px-4 bg-gray-50">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-14">
-              <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">Choose Your Pace</p>
+              <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">{t("pricing.plans.eyebrow")}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-                All Plans — 1-on-1 with Mr. Ibrahim
+                {t("pricing.plans.title")}
               </h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Every plan includes private sessions, a personalised study plan, and WhatsApp support.
-                The more sessions you book, the lower your hourly rate — and the faster you reach fluency.
+                {t("pricing.plans.subtitle")}
               </p>
             </div>
 
@@ -156,26 +156,25 @@ export default function Pricing() {
               {/* ── Standard ── */}
               <div className="bg-white rounded-2xl border-2 border-gray-200 p-7 flex flex-col hover:shadow-lg transition-shadow">
                 <div className="mb-2">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Standard</p>
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">{t("pricing.plan.standard")}</p>
                   <h3 className="text-3xl font-extrabold text-gray-900">
                     640 <span className="text-base font-normal text-gray-400">MAD/month</span>
                   </h3>
-                  <p className="text-sm text-gray-500 mt-1">8 sessions/month · 2 per week</p>
+                  <p className="text-sm text-gray-500 mt-1">{t("pricing.standard.sessions")}</p>
                 </div>
 
-                {/* Per-hour rate — anchoring */}
                 <div className="bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 mb-5 flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Rate per session</span>
+                  <span className="text-sm text-gray-600">{t("pricing.ratePerSession")}</span>
                   <span className="font-bold text-gray-900 text-lg">80 MAD/hr</span>
                 </div>
 
                 <ul className="space-y-3 flex-1 mb-6">
                   {[
-                    "2 × 1-hour private sessions/week",
-                    "Personalised lesson plan",
-                    "WhatsApp support",
-                    "Speaking & Listening feedback",
-                    "Monthly progress check-in",
+                    t("pricing.standard.f1"),
+                    t("pricing.standard.f2"),
+                    t("pricing.standard.f3"),
+                    t("pricing.standard.f4"),
+                    t("pricing.standard.f5"),
                   ].map((f) => (
                     <li key={f} className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -184,9 +183,8 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                {/* Loss-aversion nudge */}
                 <p className="text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mb-4 text-center">
-                  💡 Upgrade to Intensive and save 80 MAD/month
+                  {t("pricing.standard.nudge")}
                 </p>
 
                 <a
@@ -194,51 +192,49 @@ export default function Pricing() {
                   target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                    <MessageCircle className="w-4 h-4 mr-2" /> Get Started
+                    <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} /> {t("pricing.getStarted")}
                   </Button>
                 </a>
-                <p className="text-xs text-gray-400 text-center mt-2">Free 10-min call first · No commitment</p>
+                <p className="text-xs text-gray-400 text-center mt-2">{t("pricing.noCommit")}</p>
               </div>
 
               {/* ── Intensive — FEATURED ── */}
               <div className="bg-blue-600 rounded-2xl border-2 border-blue-600 p-7 flex flex-col shadow-2xl relative md:-mt-4 md:mb-4">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-5 py-1.5 rounded-full whitespace-nowrap shadow-lg">
-                  ⭐ MOST POPULAR — BEST VALUE
+                  {t("pricing.intensive.badge")}
                 </div>
 
                 <div className="mb-2">
-                  <p className="text-xs font-bold text-blue-200 uppercase tracking-widest mb-1">Intensive</p>
+                  <p className="text-xs font-bold text-blue-200 uppercase tracking-widest mb-1">{t("pricing.plan.intensive")}</p>
                   <h3 className="text-3xl font-extrabold text-white">
                     1,200 <span className="text-base font-normal text-blue-200">MAD/month</span>
                   </h3>
-                  <p className="text-sm text-blue-200 mt-1">16 sessions/month · 4 per week</p>
+                  <p className="text-sm text-blue-200 mt-1">{t("pricing.intensive.sessions")}</p>
                 </div>
 
-                {/* Per-hour rate with savings */}
                 <div className="bg-white/15 border border-white/20 rounded-xl px-4 py-3 mb-2 flex items-center justify-between">
-                  <span className="text-sm text-blue-100">Rate per session</span>
+                  <span className="text-sm text-blue-100">{t("pricing.ratePerSession")}</span>
                   <div className="text-right">
                     <span className="font-bold text-white text-lg">75 MAD/hr</span>
                     <span className="block text-xs text-green-300 font-semibold">↓ 5 MAD cheaper than Standard</span>
                   </div>
                 </div>
 
-                {/* Savings callout */}
                 <div className="bg-green-400/20 border border-green-400/30 rounded-xl px-4 py-2.5 mb-5 text-center">
                   <p className="text-green-200 text-xs font-bold">
-                    You save 80 MAD/month vs paying Standard rate for 16 sessions
+                    {t("pricing.intensive.savings")}
                   </p>
                 </div>
 
                 <ul className="space-y-3 flex-1 mb-6">
                   {[
-                    "4 × 1-hour private sessions/week",
-                    "Personalised lesson plan",
-                    "WhatsApp support",
-                    "Full 4-skills feedback",
-                    "IELTS study plan (if applicable)",
-                    "Email & presentation coaching",
-                    "Bi-weekly progress review",
+                    t("pricing.intensive.f1"),
+                    t("pricing.intensive.f2"),
+                    t("pricing.intensive.f3"),
+                    t("pricing.intensive.f4"),
+                    t("pricing.intensive.f5"),
+                    t("pricing.intensive.f6"),
+                    t("pricing.intensive.f7"),
                   ].map((f) => (
                     <li key={f} className="flex gap-3 text-sm text-white">
                       <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0 mt-0.5" />
@@ -247,9 +243,8 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                {/* Social proof */}
                 <p className="text-xs text-blue-200 text-center mb-4">
-                  🔥 7 out of 10 students choose this plan
+                  {t("pricing.intensive.social")}
                 </p>
 
                 <a
@@ -257,53 +252,51 @@ export default function Pricing() {
                   target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold text-base py-3">
-                    <MessageCircle className="w-4 h-4 mr-2" /> Get Started — Best Value
+                    <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} /> {t("pricing.intensive.cta")}
                   </Button>
                 </a>
-                <p className="text-xs text-blue-200 text-center mt-2">Free 10-min call first · No commitment</p>
+                <p className="text-xs text-blue-200 text-center mt-2">{t("pricing.noCommit")}</p>
               </div>
 
               {/* ── Accelerator ── */}
               <div className="bg-white rounded-2xl border-2 border-orange-400 p-7 flex flex-col hover:shadow-lg transition-shadow relative">
                 <div className="absolute -top-4 left-6 bg-orange-500 text-white text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap shadow">
-                  ⚡ FASTEST RESULTS
+                  {t("pricing.accelerator.badge")}
                 </div>
 
                 <div className="mb-2">
-                  <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-1">Accelerator</p>
+                  <p className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-1">{t("pricing.plan.accelerator")}</p>
                   <h3 className="text-3xl font-extrabold text-gray-900">
                     1,560 <span className="text-base font-normal text-gray-400">MAD/month</span>
                   </h3>
-                  <p className="text-sm text-gray-500 mt-1">24 sessions/month · 6 per week</p>
+                  <p className="text-sm text-gray-500 mt-1">{t("pricing.accelerator.sessions")}</p>
                 </div>
 
-                {/* Per-hour rate with savings */}
                 <div className="bg-orange-50 border border-orange-200 rounded-xl px-4 py-3 mb-2 flex items-center justify-between">
-                  <span className="text-sm text-gray-600">Rate per session</span>
+                  <span className="text-sm text-gray-600">{t("pricing.ratePerSession")}</span>
                   <div className="text-right">
                     <span className="font-bold text-orange-600 text-lg">65 MAD/hr</span>
                     <span className="block text-xs text-green-600 font-semibold">↓ 15 MAD cheaper than Standard</span>
                   </div>
                 </div>
 
-                {/* Savings callout */}
                 <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-2.5 mb-5 text-center">
                   <p className="text-green-700 text-xs font-bold">
-                    You save 360 MAD/month vs paying Standard rate for 24 sessions
+                    {t("pricing.accelerator.savings")}
                   </p>
                 </div>
 
                 <ul className="space-y-3 flex-1 mb-6">
                   {[
-                    "6 × 1-hour private sessions/week",
-                    "Personalised lesson plan",
-                    "WhatsApp support",
-                    "Full 4-skills feedback",
-                    "Personalised IELTS study plan",
-                    "Business communication curriculum",
-                    "Meeting & negotiation English",
-                    "Priority scheduling",
-                    "Weekly progress review",
+                    t("pricing.accelerator.f1"),
+                    t("pricing.accelerator.f2"),
+                    t("pricing.accelerator.f3"),
+                    t("pricing.accelerator.f4"),
+                    t("pricing.accelerator.f5"),
+                    t("pricing.accelerator.f6"),
+                    t("pricing.accelerator.f7"),
+                    t("pricing.accelerator.f8"),
+                    t("pricing.accelerator.f9"),
                   ].map((f) => (
                     <li key={f} className="flex gap-3 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -312,9 +305,8 @@ export default function Pricing() {
                   ))}
                 </ul>
 
-                {/* Scarcity */}
                 <p className="text-xs text-red-600 bg-red-50 border border-red-200 rounded-lg px-3 py-2 mb-4 text-center">
-                  ⚠️ Only 2 Accelerator spots available this month
+                  {t("pricing.accelerator.scarcity")}
                 </p>
 
                 <a
@@ -322,10 +314,10 @@ export default function Pricing() {
                   target="_blank" rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold">
-                    <MessageCircle className="w-4 h-4 mr-2" /> Claim My Spot
+                    <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} /> {t("pricing.accelerator.cta")}
                   </Button>
                 </a>
-                <p className="text-xs text-gray-400 text-center mt-2">Free 10-min call first · No commitment</p>
+                <p className="text-xs text-gray-400 text-center mt-2">{t("pricing.noCommit")}</p>
               </div>
             </div>
 
@@ -336,15 +328,15 @@ export default function Pricing() {
                   <Clock className="w-5 h-5 text-gray-600" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-gray-900 text-sm">Pay-Per-Lesson</p>
-                  <p className="text-gray-500 text-xs">No commitment · 80 MAD/session</p>
+                  <p className="font-bold text-gray-900 text-sm">{t("pricing.payPerLesson.title")}</p>
+                  <p className="text-gray-500 text-xs">{t("pricing.payPerLesson.desc")}</p>
                 </div>
                 <a
                   href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20single%20lesson%20(80%20MAD)"
                   target="_blank" rel="noopener noreferrer"
                 >
                   <Button variant="outline" size="sm" className="border-gray-300 text-gray-700 hover:bg-gray-50 whitespace-nowrap">
-                    Book Now
+                    {t("pricing.bookNow")}
                   </Button>
                 </a>
               </div>
@@ -353,15 +345,15 @@ export default function Pricing() {
                   <Users className="w-5 h-5 text-green-600" />
                 </div>
                 <div className="flex-1">
-                  <p className="font-bold text-gray-900 text-sm">Group Study</p>
-                  <p className="text-green-700 text-xs font-semibold">200 MAD/month · 30 MAD/session</p>
+                  <p className="font-bold text-gray-900 text-sm">{t("pricing.group.title")}</p>
+                  <p className="text-green-700 text-xs font-semibold">{t("pricing.group.desc")}</p>
                 </div>
                 <a
                   href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20the%20Group%20Study%20plan%20(200%20MAD%2Fmonth)"
                   target="_blank" rel="noopener noreferrer"
                 >
                   <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white whitespace-nowrap">
-                    Join Group
+                    {t("pricing.group.cta")}
                   </Button>
                 </a>
               </div>
@@ -370,39 +362,39 @@ export default function Pricing() {
             {/* ── Cost comparison anchor ── */}
             <div className="mt-10 bg-blue-50 border border-blue-200 rounded-2xl p-6 max-w-3xl mx-auto">
               <h3 className="font-bold text-blue-900 text-center mb-4 text-sm uppercase tracking-wide">
-                How Fluentry Compares to Other Options
+                {t("pricing.compare.title")}
               </h3>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm text-center">
                   <thead>
                     <tr className="text-blue-700 font-semibold border-b border-blue-200">
-                      <th className="pb-2 text-left">Option</th>
-                      <th className="pb-2">Cost/hr</th>
-                      <th className="pb-2">1-on-1?</th>
-                      <th className="pb-2">Personalised?</th>
+                      <th className="pb-2 text-left">{t("pricing.compare.option")}</th>
+                      <th className="pb-2">{t("pricing.compare.costHr")}</th>
+                      <th className="pb-2">{t("pricing.compare.oneOnOne")}</th>
+                      <th className="pb-2">{t("pricing.compare.personalised")}</th>
                     </tr>
                   </thead>
                   <tbody className="text-gray-700">
                     <tr className="border-b border-blue-100">
-                      <td className="py-2 text-left font-medium">Language school (Morocco)</td>
+                      <td className="py-2 text-left font-medium">{t("pricing.compare.school")}</td>
                       <td>150–300 MAD</td>
                       <td>❌</td>
                       <td>❌</td>
                     </tr>
                     <tr className="border-b border-blue-100">
-                      <td className="py-2 text-left font-medium">Preply / iTalki tutor</td>
+                      <td className="py-2 text-left font-medium">{t("pricing.compare.preply")}</td>
                       <td>200–400 MAD</td>
                       <td>✅</td>
                       <td>⚠️ Varies</td>
                     </tr>
                     <tr className="border-b border-blue-100">
-                      <td className="py-2 text-left font-medium">Duolingo / Apps</td>
+                      <td className="py-2 text-left font-medium">{t("pricing.compare.apps")}</td>
                       <td>~50 MAD</td>
                       <td>❌</td>
                       <td>❌</td>
                     </tr>
                     <tr className="bg-blue-100 rounded-lg font-bold text-blue-900">
-                      <td className="py-2 text-left">Fluentry (Intensive)</td>
+                      <td className="py-2 text-left">{t("pricing.compare.fluentry")}</td>
                       <td className="text-green-700">75 MAD ✅</td>
                       <td>✅</td>
                       <td>✅</td>
@@ -411,7 +403,7 @@ export default function Pricing() {
                 </table>
               </div>
               <p className="text-xs text-blue-600 text-center mt-3">
-                Private, personalised coaching at a fraction of what language schools charge.
+                {t("pricing.compare.note")}
               </p>
             </div>
           </div>
@@ -421,11 +413,10 @@ export default function Pricing() {
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-14">
-              <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">Goal-Focused</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Structured Programs</h2>
+              <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-2">{t("pricing.programs.eyebrow")}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">{t("pricing.programs.title")}</h2>
               <p className="text-gray-500 max-w-xl mx-auto">
-                Have a specific target — an IELTS band score or professional fluency? These fixed-duration programs
-                include a clear roadmap, a results guarantee, and the Intensive hourly rate built in.
+                {t("pricing.programs.subtitle")}
               </p>
             </div>
 
@@ -435,9 +426,9 @@ export default function Pricing() {
               <div className="rounded-2xl overflow-hidden border-2 border-blue-600 shadow-lg">
                 <div className="bg-blue-600 px-7 py-5 flex items-center justify-between">
                   <div>
-                    <p className="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">IELTS Prep</p>
-                    <h3 className="text-white text-2xl font-bold">8-Week IELTS Program</h3>
-                    <p className="text-blue-200 text-sm mt-1">2 sessions/week · 16 sessions total</p>
+                    <p className="text-blue-200 text-xs font-bold uppercase tracking-widest mb-1">{t("pricing.ielts.eyebrow")}</p>
+                    <h3 className="text-white text-2xl font-bold">{t("pricing.ielts.title")}</h3>
+                    <p className="text-blue-200 text-sm mt-1">{t("pricing.ielts.sessions")}</p>
                   </div>
                   <div className="bg-white/20 rounded-xl p-3">
                     <Trophy className="w-7 h-7 text-yellow-300" />
@@ -453,17 +444,16 @@ export default function Pricing() {
                     <span className="text-xs text-gray-400 line-through">1,280 MAD at Standard rate</span>
                   </div>
                   <p className="text-gray-600 text-sm mb-5">
-                    16 private sessions over 8 weeks, focused entirely on IELTS. All four sections covered with
-                    practice tests and detailed feedback every week. Guaranteed band improvement.
+                    {t("pricing.ielts.desc")}
                   </p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      "16 × 1-hour private sessions",
-                      "All 4 IELTS sections: L, R, W, S",
-                      "Personalised IELTS study plan",
-                      "Mock tests with band-score feedback",
-                      "WhatsApp support throughout",
-                      "Results guarantee included",
+                      t("pricing.ielts.f1"),
+                      t("pricing.ielts.f2"),
+                      t("pricing.ielts.f3"),
+                      t("pricing.ielts.f4"),
+                      t("pricing.ielts.f5"),
+                      t("pricing.ielts.f6"),
                     ].map((f) => (
                       <li key={f} className="flex gap-3 text-sm text-gray-700">
                         <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
@@ -476,10 +466,10 @@ export default function Pricing() {
                     target="_blank" rel="noopener noreferrer"
                   >
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-base py-3">
-                      <MessageCircle className="w-4 h-4 mr-2" /> Book Free Strategy Call
+                      <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} /> {t("pricing.bookCall")}
                     </Button>
                   </a>
-                  <p className="text-xs text-gray-400 text-center mt-2">Free 10-min consultation · No commitment</p>
+                  <p className="text-xs text-gray-400 text-center mt-2">{t("pricing.noCommit")}</p>
                 </div>
               </div>
 
@@ -487,9 +477,9 @@ export default function Pricing() {
               <div className="rounded-2xl overflow-hidden border-2 border-purple-600 shadow-lg">
                 <div className="bg-purple-600 px-7 py-5 flex items-center justify-between">
                   <div>
-                    <p className="text-purple-200 text-xs font-bold uppercase tracking-widest mb-1">Business English</p>
-                    <h3 className="text-white text-2xl font-bold">12-Week Business English</h3>
-                    <p className="text-purple-200 text-sm mt-1">2 sessions/week · 24 sessions total</p>
+                    <p className="text-purple-200 text-xs font-bold uppercase tracking-widest mb-1">{t("pricing.business.eyebrow")}</p>
+                    <h3 className="text-white text-2xl font-bold">{t("pricing.business.title")}</h3>
+                    <p className="text-purple-200 text-sm mt-1">{t("pricing.business.sessions")}</p>
                   </div>
                   <div className="bg-white/20 rounded-xl p-3">
                     <Zap className="w-7 h-7 text-yellow-300" />
@@ -505,17 +495,16 @@ export default function Pricing() {
                     <span className="text-xs text-gray-400 line-through">1,920 MAD at Standard rate</span>
                   </div>
                   <p className="text-gray-600 text-sm mb-5">
-                    24 private sessions over 12 weeks, focused on professional English. Master emails, meetings,
-                    presentations, and the vocabulary you use at work — in Casablanca, Rabat, or anywhere.
+                    {t("pricing.business.desc")}
                   </p>
                   <ul className="space-y-3 mb-6">
                     {[
-                      "24 × 1-hour private sessions",
-                      "Business communication curriculum",
-                      "Professional email writing",
-                      "Meeting & negotiation English",
-                      "Presentation coaching",
-                      "WhatsApp support throughout",
+                      t("pricing.business.f1"),
+                      t("pricing.business.f2"),
+                      t("pricing.business.f3"),
+                      t("pricing.business.f4"),
+                      t("pricing.business.f5"),
+                      t("pricing.business.f6"),
                     ].map((f) => (
                       <li key={f} className="flex gap-3 text-sm text-gray-700">
                         <CheckCircle className="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5" />
@@ -528,10 +517,10 @@ export default function Pricing() {
                     target="_blank" rel="noopener noreferrer"
                   >
                     <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white text-base py-3">
-                      <MessageCircle className="w-4 h-4 mr-2" /> Book Free Strategy Call
+                      <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} /> {t("pricing.bookCall")}
                     </Button>
                   </a>
-                  <p className="text-xs text-gray-400 text-center mt-2">Free 10-min consultation · No commitment</p>
+                  <p className="text-xs text-gray-400 text-center mt-2">{t("pricing.noCommit")}</p>
                 </div>
               </div>
             </div>
@@ -542,19 +531,19 @@ export default function Pricing() {
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">
-              What Every Session Includes
+              {t("pricing.included.title")}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
               {[
-                { emoji: "🎯", title: "Goal-Focused Practice", desc: "Every session is built around your specific goal — IELTS, business, or fluency." },
-                { emoji: "💬", title: "Real-Time Feedback", desc: "Instant corrections on pronunciation, grammar, and vocabulary as you speak." },
-                { emoji: "📱", title: "WhatsApp Support", desc: "Ask questions and get feedback between sessions, any time." },
-                { emoji: "📊", title: "Progress Tracking", desc: "Monthly reports showing exactly how far you've come and what's next." },
+                { emoji: "🎯", titleKey: "pricing.included.goal.title", descKey: "pricing.included.goal.desc" },
+                { emoji: "💬", titleKey: "pricing.included.feedback.title", descKey: "pricing.included.feedback.desc" },
+                { emoji: "📱", titleKey: "pricing.included.whatsapp.title", descKey: "pricing.included.whatsapp.desc" },
+                { emoji: "📊", titleKey: "pricing.included.progress.title", descKey: "pricing.included.progress.desc" },
               ].map((item) => (
-                <div key={item.title} className="bg-white rounded-xl p-5 text-center border border-gray-100 hover:shadow-md transition-shadow">
+                <div key={item.titleKey} className="bg-white rounded-xl p-5 text-center border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="text-3xl mb-3">{item.emoji}</div>
-                  <h3 className="font-bold text-gray-900 text-sm mb-2">{item.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
+                  <h3 className="font-bold text-gray-900 text-sm mb-2">{t(item.titleKey)}</h3>
+                  <p className="text-gray-500 text-xs leading-relaxed">{t(item.descKey)}</p>
                 </div>
               ))}
             </div>
@@ -564,7 +553,7 @@ export default function Pricing() {
         {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">What Students Say</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">{t("pricing.testimonials.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 {
@@ -575,17 +564,17 @@ export default function Pricing() {
                   text: "I needed English for my job in logistics. Mr. Ibrahim helped me with emails and meetings. Very patient and professional.",
                   name: "Ahmed M.", role: "Logistics Professional, Casablanca",
                 },
-              ].map((t) => (
-                <div key={t.name} className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+              ].map((item) => (
+                <div key={item.name} className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
                   <div className="flex mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">"{t.text}"</p>
+                  <p className="text-gray-700 mb-4 italic text-sm leading-relaxed">"{item.text}"</p>
                   <div>
-                    <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
+                    <p className="font-bold text-gray-900 text-sm">{item.name}</p>
+                    <p className="text-xs text-gray-500">{item.role}</p>
                   </div>
                 </div>
               ))}
@@ -596,7 +585,7 @@ export default function Pricing() {
         {/* ── FAQ ──────────────────────────────────────────────────────────── */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-2xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">Common Questions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 text-center">{t("pricing.faq.title")}</h2>
             <div className="space-y-3">
               {faqs.map((f) => <FAQItem key={f.q} q={f.q} a={f.a} />)}
             </div>
@@ -608,18 +597,16 @@ export default function Pricing() {
           <div className="container mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 bg-white/15 border border-white/20 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 text-green-300" />
-              Results Guaranteed — or we coach you for free
+              {t("pricing.cta.guarantee")}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Not Sure Which Plan Is Right for You?
+              {t("pricing.cta.title")}
             </h2>
             <p className="text-blue-100 mb-3 text-lg max-w-xl mx-auto">
-              Book a free 10-minute call with Mr. Ibrahim. He will listen to your goals and recommend the exact plan
-              that fits your schedule and budget.
+              {t("pricing.cta.subtitle")}
             </p>
-            {/* Urgency */}
             <p className="text-yellow-300 text-sm font-semibold mb-8">
-              ⏳ Only 3 spots open this month — prices may increase in April
+              {t("pricing.cta.urgency")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -627,18 +614,18 @@ export default function Pricing() {
                 target="_blank" rel="noopener noreferrer"
               >
                 <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold px-8 w-full sm:w-auto">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Book Free Strategy Call
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
+                  {t("pricing.cta.button")}
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? "mr-2" : "ml-2"}`} />
                 </Button>
               </a>
-              <Link href="/free-test">
+              <Link href={`${langPrefix}/free-test`}>
                 <Button size="lg" variant="outline" className="border-white/40 text-white hover:bg-white/10 w-full sm:w-auto">
-                  Take Free Level Test First
+                  {t("pricing.cta.freeTest")}
                 </Button>
               </Link>
             </div>
-            <p className="text-blue-200 text-sm mt-5">No commitment · No payment required · Free 10-min consultation</p>
+            <p className="text-blue-200 text-sm mt-5">{t("pricing.noCommit")}</p>
           </div>
         </section>
 

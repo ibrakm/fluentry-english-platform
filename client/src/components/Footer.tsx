@@ -1,57 +1,60 @@
 import { Link } from "wouter";
 import { Mail, MessageCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WA_URL =
   "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20learn%20more%20about%20Fluentry";
 
 export default function Footer() {
+  const { t, langPrefix, isRTL } = useLanguage();
+
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-16">
+    <footer className="bg-gray-900 text-gray-300 mt-16" dir={isRTL ? "rtl" : "ltr"}>
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
 
           {/* Brand */}
           <div>
-            <Link href="/">
+            <Link href={langPrefix}>
               <h3 className="text-white text-lg font-bold mb-2">Fluentry</h3>
             </Link>
             <p className="text-sm text-gray-400 mb-3">
-              1-on-1 English coaching for Moroccan learners. TESOL-certified. 100 MAD/hour.
+              {t("footer.tagline")}
             </p>
-            <p className="text-xs text-gray-500">Based in Tangier, Morocco 🇲🇦</p>
+            <p className="text-xs text-gray-500">{t("footer.rights")}</p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-semibold mb-4">{t("footer.quickLinks")}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-              <li><Link href="/about" className="hover:text-blue-400 transition-colors">About Mr. Ibrahim</Link></li>
-              <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Courses</Link></li>
-              <li><Link href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link></li>
-              <li><Link href="/free-test" className="hover:text-blue-400 transition-colors">Free Level Test</Link></li>
-              <li><Link href="/blog" className="hover:text-blue-400 transition-colors">Blog</Link></li>
-              <li><Link href="/success-stories" className="hover:text-blue-400 transition-colors">Success Stories</Link></li>
+              <li><Link href={langPrefix} className="hover:text-blue-400 transition-colors">{t("footer.home")}</Link></li>
+              <li><Link href={`${langPrefix}/about`} className="hover:text-blue-400 transition-colors">{t("footer.about")}</Link></li>
+              <li><Link href={`${langPrefix}/courses`} className="hover:text-blue-400 transition-colors">{t("footer.courses")}</Link></li>
+              <li><Link href={`${langPrefix}/pricing`} className="hover:text-blue-400 transition-colors">{t("footer.pricing")}</Link></li>
+              <li><Link href={`${langPrefix}/free-test`} className="hover:text-blue-400 transition-colors">{t("footer.freeTest")}</Link></li>
+              <li><Link href={`${langPrefix}/blog`} className="hover:text-blue-400 transition-colors">{t("footer.blog")}</Link></li>
+              <li><Link href={`${langPrefix}/success-stories`} className="hover:text-blue-400 transition-colors">{t("footer.successStories")}</Link></li>
             </ul>
           </div>
 
           {/* Programs */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Programs</h4>
+            <h4 className="text-white font-semibold mb-4">{t("footer.programs")}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/courses" className="hover:text-blue-400 transition-colors">IELTS Preparation</Link></li>
-              <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Business English</Link></li>
-              <li><Link href="/group-coaching" className="hover:text-blue-400 transition-colors">Group Coaching</Link></li>
-              <li><Link href="/courses" className="hover:text-blue-400 transition-colors">Conversation Practice</Link></li>
-              <li><Link href="/courses" className="hover:text-blue-400 transition-colors">General English</Link></li>
-              <li><Link href="/free-resources" className="hover:text-blue-400 transition-colors">Free Resources</Link></li>
-              <li><Link href="/audio-audit" className="hover:text-blue-400 transition-colors">Free Pronunciation Audit</Link></li>
+              <li><Link href={`${langPrefix}/courses`} className="hover:text-blue-400 transition-colors">{t("footer.ielts")}</Link></li>
+              <li><Link href={`${langPrefix}/courses`} className="hover:text-blue-400 transition-colors">{t("footer.business")}</Link></li>
+              <li><Link href={`${langPrefix}/group-coaching`} className="hover:text-blue-400 transition-colors">{t("footer.group")}</Link></li>
+              <li><Link href={`${langPrefix}/courses`} className="hover:text-blue-400 transition-colors">{t("footer.conversation")}</Link></li>
+              <li><Link href={`${langPrefix}/courses`} className="hover:text-blue-400 transition-colors">{t("footer.general")}</Link></li>
+              <li><Link href={`${langPrefix}/free-resources`} className="hover:text-blue-400 transition-colors">{t("footer.freeResources")}</Link></li>
+              <li><Link href={`${langPrefix}/audio-audit`} className="hover:text-blue-400 transition-colors">{t("footer.pronunciationAudit")}</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
+            <h4 className="text-white font-semibold mb-4">{t("footer.getInTouch")}</h4>
             <div className="space-y-3">
               <a
                 href={WA_URL}
@@ -77,7 +80,7 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2 rounded-lg transition-colors"
                 >
                   <MessageCircle size={14} />
-                  Book a Free Strategy Call
+                  {t("footer.bookCall")}
                 </a>
               </div>
             </div>
@@ -87,13 +90,13 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 gap-4">
-            <p>&copy; {new Date().getFullYear()} Fluentry. All rights reserved. Based in Tangier, Morocco.</p>
+            <p>&copy; {new Date().getFullYear()} Fluentry. {t("footer.rights")}</p>
             <div className="flex gap-6">
-              <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
-                Privacy Policy
+              <Link href={`${langPrefix}/privacy-policy`} className="hover:text-blue-400 transition-colors">
+                {t("footer.privacy")}
               </Link>
-              <Link href="/terms-of-service" className="hover:text-blue-400 transition-colors">
-                Terms of Service
+              <Link href={`${langPrefix}/terms-of-service`} className="hover:text-blue-400 transition-colors">
+                {t("footer.terms")}
               </Link>
             </div>
           </div>

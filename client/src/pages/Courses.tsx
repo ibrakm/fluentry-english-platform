@@ -6,6 +6,7 @@ import {
   ArrowRight, Shield, Star, Clock, Target, TrendingUp
 } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const courses = [
   {
@@ -122,6 +123,8 @@ const colorMap: Record<string, { border: string; badge: string; icon: string; bt
 };
 
 export default function Courses() {
+  const { t, langPrefix, isRTL } = useLanguage();
+
   return (
     <>
       <SEO
@@ -138,20 +141,20 @@ export default function Courses() {
           { question: "What is the price of English courses at Fluentry?", answer: "Fluentry charges 100 MAD per hour for 1-on-1 lessons. Monthly packages start from 800 MAD (Standard: 2 sessions/week) up to 2,400 MAD (Accelerator: 6 sessions/week). Group coaching starts from 35 MAD per session. All prices are transparent with no hidden fees." }
         ]}
       />
-      <div className="min-h-screen">
+      <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 
         {/* Hero */}
         <section className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-16 px-4">
           <div className="container mx-auto max-w-4xl text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
               <Shield className="w-4 h-4 text-green-300" />
-              Results Guaranteed on All Signature Programs
+              {t("courses.hero.badge")}
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
-              Programs Built Around Your Goal
+              {t("courses.hero.title")}
             </h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-              Every Fluentry program is structured around a specific, measurable outcome. You know exactly what you'll achieve — and we guarantee it.
+              {t("courses.hero.subtitle")}
             </p>
           </div>
         </section>
@@ -161,14 +164,14 @@ export default function Courses() {
           <div className="container mx-auto max-w-4xl">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               {[
-                { stat: "+1.5 Bands", label: "Average IELTS Improvement" },
-                { stat: "90%", label: "Students Achieve Their Goal" },
-                { stat: "8 Weeks", label: "Average Time to Results" },
-                { stat: "100%", label: "Satisfaction Guaranteed" },
+                { stat: "+1.5 Bands", labelKey: "home.results.ieltsBands" },
+                { stat: "90%", labelKey: "home.results.achieve" },
+                { stat: "8 Weeks", labelKey: "home.results.time" },
+                { stat: "100%", labelKey: "home.results.satisfaction" },
               ].map((item) => (
-                <div key={item.label} className="border-r border-blue-700 last:border-0 px-2">
+                <div key={item.labelKey} className="border-r border-blue-700 last:border-0 px-2">
                   <p className="text-2xl font-extrabold text-yellow-300">{item.stat}</p>
-                  <p className="text-xs text-blue-300 mt-1">{item.label}</p>
+                  <p className="text-xs text-blue-300 mt-1">{t(item.labelKey)}</p>
                 </div>
               ))}
             </div>
@@ -179,9 +182,9 @@ export default function Courses() {
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Program</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t("courses.grid.title")}</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Not sure which program is right for you? Take the free level test or book a free 10-minute strategy call — Mr. Ibrahim will recommend the best fit for your goals.
+                {t("courses.grid.subtitle")}
               </p>
             </div>
 
@@ -197,7 +200,7 @@ export default function Courses() {
                     </div>
 
                     {/* Header */}
-                    <div className="flex items-start gap-4 mb-5 mt-2">
+                    <div className={`flex items-start gap-4 mb-5 mt-2 ${isRTL ? "flex-row-reverse text-right" : ""}`}>
                       <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${colors.icon}`}>
                         <Icon className="w-6 h-6" />
                       </div>
@@ -208,17 +211,17 @@ export default function Courses() {
                     </div>
 
                     {/* Who it's for */}
-                    <div className="mb-5">
-                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Who it's for</p>
+                    <div className={`mb-5 ${isRTL ? "text-right" : ""}`}>
+                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">{t("courses.card.whoFor")}</p>
                       <p className="text-gray-600 text-sm">{course.audience}</p>
                     </div>
 
                     {/* Outcomes */}
                     <div className="mb-6 flex-1">
-                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">What you'll achieve</p>
+                      <p className={`text-xs font-bold text-gray-500 uppercase tracking-wide mb-3 ${isRTL ? "text-right" : ""}`}>{t("courses.card.achieve")}</p>
                       <ul className="space-y-2">
                         {course.outcomes.map((outcome, idx) => (
-                          <li key={idx} className="flex gap-3">
+                          <li key={idx} className={`flex gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                             <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
                             <span className="text-gray-700 text-sm">{outcome}</span>
                           </li>
@@ -227,8 +230,8 @@ export default function Courses() {
                     </div>
 
                     {/* Program + Price */}
-                    <div className="bg-gray-50 rounded-xl p-4 mb-5">
-                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">Program</p>
+                    <div className={`bg-gray-50 rounded-xl p-4 mb-5 ${isRTL ? "text-right" : ""}`}>
+                      <p className="text-xs font-bold text-gray-500 uppercase tracking-wide mb-1">{t("courses.card.program")}</p>
                       <p className="font-bold text-gray-900">{course.program}</p>
                       <p className={`text-2xl font-extrabold mt-1 ${colors.price}`}>{course.price}</p>
                     </div>
@@ -236,11 +239,11 @@ export default function Courses() {
                     {/* CTA */}
                     <a href={course.ctaLink} target="_blank" rel="noopener noreferrer">
                       <Button className={`w-full text-base py-3 ${colors.btn}`}>
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
                         {course.cta}
                       </Button>
                     </a>
-                    <p className="text-xs text-gray-400 text-center mt-2">Free 10-min consultation · No commitment</p>
+                    <p className="text-xs text-gray-400 text-center mt-2">{t("pricing.noCommit")}</p>
                   </Card>
                 );
               })}
@@ -251,21 +254,21 @@ export default function Courses() {
         {/* How Sessions Work */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What Every Session Includes</h2>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{t("courses.sessions.title")}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { icon: Target, title: "Personalised Focus", desc: "Each session is built around your specific goals, level, and the challenges you face as a Moroccan learner." },
-                { icon: TrendingUp, title: "Progress Tracking", desc: "Clear milestones and regular check-ins so you always know exactly how far you've come and what's next." },
-                { icon: Clock, title: "Flexible Scheduling", desc: "Sessions via Google Meet. Reschedule up to 24 hours in advance. Your time, your pace." },
+                { icon: Target, titleKey: "courses.sessions.focus.title", descKey: "courses.sessions.focus.desc" },
+                { icon: TrendingUp, titleKey: "courses.sessions.progress.title", descKey: "courses.sessions.progress.desc" },
+                { icon: Clock, titleKey: "courses.sessions.schedule.title", descKey: "courses.sessions.schedule.desc" },
               ].map((item) => {
                 const Icon = item.icon;
                 return (
-                  <Card key={item.title} className="p-6 text-center hover:shadow-lg transition-shadow">
+                  <Card key={item.titleKey} className="p-6 text-center hover:shadow-lg transition-shadow">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-6 h-6 text-blue-600" />
                     </div>
-                    <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                    <h3 className="font-bold text-gray-900 mb-2">{t(item.titleKey)}</h3>
+                    <p className="text-gray-600 text-sm">{t(item.descKey)}</p>
                   </Card>
                 );
               })}
@@ -276,7 +279,7 @@ export default function Courses() {
         {/* Testimonials */}
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Student Results</h2>
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">{t("courses.testimonials.title")}</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
@@ -287,18 +290,18 @@ export default function Courses() {
                   name: "Youssef B.", role: "Marketing Manager, Rabat", result: "Leads International Meetings",
                   text: "As a business professional, I needed to improve my presentation skills fast. I can now lead international meetings with confidence.",
                 },
-              ].map((t) => (
-                <Card key={t.name} className="p-6 bg-blue-50 border-0">
+              ].map((item) => (
+                <Card key={item.name} className="p-6 bg-blue-50 border-0">
                   <div className="flex justify-between items-start mb-3">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
                     </div>
-                    <span className="text-xs font-bold text-green-700 bg-green-100 px-2 py-1 rounded-full">{t.result}</span>
+                    <span className="text-xs font-bold text-green-700 bg-green-100 px-2 py-1 rounded-full">{item.result}</span>
                   </div>
-                  <p className="text-gray-700 text-sm italic mb-4">"{t.text}"</p>
+                  <p className="text-gray-700 text-sm italic mb-4">"{item.text}"</p>
                   <div className="border-t border-blue-200 pt-3">
-                    <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                    <p className="text-gray-500 text-xs">{t.role}</p>
+                    <p className="font-bold text-gray-900 text-sm">{item.name}</p>
+                    <p className="text-gray-500 text-xs">{item.role}</p>
                   </div>
                 </Card>
               ))}
@@ -309,14 +312,14 @@ export default function Courses() {
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white">
           <div className="container mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold mb-4">Not Sure Which Program is Right for You?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("courses.cta.title")}</h2>
             <p className="text-lg text-orange-100 mb-8">
-              Take our free level test to discover your CEFR level, or book a free 10-minute strategy call with Mr. Ibrahim — he'll recommend the perfect program for your goals.
+              {t("courses.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/free-test">
+              <Link href={`${langPrefix}/free-test`}>
                 <Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 font-bold w-full sm:w-auto">
-                  Take the Free Level Test
+                  {t("courses.cta.freeTest")}
                 </Button>
               </Link>
               <a
@@ -325,9 +328,9 @@ export default function Courses() {
                 rel="noopener noreferrer"
               >
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-orange-600 w-full sm:w-auto">
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Book Free Strategy Call
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <MessageCircle className={`w-4 h-4 ${isRTL ? "ml-2" : "mr-2"}`} />
+                  {t("courses.cta.bookCall")}
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? "mr-2" : "ml-2"}`} />
                 </Button>
               </a>
             </div>
