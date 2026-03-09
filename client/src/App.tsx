@@ -51,6 +51,11 @@ const OnboardingTestPage = lazy(() => import("./pages/OnboardingTest"));
 const SuccessStories = lazy(() => import("./pages/SuccessStories"));
 const GroupCoaching = lazy(() => import("./pages/GroupCoaching"));
 
+// Content Marketing Engine pages
+const ResourceLibrary = lazy(() => import("./pages/ResourceLibrary"));
+const UltimateIELTSGuideMorocco = lazy(() => import("./pages/blog/UltimateIELTSGuideMorocco"));
+const UltimateBusinessEnglishGuideMorocco = lazy(() => import("./pages/blog/UltimateBusinessEnglishGuideMorocco"));
+
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
 const EnglishCoachCasablanca = lazy(() => import("./pages/EnglishCoachCasablanca"));
@@ -105,6 +110,10 @@ function Router() {
         <Route path={"/start"} component={StartPage} />
         <Route path={"/fb"} component={StartPage} />
         <Route path={"/audio-audit"} component={AudioAudit} />
+        {/* Content Marketing Engine */}
+        <Route path={"/resource-library"} component={ResourceLibrary} />
+        <Route path={"/blog/ultimate-ielts-guide-morocco"} component={UltimateIELTSGuideMorocco} />
+        <Route path={"/blog/ultimate-business-english-guide-morocco"} component={UltimateBusinessEnglishGuideMorocco} />
         {/* SEO landing pages */}
         <Route path={"/ielts-preparation-morocco"} component={IELTSPreparationMorocco} />
         <Route path={"/english-coach-casablanca"} component={EnglishCoachCasablanca} />
