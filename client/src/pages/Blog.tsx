@@ -9,16 +9,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
-    slug: "how-to-find-english-speaking-partner-morocco",
-    published: true,
-    title: "How to Find an English Speaking Partner in Morocco (for Free)",
-    excerpt: "The ultimate guide to finding a language exchange partner in Morocco to practice your English speaking skills for free. Discover online platforms, local meetups, and expert tips.",
-    category: "Speaking Skills",
-    readTime: "5 min read",
-    date: "March 10, 2026",
-    image: "/images/blog/speaking-partner.webp"
-  },
-  {
     slug: "english-for-call-centers-morocco",
     published: true,
     title: "English for Call Centers in Morocco: The Ultimate Guide",

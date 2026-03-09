@@ -55,7 +55,6 @@ const GroupCoaching = lazy(() => import("./pages/GroupCoaching"));
 const ResourceLibrary = lazy(() => import("./pages/ResourceLibrary"));
 const UltimateIELTSGuideMorocco = lazy(() => import("./pages/blog/UltimateIELTSGuideMorocco"));
 const UltimateBusinessEnglishGuideMorocco = lazy(() => import("./pages/blog/UltimateBusinessEnglishGuideMorocco"));
-const HowToFindEnglishSpeakingPartnerMorocco = lazy(() => import("./pages/blog/HowToFindEnglishSpeakingPartnerMorocco"));
 const EnglishForCallCentersMorocco = lazy(() => import("./pages/blog/EnglishForCallCentersMorocco"));
 const IeltsVsToeicMorocco = lazy(() => import("./pages/blog/IeltsVsToeicMorocco"));
 
@@ -122,7 +121,6 @@ function Router() {
         <Route path="/:lang/blog/a2-to-b1-english-6-month-plan-morocco" component={A2ToB1SixMonthPlan} />
         <Route path="/:lang/blog/best-apps-websites-learn-english-morocco" component={Top15AppsWebsitesLearnEnglish} />
         <Route path="/:lang/blog/challenges-moroccan-english-learners-face" component={ChallengesMoroccanEnglishLearners} />
-        <Route path="/:lang/blog/how-to-find-english-speaking-partner-morocco" component={HowToFindEnglishSpeakingPartnerMorocco} />
         <Route path="/:lang/blog/english-for-call-centers-morocco" component={EnglishForCallCentersMorocco} />
         <Route path="/:lang/blog/ielts-vs-toeic-morocco" component={IeltsVsToeicMorocco} />
         <Route path="/:lang/articles/the-unspoken-passport" component={TheUnspokenPassport} />
