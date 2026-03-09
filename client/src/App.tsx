@@ -57,6 +57,16 @@ const UltimateIELTSGuideMorocco = lazy(() => import("./pages/blog/UltimateIELTSG
 const UltimateBusinessEnglishGuideMorocco = lazy(() => import("./pages/blog/UltimateBusinessEnglishGuideMorocco"));
 const EnglishForCallCentersMorocco = lazy(() => import("./pages/blog/EnglishForCallCentersMorocco"));
 const IeltsVsToeicMorocco = lazy(() => import("./pages/blog/IeltsVsToeicMorocco"));
+const WorldCup2030EnglishJobs = lazy(() => import("./pages/blog/WorldCup2030EnglishJobs"));
+const FreelancingMoroccoEnglish = lazy(() => import("./pages/blog/FreelancingMoroccoEnglish"));
+const EnglishSalaryMorocco = lazy(() => import("./pages/blog/EnglishSalaryMorocco"));
+const TechJobsMoroccoEnglish = lazy(() => import("./pages/blog/TechJobsMoroccoEnglish"));
+const MoroccoCanadaImmigrationIELTS = lazy(() => import("./pages/blog/MoroccoCanadaImmigrationIELTS"));
+const EnglishForEngineersMorocco = lazy(() => import("./pages/blog/EnglishForEngineersMorocco"));
+const EnglishJobInterviewMorocco = lazy(() => import("./pages/blog/EnglishJobInterviewMorocco"));
+const MoroccoOffshoringBoom = lazy(() => import("./pages/blog/MoroccoOffshoringBoom"));
+const TourismHospitalityWorldCupMorocco = lazy(() => import("./pages/blog/TourismHospitalityWorldCupMorocco"));
+const LearnEnglish3MonthsMorocco = lazy(() => import("./pages/blog/LearnEnglish3MonthsMorocco"));
 
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
@@ -123,6 +133,16 @@ function Router() {
         <Route path="/:lang/blog/challenges-moroccan-english-learners-face" component={ChallengesMoroccanEnglishLearners} />
         <Route path="/:lang/blog/english-for-call-centers-morocco" component={EnglishForCallCentersMorocco} />
         <Route path="/:lang/blog/ielts-vs-toeic-morocco" component={IeltsVsToeicMorocco} />
+        <Route path="/:lang/blog/world-cup-2030-english-jobs-morocco" component={WorldCup2030EnglishJobs} />
+        <Route path="/:lang/blog/freelancing-morocco-english-advantage" component={FreelancingMoroccoEnglish} />
+        <Route path="/:lang/blog/english-speaker-salary-morocco" component={EnglishSalaryMorocco} />
+        <Route path="/:lang/blog/tech-jobs-morocco-english-level" component={TechJobsMoroccoEnglish} />
+        <Route path="/:lang/blog/morocco-canada-immigration-ielts-guide" component={MoroccoCanadaImmigrationIELTS} />
+        <Route path="/:lang/blog/english-for-engineers-morocco" component={EnglishForEngineersMorocco} />
+        <Route path="/:lang/blog/english-job-interview-morocco-guide" component={EnglishJobInterviewMorocco} />
+        <Route path="/:lang/blog/morocco-offshoring-boom-2026" component={MoroccoOffshoringBoom} />
+        <Route path="/:lang/blog/tourism-hospitality-world-cup-morocco" component={TourismHospitalityWorldCupMorocco} />
+        <Route path="/:lang/blog/learn-english-3-months-morocco-story" component={LearnEnglish3MonthsMorocco} />
         <Route path="/:lang/articles/the-unspoken-passport" component={TheUnspokenPassport} />
         <Route path="/:lang/success-stories" component={SuccessStories} />
         <Route path="/:lang/group-coaching" component={GroupCoaching} />

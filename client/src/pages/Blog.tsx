@@ -9,6 +9,106 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
+    slug: "world-cup-2030-english-jobs-morocco",
+    published: true,
+    title: "How to Get a Job in Morocco's World Cup 2030 Projects (English is the Key)",
+    excerpt: "The FIFA World Cup 2030 is coming to Morocco, bringing over 100,000 jobs. But there's a catch: most of them will require English. Here's how to get ready.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/world-cup-2030-english-jobs.jpg"
+  },
+  {
+    slug: "freelancing-morocco-english-advantage",
+    published: true,
+    title: "How to Earn $1,000/Month Freelancing from Morocco (The English Advantage)",
+    excerpt: "Tired of local salaries? The global freelance market is booming, and Moroccans are perfectly positioned to succeed. But there's one skill that separates the top earners from the rest: English.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/freelancing-morocco-english.jpg"
+  },
+  {
+    slug: "english-speaker-salary-morocco",
+    published: true,
+    title: "Why Moroccans Who Speak English Earn 2x More (The Real Numbers)",
+    excerpt: "It's the unspoken rule of the Moroccan job market: a diploma gets you in the door, but English gets you the promotion and the high salary. We break down the numbers.",
+    category: "Career English",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/english-salary-morocco.jpg"
+  },
+  {
+    slug: "tech-jobs-morocco-english-level",
+    published: true,
+    title: "English for Oracle, HCLTech & Big Tech Jobs in Morocco (What Level Do You Need?)",
+    excerpt: "Oracle, HCLTech, Orange, and LG are hiring in Morocco, but they all require English. Find out exactly what level you need to get your foot in the door.",
+    category: "Career English",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/tech-jobs-morocco-english.jpg"
+  },
+  {
+    slug: "morocco-canada-immigration-ielts-guide",
+    published: true,
+    title: "How to Get Your Canadian Immigration with IELTS: A Guide for Moroccans",
+    excerpt: "Canada is the #1 destination for Moroccans seeking a new life, and Express Entry is your fastest path. But it all starts with one thing: your IELTS score.",
+    category: "IELTS & Exams",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-canada-immigration-ielts.jpg"
+  },
+  {
+    slug: "english-for-engineers-morocco",
+    published: true,
+    title: "English for Moroccan Engineers: Why Your Degree Isn't Enough Anymore",
+    excerpt: "In Morocco's booming industrial and aerospace sectors, a technical degree gets you an interview, but English gets you the job and the promotion.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/english-for-engineers-morocco.jpg"
+  },
+  {
+    slug: "english-job-interview-morocco-guide",
+    published: true,
+    title: "How to Pass a Job Interview in English in Morocco (Step-by-Step Guide)",
+    excerpt: "You landed the interview for your dream job, but it's in English. Don't panic. This step-by-step guide will show you exactly how to prepare and impress the recruiters.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/english-job-interview-morocco.jpg"
+  },
+  {
+    slug: "morocco-offshoring-boom-2026",
+    published: true,
+    title: "Morocco's Offshoring Boom: 130,000 New Jobs by 2026 — Are You Ready?",
+    excerpt: "The Moroccan government has launched an ambitious plan to create 130,000 new jobs in the offshoring sector. These are high-quality jobs, and they all require English.",
+    category: "Career English",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-offshoring-boom.jpg"
+  },
+  {
+    slug: "tourism-hospitality-world-cup-morocco",
+    published: true,
+    title: "English for Moroccan Tourism & World Cup Hospitality Jobs (2026–2030)",
+    excerpt: "With the World Cup coming, Morocco's tourism sector is set to explode. From hotel managers to tour guides, the demand for English-speaking professionals is at an all-time high.",
+    category: "Career English",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/tourism-hospitality-world-cup-morocco.jpg"
+  },
+  {
+    slug: "learn-english-3-months-morocco-story",
+    published: true,
+    title: "I Learned English in 3 Months in Morocco — Here's Exactly How",
+    excerpt: "From feeling stuck and frustrated to landing a dream job, this is the true story of how one Moroccan student transformed their career by mastering English in just 3 months.",
+    category: "Success Stories",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/learn-english-3-months-morocco.jpg"
+  },
+  {
     slug: "english-for-call-centers-morocco",
     published: true,
     title: "English for Call Centers in Morocco: The Ultimate Guide",
