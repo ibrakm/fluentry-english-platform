@@ -199,3 +199,14 @@
     }
   }
 }
+
+/* RTL (Arabic) support */
+html[dir="rtl"] body { text-align: right; }
+html[dir="rtl"] { font-family: "Segoe UI", "Tahoma", "Arial", sans-serif; }
+html[dir="rtl"] .mr-2 { margin-right: 0 !important; margin-left: 0.5rem !important; }
+html[dir="rtl"] .mr-3 { margin-right: 0 !important; margin-left: 0.75rem !important; }
+html[dir="rtl"] .mr-4 { margin-right: 0 !important; margin-left: 1rem !important; }
+html[dir="rtl"] .ml-2 { margin-left: 0 !important; margin-right: 0.5rem !important; }
+html[dir="rtl"] .ml-3 { margin-left: 0 !important; margin-right: 0.75rem !important; }
+html[dir="rtl"] .ml-4 { margin-left: 0 !important; margin-right: 1rem !important; }
+html[dir="rtl"] .ltr-number { direction: ltr; display: inline-block; }

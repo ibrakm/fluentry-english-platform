@@ -4,6 +4,7 @@ import { Route, Switch } from "wouter";
 import { lazy, Suspense } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { WhatsAppSticky } from "./components/WhatsAppSticky";
@@ -131,6 +132,7 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
+        <LanguageProvider>
         <ThemeProvider defaultTheme="light">
           <TooltipProvider>
             <Toaster />
@@ -147,6 +149,7 @@ function App() {
             </div>
           </TooltipProvider>
         </ThemeProvider>
+        </LanguageProvider>
       </ErrorBoundary>
     </HelmetProvider>
   );
