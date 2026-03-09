@@ -1109,7 +1109,7 @@ const translations: Record<Language, Record<string, string>> = {
     "pricing.hero.results": "نتائج في 8 أسابيع",
     "pricing.hero.guarantee": "نتائج مضمونة",
     "pricing.plans.badge": "اختر وتيرتك",
-    "pricing.plans.title": "جميع الخطط — فردي مع الأستاذ إبراهيم",
+    "pricing.plans.title": "جميع الخطط — جلسات فردية مع الأستاذ إبراهيم",
     "pricing.plans.subtitle": "تتضمن كل خطة جلسات خاصة وخطة دراسية مخصصة ودعم واتساب. كلما حجزت جلسات أكثر، انخفض سعرك بالساعة — وأسرع وصلت إلى الطلاقة.",
 
     // ── Pricing (extended) ──
