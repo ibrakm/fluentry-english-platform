@@ -518,31 +518,31 @@ export default function Home() {
             {[
               {
                 slug: "online-english-classes-morocco-2026-guide",
-                title: "Online English Classes for Moroccans",
-                excerpt: "Compare prices and methods to find the best way to learn English online.",
-                category: "Learning Guide",
-                readTime: "12 min"
+                title: t("home.blog.post1.title"),
+                excerpt: t("home.blog.post1.excerpt"),
+                category: t("home.blog.post1.category"),
+                readTime: t("home.blog.post1.readTime")
               },
               {
                 slug: "a2-to-b1-english-6-month-plan-morocco",
-                title: "From A2 to B1 in 6 Months",
-                excerpt: "A practical 6-month plan with weekly schedule to improve your English.",
-                category: "Learning Plan",
-                readTime: "10 min"
+                title: t("home.blog.post2.title"),
+                excerpt: t("home.blog.post2.excerpt"),
+                category: t("home.blog.post2.category"),
+                readTime: t("home.blog.post2.readTime")
               },
               {
                 slug: "best-apps-websites-learn-english-morocco",
-                title: "15 Best Apps & Websites for Learning English",
-                excerpt: "Discover the top digital tools for vocabulary, listening, and reading.",
-                category: "Tool Review",
-                readTime: "14 min"
+                title: t("home.blog.post3.title"),
+                excerpt: t("home.blog.post3.excerpt"),
+                category: t("home.blog.post3.category"),
+                readTime: t("home.blog.post3.readTime")
               },
               {
                 slug: "challenges-moroccan-english-learners-face",
-                title: "5 Challenges Moroccan Learners Face",
-                excerpt: "Understand the unique obstacles and practical solutions for Moroccan learners.",
-                category: "Learning Insights",
-                readTime: "11 min"
+                title: t("home.blog.post4.title"),
+                excerpt: t("home.blog.post4.excerpt"),
+                category: t("home.blog.post4.category"),
+                readTime: t("home.blog.post4.readTime")
               }
             ].map((post) => (
               <Link key={post.slug} href={`${langPrefix}/blog/${post.slug}`}>
