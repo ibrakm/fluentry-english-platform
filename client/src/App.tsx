@@ -77,6 +77,16 @@ const EuBlueCardMoroccoEnglish = lazy(() => import("./pages/blog/EuBlueCardMoroc
 const EcommerceDropshippingEnglishMorocco = lazy(() => import("./pages/blog/EcommerceDropshippingEnglishMorocco"));
 const LearnEnglishNetflixMorocco = lazy(() => import("./pages/blog/LearnEnglishNetflixMorocco"));
 const HighEndEnglishTrainingMorocco = lazy(() => import("./pages/blog/HighEndEnglishTrainingMorocco"));
+const IranWarMoroccoEconomy2026 = lazy(() => import("./pages/blog/IranWarMoroccoEconomy2026"));
+const TangerMedPortJobsEnglish2026 = lazy(() => import("./pages/blog/TangerMedPortJobsEnglish2026"));
+const MoroccoOffshoring270000Jobs2030 = lazy(() => import("./pages/blog/MoroccoOffshoring270000Jobs2030"));
+const GermanyNearshoringMorocco2026 = lazy(() => import("./pages/blog/GermanyNearshoringMorocco2026"));
+const MoroccoNewTradeHubAfrica2026 = lazy(() => import("./pages/blog/MoroccoNewTradeHubAfrica2026"));
+const MoroccoInflationEnglishSalary2026 = lazy(() => import("./pages/blog/MoroccoInflationEnglishSalary2026"));
+const GitexAfricaMoroccoTech2026 = lazy(() => import("./pages/blog/GitexAfricaMoroccoTech2026"));
+const MoroccoEmigrationGuideEnglish2026 = lazy(() => import("./pages/blog/MoroccoEmigrationGuideEnglish2026"));
+const WorldCup2030MoroccoJobsEnglish = lazy(() => import("./pages/blog/WorldCup2030MoroccoJobsEnglish"));
+const AiJobsMoroccoFutureWork2026 = lazy(() => import("./pages/blog/AiJobsMoroccoFutureWork2026"));
 
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
@@ -173,6 +183,16 @@ function Router() {
         <Route path="/:lang/blog/ecommerce-dropshipping-english-morocco" component={EcommerceDropshippingEnglishMorocco} />
         <Route path="/:lang/blog/learn-english-netflix-morocco" component={LearnEnglishNetflixMorocco} />
         <Route path="/:lang/blog/high-end-english-training-morocco" component={HighEndEnglishTrainingMorocco} />
+        <Route path="/:lang/blog/iran-war-morocco-economy-english-2026" component={IranWarMoroccoEconomy2026} />
+        <Route path="/:lang/blog/tanger-med-port-jobs-english-2026" component={TangerMedPortJobsEnglish2026} />
+        <Route path="/:lang/blog/morocco-offshoring-270000-jobs-2030" component={MoroccoOffshoring270000Jobs2030} />
+        <Route path="/:lang/blog/germany-nearshoring-morocco-english-jobs-2026" component={GermanyNearshoringMorocco2026} />
+        <Route path="/:lang/blog/morocco-africa-trade-hub-career-english-2026" component={MoroccoNewTradeHubAfrica2026} />
+        <Route path="/:lang/blog/morocco-inflation-english-salary-2026" component={MoroccoInflationEnglishSalary2026} />
+        <Route path="/:lang/blog/gitex-africa-morocco-tech-english-2026" component={GitexAfricaMoroccoTech2026} />
+        <Route path="/:lang/blog/morocco-emigration-guide-english-2026" component={MoroccoEmigrationGuideEnglish2026} />
+        <Route path="/:lang/blog/world-cup-2030-morocco-jobs-english" component={WorldCup2030MoroccoJobsEnglish} />
+        <Route path="/:lang/blog/ai-jobs-morocco-future-work-english-2026" component={AiJobsMoroccoFutureWork2026} />
         {/* SEO landing pages */}
         <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />

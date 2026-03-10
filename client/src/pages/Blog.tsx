@@ -367,6 +367,106 @@ const publishedArticles = [
     readTime: "6 min read",
     date: "March 10, 2026",
     image: "/images/blog/premium-english-coaching-morocco.webp"
+  },
+  {
+    slug: "iran-war-morocco-economy-english-2026",
+    published: true,
+    title: "The Iran War and Morocco's Economy: What the Hormuz Crisis Means for Your Salary",
+    excerpt: "Oil prices are spiking, inflation is rising, and Morocco's economy is feeling the pressure. Here is what the Hormuz crisis means for Moroccan workers — and why English is the best protection.",
+    category: "Economy & Careers",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/iran-war-morocco-economy-2026.webp"
+  },
+  {
+    slug: "tanger-med-port-jobs-english-2026",
+    published: true,
+    title: "Tanger Med Is Now Africa's Busiest Port: The Jobs It's Creating and the English They Require",
+    excerpt: "Global shipping is rerouting through Morocco. Tanger Med has become Africa's largest port and one of the world's top 20. Here are the logistics jobs it is creating and the English skills they demand.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/tanger-med-port-jobs-2026.webp"
+  },
+  {
+    slug: "morocco-offshoring-270000-jobs-2030",
+    published: true,
+    title: "Morocco's $4 Billion Offshoring Plan: 270,000 New Jobs and the English Skills They All Require",
+    excerpt: "The Moroccan government has committed $4 billion to creating 270,000 new offshoring jobs by 2030. Here is what the plan means, which companies are coming, and why English is the non-negotiable requirement.",
+    category: "Career English",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-offshoring-jobs-2030.webp"
+  },
+  {
+    slug: "germany-nearshoring-morocco-english-jobs-2026",
+    published: true,
+    title: "Why German Companies Are Moving to Morocco — And the Jobs They Are Bringing",
+    excerpt: "Germany Trade and Invest named Morocco the top nearshoring destination for German firms. Here are the industries, the companies, and the English skills you need to get hired.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/germany-nearshoring-morocco-2026.webp"
+  },
+  {
+    slug: "morocco-africa-trade-hub-career-english-2026",
+    published: true,
+    title: "Morocco Is Becoming Africa's Trade Hub: What It Means for Your Career",
+    excerpt: "A Moody's credit upgrade, the World Cup in 2030, record port traffic, and a $4 billion investment plan. Morocco's moment is now — and the professionals who speak English will benefit most.",
+    category: "Economy & Careers",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-new-trade-hub-2026.webp"
+  },
+  {
+    slug: "morocco-inflation-english-salary-2026",
+    published: true,
+    title: "Morocco's Inflation Crisis: Why English Is the Best Salary Hedge You Have",
+    excerpt: "Prices are rising and purchasing power is falling. Here is the data on how English proficiency translates directly into higher salaries — and why it is the smartest investment you can make right now.",
+    category: "Economy & Careers",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-inflation-english-salary.webp"
+  },
+  {
+    slug: "gitex-africa-morocco-tech-english-2026",
+    published: true,
+    title: "GITEX Africa 2026: Morocco's Tech Scene Is Going Global — Here's How to Be Part of It",
+    excerpt: "1,000+ exhibitors. 45,000 attendees. $1 billion in deals. GITEX Africa is the biggest tech event on the continent — and it is happening in Marrakech. Here is what it means for your career.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/gitex-africa-2026-morocco-tech.webp"
+  },
+  {
+    slug: "morocco-emigration-guide-english-2026",
+    published: true,
+    title: "The 2026 Moroccan Emigration Guide: Canada, Germany, the Gulf — What Each Country Actually Requires",
+    excerpt: "Thinking of leaving Morocco? Here is the honest, complete guide to what Canada, Germany, the UAE, and the UK actually require from Moroccan applicants — and why English is the common thread.",
+    category: "Career English",
+    readTime: "10 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-emigration-guide-2026.webp"
+  },
+  {
+    slug: "world-cup-2030-morocco-jobs-english",
+    published: true,
+    title: "World Cup 2030 in Morocco: The $11.7 Billion Opportunity and the Jobs It Will Create",
+    excerpt: "Six stadiums. 1.5 million international visitors. $11.7 billion in infrastructure investment. The 2030 World Cup is the biggest economic event in Morocco's history — and it needs English speakers.",
+    category: "Career English",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/world-cup-2030-morocco-jobs.webp"
+  },
+  {
+    slug: "ai-jobs-morocco-future-work-english-2026",
+    published: true,
+    title: "AI Is Changing Morocco's Job Market: Which Jobs Are Safe, Which Are at Risk, and How English Protects You",
+    excerpt: "AI is automating routine work across Morocco's economy. Here is the honest analysis of which jobs are vulnerable, which are growing, and why English is the best protection against disruption.",
+    category: "Career English",
+    readTime: "9 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/ai-jobs-morocco-future-work-2026.webp"
   }
 ];
 
@@ -379,6 +479,7 @@ const FILTER_CATEGORIES = [
   "Grammar & Vocabulary",
   "Learning Guide",
   "Career English",
+  "Economy & Careers",
   "Education",
   "Success Stories",
 ];
@@ -391,6 +492,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Grammar & Vocabulary": "bg-yellow-100 text-yellow-700",
   "Learning Guide": "bg-teal-100 text-teal-700",
   "Career English": "bg-rose-100 text-rose-700",
+  "Economy & Careers": "bg-amber-100 text-amber-700",
   "Education": "bg-indigo-100 text-indigo-700",
   "Success Stories": "bg-emerald-100 text-emerald-700",
 };
