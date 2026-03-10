@@ -71,27 +71,7 @@ export default function EnglishForCallCentersMorocco() {
   return (
     <>
       <SEO title={c.title} description={c.description} />
-      <div className="min-h-screen bg-gray-50">
-            {/* Hero */}
-      <header
-        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
-        style={{ backgroundImage: "url('/images/blog/call-center.webp')" }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative container mx-auto max-w-4xl">
-          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
-            <span>Career English</span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
-            English for Call Centers in Morocco: The Ultimate Guide
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
-            Master the specific English skills needed for a high-paying call center job in Morocco.
-          </p>
-          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · March 10, 2026 · 6 min read</p>
-        </div>
-      </header>
-      <div className="py-12 px-4">
+      <div className="bg-white">
         <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">{c.mainHeading}</h1>
