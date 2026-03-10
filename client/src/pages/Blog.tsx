@@ -16,7 +16,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "6 min read",
     date: "March 10, 2026",
-    image: "/images/blog/world-cup-2030-english-jobs.jpg"
+    image: "/images/blog/world-cup-2030-english-jobs.webp"
   },
   {
     slug: "freelancing-morocco-english-advantage",
@@ -26,7 +26,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "7 min read",
     date: "March 10, 2026",
-    image: "/images/blog/freelancing-morocco-english.jpg"
+    image: "/images/blog/freelancing-morocco-english.webp"
   },
   {
     slug: "english-speaker-salary-morocco",
@@ -36,7 +36,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "5 min read",
     date: "March 10, 2026",
-    image: "/images/blog/english-salary-morocco.jpg"
+    image: "/images/blog/english-salary-morocco.webp"
   },
   {
     slug: "tech-jobs-morocco-english-level",
@@ -46,7 +46,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "5 min read",
     date: "March 10, 2026",
-    image: "/images/blog/tech-jobs-morocco-english.jpg"
+    image: "/images/blog/tech-jobs-morocco-english.webp"
   },
   {
     slug: "morocco-canada-immigration-ielts-guide",
@@ -56,7 +56,7 @@ const publishedArticles = [
     category: "IELTS & Exams",
     readTime: "6 min read",
     date: "March 10, 2026",
-    image: "/images/blog/morocco-canada-immigration-ielts.jpg"
+    image: "/images/blog/morocco-canada-immigration-ielts.webp"
   },
   {
     slug: "english-for-engineers-morocco",
@@ -66,7 +66,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "6 min read",
     date: "March 10, 2026",
-    image: "/images/blog/english-for-engineers-morocco.jpg"
+    image: "/images/blog/english-for-engineers-morocco.webp"
   },
   {
     slug: "english-job-interview-morocco-guide",
@@ -76,7 +76,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "7 min read",
     date: "March 10, 2026",
-    image: "/images/blog/english-job-interview-morocco.jpg"
+    image: "/images/blog/english-job-interview-morocco.webp"
   },
   {
     slug: "morocco-offshoring-boom-2026",
@@ -86,7 +86,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "5 min read",
     date: "March 10, 2026",
-    image: "/images/blog/morocco-offshoring-boom.jpg"
+    image: "/images/blog/morocco-offshoring-boom.webp"
   },
   {
     slug: "tourism-hospitality-world-cup-morocco",
@@ -96,7 +96,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "5 min read",
     date: "March 10, 2026",
-    image: "/images/blog/tourism-hospitality-world-cup-morocco.jpg"
+    image: "/images/blog/tourism-hospitality-world-cup-morocco.webp"
   },
   {
     slug: "learn-english-3-months-morocco-story",
@@ -106,7 +106,7 @@ const publishedArticles = [
     category: "Success Stories",
     readTime: "5 min read",
     date: "March 10, 2026",
-    image: "/images/blog/learn-english-3-months-morocco.jpg"
+    image: "/images/blog/learn-english-3-months-morocco.webp"
   },
   {
     slug: "english-for-call-centers-morocco",
@@ -407,7 +407,7 @@ export default function Blog() {
                         <div className="flex items-center justify-between">
                           <span className="text-sm text-gray-500">{article.date}</span>
                           {article.published ? (
-                            <Link href={`/blog/${article.slug}`}>
+                            <Link href={`${langPrefix}/blog/${article.slug}`}>
                               <Button variant="ghost" size="sm" className="text-blue-600 hover:text-blue-700">
                                 Read More
                                 <ArrowRight className="w-4 h-4 ml-1" />
