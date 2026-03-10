@@ -2,7 +2,7 @@ import { SEO } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, BookOpen, Briefcase, GraduationCap, CheckCircle } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, GraduationCap, CheckCircle, Award } from "lucide-react";
 
 export default function IeltsVsToeicMorocco() {
   const { lang } = useLanguage();
@@ -99,12 +99,26 @@ export default function IeltsVsToeicMorocco() {
   return (
     <>
       <SEO title={c.title} description={c.description} />
-      <div className="bg-white">
-        <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">{c.mainHeading}</h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">{c.intro}</p>
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero */}
+        <header
+          className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+          style={{ backgroundImage: "url('/images/blog/ielts-vs-toeic.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative container mx-auto max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+              <Award className="w-5 h-5" />
+              <span>Exam Preparation</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">{c.mainHeading}</h1>
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">{c.intro}</p>
+            <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · March 10, 2026 · 7 min read</p>
           </div>
+        </header>
+        {/* Content */}
+        <main className="py-16 px-4">
+          <div className="container mx-auto max-w-4xl bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-6">{c.comparisonTable.heading}</h2>
@@ -169,7 +183,8 @@ export default function IeltsVsToeicMorocco() {
               </Button>
             </Link>
           </div>
-        </div>
+          </div>
+        </main>
       </div>
     </>
   );

@@ -27,14 +27,18 @@ export default function HowToPassIeltsInMorocco() {
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       <div className="bg-gray-50 text-gray-800 font-sans leading-relaxed">
         {/* Article Header */}
-        <header className="bg-gradient-to-br from-blue-700 to-indigo-800 text-white py-20 px-4 text-center shadow-lg">
-          <div className="container mx-auto max-w-4xl">
+        <header
+          className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+          style={{ backgroundImage: "url('/images/blog/ielts-morocco-guide.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative container mx-auto max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
               <BookOpen className="w-5 h-5" />
               <span>IELTS Exam Preparation</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">How to Pass the IELTS in Morocco: A Step-by-Step Guide for 2026</h1>
-            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">Your dream of studying or working abroad starts with a great IELTS score. This guide provides everything Moroccan students need to know to succeed.</p>
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">Your dream of studying or working abroad starts with a great IELTS score. This guide provides everything Moroccan students need to know to succeed.</p>
           </div>
         </header>
 
