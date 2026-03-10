@@ -136,7 +136,7 @@ const publishedArticles = [
     category: "Learning Guide",
     readTime: "12 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/online-english-classes-morocco.webp"
   },
   {
     slug: "a2-to-b1-english-6-month-plan-morocco",
@@ -146,7 +146,7 @@ const publishedArticles = [
     category: "Learning Guide",
     readTime: "10 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/a2-to-b1-english-plan.webp"
   },
   {
     slug: "best-apps-websites-learn-english-morocco",
@@ -156,7 +156,7 @@ const publishedArticles = [
     category: "Learning Guide",
     readTime: "14 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/best-apps-learn-english-morocco.webp"
   },
   {
     slug: "challenges-moroccan-english-learners-face",
@@ -166,7 +166,7 @@ const publishedArticles = [
     category: "Learning Guide",
     readTime: "11 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/challenges-moroccan-english-learners.webp"
   },
   {
     slug: "how-to-get-a-call-center-job-in-morocco",
@@ -176,7 +176,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "10 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/call-center-job-morocco.webp"
   },
   {
     slug: "english-for-tourism-morocco",
@@ -186,7 +186,7 @@ const publishedArticles = [
     category: "Career English",
     readTime: "9 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/tourism-english-morocco.webp"
   },
   {
     slug: "how-to-pass-toeic-test-in-morocco",
@@ -196,7 +196,7 @@ const publishedArticles = [
     category: "IELTS & Exams",
     readTime: "11 min read",
     date: "February 24, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/toeic-test-morocco.webp"
   },
   {
     slug: "how-to-pass-ielts-in-morocco",
@@ -206,7 +206,7 @@ const publishedArticles = [
     category: "IELTS & Exams",
     readTime: "15 min read",
     date: "February 23, 2026",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/ielts-morocco-guide.webp"
   },
   {
     slug: "how-to-think-in-english",
@@ -216,7 +216,7 @@ const publishedArticles = [
     category: "Speaking Skills",
     readTime: "8 min read",
     date: "January 15, 2025",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/think-in-english.webp"
   },
   {
     slug: "common-mistakes-moroccan-english-learners",
@@ -226,7 +226,7 @@ const publishedArticles = [
     category: "Grammar & Vocabulary",
     readTime: "10 min read",
     date: "January 10, 2025",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/common-mistakes-moroccan-english.webp"
   },
   {
     slug: "best-techniques-improve-english-speaking",
@@ -236,7 +236,7 @@ const publishedArticles = [
     category: "Speaking Skills",
     readTime: "7 min read",
     date: "January 5, 2025",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/speaking-techniques-english.webp"
   },
   {
     slug: "ielts-speaking-test-success-guide",
@@ -246,7 +246,7 @@ const publishedArticles = [
     category: "IELTS & Exams",
     readTime: "12 min read",
     date: "December 28, 2024",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/ielts-speaking-test-guide.webp"
   },
   {
     slug: "business-english-email-writing-guide",
@@ -256,7 +256,7 @@ const publishedArticles = [
     category: "Business English",
     readTime: "9 min read",
     date: "December 20, 2024",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/business-email-english.webp"
   },
   {
     slug: "improve-english-pronunciation-arabic-speakers",
@@ -266,7 +266,7 @@ const publishedArticles = [
     category: "Pronunciation",
     readTime: "11 min read",
     date: "December 15, 2024",
-    image: "/hero-illustration.webp"
+    image: "/images/blog/pronunciation-arabic-speakers.webp"
   }
 ];
 

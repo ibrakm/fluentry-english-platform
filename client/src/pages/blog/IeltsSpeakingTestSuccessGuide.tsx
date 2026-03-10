@@ -30,39 +30,30 @@ export default function IeltsSpeakingTestSuccessGuide() {
         ]}
       />
 
-      <div className="min-h-screen bg-background">
-        <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">
-          <div className="container mx-auto px-4">
-            <Link href={`${langPrefix}/blog`}>
-              <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Blog
-              </Button>
-            </Link>
+            <div className="min-h-screen bg-gray-50">
+        {/* Hero */}
+        <header
+          className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+          style={{ backgroundImage: "url('/images/blog/ielts-speaking-test-guide.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative container mx-auto max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+              <span>IELTS & Exams</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+              IELTS Speaking Test: Complete Success Guide for Moroccan Students
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+              Everything you need to ace the IELTS Speaking test — common questions, scoring criteria, and expert tips.
+            </p>
+            <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · December 28, 2024 · 12 min read</p>
           </div>
-        </div>
+        </header>
+        {/* Content */}
+        <main className="py-16 px-4">
+          <div className="container mx-auto max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-        <article className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="mb-8">
-                <Badge className="mb-4">Exam Preparation</Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  IELTS Speaking Test: Complete Success Guide for Moroccan Students
-                </h1>
-                <div className="flex items-center gap-6 text-gray-600">
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    December 28, 2024
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    12 min read
-                  </span>
-                </div>
-              </div>
-
-              <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-700 mb-6">
                   The IELTS Speaking test intimidates many Moroccan students, but it doesn't have to. As someone who has helped dozens of students achieve their target scores, I'll share exactly what you need to know to succeed.
                 </p>
@@ -309,9 +300,8 @@ export default function IeltsSpeakingTestSuccessGuide() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
-        </article>
+        </main>
       </div>
     </>
   );

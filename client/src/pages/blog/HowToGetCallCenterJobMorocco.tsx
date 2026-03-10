@@ -55,21 +55,29 @@ export default function HowToGetCallCenterJobMorocco() {
         keywords={'call center jobs morocco, english for call centers morocco, call center salary morocco, call center interview questions morocco'}
       />
 
-      <div className="bg-white dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto py-16 px-4">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Career Guide</p>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Your step-by-step guide to landing a high-paying call center job in Casablanca, Rabat, or Tangier. English is the key.
-            </p>
-            <p className="text-sm text-gray-400 mt-4">By Mr. Ibrahim • Last updated: Feb 24, 2026</p>
+      <div className="min-h-screen bg-gray-50">
+            {/* Hero */}
+      <header
+        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+        style={{ backgroundImage: "url('/images/blog/call-center-job-morocco.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+            <span>Career English</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+            Your step-by-step guide to landing a high-paying call center job in Casablanca, Rabat, or Tangier.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · February 24, 2026 · 10 min read</p>
+        </div>
+      </header>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-          {/* Intro */}
           <article className="prose prose-lg dark:prose-invert mx-auto">
             <p>
               The call center industry in Morocco is booming. Companies like Webhelp, Intelcia, and Comdata are hiring thousands of agents, and the salaries are some of the best for young graduates. But there’s one skill that separates the high-earners from everyone else: **excellent English communication**.
@@ -168,6 +176,7 @@ export default function HowToGetCallCenterJobMorocco() {
             </div>
 
           </article>
+        </div>
         </div>
       </div>
     </>

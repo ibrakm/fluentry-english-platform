@@ -23,43 +23,30 @@ export default function HowToThinkInEnglish() {
         ]}
       />
 
-      <div className="min-h-screen bg-background">
-        {/* Header */}
-        <div className="bg-gradient-to-br from-blue-600 to-blue-500 text-white py-8">
-          <div className="container mx-auto px-4">
-            <Link href={`${langPrefix}/blog`}>
-              <Button variant="ghost" className="text-white hover:bg-white/20 mb-4">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Blog
-              </Button>
-            </Link>
+            <div className="min-h-screen bg-gray-50">
+        {/* Hero */}
+        <header
+          className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+          style={{ backgroundImage: "url('/images/blog/think-in-english.webp')" }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative container mx-auto max-w-4xl">
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+              <span>Speaking Skills</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+              How to Think in English: Stop Translating in Your Head
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+              The single most important breakthrough in your English journey. Here's how to make it happen.
+            </p>
+            <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · January 15, 2025 · 8 min read</p>
           </div>
-        </div>
+        </header>
+        {/* Content */}
+        <main className="py-16 px-4">
+          <div className="container mx-auto max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-        {/* Article */}
-        <article className="py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              {/* Article Header */}
-              <div className="mb-8">
-                <Badge className="mb-4">Learning Strategies</Badge>
-                <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  How to Think in English: Stop Translating in Your Head
-                </h1>
-                <div className="flex items-center gap-6 text-gray-600">
-                  <span className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    January 15, 2025
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    8 min read
-                  </span>
-                </div>
-              </div>
-
-              {/* Article Content */}
-              <div className="prose prose-lg max-w-none">
                 <p className="text-xl text-gray-700 mb-6">
                   One of the biggest challenges English learners face is the constant mental translation between their native language and English. This habit slows down your speaking, makes conversations exhausting, and prevents you from achieving true fluency.
                 </p>
@@ -273,9 +260,8 @@ export default function HowToThinkInEnglish() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
-        </article>
+        </main>
       </div>
     </>
   );

@@ -147,21 +147,29 @@ export default function Top15AppsWebsitesLearnEnglish() {
         keywords="best apps learn English Morocco, applications pour apprendre l'anglais, English learning websites"
       />
 
-      <div className="bg-white dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto py-16 px-4">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Tool Review</p>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              The 15 Best Apps & Websites for Learning English in Morocco
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Discover the top digital tools and how to use them effectively with professional coaching.
-            </p>
-            <p className="text-sm text-gray-400 mt-4">By Mr. Ibrahim • Last updated: Feb 24, 2026</p>
+      <div className="min-h-screen bg-gray-50">
+            {/* Hero */}
+      <header
+        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+        style={{ backgroundImage: "url('/images/blog/best-apps-learn-english-morocco.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+            <span>Learning Guide</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            The 15 Best Apps & Websites for Learning English in Morocco (2026 Review)
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+            Our 2026 review of the best digital tools for Moroccan English learners — vocabulary, listening, and more.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · February 24, 2026 · 14 min read</p>
+        </div>
+      </header>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-          {/* Intro */}
           <article className="prose prose-lg dark:prose-invert mx-auto">
             <p>
               If you have a smartphone, you have an English classroom in your pocket. The digital world is filled with powerful tools that can help you learn English faster than ever before. But with thousands of apps and websites to choose from, how do you know which ones are truly effective for Moroccan learners? And are they enough to achieve fluency on their own?
@@ -275,6 +283,7 @@ export default function Top15AppsWebsitesLearnEnglish() {
             </div>
 
           </article>
+        </div>
         </div>
       </div>
     </>

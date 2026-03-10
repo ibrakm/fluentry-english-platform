@@ -54,21 +54,29 @@ export default function OnlineEnglishClassesMorocco() {
         keywords="online English classes Morocco, apprendre l'anglais en ligne Maroc, prix cours anglais, best online English courses"
       />
 
-      <div className="bg-white dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto py-16 px-4">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">Learning Guide</p>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Online English Classes for Moroccans: The Complete 2026 Guide
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Compare prices, methods, and find the best way to learn English online in Morocco.
-            </p>
-            <p className="text-sm text-gray-400 mt-4">By Mr. Ibrahim • Last updated: Feb 24, 2026</p>
+      <div className="min-h-screen bg-gray-50">
+            {/* Hero */}
+      <header
+        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+        style={{ backgroundImage: "url('/images/blog/online-english-classes-morocco.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+            <span>Learning Guide</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            Online English Classes for Moroccans: The Complete 2026 Guide
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+            Compare prices, methods, and platforms to find the best online English learning option for you in 2026.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · February 24, 2026 · 12 min read</p>
+        </div>
+      </header>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-          {/* Intro */}
           <article className="prose prose-lg dark:prose-invert mx-auto">
             <p>
               The demand for English proficiency in Morocco is surging. From call centers in Rabat to tourism in Marrakech and international business in Casablanca, English is no longer just a valuable skill—it is an essential one. However, the traditional methods of learning, such as expensive language centers with rigid schedules and crowded classrooms, are often inefficient and outdated.
@@ -237,6 +245,7 @@ export default function OnlineEnglishClassesMorocco() {
             </div>
 
           </article>
+        </div>
         </div>
       </div>
     </>

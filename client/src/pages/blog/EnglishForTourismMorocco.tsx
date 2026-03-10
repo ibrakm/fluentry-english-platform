@@ -54,21 +54,29 @@ export default function EnglishForTourismMorocco() {
         keywords={'english for tourism morocco, hotel english course marrakech, english for tour guides morocco, hospitality english casablanca'}
       />
 
-      <div className="bg-white dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto py-16 px-4">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-amber-600 dark:text-amber-400 font-semibold mb-2">Career Guide</p>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              English for Tourism in Morocco: The Ultimate Guide for Hotel Staff & Tour Guides
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Tourism in Morocco is expected to welcome over 17 million visitors by 2026. Are you ready to serve them in English?
-            </p>
-            <p className="text-sm text-gray-400 mt-4">By Mr. Ibrahim • Last updated: Feb 24, 2026</p>
+      <div className="min-h-screen bg-gray-50">
+            {/* Hero */}
+      <header
+        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+        style={{ backgroundImage: "url('/images/blog/tourism-english-morocco.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+            <span>Career English</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            English for Tourism in Morocco: The Ultimate Guide for Hotel Staff & Tour Guides
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+            Master the essential English phrases and skills needed for Morocco's booming tourism and hospitality sector.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · February 24, 2026 · 9 min read</p>
+        </div>
+      </header>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-          {/* Intro */}
           <article className="prose prose-lg dark:prose-invert mx-auto">
             <p>
               From the riads of Marrakech to the beaches of Agadir, Morocco's tourism sector is its crown jewel. As more international tourists arrive, one skill has become absolutely essential for anyone working in hospitality: **fluent English**.
@@ -139,6 +147,7 @@ export default function EnglishForTourismMorocco() {
             </div>
 
           </article>
+        </div>
         </div>
       </div>
     </>

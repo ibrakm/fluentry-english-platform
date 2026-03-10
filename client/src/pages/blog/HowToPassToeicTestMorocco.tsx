@@ -54,21 +54,29 @@ export default function HowToPassToeicTestMorocco() {
         keywords={'toeic test morocco, toeic preparation casablanca, amideast morocco toeic, toeic score for engineers morocco'}
       />
 
-      <div className="bg-white dark:bg-gray-900">
-        <div className="max-w-3xl mx-auto py-16 px-4">
-          {/* Header */}
-          <div className="text-center mb-10">
-            <p className="text-purple-600 dark:text-purple-400 font-semibold mb-2">Exam Preparation</p>
-            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              How to Pass the TOEIC Test in Morocco (2026 Guide)
-            </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              The TOEIC test is essential for many engineering, business, and aviation jobs in Morocco. Here’s how to get the score you need.
-            </p>
-            <p className="text-sm text-gray-400 mt-4">By Mr. Ibrahim • Last updated: Feb 24, 2026</p>
+      <div className="min-h-screen bg-gray-50">
+            {/* Hero */}
+      <header
+        className="relative bg-cover bg-center text-white py-24 px-4 text-center"
+        style={{ backgroundImage: "url('/images/blog/toeic-test-morocco.webp')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative container mx-auto max-w-4xl">
+          <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 text-sm font-semibold">
+            <span>IELTS & Exams</span>
           </div>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight leading-tight">
+            How to Pass the TOEIC Test in Morocco (2026 Guide)
+          </h1>
+          <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+            Your complete guide to passing the TOEIC Listening & Reading test — test centers, required scores, and strategies.
+          </p>
+          <p className="mt-4 text-sm text-gray-300">By Ibrahim K. · February 24, 2026 · 11 min read</p>
+        </div>
+      </header>
+      <div className="py-16 px-4">
+        <div className="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
 
-          {/* Intro */}
           <article className="prose prose-lg dark:prose-invert mx-auto">
             <p>
               If you are an engineer, a business professional, or a student in Morocco, you have probably heard of the TOEIC test. The Test of English for International Communication is the world's leading business English proficiency test. Companies like OCP, Royal Air Maroc, and many multinational corporations require a specific TOEIC score for hiring and promotions.
@@ -141,6 +149,7 @@ export default function HowToPassToeicTestMorocco() {
             </div>
 
           </article>
+        </div>
         </div>
       </div>
     </>
