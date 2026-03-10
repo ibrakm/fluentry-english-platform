@@ -87,6 +87,11 @@ const GitexAfricaMoroccoTech2026 = lazy(() => import("./pages/blog/GitexAfricaMo
 const MoroccoEmigrationGuideEnglish2026 = lazy(() => import("./pages/blog/MoroccoEmigrationGuideEnglish2026"));
 const WorldCup2030MoroccoJobsEnglish = lazy(() => import("./pages/blog/WorldCup2030MoroccoJobsEnglish"));
 const AiJobsMoroccoFutureWork2026 = lazy(() => import("./pages/blog/AiJobsMoroccoFutureWork2026"));
+const MoroccoMoodysUpgradeEconomy2026 = lazy(() => import("./pages/blog/MoroccoMoodysUpgradeEconomy2026"));
+const MoroccanDiasporaReturningEnglish2026 = lazy(() => import("./pages/blog/MoroccanDiasporaReturningEnglish2026"));
+const CasablancaFinanceCityJobsEnglish2026 = lazy(() => import("./pages/blog/CasablancaFinanceCityJobsEnglish2026"));
+const MoroccoSpainPortugalCorridorEnglish2030 = lazy(() => import("./pages/blog/MoroccoSpainPortugalCorridorEnglish2030"));
+const MoroccoSuccessfulProfessionalsEnglish = lazy(() => import("./pages/blog/MoroccoSuccessfulProfessionalsEnglish"));
 
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
@@ -193,6 +198,11 @@ function Router() {
         <Route path="/:lang/blog/morocco-emigration-guide-english-2026" component={MoroccoEmigrationGuideEnglish2026} />
         <Route path="/:lang/blog/world-cup-2030-morocco-jobs-english" component={WorldCup2030MoroccoJobsEnglish} />
         <Route path="/:lang/blog/ai-jobs-morocco-future-work-english-2026" component={AiJobsMoroccoFutureWork2026} />
+        <Route path="/:lang/blog/morocco-moodys-upgrade-economy-english-2026" component={MoroccoMoodysUpgradeEconomy2026} />
+        <Route path="/:lang/blog/moroccan-diaspora-returning-english-competitive-advantage-2026" component={MoroccanDiasporaReturningEnglish2026} />
+        <Route path="/:lang/blog/casablanca-finance-city-jobs-english-salary-2026" component={CasablancaFinanceCityJobsEnglish2026} />
+        <Route path="/:lang/blog/morocco-spain-portugal-economic-corridor-english-2030" component={MoroccoSpainPortugalCorridorEnglish2030} />
+        <Route path="/:lang/blog/morocco-successful-professionals-english-turning-point" component={MoroccoSuccessfulProfessionalsEnglish} />
         {/* SEO landing pages */}
         <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />

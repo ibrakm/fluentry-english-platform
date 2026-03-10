@@ -467,6 +467,56 @@ const publishedArticles = [
     readTime: "9 min read",
     date: "March 10, 2026",
     image: "/images/blog/ai-jobs-morocco-future-work-2026.webp"
+  },
+  {
+    slug: "morocco-moodys-upgrade-economy-english-2026",
+    published: true,
+    title: "Morocco's Moody's Upgrade: What a Ba1 Credit Rating Means for Jobs, Investment, and Your Career",
+    excerpt: "Moody's just upgraded Morocco's credit rating to Ba1 with a positive outlook. Here is what that means in plain terms — and why the wave of foreign investment it will bring will reward English speakers most.",
+    category: "Economy & Careers",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-moodys-upgrade-economy-2026.webp"
+  },
+  {
+    slug: "moroccan-diaspora-returning-english-competitive-advantage-2026",
+    published: true,
+    title: "The Moroccan Diaspora Is Coming Home: What It Means for Those Who Never Left",
+    excerpt: "Moroccans who spent years in France, Spain, Canada, and the Gulf are coming back — with savings, international experience, and fluent English. Here is what that means for those who stayed.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/moroccan-diaspora-returning-2026.webp"
+  },
+  {
+    slug: "casablanca-finance-city-jobs-english-salary-2026",
+    published: true,
+    title: "Casablanca Finance City Is Hiring: The Financial Sector Jobs That Pay in Dollars and Require English",
+    excerpt: "Casablanca Finance City is positioning itself as the financial hub of Africa. Investment banks, private equity firms, and the Big Four audit firms are all here — and they all work in English.",
+    category: "Career English",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/casablanca-finance-city-jobs-2026.webp"
+  },
+  {
+    slug: "morocco-spain-portugal-economic-corridor-english-2030",
+    published: true,
+    title: "The Morocco-Spain-Portugal Economic Corridor: How the 2030 World Cup Is Redrawing the Business Map of the Mediterranean",
+    excerpt: "Business leaders from Morocco, Spain, and Portugal met in early 2026 to plan the economic partnership around the 2030 World Cup. A trilateral corridor is forming — and English is the only language all three sides share.",
+    category: "Economy & Careers",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-spain-portugal-corridor-2030.webp"
+  },
+  {
+    slug: "morocco-successful-professionals-english-turning-point",
+    published: true,
+    title: "Why Morocco's Most Successful Young Professionals All Did the Same Thing at 25",
+    excerpt: "A logistics coordinator at Tanger Med. A developer at a Casablanca tech firm. A nurse in Germany. A financial analyst at CFC. They work in different sectors — but they all made the same decision at a turning point in their careers.",
+    category: "Success Stories",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-successful-professionals-english.webp"
   }
 ];
 
