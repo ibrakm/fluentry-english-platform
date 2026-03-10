@@ -67,6 +67,16 @@ const EnglishJobInterviewMorocco = lazy(() => import("./pages/blog/EnglishJobInt
 const MoroccoOffshoringBoom = lazy(() => import("./pages/blog/MoroccoOffshoringBoom"));
 const TourismHospitalityWorldCupMorocco = lazy(() => import("./pages/blog/TourismHospitalityWorldCupMorocco"));
 const LearnEnglish3MonthsMorocco = lazy(() => import("./pages/blog/LearnEnglish3MonthsMorocco"));
+const MoroccoEducationReformEnglish = lazy(() => import("./pages/blog/MoroccoEducationReformEnglish"));
+const MoroccoDigitalNomadRemoteWork = lazy(() => import("./pages/blog/MoroccoDigitalNomadRemoteWork"));
+const LearnEnglishWithChatGPTMorocco = lazy(() => import("./pages/blog/LearnEnglishWithChatGPTMorocco"));
+const EnglishForHealthcareMorocco = lazy(() => import("./pages/blog/EnglishForHealthcareMorocco"));
+const RenewableEnergyJobsEnglishMorocco = lazy(() => import("./pages/blog/RenewableEnergyJobsEnglishMorocco"));
+const MoroccoSpainTunnelEnglishJobs = lazy(() => import("./pages/blog/MoroccoSpainTunnelEnglishJobs"));
+const EuBlueCardMoroccoEnglish = lazy(() => import("./pages/blog/EuBlueCardMoroccoEnglish"));
+const EcommerceDropshippingEnglishMorocco = lazy(() => import("./pages/blog/EcommerceDropshippingEnglishMorocco"));
+const LearnEnglishNetflixMorocco = lazy(() => import("./pages/blog/LearnEnglishNetflixMorocco"));
+const HighEndEnglishTrainingMorocco = lazy(() => import("./pages/blog/HighEndEnglishTrainingMorocco"));
 
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
@@ -153,6 +163,16 @@ function Router() {
         <Route path="/:lang/resource-library" component={ResourceLibrary} />
         <Route path="/:lang/blog/ultimate-ielts-guide-morocco" component={UltimateIELTSGuideMorocco} />
         <Route path="/:lang/blog/ultimate-business-english-guide-morocco" component={UltimateBusinessEnglishGuideMorocco} />
+        <Route path="/:lang/blog/morocco-education-reform-english-2026" component={MoroccoEducationReformEnglish} />
+        <Route path="/:lang/blog/morocco-remote-work-digital-nomad-2026" component={MoroccoDigitalNomadRemoteWork} />
+        <Route path="/:lang/blog/learn-english-with-chatgpt-morocco" component={LearnEnglishWithChatGPTMorocco} />
+        <Route path="/:lang/blog/english-for-healthcare-morocco-nurses-doctors" component={EnglishForHealthcareMorocco} />
+        <Route path="/:lang/blog/renewable-energy-jobs-english-morocco" component={RenewableEnergyJobsEnglishMorocco} />
+        <Route path="/:lang/blog/morocco-spain-tunnel-english-jobs" component={MoroccoSpainTunnelEnglishJobs} />
+        <Route path="/:lang/blog/eu-blue-card-morocco-english-2026" component={EuBlueCardMoroccoEnglish} />
+        <Route path="/:lang/blog/ecommerce-dropshipping-english-morocco" component={EcommerceDropshippingEnglishMorocco} />
+        <Route path="/:lang/blog/learn-english-netflix-morocco" component={LearnEnglishNetflixMorocco} />
+        <Route path="/:lang/blog/high-end-english-training-morocco" component={HighEndEnglishTrainingMorocco} />
         {/* SEO landing pages */}
         <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />

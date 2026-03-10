@@ -267,6 +267,106 @@ const publishedArticles = [
     readTime: "11 min read",
     date: "December 15, 2024",
     image: "/images/blog/pronunciation-arabic-speakers.webp"
+  },
+  {
+    slug: "morocco-education-reform-english-2026",
+    published: true,
+    title: "Morocco's 2025-2026 Education Reform: What It Means for English Learners",
+    excerpt: "The expansion of English in middle schools and new Baccalaureate requirements are changing everything. Here is what students and parents need to know.",
+    category: "Education",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/education-reform-morocco.webp"
+  },
+  {
+    slug: "morocco-remote-work-digital-nomad-2026",
+    published: true,
+    title: "How Moroccans Are Securing High-Paying Remote Jobs in 2026",
+    excerpt: "Tired of local salaries? Discover how mastering English is unlocking remote USD and EUR salaries for Moroccan professionals on global platforms.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/remote-work-morocco.webp"
+  },
+  {
+    slug: "learn-english-with-chatgpt-morocco",
+    published: true,
+    title: "How to Learn English with ChatGPT: A Guide for Moroccan Students (2026)",
+    excerpt: "Morocco ranks #1 globally in GPT usage. Discover the best prompts and techniques to use ChatGPT as your personal, free English tutor.",
+    category: "Learning Guide",
+    readTime: "8 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/chatgpt-english-morocco.webp"
+  },
+  {
+    slug: "english-for-healthcare-morocco-nurses-doctors",
+    published: true,
+    title: "Why Moroccan Nurses and Doctors Need English in 2026",
+    excerpt: "From international research to high-paying jobs in the UK and Gulf, English is the new stethoscope for Moroccan medical professionals.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/healthcare-english-morocco.webp"
+  },
+  {
+    slug: "renewable-energy-jobs-english-morocco",
+    published: true,
+    title: "Green Jobs in Morocco: Why the Renewable Energy Sector Demands English",
+    excerpt: "Morocco's booming renewable energy sector creates 25,000 jobs annually. Discover why English is the required language for these high-paying engineering roles.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/renewable-energy-morocco.webp"
+  },
+  {
+    slug: "morocco-spain-tunnel-english-jobs",
+    published: true,
+    title: "The Morocco-Spain Tunnel Project: A Goldmine for English Speakers",
+    excerpt: "The historic Gibraltar Strait Tunnel is becoming a reality. Here is why English is the secret weapon to landing a job on the project of the century.",
+    category: "Career English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/morocco-spain-tunnel.webp"
+  },
+  {
+    slug: "eu-blue-card-morocco-english-2026",
+    published: true,
+    title: "The 2026 Guide to the EU Blue Card for Moroccan Professionals",
+    excerpt: "France is no longer the only option. Discover how Moroccan engineers and IT specialists are moving to Northern Europe using just their English skills.",
+    category: "Career English",
+    readTime: "7 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/eu-blue-card-morocco.webp"
+  },
+  {
+    slug: "ecommerce-dropshipping-english-morocco",
+    published: true,
+    title: "Why Moroccan Dropshippers Must Master English in 2026",
+    excerpt: "If you are selling to the US, UK, or Australia, poor English will kill your conversion rates. Here is how to fix it and scale your business globally.",
+    category: "Business English",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/ecommerce-morocco.webp"
+  },
+  {
+    slug: "learn-english-netflix-morocco",
+    published: true,
+    title: "How to Actually Learn English Using Netflix in 2026",
+    excerpt: "Stop just watching with Arabic subtitles. Discover the proven 3-step Active Watching method to turn your binge-watching into real English fluency.",
+    category: "Learning Guide",
+    readTime: "5 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/netflix-english-morocco.webp"
+  },
+  {
+    slug: "high-end-english-training-morocco",
+    published: true,
+    title: "Why Traditional Language Centers Are Failing Moroccan Professionals",
+    excerpt: "The shift toward high-end, specialized English coaching in Morocco. Why professionals are abandoning crowded classrooms for personalized, goal-oriented training.",
+    category: "Learning Guide",
+    readTime: "6 min read",
+    date: "March 10, 2026",
+    image: "/images/blog/premium-english-coaching-morocco.webp"
   }
 ];
 
@@ -279,6 +379,8 @@ const FILTER_CATEGORIES = [
   "Grammar & Vocabulary",
   "Learning Guide",
   "Career English",
+  "Education",
+  "Success Stories",
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -289,6 +391,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Grammar & Vocabulary": "bg-yellow-100 text-yellow-700",
   "Learning Guide": "bg-teal-100 text-teal-700",
   "Career English": "bg-rose-100 text-rose-700",
+  "Education": "bg-indigo-100 text-indigo-700",
+  "Success Stories": "bg-emerald-100 text-emerald-700",
 };
 
 export default function Blog() {
