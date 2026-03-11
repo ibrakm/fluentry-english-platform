@@ -10,8 +10,9 @@ export default function MoroccoOffshoringBoom() {
   const description = "Morocco just unveiled a new national offshoring strategy targeting 130,000 new jobs. These jobs ALL require strong English. Here is how to position yourself to get one.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/morocco-offshoring-boom-2026"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/morocco-offshoring-boom.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/morocco-offshoring-boom-2026"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/morocco-offshoring-boom.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

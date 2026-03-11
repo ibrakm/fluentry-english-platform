@@ -10,8 +10,9 @@ export default function TourismHospitalityWorldCupMorocco() {
   const description = "With the World Cup coming, Morocco's tourism and hospitality sector is set to explode. From hotel managers to tour guides, the demand for English-speaking professionals is at an all-time high.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/tourism-hospitality-world-cup-morocco"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/tourism-hospitality-world-cup-morocco.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/tourism-hospitality-world-cup-morocco"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/tourism-hospitality-world-cup-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

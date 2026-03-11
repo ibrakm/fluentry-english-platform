@@ -93,6 +93,9 @@ const CasablancaFinanceCityJobsEnglish2026 = lazy(() => import("./pages/blog/Cas
 const MoroccoSpainPortugalCorridorEnglish2030 = lazy(() => import("./pages/blog/MoroccoSpainPortugalCorridorEnglish2030"));
 const MoroccoSuccessfulProfessionalsEnglish = lazy(() => import("./pages/blog/MoroccoSuccessfulProfessionalsEnglish"));
 
+// Legal pages
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 // SEO landing pages
 const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMorocco"));
 const EnglishCoachCasablanca = lazy(() => import("./pages/EnglishCoachCasablanca"));
@@ -208,6 +211,9 @@ function Router() {
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />
         <Route path="/:lang/english-coach-rabat" component={EnglishCoachRabat} />
         <Route path="/:lang/english-coach-tangier" component={EnglishCoachTangier} />
+        {/* Legal pages */}
+        <Route path="/:lang/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/:lang/terms-of-service" component={TermsOfService} />
         <Route path="/404" component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />

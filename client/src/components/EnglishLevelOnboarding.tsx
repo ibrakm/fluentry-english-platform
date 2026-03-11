@@ -91,6 +91,7 @@ export const EnglishLevelOnboarding: React.FC<OnboardingProps> = ({
   onComplete,
   onSkip,
 }) => {
+  const { langPrefix } = useLanguage();
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [selectedChallenges, setSelectedChallenges] = useState<string[]>([]);
   const [selectedLevel, setSelectedLevel] = useState<string>('');

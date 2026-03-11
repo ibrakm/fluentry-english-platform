@@ -151,7 +151,8 @@ export default function SpeakingTest() {
   // Stored results for after lead capture
   const [finalResults, setFinalResults] = useState<SpeakingResult[]>([]);
 
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recognitionRef = useRef<any>(null);
   const currentPrompt = speakingPrompts[currentPromptIndex];
 
   const startRecording = useCallback(() => {
@@ -160,9 +161,8 @@ export default function SpeakingTest() {
     setTranscript("");
     setCurrentResult(null);
 
-    const SpeechRecognition =
-      (window as unknown as { SpeechRecognition?: typeof window.SpeechRecognition; webkitSpeechRecognition?: typeof window.SpeechRecognition }).SpeechRecognition ||
-      (window as unknown as { SpeechRecognition?: typeof window.SpeechRecognition; webkitSpeechRecognition?: typeof window.SpeechRecognition }).webkitSpeechRecognition;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) return;
 
@@ -174,14 +174,16 @@ export default function SpeakingTest() {
 
     recognition.onstart = () => setIsRecording(true);
 
-    recognition.onresult = (event) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onresult = (event: any) => {
       const spokenText = event.results[0][0].transcript;
       setTranscript(spokenText);
       const result = scoreTranscript(spokenText, currentPrompt);
       setCurrentResult(result);
     };
 
-    recognition.onerror = (event) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    recognition.onerror = (event: any) => {
       setIsRecording(false);
       if (event.error === "not-allowed") {
         setError("Microphone access was denied. Please allow microphone access in your browser settings and try again.");

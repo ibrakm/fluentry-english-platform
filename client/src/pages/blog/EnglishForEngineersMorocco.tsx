@@ -10,8 +10,9 @@ export default function EnglishForEngineersMorocco() {
   const description = "In Morocco's booming industrial, aerospace, and automotive sectors, a technical degree gets you an interview, but English gets you the job and the promotion. Here is why.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/english-for-engineers-morocco"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/english-for-engineers-morocco.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/english-for-engineers-morocco"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-for-engineers-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

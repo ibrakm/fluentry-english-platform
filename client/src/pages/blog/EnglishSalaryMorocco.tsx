@@ -14,17 +14,7 @@ export default function EnglishSalaryMorocco() {
       <SEO
         title={title}
         description={description}
-        canonical="https://fluentry.online/en/blog/english-speaker-salary-morocco"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": description,
-          "image": "https://fluentry.online/images/blog/english-salary-morocco.webp",
-          "author": { "@type": "Person", "name": "Ibrahim K." },
-          "publisher": { "@type": "Organization", "name": "Fluentry" },
-          "datePublished": "2026-03-10",
-        }}
+        path="/blog/english-speaker-salary-morocco"
       />
       <div className="min-h-screen bg-gray-50">
         <header

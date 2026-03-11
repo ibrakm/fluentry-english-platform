@@ -10,8 +10,9 @@ export default function TechJobsMoroccoEnglish() {
   const description = "Oracle, HCLTech, Capgemini, and dozens of global tech companies are hiring in Morocco. Here is exactly what English level they require and how to get there.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/tech-jobs-morocco-english-level"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/tech-jobs-morocco-english.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/tech-jobs-morocco-english-level"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/tech-jobs-morocco-english.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

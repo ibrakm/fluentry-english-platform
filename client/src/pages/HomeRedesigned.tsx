@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'wouter';
 import {
   Zap,
   Users,
@@ -11,9 +11,9 @@ import {
   Star,
   Play,
 } from 'lucide-react';
-import EnglishLevelOnboarding from '../components/EnglishLevelOnboarding';
-import Testimonials from '../components/Testimonials';
-import NewsletterSignup from '../components/NewsletterSignup';
+import { EnglishLevelOnboarding } from '../components/EnglishLevelOnboarding';
+import { Testimonials } from '../components/Testimonials';
+import { NewsletterSignup } from '../components/NewsletterSignup';
 import Footer from '../components/Footer';
 
 const HomeRedesigned: React.FC = () => {

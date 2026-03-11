@@ -517,6 +517,26 @@ const publishedArticles = [
     readTime: "6 min read",
     date: "March 10, 2026",
     image: "/images/blog/morocco-successful-professionals-english.webp"
+  },
+  {
+    slug: "ultimate-ielts-guide-morocco",
+    published: true,
+    title: "The Ultimate IELTS Guide for Moroccan Students (2026) — Band 7+ Guaranteed",
+    excerpt: "The most complete IELTS preparation guide for Moroccan students. Covers all 4 sections, Morocco-specific strategies, test centres, fees, common mistakes Arabic speakers make, and a week-by-week 8-week study plan.",
+    category: "IELTS & Exams",
+    readTime: "15 min read",
+    date: "March 9, 2026",
+    image: "/images/blog/ielts-morocco-guide.webp"
+  },
+  {
+    slug: "ultimate-business-english-guide-morocco",
+    published: true,
+    title: "The Ultimate Business English Guide for Moroccan Professionals (2026)",
+    excerpt: "Master Business English in Morocco. Emails, meetings, presentations, negotiations, LinkedIn — the complete guide for Moroccan professionals who want to advance their careers internationally.",
+    category: "Business English",
+    readTime: "15 min read",
+    date: "March 9, 2026",
+    image: "/images/blog/premium-english-coaching-morocco.webp"
   }
 ];
 

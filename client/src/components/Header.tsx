@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import {
   Menu, X, Home, Info, BookOpen, Tag, ClipboardList, Layers,
   MessageCircle, Users, Star, Globe, ChevronDown, Newspaper,
-  GraduationCap, Briefcase, FileText, Lightbulb, TrendingUp,
-  Award, BookMarked, Headphones, PenTool, BarChart2
+  GraduationCap, Briefcase, Lightbulb, TrendingUp,
+  Award, BarChart2
 } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";

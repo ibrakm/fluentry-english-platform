@@ -10,8 +10,9 @@ export default function LearnEnglish3MonthsMorocco() {
   const description = "From feeling stuck and frustrated to landing a dream job, this is the true story of how one Moroccan student transformed their career by mastering English in just 3 months.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/learn-english-3-months-morocco-story"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/learn-english-3-months-morocco.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/learn-english-3-months-morocco-story"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/learn-english-3-months-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

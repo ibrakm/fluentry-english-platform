@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Users, Zap, Globe, BookOpen, ArrowRight, Star, Award, Clock, X, TrendingUp, Shield, Target } from "lucide-react";
+import { CheckCircle, Users, BookOpen, ArrowRight, Star, Award, Clock, Shield, Target } from "lucide-react";
 import { useState } from "react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { Testimonials } from "@/components/Testimonials";

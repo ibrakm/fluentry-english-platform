@@ -14,17 +14,7 @@ export default function FreelancingMoroccoEnglish() {
       <SEO
         title={title}
         description={description}
-        canonical="https://fluentry.online/en/blog/freelancing-morocco-english-advantage"
-        schema={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          "headline": title,
-          "description": description,
-          "image": "https://fluentry.online/images/blog/freelancing-morocco-english.webp",
-          "author": { "@type": "Person", "name": "Ibrahim K." },
-          "publisher": { "@type": "Organization", "name": "Fluentry" },
-          "datePublished": "2026-03-10",
-        }}
+        path="/blog/freelancing-morocco-english-advantage"
       />
       <div className="min-h-screen bg-gray-50">
         <header

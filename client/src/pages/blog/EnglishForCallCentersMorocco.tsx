@@ -66,11 +66,11 @@ export default function EnglishForCallCentersMorocco() {
     },
   };
 
-  const c = content[lang];
+  const c = content[lang as keyof typeof content] ?? content.en;
 
   return (
     <>
-      <SEO title={c.title} description={c.description} />
+      <SEO title={c.title} description={c.description} path="/blog/english-for-call-centers-morocco" />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
         <header

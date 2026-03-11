@@ -10,8 +10,9 @@ export default function EnglishJobInterviewMorocco() {
   const description = "Preparing for a job interview in English in Morocco? This step-by-step guide covers everything from common questions to pronunciation tips to help you land the job.";
   return (
     <>
-      <SEO title={title} description={description} canonical="https://fluentry.online/en/blog/english-job-interview-morocco-guide"
-        schema={{"@context":"https://schema.org","@type":"BlogPosting","headline":title,"description":description,"image":"https://fluentry.online/images/blog/english-job-interview-morocco.webp","author":{"@type":"Person","name":"Ibrahim K."},"publisher":{"@type":"Organization","name":"Fluentry"},"datePublished":"2026-03-10"}} />
+      <SEO title={title} description={description}
+        path="/blog/english-job-interview-morocco-guide"
+ />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-job-interview-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

@@ -68,6 +68,7 @@ const painPoints = [
 
 // ─── Lead Magnet Form ─────────────────────────────────────────────────────────
 function LeadMagnetForm() {
+  const { langPrefix } = useLanguage();
   const [name, setName] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
   const [submitted, setSubmitted] = useState(false);
