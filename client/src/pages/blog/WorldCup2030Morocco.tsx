@@ -44,12 +44,12 @@ export default function WorldCup2030Morocco() {
           <div className="container mx-auto max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
             <article className="prose prose-lg max-w-none text-gray-800">
               <p className="lead text-xl text-gray-600 font-medium mb-8">
-                The 2030 FIFA World Cup is more than just a football tournament for Morocco — it's a national economic catalyst. As infrastructure projects hit their peak in 2026, thousands of high-level positions are opening up in hospitality, project management, and international coordination. But there's a catch: **the best-paying roles require fluent English.**
+                The 2030 FIFA World Cup is more than just a football tournament for Morocco — it is a national economic catalyst. As infrastructure projects hit their peak in 2026, thousands of high-level positions are opening up in hospitality, project management, and international coordination. But there is a catch: <strong>the best-paying roles require fluent English.</strong>
               </p>
 
-              <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">The "World Cup Premium" on English</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">The World Cup Premium on English</h2>
               <p>
-                Because the World Cup is a global event, all coordination with FIFA, international contractors, and global tourism agencies happens in English. This has created a "World Cup Premium" — a significant salary increase for professionals who can operate fluently in English.
+                Because the World Cup is a global event, all coordination with FIFA, international contractors, and global tourism agencies happens in English. This has created a <strong>World Cup Premium</strong> — a significant salary increase for professionals who can operate fluently in English.
               </p>
 
               <div className="bg-amber-50 border-l-4 border-amber-600 p-6 my-8 rounded-r-lg">
@@ -57,15 +57,15 @@ export default function WorldCup2030Morocco() {
                 <ul className="space-y-2 mb-0">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                    <span>**Project Managers:** Coordinating with international engineering and architecture firms.</span>
+                    <span><strong>Project Managers:</strong> Coordinating with international engineering and architecture firms.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                    <span>**Hospitality Managers:** Leading teams in new luxury hotels and resorts across Morocco.</span>
+                    <span><strong>Hospitality Managers:</strong> Leading teams in new luxury hotels and resorts across Morocco.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                    <span>**Logistics & Transport:** Managing complex international movement of people and goods.</span>
+                    <span><strong>Logistics & Transport:</strong> Managing complex international movement of people and goods.</span>
                   </li>
                 </ul>
               </div>
@@ -77,13 +77,13 @@ export default function WorldCup2030Morocco() {
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Start Preparing for 2030 Today</h2>
               <p>
-                The jobs of 2030 are being hired for *now*. 2026 is the year to elevate your English from "basic" to "professional." This is the single best investment you can make in your career to ensure you benefit from Morocco's historic World Cup moment.
+                The jobs of 2030 are being hired for <strong>now</strong>. 2026 is the year to elevate your English from basic to professional. This is the single best investment you can make in your career to ensure you benefit from Morocco's historic World Cup moment.
               </p>
 
               <div className="bg-gray-50 p-8 rounded-xl mt-12 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 mt-0">Score Your Dream Job</h3>
                 <p className="text-gray-600 mb-6">
-                  Our **Business English & Professional Communication** programs are tailored for the specific demands of Morocco's 2030 growth.
+                  Our <strong>Business English & Professional Communication</strong> programs are tailored for the specific demands of Morocco's 2030 growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`${langPrefix}/business-english`}>

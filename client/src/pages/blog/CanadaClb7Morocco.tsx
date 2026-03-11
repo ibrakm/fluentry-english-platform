@@ -49,7 +49,7 @@ export default function CanadaClb7Morocco() {
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">What is CLB 7 and Why Does It Matter?</h2>
               <p>
-                The Canadian Language Benchmark (CLB) is the national standard used in Canada for describing, measuring, and recognizing the English language proficiency of adult immigrants. For 2026, **CLB 7 has become the "golden ticket"** for most Express Entry streams, especially for university graduates.
+                The Canadian Language Benchmark (CLB) is the national standard used in Canada for describing, measuring, and recognizing the English language proficiency of adult immigrants. For 2026, <strong>CLB 7 has become the "golden ticket"</strong> for most Express Entry streams, especially for university graduates.
               </p>
 
               <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
@@ -57,33 +57,33 @@ export default function CanadaClb7Morocco() {
                 <ul className="space-y-2 mb-0">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span>**University Graduates:** Must hit CLB 7 (IELTS 6.0 in all bands).</span>
+                    <span><strong>University Graduates:</strong> Must hit CLB 7 (IELTS 6.0 in all bands).</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span>**College Graduates:** Generally require at least CLB 5.</span>
+                    <span><strong>College Graduates:</strong> Generally require at least CLB 5.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
-                    <span>**Category-Based Draws:** French speakers and Healthcare professionals still get priority, but English is the multiplier.</span>
+                    <span><strong>Category-Based Draws:</strong> French speakers and Healthcare professionals still get priority, but English is the multiplier.</span>
                   </li>
                 </ul>
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">IELTS vs. CELPIP: Which Should You Take in Morocco?</h2>
               <p>
-                In Morocco, the most common path is the **IELTS General Training**. While CELPIP is also accepted, IELTS test centers are more widely available in cities like Casablanca, Rabat, and Marrakech. To achieve CLB 7, you need a minimum score of **6.0 in Reading, Writing, Listening, and Speaking**.
+                In Morocco, the most common path is the <strong>IELTS General Training</strong>. While CELPIP is also accepted, IELTS test centers are more widely available in cities like Casablanca, Rabat, and Marrakech. To achieve CLB 7, you need a minimum score of <strong>6.0 in Reading, Writing, Listening, and Speaking</strong>.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Common Challenges for Moroccan Applicants</h2>
               <p>
-                Many Moroccan candidates struggle with the **Writing and Speaking** components of the IELTS. Often, they have a strong technical grasp of English but lack the natural fluency or specific essay-writing structures required to hit that 6.0+ mark.
+                Many Moroccan candidates struggle with the <strong>Writing and Speaking</strong> components of the IELTS. Often, they have a strong technical grasp of English but lack the natural fluency or specific essay-writing structures required to hit that 6.0+ mark.
               </p>
 
               <div className="bg-gray-50 p-8 rounded-xl mt-12 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 mt-0">Ready to Achieve CLB 7?</h3>
                 <p className="text-gray-600 mb-6">
-                  Don't leave your Canadian dream to chance. Our **8-Week IELTS Accelerator** is specifically designed for Moroccan professionals who need to hit CLB 7 or higher on their first attempt.
+                  Don't leave your Canadian dream to chance. Our <strong>8-Week IELTS Accelerator</strong> is specifically designed for Moroccan professionals who need to hit CLB 7 or higher on their first attempt.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`${langPrefix}/ielts-preparation`}>

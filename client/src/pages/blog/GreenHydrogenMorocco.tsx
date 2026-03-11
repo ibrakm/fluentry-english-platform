@@ -44,7 +44,7 @@ export default function GreenHydrogenMorocco() {
           <div className="container mx-auto max-w-3xl bg-white p-8 sm:p-12 rounded-2xl shadow-xl">
             <article className="prose prose-lg max-w-none text-gray-800">
               <p className="lead text-xl text-gray-600 font-medium mb-8">
-                In February 2026, the Moroccan government officially selected a group of international investors for the "Morocco Offer" for green hydrogen. This massive initiative is set to transform the Kingdom into a global energy hub, but it also creates a new demand for a specific type of English: **Technical English for Renewable Energy.**
+                In February 2026, the Moroccan government officially selected a group of international investors for the "Morocco Offer" for green hydrogen. This massive initiative is set to transform the Kingdom into a global energy hub, but it also creates a new demand for a specific type of English: <strong>Technical English for Renewable Energy.</strong>
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Why English is the Language of Green Hydrogen</h2>
@@ -57,22 +57,22 @@ export default function GreenHydrogenMorocco() {
                 <ul className="space-y-2 mb-0">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                    <span>**Technical Vocabulary:** Electrolysis, desalination, grid integration, and carbon neutrality.</span>
+                    <span><strong>Technical Vocabulary:</strong> Electrolysis, desalination, grid integration, and carbon neutrality.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                    <span>**Report Writing:** Ability to write clear, concise technical reports for international stakeholders.</span>
+                    <span><strong>Report Writing:</strong> Ability to write clear, concise technical reports for international stakeholders.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-green-600 shrink-0 mt-0.5" />
-                    <span>**Presentation Skills:** Pitching projects and explaining complex technical data in English.</span>
+                    <span><strong>Presentation Skills:</strong> Pitching projects and explaining complex technical data in English.</span>
                   </li>
                 </ul>
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">The Salary Gap for English Speakers</h2>
               <p>
-                In Morocco's emerging green energy sector, there is a clear salary gap. Engineers who are fluent in English can earn **30-50% more** than those who only speak French and Arabic. This is because English-speaking professionals can lead international teams and coordinate with global partners.
+                In Morocco's emerging green energy sector, there is a clear salary gap. Engineers who are fluent in English can earn <strong>30-50% more</strong> than those who only speak French and Arabic. This is because English-speaking professionals can lead international teams and coordinate with global partners.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">How to Prepare Your Career for 2026</h2>
@@ -83,7 +83,7 @@ export default function GreenHydrogenMorocco() {
               <div className="bg-gray-50 p-8 rounded-xl mt-12 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 mt-0">Ready for the Energy Boom?</h3>
                 <p className="text-gray-600 mb-6">
-                  Join our **Technical English for Engineers** program and get the language skills you need to lead Morocco's green revolution.
+                  Join our <strong>Technical English for Engineers</strong> program and get the language skills you need to lead Morocco's green revolution.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href={`${langPrefix}/business-english`}>
