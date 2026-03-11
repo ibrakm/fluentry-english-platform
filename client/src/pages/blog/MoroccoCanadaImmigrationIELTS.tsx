@@ -77,6 +77,20 @@ export default function MoroccoCanadaImmigrationIELTS() {
                 ))}
               </ul>
             </section>
+
+              {/* Internal Link: IELTS Preparation */}
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Ready to Achieve IELTS Band 7.5+?</h3>
+                <p className="text-blue-700 mb-4 text-sm">Join Fluentry's 8-Week IELTS Accelerator — the only IELTS preparation program in Morocco with a guaranteed band score improvement or your money back.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">View IELTS Program</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
             <div className="bg-gradient-to-r from-red-600 to-rose-700 text-white p-8 rounded-2xl text-center mb-12">
               <h3 className="text-2xl font-bold mb-3">Your Canadian Dream Depends on Your IELTS Score</h3>
               <p className="text-red-100 mb-6 max-w-xl mx-auto">Do not let a low IELTS score be the reason your Canadian dream is delayed or denied. At Fluentry, our IELTS Preparation Course has helped hundreds of Moroccan students achieve the scores they need.</p>

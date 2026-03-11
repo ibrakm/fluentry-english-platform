@@ -140,7 +140,7 @@ export default function MoroccoSuccessfulProfessionalsEnglish() {
             <div className="mt-10 border-t pt-8 flex items-start gap-4">
               <img
                 src="/ibrahim-photo.webp"
-                alt="Mr. Ibrahim K."
+                alt="Mr. Ibrahim K. — English coach for successful Moroccan professionals and business leaders"
                 className="w-20 h-20 rounded-full object-cover"
               />
               <div>

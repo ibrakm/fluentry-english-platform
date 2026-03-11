@@ -106,18 +106,27 @@ const stats = [
 
 export default function SuccessStories() {
   const { langPrefix } = useLanguage();
+
+  const successFAQ = [
+    { question: "Are the Fluentry student success stories real?", answer: "Yes. All testimonials on the Fluentry website are from real students who completed coaching programmes with Mr. Ibrahim K. Results include IELTS band improvements, B2 fluency achievements, and career breakthroughs in Moroccan and international companies." },
+    { question: "How quickly can I improve my English with Fluentry?", answer: "Most students see measurable improvement within 4–6 weeks. The 8-Week IELTS Accelerator typically produces a 1–1.5 band score improvement. Fluency and Business English goals are usually achieved within 8–12 weeks of consistent 1-on-1 coaching." },
+    { question: "What results can I expect from Fluentry English coaching?", answer: "Results depend on your starting level and goals. Typical outcomes include: IELTS band score improvement of 1–1.5 bands, progression from A2 to B2 level in 8–12 weeks, improved confidence in business meetings and presentations, and career advancement through better English communication." },
+    { question: "Does Fluentry guarantee results?", answer: "Yes. Fluentry offers a results guarantee on structured programmes. If you complete the full programme and don't reach your target, Mr. Ibrahim continues coaching at no extra cost. This guarantee reflects his confidence in the method and his commitment to your success." },
+  ];
+
   return (
     <>
       <SEO
-        title="Student Success Stories | Real Results from Fluentry English Coaching"
-        description="Read real before-and-after stories from Moroccan students who improved their English with Fluentry — from IELTS 5.5 to 7.0, A2 to B2, and career breakthroughs in 8 weeks."
-        keywords="Fluentry success stories, IELTS results Morocco, English improvement Morocco, English coaching testimonials, learn English Tangier, IELTS 7 Morocco"
+        title="Student Success Stories Morocco | IELTS 7.5, B2 Fluency & Career Wins | Fluentry"
+        description="Real results from real Moroccan students. IELTS 5.5 → 7.0, A2 → B2 fluency, and career breakthroughs — all in 8 weeks with Fluentry's TESOL-certified coach Mr. Ibrahim K. Read verified testimonials and see what's possible for you."
+        keywords="Fluentry success stories, IELTS results Morocco, English improvement Morocco, English coaching testimonials, learn English Tangier, IELTS 7 Morocco, English coaching results Morocco, IELTS improvement Morocco"
         path="/success-stories"
         breadcrumbs={[
           { name: "Home", item: "https://fluentry.online/" },
           { name: "Success Stories", item: "https://fluentry.online/success-stories" },
         ]}
         type="website"
+        faqItems={successFAQ}
       />
 
       {/* ── Hero ── */}

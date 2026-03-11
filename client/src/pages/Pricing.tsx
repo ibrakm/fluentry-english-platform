@@ -73,10 +73,10 @@ export default function Pricing() {
   return (
     <>
       <SEO
-        title="English Lesson Prices Morocco | From 80 MAD/hr | Fluentry"
-        description="Affordable 1-on-1 English coaching in Morocco. Standard 80 MAD/hr, Intensive 75 MAD/hr, Accelerator 65 MAD/hr. IELTS & Business English programs. TESOL-certified Mr. Ibrahim."
+        title="English Coaching Prices Morocco | From 65 MAD/hr | Fluentry Tangier"
+        description="Transparent, affordable English coaching prices in Morocco. 1-on-1 lessons from 65 MAD/hr. IELTS Accelerator program, Business English Mastery, and General English plans. TESOL-certified coach Mr. Ibrahim K. No hidden fees. Free 10-min strategy call."
         path="/pricing"
-        keywords="English lesson price Morocco, affordable English tutor Morocco, English coaching cost Morocco, cours anglais prix Maroc, تكلفة دروس الإنجليزية المغرب, English lesson packages Morocco, IELTS program price Morocco, Business English program price Morocco, 80 MAD English lesson Morocco"
+        keywords="English lesson price Morocco, affordable English tutor Morocco, English coaching cost Morocco, cours anglais prix Maroc, تكلفة دروس الإنجليزية المغرب, English lesson packages Morocco, IELTS program price Morocco, Business English program price Morocco, cheap English lessons Morocco, English tutor price Tangier, cours anglais pas cher Maroc, online English lessons price Morocco, how much English coaching Morocco"
         breadcrumbs={[{ name: "Pricing", item: "https://fluentry.online/pricing" }]}
         faqItems={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />

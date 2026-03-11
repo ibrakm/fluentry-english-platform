@@ -76,6 +76,20 @@ export default function EnglishForEngineersMorocco() {
                 ))}
               </ul>
             </section>
+
+              {/* Internal Link: Business English */}
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-green-900 mb-2">Master Business English in 12 Weeks</h3>
+                <p className="text-green-700 mb-4 text-sm">Fluentry's Business English Mastery programme is designed for Moroccan professionals who need to communicate confidently in meetings, emails, and presentations.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/courses`}>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold">View Business English Course</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
             <div className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white p-8 rounded-2xl text-center mb-12">
               <h3 className="text-2xl font-bold mb-3">Speak the Language of Global Engineering</h3>
               <p className="text-indigo-100 mb-6 max-w-xl mx-auto">You are a talented engineer. Do not let language be the barrier that limits your potential. Fluentry's English for Engineers course is tailored to your specific needs - the technical vocabulary, presentation skills, and professional communication you use every day on the job.</p>

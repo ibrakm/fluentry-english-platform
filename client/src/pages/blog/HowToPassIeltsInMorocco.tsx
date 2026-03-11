@@ -149,6 +149,20 @@ export default function HowToPassIeltsInMorocco() {
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-blue-600 pl-4">Why Professional Coaching is a Game-Changer</h2>
               <p className="mb-6">Self-study is good, but it has limits. You can't easily spot your own fossilized errors in speaking or writing. This is where a professional coach makes all the difference.</p>
+
+              {/* Internal Link: IELTS Preparation */}
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Ready to Achieve IELTS Band 7.5+?</h3>
+                <p className="text-blue-700 mb-4 text-sm">Join Fluentry's 8-Week IELTS Accelerator — the only IELTS preparation program in Morocco with a guaranteed band score improvement or your money back.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">View IELTS Program</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
               <div className="bg-gradient-to-r from-orange-50 to-yellow-50 p-8 rounded-lg shadow-inner">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">

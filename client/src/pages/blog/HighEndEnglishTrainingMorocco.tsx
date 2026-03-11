@@ -79,11 +79,18 @@ export default function HighEndEnglishTrainingMorocco() {
                 <p className="text-gray-600 mb-6">
                   Fluentry is Morocco's leading provider of premium, specialized English coaching. We don't teach generic English; we teach the English you need to achieve your specific life goals.
                 </p>
-                <Link href={`${langPrefix}/pricing`}>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center gap-2">
-                    Book a Strategy Session <ArrowRight className="w-5 h-5" />
-                  </button>
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/pricing`}>
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center gap-2">
+                      Book a Strategy Session <ArrowRight className="w-5 h-5" />
+                    </button>
+                  </Link>
+                  <Link href={`${langPrefix}/courses`}>
+                    <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-lg transition-colors">
+                      View All Courses
+                    </button>
+                  </Link>
+                </div>
               </div>
             </article>
           </div>

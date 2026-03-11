@@ -472,6 +472,20 @@ export default function UltimateBusinessEnglishGuideMorocco() {
 
             {/* CTA */}
             <section className="mb-16">
+
+              {/* Internal Link: Business English */}
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-green-900 mb-2">Master Business English in 12 Weeks</h3>
+                <p className="text-green-700 mb-4 text-sm">Fluentry's Business English Mastery programme is designed for Moroccan professionals who need to communicate confidently in meetings, emails, and presentations.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/courses`}>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold">View Business English Course</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
               <div className="bg-gradient-to-br from-gray-900 to-blue-900 text-white rounded-2xl p-8 text-center">
                 <h2 className="text-3xl font-extrabold mb-4">Ready to Advance Your Career with Business English?</h2>
                 <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">Mr. Ibrahim's 12-Week Business English Mastery programme is designed specifically for Moroccan professionals. Book a free strategy call and get a personalised plan built around your industry and career goals.</p>

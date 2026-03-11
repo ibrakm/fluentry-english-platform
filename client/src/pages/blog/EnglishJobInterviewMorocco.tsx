@@ -64,6 +64,20 @@ export default function EnglishJobInterviewMorocco() {
                 ))}
               </ul>
             </section>
+
+              {/* Internal Link: Business English */}
+              <div className="bg-green-50 border border-green-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-green-900 mb-2">Master Business English in 12 Weeks</h3>
+                <p className="text-green-700 mb-4 text-sm">Fluentry's Business English Mastery programme is designed for Moroccan professionals who need to communicate confidently in meetings, emails, and presentations.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/courses`}>
+                    <Button className="bg-green-600 hover:bg-green-700 text-white font-semibold">View Business English Course</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
             <div className="bg-gradient-to-r from-teal-600 to-cyan-700 text-white p-8 rounded-2xl text-center mb-12">
               <h3 className="text-2xl font-bold mb-3">Practice Makes Perfect - Practice with a Real Coach</h3>
               <p className="text-teal-100 mb-6 max-w-xl mx-auto">The best way to prepare for an English interview is to practice with someone who can give you real, honest feedback. At Fluentry, we offer dedicated Interview Preparation sessions where we simulate real interviews, correct your mistakes, and build your confidence.</p>

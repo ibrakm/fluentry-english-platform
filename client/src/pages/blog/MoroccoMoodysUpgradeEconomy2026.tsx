@@ -120,7 +120,7 @@ export default function MoroccoMoodysUpgradeEconomy2026() {
             <div className="mt-10 border-t pt-8 flex items-start gap-4">
               <img
                 src="/ibrahim-photo.webp"
-                alt="Mr. Ibrahim K."
+                alt="Mr. Ibrahim K. — Business English coach in Morocco discussing economic opportunities in 2026"
                 className="w-20 h-20 rounded-full object-cover"
               />
               <div>

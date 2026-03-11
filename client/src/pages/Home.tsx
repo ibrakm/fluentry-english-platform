@@ -37,9 +37,9 @@ const homeFAQ = [
 
 export default function Home() {
   const { t, langPrefix, isRTL } = useLanguage();
-  const title = "English Coaching Morocco | IELTS Prep & Business English | Fluentry";
-  const description = "Learn English online in Morocco with TESOL-certified coach Mr. Ibrahim K. IELTS 7.5+ guaranteed, Business English & conversation. 1-on-1 lessons from 100 MAD/hr. Free level test.";
-  const homeKeywords = "English coaching Morocco, cours anglais en ligne Maroc, IELTS preparation Morocco, تعلم الإنجليزية المغرب, English teacher Tangier, online English lessons Morocco, Business English Morocco, IELTS coaching Casablanca, English tutor Morocco, professeur anglais Maroc, TESOL certified coach Morocco, learn English online Morocco, English for work Morocco, IELTS 7.5 Morocco, English fluency Morocco, cours anglais Casablanca, cours anglais Rabat, cours anglais Marrakech, English lessons Morocco online, 1-on-1 English coaching Morocco";
+  const title = "#1 English Coach Morocco | IELTS 7.5+ Guaranteed | Fluentry — Tangier";
+  const description = "Morocco's top-rated TESOL-certified English coach. Achieve IELTS 7.5+, master Business English, or reach fluency in 8 weeks — guaranteed or free. 1-on-1 online lessons from Tangier. 100+ students coached. Book your free strategy call today.";
+  const homeKeywords = "English coaching Morocco, IELTS preparation Morocco, IELTS coaching Tangier, Business English Morocco, cours anglais en ligne Maroc, تعلم الإنجليزية المغرب, English teacher Tangier Morocco, online English lessons Morocco, TESOL certified coach Morocco, IELTS 7.5 guaranteed Morocco, English fluency Morocco, learn English online Morocco, English for work Morocco, cours anglais Casablanca, cours anglais Rabat, cours anglais Marrakech, cours anglais Tanger, professeur anglais Maroc, IELTS coaching Casablanca, IELTS coaching Rabat, Business English coaching Tangier, 1-on-1 English coaching Morocco, English speaking course Morocco, TOEFL preparation Morocco, English pronunciation Morocco, speak English fluently Morocco, تعلم الانجليزية اون لاين المغرب, كوتش انجليزية المغرب, IELTS band 7 Morocco, English for professionals Morocco, English for job interviews Morocco";
 
 
   return (

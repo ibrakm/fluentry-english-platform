@@ -222,7 +222,7 @@ export default function CommonMistakesMoroccanLearners() {
                 <div className="flex items-start gap-4">
                   <img loading="lazy" 
                     src="/ibrahim-photo.webp" 
-                    alt="Mr. Ibrahim K." 
+                    alt="Mr. Ibrahim K. — TESOL-certified English coach helping Moroccan learners fix common mistakes" 
                     className="w-20 h-20 rounded-full object-cover"
                   />
                   <div>

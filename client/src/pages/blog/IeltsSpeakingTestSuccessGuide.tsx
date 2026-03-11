@@ -274,6 +274,20 @@ export default function IeltsSpeakingTestSuccessGuide() {
                   <li><strong>If you don't understand</strong>, politely ask: "Could you repeat that, please?"</li>
                 </ul>
 
+
+              {/* Internal Link: IELTS Preparation */}
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Ready to Achieve IELTS Band 7.5+?</h3>
+                <p className="text-blue-700 mb-4 text-sm">Join Fluentry's 8-Week IELTS Accelerator — the only IELTS preparation program in Morocco with a guaranteed band score improvement or your money back.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">View IELTS Program</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
                 <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-8 rounded-lg mt-12">
                   <h3 className="text-2xl font-bold mb-4">Need IELTS Speaking Coaching?</h3>
                   <p className="mb-6">
@@ -291,7 +305,7 @@ export default function IeltsSpeakingTestSuccessGuide() {
                 <div className="flex items-start gap-4">
                   <img loading="lazy" 
                     src="/ibrahim-photo.webp" 
-                    alt="Mr. Ibrahim K." 
+                    alt="Mr. Ibrahim K. — IELTS preparation coach in Morocco, specialist in IELTS speaking test" 
                     className="w-20 h-20 rounded-full object-cover"
                   />
                   <div>

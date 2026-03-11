@@ -128,10 +128,10 @@ export default function Courses() {
   return (
     <>
       <SEO
-        title="English Courses Morocco | IELTS Prep, Business English & Conversation | Fluentry"
-        description="Outcome-based English courses in Morocco: 8-Week IELTS Accelerator (7.5+ guaranteed), 12-Week Business English Mastery, Conversation & Pronunciation. 1-on-1 with TESOL-certified Mr. Ibrahim K."
+        title="English Courses Morocco | IELTS Prep, Business English & Fluency | Fluentry"
+        description="Outcome-based English courses in Morocco with guaranteed results. 8-Week IELTS Accelerator (band 7.5+ or free), 12-Week Business English Mastery, Conversation & Pronunciation coaching. 100% online, 1-on-1 with TESOL-certified Mr. Ibrahim K. Free placement test included."
         path="/courses"
-        keywords="English courses Morocco, IELTS preparation Morocco, IELTS coaching Morocco, Business English course Morocco, English conversation course Morocco, TOEFL preparation Morocco, pronunciation coaching Morocco, cours anglais Maroc, دورات إنجليزية المغرب, online English course Morocco, English program Morocco 2026"
+        keywords="English courses Morocco, IELTS preparation Morocco, IELTS coaching Morocco, Business English course Morocco, English conversation course Morocco, TOEFL preparation Morocco, pronunciation coaching Morocco, cours anglais Maroc, دورات إنجليزية المغرب, online English course Morocco, English program Morocco 2026, IELTS band 7 Morocco, Business English Tangier, English fluency course Morocco, general English Morocco, beginner English Morocco"
         breadcrumbs={[{ name: "Courses", item: "https://fluentry.online/courses" }]}
         faqItems={[
           { question: "What English courses does Fluentry offer in Morocco?", answer: "Fluentry offers four programmes: the 8-Week IELTS Accelerator (targeting band 7.5+), the 12-Week Business English Mastery programme for professionals, the Conversation & Fluency course for everyday speaking confidence, and General English for beginners. All courses are 100% online, 1-on-1 with TESOL-certified coach Mr. Ibrahim K." },

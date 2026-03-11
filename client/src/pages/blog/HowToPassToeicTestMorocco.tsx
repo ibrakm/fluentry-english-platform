@@ -135,6 +135,20 @@ export default function HowToPassToeicTestMorocco() {
             </ol>
 
             {/* Final CTA */}
+
+              {/* Internal Link: IELTS Preparation */}
+              <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-8">
+                <h3 className="text-xl font-bold text-blue-900 mb-2">Ready to Achieve IELTS Band 7.5+?</h3>
+                <p className="text-blue-700 mb-4 text-sm">Join Fluentry's 8-Week IELTS Accelerator — the only IELTS preparation program in Morocco with a guaranteed band score improvement or your money back.</p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">View IELTS Program</Button>
+                  </Link>
+                  <Link href={`${langPrefix}/pricing`}>
+                    <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">See Pricing</Button>
+                  </Link>
+                </div>
+              </div>
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-700 rounded-2xl p-8 mt-10">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Unlock Your Career with a High TOEIC Score</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6">

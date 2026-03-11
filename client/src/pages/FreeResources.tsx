@@ -29,14 +29,22 @@ export default function FreeResources() {
   const [activeGameTab, setActiveGameTab] = useState("vocabulary");
   const [activeResourceTab, setActiveResourceTab] = useState("exercises");
 
+  const freeResourcesFAQ = [
+    { question: "Are Fluentry's free English resources really free?", answer: "Yes. All resources on this page — listening exercises, vocabulary games, grammar challenges, idiom guides, and practice exercises — are 100% free with no registration required. They are designed for Moroccan English learners at all levels." },
+    { question: "What free English resources does Fluentry offer?", answer: "Fluentry offers 8 listening exercises (A1–B2 levels), interactive vocabulary and grammar games, an idiom matching game, a complete idiom guide, and practice exercises. Downloadable PDF guides and video lessons are also coming soon." },
+    { question: "Can I use these resources to prepare for IELTS?", answer: "Yes. The listening exercises are particularly useful for IELTS Listening practice. For a full IELTS preparation programme with guaranteed band score improvement, Fluentry also offers the 8-Week IELTS Accelerator with TESOL-certified coach Mr. Ibrahim K." },
+    { question: "What level are the free resources suitable for?", answer: "The resources cover A1 (beginner) to B2 (upper-intermediate) levels. The listening exercises are labelled by CEFR level. If you are unsure of your level, take the free 5-minute English level test on the Fluentry website." },
+  ];
+
   return (
     <>
       <SEO
-        title="Free English Resources Morocco | Listening Exercises, Games & Guides | Fluentry"
-        description="Practice English for free: 8 listening exercises (A1–B2), interactive vocabulary & grammar games, idiom guides, and downloadable worksheets. Fluentry — Morocco's English coaching platform."
+        title="Free English Resources Morocco | Listening, Games & Idiom Guides | Fluentry"
+        description="Practice English for free: 8 listening exercises (A1–B2), interactive vocabulary & grammar games, idiom guides, and practice exercises. 100% free, no registration. Fluentry — Morocco's top English coaching platform."
         path="/free-resources"
-        keywords="free English resources Morocco, English listening exercises Morocco, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب"
+        keywords="free English resources Morocco, English listening exercises Morocco, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب, free English idiom guide Morocco, English grammar games Morocco"
         breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.online/free-resources" }]}
+        faqItems={freeResourcesFAQ}
       />
 
       <div className="min-h-screen flex flex-col bg-background">
@@ -75,7 +83,7 @@ export default function FreeResources() {
                 <div>
                   <img loading="lazy"
                     src="/ibrahim-photo.webp"
-                    alt="Mr. Ibrahim K. - TESOL Certified English Coach"
+                    alt="Mr. Ibrahim K. — TESOL-Certified English Coach in Tangier Morocco, creator of free English learning resources for Moroccan students"
                     className="rounded-xl shadow-lg w-full"
                   />
                 </div>

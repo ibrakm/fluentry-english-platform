@@ -115,7 +115,7 @@ export default function CasablancaFinanceCityJobsEnglish2026() {
             <div className="mt-10 border-t pt-8 flex items-start gap-4">
               <img
                 src="/ibrahim-photo.webp"
-                alt="Mr. Ibrahim K."
+                alt="Mr. Ibrahim K. — English coach for finance professionals in Casablanca Morocco"
                 className="w-20 h-20 rounded-full object-cover"
               />
               <div>

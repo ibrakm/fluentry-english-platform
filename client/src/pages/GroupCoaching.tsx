@@ -137,8 +137,8 @@ export default function GroupCoaching() {
   return (
     <>
       <SEO
-        title="Group English Coaching in Morocco | IELTS, Business & Speaking Groups — Fluentry"
-        description="Join a small-group English coaching programme in Morocco. IELTS preparation, Business English, and Speaking Confidence groups. From 35 MAD per session. 4–6 students. Online via Zoom. Saturdays & Sundays."
+        title="Group English Classes Morocco | From 35 MAD/session | IELTS & Business | Fluentry"
+        description="Affordable small-group English coaching in Morocco. IELTS preparation, Business English & Speaking Confidence groups. Max 6 students per group for personalised attention. From 35 MAD per session. Online via Zoom, Saturdays & Sundays. TESOL-certified coach Mr. Ibrahim K."
         keywords="group English coaching Morocco, IELTS group class Morocco, Business English group Morocco, online English group lessons Morocco, affordable English classes Morocco, cours anglais groupe Maroc, group English lessons Tangier, affordable IELTS class Morocco"
         path="/group-coaching"
         breadcrumbs={[

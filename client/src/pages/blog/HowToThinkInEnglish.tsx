@@ -233,7 +233,7 @@ export default function HowToThinkInEnglish() {
                 <div className="flex items-start gap-4">
                   <img loading="lazy" 
                     src="/ibrahim-photo.webp" 
-                    alt="Mr. Ibrahim K." 
+                    alt="Mr. Ibrahim K. — English fluency coach teaching Moroccan students to think in English" 
                     className="w-20 h-20 rounded-full object-cover"
                   />
                   <div>

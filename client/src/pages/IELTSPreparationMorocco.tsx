@@ -66,8 +66,8 @@ export default function IELTSPreparationMorocco() {
   return (
     <>
       <SEO
-        title="IELTS Preparation Morocco | Online Coaching | Fluentry"
-        description="Online IELTS preparation in Morocco with TESOL-certified coach Mr. Ibrahim. 8-week program, 1-on-1 sessions, all 4 sections covered. Achieve 6.5–7.5 band score. 1,200 MAD total. Casablanca, Rabat, Tangier."
+        title="IELTS Preparation Morocco | Band 7.5+ Guaranteed | Fluentry Tangier"
+        description="Morocco's best IELTS preparation coaching online. TESOL-certified Mr. Ibrahim K. guarantees band 7.5+ in 8 weeks — or coaching is free. All 4 sections: Listening, Reading, Writing & Speaking. 1-on-1 sessions from Tangier. Serving Casablanca, Rabat, Marrakech & all Morocco."
         path="/ielts-preparation-morocco"
         keywords="IELTS preparation Morocco, IELTS coaching Morocco, IELTS online Morocco, IELTS Casablanca, IELTS Rabat, IELTS Tangier, IELTS preparation Maroc, تحضير IELTS المغرب, IELTS band score Morocco, IELTS 7.5 Morocco, IELTS Academic Morocco, IELTS General Training Morocco, online IELTS coaching Morocco 2026, best IELTS tutor Morocco, IELTS preparation course Morocco"
         breadcrumbs={[
