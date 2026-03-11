@@ -192,10 +192,10 @@ export default function IeltsVsToeicMorocco() {
                 <h3 className="text-xl font-bold text-blue-900 mb-2">Ready to Achieve IELTS Band 7.5+?</h3>
                 <p className="text-blue-700 mb-4 text-sm">Join Fluentry's 8-Week IELTS Accelerator — the only IELTS preparation program in Morocco with a guaranteed band score improvement or your money back.</p>
                 <div className="flex flex-wrap gap-3">
-                  <Link href={`${langPrefix}/ielts-preparation-morocco`}>
+                  <Link href={`/${lang}/ielts-preparation-morocco`}>
                     <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">View IELTS Program</Button>
                   </Link>
-                  <Link href={`${langPrefix}/pricing`}>
+                  <Link href={`/${lang}/pricing`}>
                     <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">See Pricing</Button>
                   </Link>
                 </div>
@@ -206,12 +206,12 @@ export default function IeltsVsToeicMorocco() {
                 Book a free 10-minute strategy call with Mr. Ibrahim. No commitment, no payment — just a conversation about your goals and how to reach them.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href={`${langPrefix}/free-test`}>
+                <Link href={`/${lang}/free-test`}>
                   <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 w-full sm:w-auto font-bold">
                     Take the Free Level Test
                   </Button>
                 </Link>
-                <Link href={`${langPrefix}/book-lesson`}>
+                <Link href={`/${lang}/book-lesson`}>
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
                     Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>

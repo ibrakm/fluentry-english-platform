@@ -139,12 +139,12 @@ export default function EnglishForCallCentersMorocco() {
                 Book a free 10-minute strategy call with Mr. Ibrahim. No commitment, no payment — just a conversation about your goals and how to reach them.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <Link href={`${langPrefix}/free-test`}>
+                <Link href={`/${lang}/free-test`}>
                   <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 w-full sm:w-auto font-bold">
                     Take the Free Level Test
                   </Button>
                 </Link>
-                <Link href={`${langPrefix}/book-lesson`}>
+                <Link href={`/${lang}/book-lesson`}>
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
                     Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
