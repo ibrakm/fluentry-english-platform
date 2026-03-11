@@ -266,28 +266,6 @@ export default function FreeResources() {
                 </CardContent>
               </Card>
 
-              <Card className="hover:shadow-md transition-shadow">
-                <CardHeader className="pb-3">
-                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
-                    <BookOpen className="w-5 h-5 text-orange-600" />
-                  </div>
-                  <CardTitle className="text-base">Study Tips & Blog</CardTitle>
-                  <CardDescription className="text-xs">Articles and tips on effective English learning strategies</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-1.5 text-xs text-gray-500 mb-4">
-                    <li>• How to think in English</li>
-                    <li>• Best learning techniques</li>
-                    <li>• Student success stories</li>
-                    <li>• Weekly learning tips</li>
-                  </ul>
-                  <Link href={`${langPrefix}/blog`}>
-                    <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white text-xs">
-                      Read Blog
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
