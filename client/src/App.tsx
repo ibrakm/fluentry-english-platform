@@ -92,6 +92,9 @@ const MoroccanDiasporaReturningEnglish2026 = lazy(() => import("./pages/blog/Mor
 const CasablancaFinanceCityJobsEnglish2026 = lazy(() => import("./pages/blog/CasablancaFinanceCityJobsEnglish2026"));
 const MoroccoSpainPortugalCorridorEnglish2030 = lazy(() => import("./pages/blog/MoroccoSpainPortugalCorridorEnglish2030"));
 const MoroccoSuccessfulProfessionalsEnglish = lazy(() => import("./pages/blog/MoroccoSuccessfulProfessionalsEnglish"));
+const CanadaClb7Morocco = lazy(() => import("./pages/blog/CanadaClb7Morocco"));
+const GreenHydrogenMorocco = lazy(() => import("./pages/blog/GreenHydrogenMorocco"));
+const WorldCup2030Morocco = lazy(() => import("./pages/blog/WorldCup2030Morocco"));
 
 // Legal pages
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -209,6 +212,9 @@ function Router() {
         <Route path="/:lang/blog/casablanca-finance-city-jobs-english-salary-2026" component={CasablancaFinanceCityJobsEnglish2026} />
         <Route path="/:lang/blog/morocco-spain-portugal-economic-corridor-english-2030" component={MoroccoSpainPortugalCorridorEnglish2030} />
         <Route path="/:lang/blog/morocco-successful-professionals-english-turning-point" component={MoroccoSuccessfulProfessionalsEnglish} />
+        <Route path="/:lang/blog/canada-clb7-morocco" component={CanadaClb7Morocco} />
+        <Route path="/:lang/blog/green-hydrogen-morocco" component={GreenHydrogenMorocco} />
+        <Route path="/:lang/blog/world-cup-2030-morocco" component={WorldCup2030Morocco} />
         {/* SEO landing pages */}
         <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />

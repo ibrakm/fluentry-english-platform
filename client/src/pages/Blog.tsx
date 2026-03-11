@@ -9,6 +9,36 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
+    slug: "canada-clb7-morocco",
+    published: true,
+    title: "Canada's New CLB 7 Standards: Your Roadmap to Express Entry Success in 2026",
+    excerpt: "Learn about Canada's stricter language requirements for 2026. Discover how to achieve CLB 7 in IELTS or CELPIP for your Express Entry application from Morocco.",
+    category: "Immigration & Exams",
+    readTime: "8 min read",
+    date: "March 11, 2026",
+    image: "/images/blog/canada-clb7-morocco.webp"
+  },
+  {
+    slug: "green-hydrogen-morocco",
+    published: true,
+    title: "English for Green Energy: Getting Hired in Morocco's Hydrogen Boom",
+    excerpt: "Explore the emerging career opportunities in Morocco's green hydrogen sector. Learn why technical English is essential for engineers and project managers in 2026.",
+    category: "Renewable Energy & Career",
+    readTime: "7 min read",
+    date: "March 11, 2026",
+    image: "/images/blog/green-hydrogen-morocco.webp"
+  },
+  {
+    slug: "world-cup-2030-morocco",
+    published: true,
+    title: "World Cup 2030: Why Your English Level Will Decide Your Salary in 2026",
+    excerpt: "Explore the massive job opportunities in Morocco's World Cup 2030 infrastructure and hospitality sectors. Learn why English is the key to higher salaries in 2026.",
+    category: "Economy & Opportunity",
+    readTime: "6 min read",
+    date: "March 11, 2026",
+    image: "/images/blog/world-cup-2030-morocco.webp"
+  },
+  {
     slug: "world-cup-2030-english-jobs-morocco",
     published: true,
     title: "How to Get a Job in Morocco's World Cup 2030 Projects (English is the Key)",
