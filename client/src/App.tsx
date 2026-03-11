@@ -101,6 +101,9 @@ const IELTSPreparationMorocco = lazy(() => import("./pages/IELTSPreparationMoroc
 const EnglishCoachCasablanca = lazy(() => import("./pages/EnglishCoachCasablanca"));
 const EnglishCoachRabat = lazy(() => import("./pages/EnglishCoachRabat"));
 const EnglishCoachTangier = lazy(() => import("./pages/EnglishCoachTangier"));
+const EnglishCoachMarrakech = lazy(() => import("./pages/EnglishCoachMarrakech"));
+const EnglishCoachFes = lazy(() => import("./pages/EnglishCoachFes"));
+const EnglishCoachAgadir = lazy(() => import("./pages/EnglishCoachAgadir"));
 
 // Loading fallback — minimal spinner shown while a page chunk loads
 function PageLoader() {
@@ -211,6 +214,9 @@ function Router() {
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />
         <Route path="/:lang/english-coach-rabat" component={EnglishCoachRabat} />
         <Route path="/:lang/english-coach-tangier" component={EnglishCoachTangier} />
+        <Route path="/:lang/english-coach-marrakech" component={EnglishCoachMarrakech} />
+        <Route path="/:lang/english-coach-fes" component={EnglishCoachFes} />
+        <Route path="/:lang/english-coach-agadir" component={EnglishCoachAgadir} />
         {/* Legal pages */}
         <Route path="/:lang/privacy-policy" component={PrivacyPolicy} />
         <Route path="/:lang/terms-of-service" component={TermsOfService} />

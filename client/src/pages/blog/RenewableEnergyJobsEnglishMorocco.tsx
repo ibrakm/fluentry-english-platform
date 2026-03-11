@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { ArrowRight, Sun, Wind, CheckCircle } from "lucide-react";
@@ -88,6 +89,26 @@ export default function RenewableEnergyJobsEnglishMorocco() {
                   </button>
                 </Link>
               </div>
+            
+            {/* CTA — Book a Free Strategy Call */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-8 rounded-2xl text-center my-12">
+              <h3 className="text-2xl font-bold mb-3">Ready to Take Your English to the Next Level?</h3>
+              <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+                Book a free 10-minute strategy call with Mr. Ibrahim. No commitment, no payment — just a conversation about your goals and how to reach them.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link href={`${langPrefix}/free-test`}>
+                  <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 w-full sm:w-auto font-bold">
+                    Take the Free Level Test
+                  </Button>
+                </Link>
+                <Link href={`${langPrefix}/book-lesson`}>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                    Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
             </article>
           </div>
         </main>

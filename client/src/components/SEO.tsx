@@ -29,7 +29,7 @@ interface SEOProps {
 const BASE_URL = "https://fluentry.online";
 const DEFAULT_IMAGE = `${BASE_URL}/og-image.png`;
 const DEFAULT_KEYWORDS =
-  "English coaching Morocco, online English lessons Morocco, English teacher Tangier, TESOL certified coach Morocco, Business English Morocco, IELTS preparation Morocco, IELTS Morocco 2026, learn English online Morocco, 1-on-1 English coaching, private English lessons Morocco, English fluency Morocco, cours anglais en ligne Maroc, تعلم الإنجليزية المغرب, English tutor Morocco, English speaking course Morocco, online English teacher Morocco, English lessons Casablanca, English lessons Rabat, English lessons Marrakech, English lessons Fes, English coach Tangier, CEFR test Morocco, English for job interviews Morocco, business English Casablanca, English pronunciation Morocco, speak English fluently Morocco, تعلم الانجليزية اون لاين المغرب, cours anglais Casablanca, cours anglais Maroc en ligne, professeur anglais Maroc";
+  "English coaching Morocco, online English lessons Morocco, English teacher Tangier, TESOL certified coach Morocco, Business English Morocco, IELTS preparation Morocco, IELTS Morocco 2026, learn English online Morocco, 1-on-1 English coaching, private English lessons Morocco, English fluency Morocco, cours anglais en ligne Maroc, تعلم الإنجليزية المغرب, English tutor Morocco, English speaking course Morocco, online English teacher Morocco, English lessons Casablanca, English lessons Rabat, English lessons Marrakech, English lessons Fes, English coach Tangier, English coach Marrakech, English coach Fes, English coach Agadir, English coach Casablanca, English coach Rabat, CEFR test Morocco, English for job interviews Morocco, business English Casablanca, English pronunciation Morocco, speak English fluently Morocco, تعلم الانجليزية اون لاين المغرب, cours anglais Casablanca, cours anglais Marrakech, cours anglais Maroc en ligne, professeur anglais Maroc, professeur anglais Marrakech, professeur anglais Fes";
 
 export const SEO = ({
   title,
@@ -95,10 +95,19 @@ export const SEO = ({
     },
     priceRange: "62.50–100 MAD",
     currenciesAccepted: "MAD",
-    areaServed: {
-      "@type": "Country",
-      name: "Morocco",
-    },
+    areaServed: [
+      { "@type": "Country", name: "Morocco" },
+      { "@type": "City", name: "Casablanca" },
+      { "@type": "City", name: "Rabat" },
+      { "@type": "City", name: "Tangier" },
+      { "@type": "City", name: "Marrakech" },
+      { "@type": "City", name: "Fes" },
+      { "@type": "City", name: "Agadir" },
+      { "@type": "City", name: "Meknes" },
+      { "@type": "City", name: "Oujda" },
+      { "@type": "City", name: "Kenitra" },
+      { "@type": "City", name: "Tetouan" },
+    ],
     serviceType: "English Language Coaching",
     sameAs: ["https://web.facebook.com/SweetLollipope/"],
     openingHours: "Mo-Sa 09:00-20:00",
