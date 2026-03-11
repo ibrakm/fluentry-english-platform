@@ -161,50 +161,23 @@ export default function Header() {
       ],
     },
     {
-      label: "Blog",
+      label: "Pricing",
       dropdown: [
         {
-          href: `${langPrefix}/blog`,
-          label: "All Articles",
-          description: "Browse all 15+ expert blog posts",
-          icon: Newspaper,
-          badge: "15+ posts",
+          href: `${langPrefix}/pricing`,
+          label: t("nav.pricing"),
+          description: "1-on-1 coaching plans — from 100 MAD/hr",
+          icon: Tag,
         },
         {
-          href: `${langPrefix}/blog/morocco-moodys-upgrade-economy-english-2026`,
-          label: "Morocco's Moody's Upgrade",
-          description: "What Ba1 means for your career",
-          icon: TrendingUp,
-          badge: "New",
-        },
-        {
-          href: `${langPrefix}/blog/casablanca-finance-city-jobs-english-salary-2026`,
-          label: "CFC Jobs & English",
-          description: "Dollar-paying finance jobs in Morocco",
-          icon: Briefcase,
-          badge: "New",
-        },
-        {
-          href: `${langPrefix}/blog/online-english-classes-morocco-2026-guide`,
-          label: "Online Classes Guide 2026",
-          description: "The complete guide for Moroccans",
-          icon: BookMarked,
-        },
-        {
-          href: `${langPrefix}/blog/challenges-moroccan-english-learners-face`,
-          label: "5 Challenges Moroccans Face",
-          description: "And how to overcome every one",
-          icon: Headphones,
-        },
-        {
-          href: `${langPrefix}/blog/morocco-successful-professionals-english-turning-point`,
-          label: "What Successful Pros Did at 25",
-          description: "The turning point that changed everything",
-          icon: Star,
-          badge: "New",
+          href: `${langPrefix}/group-coaching`,
+          label: t("nav.groupCoaching"),
+          description: "Group sessions — affordable & interactive",
+          icon: Users,
         },
       ],
     },
+    { href: `${langPrefix}/blog`, label: "Blog", icon: Newspaper },
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang) || LANGUAGES[0];
@@ -271,7 +244,7 @@ export default function Header() {
                   {activeDropdown === key && item.dropdown && (
                     <div
                       className={`absolute top-full mt-1 bg-white border border-gray-100 rounded-2xl shadow-2xl py-2 z-50 ${
-                        key === "Blog" ? "w-80" : "w-72"
+                        key === "Blog" ? "w-80" : key === "Pricing" ? "w-72" : "w-72"
                       } ${isRTL ? "right-0" : "left-0"}`}
                       onMouseEnter={() => handleMouseEnter(key)}
                       onMouseLeave={handleMouseLeave}
