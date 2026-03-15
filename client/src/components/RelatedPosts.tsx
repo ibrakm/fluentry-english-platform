@@ -36,6 +36,12 @@ export const ALL_POSTS: RelatedPost[] = [
   { title: "English Job Interview Morocco Guide", path: "/blog/english-job-interview-morocco-guide", description: "Ace your English job interview in Morocco", category: "Career" },
   { title: "Ultimate IELTS Guide Morocco", path: "/blog/ultimate-ielts-guide-morocco", description: "The complete IELTS preparation resource for Morocco", category: "IELTS" },
   { title: "Ultimate Business English Guide Morocco", path: "/blog/ultimate-business-english-guide-morocco", description: "Master Business English for Moroccan professionals", category: "Business" },
+  { title: "English for World Cup 2030 Volunteers", path: "/blog/world-cup-2030-volunteers-english-morocco", description: "Prepare your English to volunteer at the FIFA World Cup 2030 in Morocco", category: "Career" },
+  { title: "Moroccan Nurses: Working in the UK Guide", path: "/blog/english-for-nurses-morocco-uk", description: "Complete guide for Moroccan nurses to work in the UK with English requirements", category: "Career" },
+  { title: "IELTS vs TOEFL Morocco: Which to Choose?", path: "/blog/ielts-vs-toefl-morocco", description: "Detailed comparison of IELTS and TOEFL for Moroccan test-takers", category: "Exams" },
+  { title: "English for Remote Work Morocco", path: "/blog/english-for-remote-work-morocco", description: "Earn in dollars while living in Morocco with remote work English skills", category: "Career" },
+  { title: "English for Moroccan Developers", path: "/blog/english-for-developers-morocco", description: "The English skills that double a Moroccan developer's salary", category: "Career" },
+  { title: "English for University Admission Morocco", path: "/blog/english-for-university-admission-morocco", description: "Complete guide to English requirements for studying abroad from Morocco", category: "Exams" },
 ];
 
 // Get related posts by category, excluding the current post

@@ -96,6 +96,12 @@ const MoroccoSuccessfulProfessionalsEnglish = lazy(() => import("./pages/blog/Mo
 const CanadaClb7Morocco = lazy(() => import("./pages/blog/CanadaClb7Morocco"));
 const GreenHydrogenMorocco = lazy(() => import("./pages/blog/GreenHydrogenMorocco"));
 const WorldCup2030Morocco = lazy(() => import("./pages/blog/WorldCup2030Morocco"));
+const WorldCup2030VolunteersEnglish = lazy(() => import("./pages/blog/WorldCup2030VolunteersEnglish"));
+const EnglishForNursesMoroccoUK = lazy(() => import("./pages/blog/EnglishForNursesMoroccoUK"));
+const IeltsVsToeflMorocco = lazy(() => import("./pages/blog/IeltsVsToeflMorocco"));
+const EnglishForRemoteWorkMorocco = lazy(() => import("./pages/blog/EnglishForRemoteWorkMorocco"));
+const EnglishForDevelopersMorocco = lazy(() => import("./pages/blog/EnglishForDevelopersMorocco"));
+const EnglishForUniversityAdmissionMorocco = lazy(() => import("./pages/blog/EnglishForUniversityAdmissionMorocco"));
 
 // Legal pages
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -216,6 +222,12 @@ function Router() {
         <Route path="/:lang/blog/canada-clb7-morocco" component={CanadaClb7Morocco} />
         <Route path="/:lang/blog/green-hydrogen-morocco" component={GreenHydrogenMorocco} />
         <Route path="/:lang/blog/world-cup-2030-morocco" component={WorldCup2030Morocco} />
+        <Route path="/:lang/blog/world-cup-2030-volunteers-english-morocco" component={WorldCup2030VolunteersEnglish} />
+        <Route path="/:lang/blog/english-for-nurses-morocco-uk" component={EnglishForNursesMoroccoUK} />
+        <Route path="/:lang/blog/ielts-vs-toefl-morocco" component={IeltsVsToeflMorocco} />
+        <Route path="/:lang/blog/english-for-remote-work-morocco" component={EnglishForRemoteWorkMorocco} />
+        <Route path="/:lang/blog/english-for-developers-morocco" component={EnglishForDevelopersMorocco} />
+        <Route path="/:lang/blog/english-for-university-admission-morocco" component={EnglishForUniversityAdmissionMorocco} />
         {/* SEO landing pages */}
         <Route path="/:lang/ielts-preparation-morocco" component={IELTSPreparationMorocco} />
         <Route path="/:lang/english-coach-casablanca" component={EnglishCoachCasablanca} />

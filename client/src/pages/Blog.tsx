@@ -9,6 +9,66 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const publishedArticles = [
   {
+    slug: "world-cup-2030-volunteers-english-morocco",
+    published: true,
+    title: "English for World Cup 2030 Volunteers in Morocco",
+    excerpt: "Morocco will need 20,000+ volunteers for the FIFA World Cup 2030. English is the #1 skill that will get you selected. Here's your complete preparation guide.",
+    category: "World Cup 2030",
+    readTime: "8 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/world-cup-2030-english-jobs.webp"
+  },
+  {
+    slug: "english-for-nurses-morocco-uk",
+    published: true,
+    title: "Moroccan Nurses: Your Complete Guide to Working in the UK",
+    excerpt: "The UK is actively recruiting nurses from Morocco. Learn about IELTS 7.0/OET requirements, NMC registration, salary expectations (3-5x increase), and how to prepare.",
+    category: "Healthcare & Migration",
+    readTime: "10 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/call-center-job-morocco.webp"
+  },
+  {
+    slug: "ielts-vs-toefl-morocco",
+    published: true,
+    title: "IELTS vs TOEFL in Morocco: Which Test Should You Take? (2026 Guide)",
+    excerpt: "Complete comparison of IELTS and TOEFL for Moroccan students and professionals. Costs, formats, score equivalency, test centres, and which is best for your goals.",
+    category: "English Exams",
+    readTime: "9 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/english-salary-morocco.webp"
+  },
+  {
+    slug: "english-for-remote-work-morocco",
+    published: true,
+    title: "English for Remote Work: Earn in Dollars, Live in Morocco",
+    excerpt: "How Moroccans with strong English are earning 3-10x local salaries working remotely for international companies. Jobs, salaries, platforms, and your action plan.",
+    category: "Remote Work & Career",
+    readTime: "9 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/english-salary-morocco.webp"
+  },
+  {
+    slug: "english-for-developers-morocco",
+    published: true,
+    title: "English for Moroccan Developers: The Skill That Doubles Your Salary",
+    excerpt: "Why Moroccan software developers need English to access top-paying jobs. Technical vocabulary, code review language, interview prep, and salary comparisons.",
+    category: "Tech & Career",
+    readTime: "8 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/english-salary-morocco.webp"
+  },
+  {
+    slug: "english-for-university-admission-morocco",
+    published: true,
+    title: "English for University Admission: A Moroccan Student's Complete Guide",
+    excerpt: "Everything Moroccan students need to know about English requirements for studying abroad. IELTS/TOEFL scores, scholarships, personal statements, and timelines.",
+    category: "Academic English",
+    readTime: "10 min read",
+    date: "March 15, 2026",
+    image: "/images/blog/english-salary-morocco.webp"
+  },
+  {
     slug: "canada-clb7-morocco",
     published: true,
     title: "Canada's New CLB 7 Standards: Your Roadmap to Express Entry Success in 2026",
