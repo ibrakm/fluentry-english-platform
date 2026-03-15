@@ -4,9 +4,11 @@ import GrammarChallenge from "@/components/games/GrammarChallenge";
 import IdiomMatcher from "@/components/games/IdiomMatcher";
 import VocabularyQuiz from "@/components/games/VocabularyQuiz";
 import IdiomGuide from "@/components/IdiomGuide";
+import IdiomLibrary from "@/components/IdiomLibrary";
+import IrregularVerbs from "@/components/IrregularVerbs";
 import ListeningPractice from "@/components/ListeningPractice";
 import PracticeExercises from "@/components/PracticeExercises";
-import { BookOpen, Download, FileText, GamepadIcon, Headphones, PenTool, BookMarked } from "lucide-react";
+import { BookOpen, Download, FileText, GamepadIcon, Headphones, PenTool, BookMarked, List } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
 import { useState } from "react";
@@ -24,25 +26,33 @@ const resourceTabs = [
   { id: "idiomguide", label: "Idiom Guide", icon: BookMarked },
 ];
 
+const referenceTabs = [
+  { id: "irregular-verbs", label: "Irregular Verbs", icon: List },
+  { id: "idiom-library", label: "Idiom Library", icon: BookMarked },
+];
+
 export default function FreeResources() {
   const { langPrefix } = useLanguage();
   const [activeGameTab, setActiveGameTab] = useState("vocabulary");
   const [activeResourceTab, setActiveResourceTab] = useState("exercises");
+  const [activeReferenceTab, setActiveReferenceTab] = useState("irregular-verbs");
 
   const freeResourcesFAQ = [
-    { question: "Are Fluentry's free English resources really free?", answer: "Yes. All resources on this page — listening exercises, vocabulary games, grammar challenges, idiom guides, and practice exercises — are 100% free with no registration required. They are designed for Moroccan English learners at all levels." },
-    { question: "What free English resources does Fluentry offer?", answer: "Fluentry offers 8 listening exercises (A1–B2 levels), interactive vocabulary and grammar games, an idiom matching game, a complete idiom guide, and practice exercises. Downloadable PDF guides and video lessons are also coming soon." },
-    { question: "Can I use these resources to prepare for IELTS?", answer: "Yes. The listening exercises are particularly useful for IELTS Listening practice. For a full IELTS preparation programme with guaranteed band score improvement, Fluentry also offers the 8-Week IELTS Accelerator with TESOL-certified coach Mr. Ibrahim K." },
-    { question: "What level are the free resources suitable for?", answer: "The resources cover A1 (beginner) to B2 (upper-intermediate) levels. The listening exercises are labelled by CEFR level. If you are unsure of your level, take the free 5-minute English level test on the Fluentry website." },
+    { question: "Are Fluentry's free English resources really free?", answer: "Yes. All resources on this page — listening exercises, vocabulary games, grammar challenges, idiom guides, irregular verbs list, and practice exercises — are 100% free with no registration required. They are designed for Moroccan English learners at all levels." },
+    { question: "What free English resources does Fluentry offer?", answer: "Fluentry offers 8 listening exercises (A1–B2 levels), interactive vocabulary and grammar games, an idiom matching game, a complete idiom library with 100+ idioms, a full irregular verbs reference table with 120+ verbs, a complete idiom guide, and practice exercises." },
+    { question: "Can I use these resources to prepare for IELTS?", answer: "Yes. The listening exercises are particularly useful for IELTS Listening practice. The idiom library and irregular verbs list are essential for IELTS Writing and Speaking. For a full IELTS preparation programme, Fluentry also offers the 8-Week IELTS Accelerator with TESOL-certified coach Mr. Ibrahim K." },
+    { question: "What level are the free resources suitable for?", answer: "The resources cover A1 (beginner) to B2 (upper-intermediate) levels. The listening exercises are labelled by CEFR level. The irregular verbs and idiom library are useful for all levels. If you are unsure of your level, take the free 5-minute English level test on the Fluentry website." },
+    { question: "What is the complete list of irregular verbs in English?", answer: "Fluentry provides a searchable table of 120+ irregular English verbs with their base form, simple past, and past participle. You can filter by letter or search any verb form. Examples include: go/went/gone, write/wrote/written, take/took/taken, and many more." },
+    { question: "What are the most common English idioms?", answer: "Fluentry's interactive idiom library includes 100+ of the most commonly used English idioms, organized by category (Work & Business, Everyday Life, Feelings & Emotions, Communication, Time & Speed, and more). Each idiom includes its meaning and a real example sentence." },
   ];
 
   return (
     <>
       <SEO
-        title="Free English Resources Morocco | Listening, Games & Idiom Guides | Fluentry"
-        description="Practice English for free: 8 listening exercises (A1–B2), interactive vocabulary & grammar games, idiom guides, and practice exercises. 100% free, no registration. Fluentry — Morocco's top English coaching platform."
+        title="Free English Resources Morocco | Irregular Verbs, 100+ Idioms, Games & Exercises | Fluentry"
+        description="Free English learning resources for Morocco: complete irregular verbs list (120+ verbs), 100+ English idioms with meanings and examples, listening exercises (A1–B2), vocabulary games, grammar challenges, and practice exercises. 100% free, no registration needed."
         path="/free-resources"
-        keywords="free English resources Morocco, English listening exercises Morocco, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب, free English idiom guide Morocco, English grammar games Morocco"
+        keywords="free English resources Morocco, irregular verbs list English, English idioms with meanings Morocco, common English idioms examples, liste verbes irréguliers anglais, irregular verbs English complete list, English learning games Morocco, free IELTS practice Morocco, English vocabulary games Morocco, free English practice online Morocco, ressources anglais gratuit Maroc, موارد إنجليزية مجانية المغرب, free English idiom guide Morocco, English grammar games Morocco, irregular verbs base past past participle, most used English idioms, business English idioms Morocco, IELTS vocabulary Morocco"
         breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.online/free-resources" }]}
         faqItems={freeResourcesFAQ}
       />
@@ -56,13 +66,30 @@ export default function FreeResources() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
                 Free English Learning Resources
               </h1>
-              <p className="text-base sm:text-lg md:text-xl mb-8 text-white/90">
-                Practice your English with interactive games, idiom guides, and exercises — completely free!
+              <p className="text-base sm:text-lg md:text-xl mb-6 text-white/90">
+                Irregular verbs, 100+ idioms, interactive games, listening exercises, and more — completely free!
               </p>
+              {/* Quick jump links */}
+              <div className="flex flex-wrap gap-2 justify-center mb-8">
+                {[
+                  { label: "Irregular Verbs", href: "#irregular-verbs" },
+                  { label: "Idiom Library", href: "#idiom-library" },
+                  { label: "Games", href: "#games" },
+                  { label: "Listening", href: "#more-resources" },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-1.5 bg-white/20 hover:bg-white/30 rounded-full text-sm font-medium text-white border border-white/30 transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a href="#games">
+                <a href="#irregular-verbs">
                   <Button size="lg" className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8">
-                    Start Playing
+                    Start Learning
                   </Button>
                 </a>
                 <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
@@ -107,8 +134,51 @@ export default function FreeResources() {
           </div>
         </section>
 
+        {/* ── Reference Tables: Irregular Verbs & Idiom Library ── */}
+        <section id="irregular-verbs" className="py-12 sm:py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">English Reference Library</h2>
+              <p className="text-gray-500 text-sm sm:text-base max-w-xl mx-auto">
+                A complete reference for irregular verbs and the most-used English idioms — searchable and interactive
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              {/* Tab selector */}
+              <div className="flex rounded-xl bg-gray-100 p-1 gap-1 mb-6">
+                {referenceTabs.map((tab) => {
+                  const Icon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      id={tab.id}
+                      onClick={() => setActiveReferenceTab(tab.id)}
+                      className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 px-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                        activeReferenceTab === tab.id
+                          ? "bg-white text-blue-600 shadow-sm"
+                          : "text-gray-500 hover:text-gray-700"
+                      }`}
+                      style={{ WebkitTapHighlightColor: "transparent", minHeight: "44px" }}
+                    >
+                      <Icon className="w-4 h-4 flex-shrink-0" />
+                      <span className="truncate">{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Reference content */}
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 sm:p-6">
+                {activeReferenceTab === "irregular-verbs" && <IrregularVerbs />}
+                {activeReferenceTab === "idiom-library" && <IdiomLibrary />}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── Interactive Games ── */}
-        <section id="games" className="py-12 sm:py-16">
+        <section id="games" className="py-12 sm:py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Interactive Learning Games</h2>
@@ -151,7 +221,7 @@ export default function FreeResources() {
         </section>
 
         {/* ── More Free Resources ── */}
-        <section className="py-12 sm:py-16 bg-slate-50">
+        <section id="more-resources" className="py-12 sm:py-16">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">More Free Resources</h2>
@@ -199,7 +269,7 @@ export default function FreeResources() {
         </section>
 
         {/* ── Additional Resources Grid ── */}
-        <section className="py-12 sm:py-16">
+        <section className="py-12 sm:py-16 bg-slate-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-8">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Additional Resources</h2>
@@ -208,14 +278,14 @@ export default function FreeResources() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Card className="hover:shadow-md transition-shadow">
                 <CardHeader className="pb-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                     <Download className="w-5 h-5 text-blue-600" />
                   </div>
-                  <CardTitle className="text-base">Downloadable Guides</CardTitle>
-                  <CardDescription className="text-xs">PDF guides covering common mistakes, business English, and exam prep</CardDescription>
+                  <CardTitle className="text-base">PDF Guides</CardTitle>
+                  <CardDescription className="text-xs">Downloadable study guides for offline learning</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-1.5 text-xs text-gray-500 mb-4">
@@ -273,7 +343,6 @@ export default function FreeResources() {
                   </Link>
                 </CardContent>
               </Card>
-
             </div>
           </div>
         </section>
