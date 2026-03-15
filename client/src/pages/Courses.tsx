@@ -26,7 +26,7 @@ const courses = [
     ],
     program: "8-Week IELTS Accelerator",
     price: "12,000 MAD",
-    cta: "Book Free Strategy Call",
+    cta: "Book Free Consultation Call",
     ctaLink: "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20IELTS%20preparation",
   },
   {
@@ -46,7 +46,7 @@ const courses = [
     ],
     program: "12-Week Business English Mastery",
     price: "15,000 MAD",
-    cta: "Book Free Strategy Call",
+    cta: "Book Free Consultation Call",
     ctaLink: "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27m%20interested%20in%20Business%20English",
   },
   {

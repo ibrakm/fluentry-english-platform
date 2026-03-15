@@ -95,7 +95,7 @@ export default function EnglishForEngineersMorocco() {
               <p className="text-indigo-100 mb-6 max-w-xl mx-auto">You are a talented engineer. Do not let language be the barrier that limits your potential. Fluentry's English for Engineers course is tailored to your specific needs - the technical vocabulary, presentation skills, and professional communication you use every day on the job.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href={`${langPrefix}/free-test`}><Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 w-full sm:w-auto font-bold">Check Your English Level (Free)</Button></Link>
-                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
+                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Consultation Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
               </div>
             </div>
             <p className="text-gray-600 border-t pt-6">The next time you see a job posting from a top international company in Morocco, read the requirements carefully. English will be there. Be the candidate who is fully prepared to meet that requirement.</p>

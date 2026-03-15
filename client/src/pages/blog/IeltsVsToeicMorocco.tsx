@@ -185,7 +185,7 @@ export default function IeltsVsToeicMorocco() {
           </div>
           </div>
         
-            {/* CTA — Book a Free Strategy Call */}
+            {/* CTA — Book a Free Consultation Call */}
 
               {/* Internal Link: IELTS Preparation */}
               <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 my-8">
@@ -213,7 +213,7 @@ export default function IeltsVsToeicMorocco() {
                 </Link>
                 <Link href={`/${lang}/book-lesson`}>
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
-                    Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" />
+                    Book a Free Consultation Call <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
               </div>

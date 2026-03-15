@@ -492,7 +492,7 @@ export default function UltimateBusinessEnglishGuideMorocco() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href={`${langPrefix}/book-lesson`}>
                     <button className="bg-green-400 text-green-900 font-bold px-8 py-4 rounded-xl hover:bg-green-300 transition-colors text-lg">
-                      Book Free Strategy Call
+                      Book Free Consultation Call
                     </button>
                   </Link>
                   <Link href={`${langPrefix}/pricing`}>

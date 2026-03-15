@@ -98,7 +98,7 @@ export default function CityPage({
                   <a href={`https://wa.me/212672580932?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer">
                     <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold w-full sm:w-auto">
                       <MessageCircle className="w-4 h-4 mr-2" />
-                      Book Free Strategy Call
+                      Book Free Consultation Call
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </a>
@@ -272,7 +272,7 @@ export default function CityPage({
               <a href={`https://wa.me/212672580932?text=${encodeURIComponent(waMsg)}`} target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold px-8 w-full sm:w-auto">
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  Book Free Strategy Call
+                  Book Free Consultation Call
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </a>

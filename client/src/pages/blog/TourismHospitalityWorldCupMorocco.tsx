@@ -61,7 +61,7 @@ export default function TourismHospitalityWorldCupMorocco() {
               <p className="text-orange-50 mb-6 max-w-xl mx-auto">This is your chance to be an ambassador for Morocco on the world stage. At Fluentry, our English for Hospitality course gives you the specific language you need to provide a world-class experience to international visitors.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href={`${langPrefix}/free-test`}><Button size="lg" className="bg-white text-orange-600 hover:bg-orange-50 w-full sm:w-auto font-bold">Check Your English Level (Free)</Button></Link>
-                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
+                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Consultation Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
               </div>
             </div>
             <p className="text-gray-600 border-t pt-6">The next few years will see a massive hiring boom in the tourism sector. The best hotels, the best tour companies, and the best restaurants will all be looking for one thing: professionals who can provide a world-class experience in English. Make sure you are one of them.</p>

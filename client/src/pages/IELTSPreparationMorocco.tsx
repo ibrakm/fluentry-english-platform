@@ -120,7 +120,7 @@ export default function IELTSPreparationMorocco() {
                   >
                     <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold w-full sm:w-auto">
                       <MessageCircle className="w-4 h-4 mr-2" />
-                      Book Free Strategy Call
+                      Book Free Consultation Call
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </a>
@@ -369,7 +369,7 @@ export default function IELTSPreparationMorocco() {
                 >
                   <Button size="lg" className="bg-yellow-400 hover:bg-yellow-300 text-yellow-900 font-bold px-8 w-full sm:w-auto">
                     <MessageCircle className="w-4 h-4 mr-2" />
-                    Book Free Strategy Call
+                    Book Free Consultation Call
                   </Button>
                 </a>
                 <Link href={`${langPrefix}/pricing`}>

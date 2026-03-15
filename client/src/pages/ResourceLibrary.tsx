@@ -397,7 +397,7 @@ export default function ResourceLibrary() {
                     <div className="text-xs text-blue-200 mb-4">Want personalised coaching instead?</div>
                     <Link href={`${langPrefix}/book-lesson`}>
                       <button className="bg-yellow-400 text-yellow-900 font-bold px-6 py-3 rounded-xl hover:bg-yellow-300 transition-colors text-sm w-full">
-                        Book Free Strategy Call
+                        Book Free Consultation Call
                       </button>
                     </Link>
                     <p className="text-xs text-blue-300 mt-2">10 minutes · No commitment · Results guaranteed</p>

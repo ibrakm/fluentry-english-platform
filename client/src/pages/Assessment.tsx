@@ -84,7 +84,7 @@ const Assessment: React.FC = () => {
               >
                 <Calendar className="w-5 h-5" />
                 <div className="text-left">
-                  <p className="text-sm font-semibold">Book a Free Strategy Call</p>
+                  <p className="text-sm font-semibold">Book a Free Consultation Call</p>
                   <p className="text-xs opacity-90">Start practicing with our expert coach</p>
                 </div>
                 <ChevronRight className="w-5 h-5 ml-auto" />

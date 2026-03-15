@@ -186,7 +186,7 @@ export default function FreeTest() {
             </p>
             <a href="https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
-                Book a Free Strategy Call
+                Book a Free Consultation Call
               </Button>
             </a>
           </div>

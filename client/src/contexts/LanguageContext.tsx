@@ -61,7 +61,7 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.rights": "All rights reserved. Based in Tangier, Morocco.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
-    "footer.bookCall": "Book a Free Strategy Call",
+    "footer.bookCall": "Book a Free Consultation Call",
     "footer.home": "Home",
     "footer.about": "About Mr. Ibrahim",
     "footer.courses": "Courses",
@@ -74,7 +74,7 @@ const translations: Record<Language, Record<string, string>> = {
     "home.hero.badge": "🇲🇦 #1 English Coach in Morocco",
     "home.hero.title": "Speak English with Confidence — Results Guaranteed",
     "home.hero.subtitle": "Personalised 1-on-1 English coaching for Moroccan professionals and students. IELTS, Business English, Conversation Fluency — real results in 8 weeks.",
-    "home.hero.cta1": "Book Free Strategy Call",
+    "home.hero.cta1": "Book Free Consultation Call",
     "home.hero.cta2": "View Programs & Pricing",
     "home.hero.students": "100+ Students",
     "home.hero.rating": "4.9★ Rating",
@@ -132,7 +132,7 @@ const translations: Record<Language, Record<string, string>> = {
     "home.programs.vip.cta": "Apply for VIP Program",
     "home.programs.flexible": "Prefer a flexible monthly plan?",
     "home.programs.viewPricing": "View all pricing options →",
-    "home.programs.bookCall": "Book Free Strategy Call",
+    "home.programs.bookCall": "Book Free Consultation Call",
 
     "home.why.title": "Why Fluentry is Different",
     "home.why.subtitle": "There are hundreds of English teachers in Morocco. Here is why serious learners choose Fluentry.",
@@ -165,13 +165,13 @@ const translations: Record<Language, Record<string, string>> = {
     "home.why.table.methodT": "❌ No",
 
     "home.how.title": "How It Works",
-    "home.how.step1.title": "Book a Free Strategy Call",
+    "home.how.step1.title": "Book a Free Consultation Call",
     "home.how.step1.desc": "10 minutes with Mr. Ibrahim to discuss your goals, current level, and the right program for you.",
     "home.how.step2.title": "Get Your Custom Roadmap",
     "home.how.step2.desc": "Receive a personalized week-by-week plan with clear milestones and measurable outcomes.",
     "home.how.step3.title": "Achieve Your Goal",
     "home.how.step3.desc": "Follow the program, track your progress, and reach your target — guaranteed.",
-    "home.how.cta": "Book Your Free Strategy Call",
+    "home.how.cta": "Book Your Free Consultation Call",
 
     "home.courses.title": "All Course Offerings",
     "home.courses.subtitle": "Whether you're a student, professional, or lifelong learner, we have a program for you.",
@@ -202,7 +202,7 @@ const translations: Record<Language, Record<string, string>> = {
     "home.cta.title": "Ready to Stop Struggling and Start Achieving?",
     "home.cta.subtitle": "Book a free 10-minute strategy call. No commitment, no pressure — just a clear plan to reach your English goals.",
     "home.cta.guarantee": "Results guaranteed — or we coach you for free",
-    "home.cta.button": "Book Your Free Strategy Call",
+    "home.cta.button": "Book Your Free Consultation Call",
     "home.cta.viewPrograms": "View All Programs",
     "home.cta.note": "Free 10-min call · No commitment · 100% in English or Darija",
 
@@ -210,7 +210,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.hero.badge": "TESOL-Certified · Based in Morocco",
     "about.hero.title": "Meet Mr. Ibrahim K.",
     "about.hero.subtitle": "Morocco's outcome-focused English coach — helping students and professionals achieve real, measurable results since 2022.",
-    "about.hero.cta1": "Book Free Strategy Call",
+    "about.hero.cta1": "Book Free Consultation Call",
     "about.hero.cta2": "Take Free Level Test",
     "about.hero.role": "TESOL-Certified English Coach",
     "about.hero.location": "Tangier, Morocco 🇲🇦",
@@ -233,7 +233,7 @@ const translations: Record<Language, Record<string, string>> = {
     "about.mission.text": "To provide accessible, high-quality, and personalised online English coaching in Morocco that transforms learners into confident, natural communicators — ready to thrive in a global environment. Every student deserves to pay for results, not just hours.",
     "about.cta.title": "Ready to Work with Mr. Ibrahim?",
     "about.cta.subtitle": "Book a free 10-minute strategy call. No commitment, no pressure — just a clear plan to reach your English goals.",
-    "about.cta.button": "Book Free Strategy Call",
+    "about.cta.button": "Book Free Consultation Call",
     "about.cta.viewPricing": "View Programs & Pricing",
     "about.cta.guarantee": "Results guaranteed on all signature programs",
 
@@ -259,13 +259,13 @@ const translations: Record<Language, Record<string, string>> = {
     "courses.general.desc": "Build a strong foundation from scratch",
     "courses.forWho": "WHO IT'S FOR",
     "courses.achieve": "WHAT YOU'LL ACHIEVE",
-    "courses.bookCall": "Book Free Strategy Call",
+    "courses.bookCall": "Book Free Consultation Call",
     "courses.startCoaching": "Start Coaching",
     "courses.program": "Program",
     "courses.investment": "Investment",
     "courses.cta.title": "Not Sure Which Program is Right for You?",
     "courses.cta.subtitle": "Book a free 10-minute strategy call. Mr. Ibrahim will assess your level, understand your goals, and recommend the best program for your situation.",
-    "courses.cta.button": "Book Free Strategy Call on WhatsApp",
+    "courses.cta.button": "Book Free Consultation Call on WhatsApp",
     "courses.cta.note": "Free 10-min call · No commitment · Personalised recommendation",
 
     // ── Pricing ──
@@ -276,7 +276,7 @@ const translations: Record<Language, Record<string, string>> = {
     "pricing.mostPopular": "Most Popular",
     "pricing.bestValue": "Best Value",
     "pricing.getStarted": "Get Started",
-    "pricing.bookCall": "Book Free Strategy Call",
+    "pricing.bookCall": "Book Free Consultation Call",
     "pricing.freeConsult": "Free 10-min consultation · No commitment",
     "pricing.saveVsStandard": "Save vs Standard",
     "pricing.standard": "Standard",
@@ -393,7 +393,7 @@ const translations: Record<Language, Record<string, string>> = {
     "pricing.cta.title": "Not Sure Which Plan Is Right for You?",
     "pricing.cta.subtitle": "Book a free 10-minute call with Mr. Ibrahim. He will listen to your goals and recommend the exact plan that fits your schedule and budget.",
     "pricing.cta.urgency": "⏳ Only 3 spots open this month — prices may increase in April",
-    "pricing.cta.button": "Book Free Strategy Call",
+    "pricing.cta.button": "Book Free Consultation Call",
     "pricing.cta.freeTest": "Take Free Level Test First",
 
     // ── Courses (extended) ──
@@ -411,7 +411,7 @@ const translations: Record<Language, Record<string, string>> = {
     "courses.sessions.schedule.desc": "Sessions via Google Meet. Reschedule up to 24 hours in advance. Your time, your pace.",
     "courses.testimonials.title": "Student Results",
     "courses.cta.freeTest": "Take the Free Level Test",
-    "courses.cta.bookCall": "Book Free Strategy Call",
+    "courses.cta.bookCall": "Book Free Consultation Call",
 
     // ── Free Test ──
     "freeTest.title": "Free English Level Test",
@@ -428,7 +428,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // ── Common ──
     "common.learnMore": "Learn More",
-    "common.bookCall": "Book Free Strategy Call",
+    "common.bookCall": "Book Free Consultation Call",
     "common.freeCall": "Free 10-min call · No commitment",
     "common.whatsapp": "WhatsApp",
     "common.readMore": "Read More",

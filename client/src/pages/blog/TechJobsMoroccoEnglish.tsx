@@ -65,7 +65,7 @@ export default function TechJobsMoroccoEnglish() {
               <p className="text-blue-100 mb-6 max-w-xl mx-auto">You have the technical skills. Now get the English to match. At Fluentry, we specialize in Professional and Business English for tech professionals.</p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link href={`${langPrefix}/free-test`}><Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 w-full sm:w-auto font-bold">Check Your English Level (Free)</Button></Link>
-                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Strategy Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
+                <Link href={`${langPrefix}/book-lesson`}><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">Book a Free Consultation Call <ArrowRight className="ml-2 w-4 h-4" /></Button></Link>
               </div>
             </div>
             <p className="text-gray-600 border-t pt-6">The opportunity to work for a global tech leader from right here in Morocco is real. But the door is only open to those who have invested in their English skills.</p>

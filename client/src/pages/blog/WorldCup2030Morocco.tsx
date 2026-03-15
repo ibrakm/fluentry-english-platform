@@ -93,7 +93,7 @@ export default function WorldCup2030Morocco() {
                   </Link>
                   <Link href={`${langPrefix}/book-lesson`}>
                     <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 w-full sm:w-auto">
-                      Book a Free Strategy Call
+                      Book a Free Consultation Call
                     </Button>
                   </Link>
                 </div>

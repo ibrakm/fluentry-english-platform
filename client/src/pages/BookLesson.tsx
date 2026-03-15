@@ -18,7 +18,7 @@ const steps = [
   {
     step: "2",
     icon: Clock,
-    title: "Free 10-Minute Strategy Call",
+    title: "Free 10-Minute Consultation Call",
     desc: "Mr. Ibrahim will schedule a quick free call to understand your goals and recommend the best plan for you.",
   },
   {
@@ -88,7 +88,7 @@ export default function BookLesson() {
           <div className="container mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5">
               <Shield className="w-4 h-4 text-green-300" />
-              Free 10-Minute Strategy Call — No Commitment
+              Free 10-Minute Consultation Call — No Commitment
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Book Your English Lesson</h1>
             <p className="text-blue-100 text-lg max-w-xl mx-auto mb-8">
