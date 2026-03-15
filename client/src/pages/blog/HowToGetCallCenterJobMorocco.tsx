@@ -14,6 +14,7 @@
 
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import RelatedPosts from "@/components/RelatedPosts";
 import { ArrowRight, CheckCircle, Zap } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -177,7 +178,9 @@ export default function HowToGetCallCenterJobMorocco() {
 
           </article>
         </div>
-        </div>
+        
+            <RelatedPosts currentPath="/blog/how-to-get-a-call-center-job-in-morocco" category="Career" />
+</div>
       </div>
     </>
   );

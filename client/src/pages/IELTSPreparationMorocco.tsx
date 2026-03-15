@@ -75,6 +75,11 @@ export default function IELTSPreparationMorocco() {
           { name: "IELTS Preparation Morocco", item: "https://fluentry.online/ielts-preparation-morocco" },
         ]}
         faqItems={faqs.map((f) => ({ question: f.q, answer: f.a }))}
+        reviewData={{
+          ratingValue: "4.9",
+          reviewCount: "32",
+          bestRating: "5",
+        }}
         courseData={{
           name: "8-Week IELTS Preparation Program — Morocco",
           description: "Private 1-on-1 IELTS preparation coaching for Moroccan students and professionals. All four sections covered: Listening, Reading, Writing, and Speaking. Guaranteed band score improvement.",

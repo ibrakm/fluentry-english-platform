@@ -140,6 +140,13 @@ export default function Courses() {
           { question: "Can I take English lessons online from anywhere in Morocco?", answer: "Yes. All lessons are conducted online via Google Meet or Zoom, so you can join from Tangier, Casablanca, Rabat, Marrakech, Fes, Agadir, or anywhere in Morocco with an internet connection." },
           { question: "What is the price of English courses at Fluentry?", answer: "Fluentry charges 100 MAD per hour for 1-on-1 lessons. Monthly packages start from 800 MAD (Standard: 2 sessions/week) up to 2,400 MAD (Accelerator: 6 sessions/week). Group coaching starts from 35 MAD per session. All prices are transparent with no hidden fees." }
         ]}
+        courseData={{
+          name: "English Courses Morocco - IELTS, Business English & Fluency Programs",
+          description: "Outcome-based English courses in Morocco with guaranteed results. IELTS Accelerator, Business English Mastery, Conversation & Pronunciation coaching. 100% online, 1-on-1 with TESOL-certified coach.",
+          provider: "Fluentry",
+          price: "100",
+          priceCurrency: "MAD",
+        }}
       />
       <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 

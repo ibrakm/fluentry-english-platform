@@ -7,70 +7,172 @@
 
   <!-- ── Core Pages ── -->
   <url><loc>https://fluentry.online/</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/"/>
   <url><loc>https://fluentry.online/about</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/about"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/about"/>
   <url><loc>https://fluentry.online/courses</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/courses"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/courses"/>
   <url><loc>https://fluentry.online/pricing</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/pricing"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/pricing"/>
   <url><loc>https://fluentry.online/book-lesson</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/book-lesson"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/book-lesson"/>
   <url><loc>https://fluentry.online/community</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/community"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/community"/>
   <url><loc>https://fluentry.online/certificate</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/certificate"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/certificate"/>
 
   <!-- ── High-Value Lead Gen & Resource Pages ── -->
   <url><loc>https://fluentry.online/free-test</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/free-test"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/free-test"/>
   <url><loc>https://fluentry.online/free-resources</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.90</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/free-resources"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/free-resources"/>
   <url><loc>https://fluentry.online/start</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/start"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/start"/>
   <url><loc>https://fluentry.online/audio-audit</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/audio-audit"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/audio-audit"/>
 
   <!-- ── New Pages (March 2026) ── -->
   <url><loc>https://fluentry.online/success-stories</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/success-stories"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/success-stories"/>
   <url><loc>https://fluentry.online/group-coaching</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/group-coaching"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/group-coaching"/>
 
   <!-- ── SEO Landing Pages (March 2026) ── -->
   <url><loc>https://fluentry.online/ielts-preparation-morocco</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/ielts-preparation-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/ielts-preparation-morocco"/>
   <url><loc>https://fluentry.online/english-coach-casablanca</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-casablanca"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-casablanca"/>
   <url><loc>https://fluentry.online/english-coach-rabat</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-rabat"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-rabat"/>
   <url><loc>https://fluentry.online/english-coach-marrakech</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-marrakech"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-marrakech"/>
   <url><loc>https://fluentry.online/english-coach-fes</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-fes"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-fes"/>
   <url><loc>https://fluentry.online/english-coach-agadir</loc><lastmod>2026-03-11</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-agadir"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-agadir"/>
   <url><loc>https://fluentry.online/english-coach-tangier</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-tangier"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-tangier"/>
 
   <!-- ── Content Marketing Engine (March 2026) ── -->
   <url><loc>https://fluentry.online/resource-library</loc><lastmod>2026-03-09</lastmod><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/resource-library"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/resource-library"/>
   <url><loc>https://fluentry.online/blog/ultimate-ielts-guide-morocco</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/ultimate-ielts-guide-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/ultimate-ielts-guide-morocco"/>
   <url><loc>https://fluentry.online/blog/ultimate-business-english-guide-morocco</loc><lastmod>2026-03-09</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/ultimate-business-english-guide-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/ultimate-business-english-guide-morocco"/>
 
   <!-- ── Blog Index ── -->
   <url><loc>https://fluentry.online/blog</loc><lastmod>2026-03-07</lastmod><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog"/>
 
   <!-- ── Blog Posts (Newest First) ── -->
   <url><loc>https://fluentry.online/blog/world-cup-2030-english-jobs-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/world-cup-2030-english-jobs-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/world-cup-2030-english-jobs-morocco"/>
   <url><loc>https://fluentry.online/blog/freelancing-morocco-english-advantage</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/freelancing-morocco-english-advantage"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/freelancing-morocco-english-advantage"/>
   <url><loc>https://fluentry.online/blog/english-speaker-salary-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/english-speaker-salary-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/english-speaker-salary-morocco"/>
   <url><loc>https://fluentry.online/blog/tech-jobs-morocco-english-level</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/tech-jobs-morocco-english-level"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/tech-jobs-morocco-english-level"/>
   <url><loc>https://fluentry.online/blog/morocco-canada-immigration-ielts-guide</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/morocco-canada-immigration-ielts-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/morocco-canada-immigration-ielts-guide"/>
   <url><loc>https://fluentry.online/blog/english-for-engineers-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/english-for-engineers-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/english-for-engineers-morocco"/>
   <url><loc>https://fluentry.online/blog/english-job-interview-morocco-guide</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/english-job-interview-morocco-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/english-job-interview-morocco-guide"/>
   <url><loc>https://fluentry.online/blog/morocco-offshoring-boom-2026</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/morocco-offshoring-boom-2026"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/morocco-offshoring-boom-2026"/>
   <url><loc>https://fluentry.online/blog/tourism-hospitality-world-cup-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/tourism-hospitality-world-cup-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/tourism-hospitality-world-cup-morocco"/>
   <url><loc>https://fluentry.online/blog/learn-english-3-months-morocco-story</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/learn-english-3-months-morocco-story"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/learn-english-3-months-morocco-story"/>
   <url><loc>https://fluentry.online/blog/english-for-call-centers-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/english-for-call-centers-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/english-for-call-centers-morocco"/>
   <url><loc>https://fluentry.online/blog/ielts-vs-toeic-morocco</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/ielts-vs-toeic-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/ielts-vs-toeic-morocco"/>
   <url><loc>https://fluentry.online/blog/online-english-classes-morocco-2026-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/online-english-classes-morocco-2026-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/online-english-classes-morocco-2026-guide"/>
   <url><loc>https://fluentry.online/blog/a2-to-b1-english-6-month-plan-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/a2-to-b1-english-6-month-plan-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/a2-to-b1-english-6-month-plan-morocco"/>
   <url><loc>https://fluentry.online/blog/best-apps-websites-learn-english-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/best-apps-websites-learn-english-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/best-apps-websites-learn-english-morocco"/>
   <url><loc>https://fluentry.online/blog/challenges-moroccan-english-learners-face</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/challenges-moroccan-english-learners-face"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/challenges-moroccan-english-learners-face"/>
   <url><loc>https://fluentry.online/blog/how-to-get-a-call-center-job-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/how-to-get-a-call-center-job-in-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/how-to-get-a-call-center-job-in-morocco"/>
   <url><loc>https://fluentry.online/blog/english-for-tourism-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/english-for-tourism-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/english-for-tourism-morocco"/>
   <url><loc>https://fluentry.online/blog/how-to-pass-toeic-test-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/how-to-pass-toeic-test-in-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/how-to-pass-toeic-test-in-morocco"/>
   <url><loc>https://fluentry.online/blog/how-to-pass-ielts-in-morocco</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/how-to-pass-ielts-in-morocco"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/how-to-pass-ielts-in-morocco"/>
   <url><loc>https://fluentry.online/blog/ielts-speaking-test-success-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/ielts-speaking-test-success-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/ielts-speaking-test-success-guide"/>
   <url><loc>https://fluentry.online/blog/business-english-email-writing-guide</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/business-english-email-writing-guide"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/business-english-email-writing-guide"/>
   <url><loc>https://fluentry.online/blog/common-mistakes-moroccan-english-learners</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/common-mistakes-moroccan-english-learners"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/common-mistakes-moroccan-english-learners"/>
   <url><loc>https://fluentry.online/blog/best-techniques-improve-english-speaking</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/best-techniques-improve-english-speaking"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/best-techniques-improve-english-speaking"/>
   <url><loc>https://fluentry.online/blog/improve-english-pronunciation-arabic-speakers</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/improve-english-pronunciation-arabic-speakers"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/improve-english-pronunciation-arabic-speakers"/>
   <url><loc>https://fluentry.online/blog/how-to-think-in-english</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/blog/how-to-think-in-english"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/blog/how-to-think-in-english"/>
 
   <!-- ── Articles ── -->
   <url><loc>https://fluentry.online/articles/the-unspoken-passport</loc><lastmod>2026-03-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/articles/the-unspoken-passport"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/articles/the-unspoken-passport"/>
 
   <!-- ── Free Resource Tools (March 2026) ── -->
   <!-- These anchor-based URLs help Google understand each tool is a distinct resource -->
@@ -81,4 +183,18 @@
   <url><loc>https://fluentry.online/free-resources#games</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://fluentry.online/free-resources#listening-practice</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 
+
+  <!-- ── Additional City Pages ── -->
+  <url><loc>https://fluentry.online/english-coach-meknes</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-meknes"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-meknes"/></url>
+  <url><loc>https://fluentry.online/english-coach-oujda</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-oujda"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-oujda"/></url>
+  <url><loc>https://fluentry.online/english-coach-kenitra</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-kenitra"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-kenitra"/></url>
+  <url><loc>https://fluentry.online/english-coach-tetouan</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://fluentry.online/en/english-coach-tetouan"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://fluentry.online/english-coach-tetouan"/></url>
 </urlset>

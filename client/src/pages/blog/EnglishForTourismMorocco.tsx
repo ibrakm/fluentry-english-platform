@@ -14,6 +14,7 @@
 
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import RelatedPosts from "@/components/RelatedPosts";
 import { ArrowRight, CheckCircle, Zap, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -148,7 +149,9 @@ export default function EnglishForTourismMorocco() {
 
           </article>
         </div>
-        </div>
+        
+            <RelatedPosts currentPath="/blog/english-for-tourism-morocco" category="Career" />
+</div>
       </div>
     </>
   );

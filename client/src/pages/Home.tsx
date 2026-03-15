@@ -50,6 +50,11 @@ export default function Home() {
         path="/"
         keywords={homeKeywords}
         faqItems={homeFAQ}
+        reviewData={{
+          ratingValue: "4.9",
+          reviewCount: "47",
+          bestRating: "5",
+        }}
       />
       <div className="min-h-screen" dir={isRTL ? "rtl" : "ltr"}>
 

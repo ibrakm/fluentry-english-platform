@@ -52,6 +52,19 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* City Pages - Local SEO */}
+          <div>
+            <h4 className="text-white font-semibold mb-4">English Coaching by City</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href={`${langPrefix}/english-coach-casablanca`} className="hover:text-blue-400 transition-colors">English Coach Casablanca</Link></li>
+              <li><Link href={`${langPrefix}/english-coach-rabat`} className="hover:text-blue-400 transition-colors">English Coach Rabat</Link></li>
+              <li><Link href={`${langPrefix}/english-coach-tangier`} className="hover:text-blue-400 transition-colors">English Coach Tangier</Link></li>
+              <li><Link href={`${langPrefix}/english-coach-marrakech`} className="hover:text-blue-400 transition-colors">English Coach Marrakech</Link></li>
+              <li><Link href={`${langPrefix}/english-coach-fes`} className="hover:text-blue-400 transition-colors">English Coach Fes</Link></li>
+              <li><Link href={`${langPrefix}/english-coach-agadir`} className="hover:text-blue-400 transition-colors">English Coach Agadir</Link></li>
+            </ul>
+          </div>
+
           {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-4">{t("footer.getInTouch")}</h4>

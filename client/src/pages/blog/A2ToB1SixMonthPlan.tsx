@@ -14,6 +14,7 @@
 
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import RelatedPosts from "@/components/RelatedPosts";
 import { ArrowRight, Calendar, Target, TrendingUp } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -218,7 +219,9 @@ export default function A2ToB1SixMonthPlan() {
 
           </article>
         </div>
-        </div>
+        
+            <RelatedPosts currentPath="/blog/a2-to-b1-english-6-month-plan-morocco" category="Learning" />
+</div>
       </div>
     </>
   );

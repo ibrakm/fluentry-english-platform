@@ -1342,7 +1342,7 @@ export default function ListeningPractice() {
         {exercises.map((ex) => (
           <span key={ex.id}>
             <audio src={ex.audioSrc} preload="auto" />
-            <img loading="lazy" src={ex.imageSrc} alt="" />
+            <img loading="lazy" src={ex.imageSrc} alt="English coaching session with Fluentry in Morocco" />
           </span>
         ))}
       </div>

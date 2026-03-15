@@ -14,6 +14,7 @@
 
 import { SEO } from "@/components/SEO";
 import { Link } from "wouter";
+import RelatedPosts from "@/components/RelatedPosts";
 import { ArrowRight, AlertCircle, Lightbulb, Heart } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -284,7 +285,9 @@ export default function ChallengesMoroccanEnglishLearners() {
 
           </article>
         </div>
-        </div>
+        
+            <RelatedPosts currentPath="/blog/challenges-moroccan-english-learners-face" category="Learning" />
+</div>
       </div>
     </>
   );

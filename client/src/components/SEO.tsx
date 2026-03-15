@@ -24,6 +24,19 @@ interface SEOProps {
     priceCurrency?: string;
   };
   breadcrumbs?: BreadcrumbItem[];
+  reviewData?: {
+    ratingValue: string;
+    reviewCount: string;
+    bestRating?: string;
+  };
+  videoData?: {
+    name: string;
+    description: string;
+    thumbnailUrl: string;
+    uploadDate: string;
+    duration?: string;
+    contentUrl?: string;
+  };
 }
 
 const BASE_URL = "https://fluentry.online";
@@ -44,6 +57,8 @@ export const SEO = ({
   faqItems,
   courseData,
   breadcrumbs,
+  reviewData,
+  videoData,
 }: SEOProps) => {
   const fullUrl = `${BASE_URL}${path}`;
   const fullTitle = title.includes("Fluentry") ? title : `${title} | Fluentry`;
@@ -261,6 +276,44 @@ export const SEO = ({
         }
       : null;
 
+
+  // ── Structured Data: AggregateRating (optional) ────────────────────────
+  const aggregateRatingSchema =
+    reviewData
+      ? {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "@id": `${BASE_URL}/#organization`,
+          name: "Fluentry",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: reviewData.ratingValue,
+            reviewCount: reviewData.reviewCount,
+            bestRating: reviewData.bestRating || "5",
+            worstRating: "1",
+          },
+        }
+      : null;
+
+  // ── Structured Data: VideoObject (optional) ────────────────────────────
+  const videoSchema =
+    videoData
+      ? {
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: videoData.name,
+          description: videoData.description,
+          thumbnailUrl: videoData.thumbnailUrl,
+          uploadDate: videoData.uploadDate,
+          ...(videoData.duration && { duration: videoData.duration }),
+          ...(videoData.contentUrl && { contentUrl: videoData.contentUrl }),
+          publisher: {
+            "@type": "Organization",
+            "@id": `${BASE_URL}/#organization`,
+            name: "Fluentry",
+          },
+        }
+      : null;
   return (
     <Helmet>
       {/* Primary Meta Tags */}
@@ -342,6 +395,20 @@ export const SEO = ({
       {courseSchema && (
         <script type="application/ld+json">
           {JSON.stringify(courseSchema)}
+        </script>
+      )}
+
+      {/* Structured Data — AggregateRating (if provided) */}
+      {aggregateRatingSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(aggregateRatingSchema)}
+        </script>
+      )}
+
+      {/* Structured Data — VideoObject (if provided) */}
+      {videoSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(videoSchema)}
         </script>
       )}
     </Helmet>
