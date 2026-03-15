@@ -12,6 +12,7 @@ import { ExitIntentPopup } from "./components/ExitIntentPopup";
 import { AIChatbot } from "./components/AIChatbot";
 import { SocialProofNotification } from "./components/SocialProofNotification";
 import { HelmetProvider } from "react-helmet-async";
+import { Analytics } from "@vercel/analytics/react";
 
 // Eagerly load the home page for fast initial render
 import Home from "./pages/Home";
@@ -252,6 +253,7 @@ function App() {
               <ExitIntentPopup />
               <AIChatbot />
               <SocialProofNotification />
+              <Analytics />
             </div>
           </TooltipProvider>
         </ThemeProvider>
