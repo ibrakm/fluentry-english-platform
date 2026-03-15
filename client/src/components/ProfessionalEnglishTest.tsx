@@ -531,7 +531,9 @@ export default function ProfessionalEnglishTest() {
 
   const handleLeadSubmit = async () => {
     if (!leadData.name.trim()) { setLeadError("Please enter your name."); return; }
-    if (!leadData.email.trim() && !leadData.phone.trim()) { setLeadError("Please enter your email or WhatsApp number."); return; }
+    if (!leadData.email.trim()) { setLeadError("Please enter your email address to unlock your results."); return; }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(leadData.email.trim())) { setLeadError("Please enter a valid email address."); return; }
     setLeadError("");
     setIsSubmitting(true);
 
@@ -556,14 +558,7 @@ export default function ProfessionalEnglishTest() {
       body: JSON.stringify(payload),
     }).catch(() => { /* silent fail */ });
 
-    // Build WhatsApp message and auto-redirect the student
-    const levelInfoForWA = getLevelInfo(testResult!.level);
-    const waMessage = encodeURIComponent(
-      `Hi Mr. Ibrahim! 👋\n\nMy name is ${leadData.name.trim()} and I just completed your English test on Fluentry.\n\n📊 My Level: ${testResult!.level} — ${levelInfoForWA.title}\n✅ Score: ${testResult!.score}/${testResult!.totalQuestions} (${testResult!.percentage}%)\n${leadData.phone ? `📱 My WhatsApp: ${leadData.phone}\n` : ""}${leadData.email ? `📧 My Email: ${leadData.email}\n` : ""}\nCould you please send me my detailed results and your recommendation for which package suits me best? I'd love to start as soon as possible! 😊`
-    );
-    window.open(`https://wa.me/212672580932?text=${waMessage}`, "_blank");
-
-    // Show results immediately
+    // Show results immediately — WhatsApp is offered as optional next step on the results page
     setLeadSubmitted(true);
     setIsSubmitting(false);
     setStage("results");
@@ -827,22 +822,22 @@ export default function ProfessionalEnglishTest() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">WhatsApp Number</label>
-                <input
-                  type="tel"
-                  placeholder="e.g. +212 6XX XXX XXX"
-                  value={leadData.phone}
-                  onChange={(e) => setLeadData({ ...leadData, phone: e.target.value })}
-                  className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-blue-500 focus:outline-none transition-colors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Email Address *</label>
                 <input
                   type="email"
                   placeholder="e.g. youssef@gmail.com"
                   value={leadData.email}
                   onChange={(e) => setLeadData({ ...leadData, email: e.target.value })}
+                  className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-blue-500 focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">WhatsApp Number <span className="text-gray-400 font-normal">(optional)</span></label>
+                <input
+                  type="tel"
+                  placeholder="e.g. +212 6XX XXX XXX"
+                  value={leadData.phone}
+                  onChange={(e) => setLeadData({ ...leadData, phone: e.target.value })}
                   className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-gray-900 focus:border-blue-500 focus:outline-none transition-colors"
                 />
               </div>
@@ -857,15 +852,15 @@ export default function ProfessionalEnglishTest() {
 
             <Button
               size="lg"
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-lg font-bold py-6 shadow-lg"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg font-bold py-6 shadow-lg"
               onClick={handleLeadSubmit}
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Opening WhatsApp..." : "💬 See My Results & Message Mr. Ibrahim"}
+              {isSubmitting ? "Unlocking your results..." : "🔓 Reveal My CEFR Level & Plan"}
             </Button>
 
             <p className="text-center text-xs text-gray-400">
-              📱 WhatsApp will open automatically with your results pre-filled. Mr. Ibrahim will reply with your full score and personalized recommendation.
+              🔒 Your details are kept private and never shared. We will send your personalised learning plan to your email.
             </p>
           </div>
         </Card>
