@@ -55,9 +55,9 @@ const plans = [
   },
   {
     name: "Intensive — 4 lessons/week",
-    price: "1,600 MAD/month",
+    price: "1,200 MAD/month",
     desc: "16 sessions per month. Faster results.",
-    waText: "Intensive%20plan%20(1%2C600%20MAD%2Fmonth%20%E2%80%94%204%20lessons%2Fweek)",
+    waText: "Intensive%20plan%20(1%2C200%20MAD%2Fmonth%20%E2%80%94%204%20lessons%2Fweek)",
     color: "border-orange-500",
     btnCls: "bg-orange-500 hover:bg-orange-600 text-white",
   },
