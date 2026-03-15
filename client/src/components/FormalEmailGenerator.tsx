@@ -162,9 +162,9 @@ export default function FormalEmailGenerator() {
           <Mail className="w-4 h-4" />
           8 Email Types · Instant Generation
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Formal English Email Generator</h3>
+        <h2 className="text-xl font-bold text-gray-900">Free Formal English Email Generator</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Fill in the details below and get a professional English email in seconds. Perfect for job applications, complaints, requests, and more.
+          Fill in the details below and get a professional English email in seconds. Perfect for job applications, complaints, requests, meeting requests, and more.
         </p>
       </div>
 

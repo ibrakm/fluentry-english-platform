@@ -82,9 +82,9 @@ export default function FalseFriends() {
           <AlertTriangle className="w-4 h-4" />
           {falseFriends.length} False Friends · French → English
         </div>
-        <h3 className="text-xl font-bold text-gray-900">French–English False Friends</h3>
+        <h2 className="text-xl font-bold text-gray-900">French–English False Friends for Moroccan Learners</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Words that look the same in French and English but mean completely different things. These are the most common mistakes Moroccan learners make.
+          Words that look the same in French and English but mean completely different things. These are the most common false cognate mistakes Moroccan learners make.
         </p>
       </div>
 

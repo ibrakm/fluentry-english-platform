@@ -148,9 +148,9 @@ export default function ProfessionalEnglish() {
           <Briefcase className="w-4 h-4" />
           6 Professional English Guides
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Professional English for Moroccan Professionals</h3>
+        <h2 className="text-xl font-bold text-gray-900">Professional English Guides for Moroccan Professionals</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Email etiquette, LinkedIn optimization, meeting phrases, salary negotiation, IT vocabulary, and medical English — all in one place.
+          Business email etiquette, LinkedIn profile optimization, meeting and Zoom phrases, salary negotiation scripts, IT developer vocabulary, and medical English for UK healthcare workers — all in one place.
         </p>
       </div>
 

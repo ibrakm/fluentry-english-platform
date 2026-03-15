@@ -178,9 +178,9 @@ export default function IdiomLibrary() {
           <BookMarked className="w-4 h-4" />
           {idioms.length}+ English Idioms
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Interactive Idiom Library</h3>
+        <h2 className="text-xl font-bold text-gray-900">100+ Common English Idioms with Meanings and Examples</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Learn the most common English idioms with their meanings and real example sentences. Click any idiom to expand it.
+          Learn the most common English idioms with their meanings and real example sentences. Organized by category: Business, Everyday Life, Feelings, Communication, and more.
         </p>
       </div>
 

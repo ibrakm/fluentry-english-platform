@@ -92,7 +92,7 @@ export default function StopSayingVery() {
           <Zap className="w-4 h-4" />
           {upgrades.length} Vocabulary Upgrades
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Stop Saying "Very" — Upgrade Your Vocabulary</h3>
+        <h2 className="text-xl font-bold text-gray-900">Stop Saying "Very" — Advanced English Vocabulary Upgrade</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
           Replace weak "very + adjective" combinations with powerful single words. Instantly improve your IELTS score, BAC essay, and professional writing.
         </p>

@@ -172,9 +172,9 @@ export default function IrregularVerbs() {
           <BookOpen className="w-4 h-4" />
           {irregularVerbs.length} Irregular Verbs
         </div>
-        <h3 className="text-xl font-bold text-gray-900">Complete Irregular Verbs List</h3>
+        <h2 className="text-xl font-bold text-gray-900">Complete List of Irregular Verbs in English — Base, Past, Past Participle</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Master all irregular English verbs — base form, simple past, and past participle — with their meanings. Search or filter by letter.
+          Master all irregular English verbs — base form, simple past, and past participle — with their meanings. Search any verb form or filter by letter.
         </p>
       </div>
 

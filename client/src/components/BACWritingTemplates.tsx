@@ -251,9 +251,9 @@ export default function BACWritingTemplates() {
           <BookOpen className="w-4 h-4" />
           {templates.length} Writing Types · BAC Exam Ready
         </div>
-        <h3 className="text-xl font-bold text-gray-900">BAC English Writing Templates</h3>
+        <h2 className="text-xl font-bold text-gray-900">BAC English Writing Templates — Moroccan BAC Exam</h2>
         <p className="text-gray-500 text-sm max-w-lg mx-auto">
-          Master every writing task in the Moroccan BAC English exam. Copy the template, fill in the blanks, and study the real examples.
+          Master every writing task in the Moroccan BAC English exam: formal letter, article, essay, report, speech, and summary. Copy the template, fill in the blanks, and study the real examples.
         </p>
       </div>
 
