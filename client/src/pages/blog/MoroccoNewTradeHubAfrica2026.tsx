@@ -14,6 +14,11 @@ export default function MoroccoNewTradeHubAfrica2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco trade hub Africa 2026, Morocco economy 2026, Morocco Moody's upgrade, Morocco World Cup 2030 economy"
+      
+        titleFr="Maroc : Nouveau hub commercial en Afrique 2026"
+        titleAr="المغرب: مركز تجاري جديد في أفريقيا 2026"
+        descriptionFr="Le Maroc comme nouveau hub commercial africain et l'importance de l'anglais."
+        descriptionAr="المغرب كمركز تجاري أفريقي جديد وأهمية الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

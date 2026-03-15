@@ -14,6 +14,11 @@ export default function MoroccoOffshoring270000Jobs2030() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco offshoring jobs 2030, Morocco digital jobs English, offshoring Morocco 270000 jobs, Morocco nearshoring English"
+      
+        titleFr="Offshoring Maroc : 270 000 emplois d'ici 2030"
+        titleAr="الأوفشورينغ في المغرب: 270,000 وظيفة بحلول 2030"
+        descriptionFr="L'offshoring au Maroc créera 270 000 emplois d'ici 2030. L'anglais est la clé."
+        descriptionAr="سيخلق الأوفشورينغ في المغرب 270,000 وظيفة بحلول 2030. الإنجليزية هي المفتاح."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

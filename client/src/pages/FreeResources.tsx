@@ -206,6 +206,11 @@ export default function FreeResources() {
         description="Free English resources for Moroccan learners: BAC writing templates, 120+ irregular verbs, 100+ idioms, French-English false friends, formal email generator, professional English guides (LinkedIn, meetings, salary, IT, medical), interactive games and listening exercises. 100% free."
         path="/free-resources"
         keywords="free English resources Morocco, BAC English writing templates Morocco, irregular verbs list English, English idioms with meanings Morocco, French English false friends Moroccan learners, formal email generator English, professional English Morocco, business English Morocco, LinkedIn profile English Morocco, meeting phrases English, salary negotiation English Morocco, IT English vocabulary Morocco, medical English Morocco nurses UK, stop saying very vocabulary upgrade, liste verbes irréguliers anglais, ressources anglais gratuit Maroc, free IELTS practice Morocco, English learning games Morocco, موارد إنجليزية مجانية المغرب"
+
+        titleFr="Ressources gratuites pour apprendre l'anglais | Fluentry Maroc"
+        titleAr="موارد مجانية لتعلم الإنجليزية | Fluentry المغرب"
+        descriptionFr="Accédez à des ressources gratuites pour améliorer votre anglais : exercices, vocabulaire, guides de prononciation."
+        descriptionAr="احصل على موارد مجانية لتحسين إنجليزيتك: تمارين ومفردات وأدلة نطق."
         breadcrumbs={[{ name: "Free Resources", item: "https://fluentry.online/free-resources" }]}
         faqItems={freeResourcesFAQ}
       />

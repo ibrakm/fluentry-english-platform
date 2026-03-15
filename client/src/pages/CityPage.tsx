@@ -65,6 +65,11 @@ export default function CityPage({
         title={`English Coach ${city} | 1-on-1 Online Lessons | Fluentry`}
         description={`Private 1-on-1 English coaching for students and professionals in ${city}, Morocco. TESOL-certified Mr. Ibrahim. IELTS prep, Business English, Conversation. From 80 MAD/hr. Online via Google Meet.`}
         path={`/english-coach-${slug}`}
+
+        titleFr={`Coach d'anglais ${city} | Cours particuliers en ligne | Fluentry`}
+        titleAr={`مدرب إنجليزية ${city} | دروس خصوصية عبر الإنترنت | Fluentry`}
+        descriptionFr={`Coaching d'anglais personnalisé 1-à-1 pour les étudiants et professionnels à ${city}, Maroc. M. Ibrahim certifié TESOL. IELTS, anglais des affaires, conversation. À partir de 80 MAD/h.`}
+        descriptionAr={`تدريب إنجليزية مخصص فردي للطلاب والمهنيين في ${city}، المغرب. الأستاذ إبراهيم معتمد TESOL. IELTS، إنجليزية الأعمال، محادثة. ابتداءً من 80 درهم/ساعة.`}
         keywords={`English coach ${city}, English lessons ${city}, English tutor ${city}, cours anglais ${cityFr}, تعلم الإنجليزية ${cityAr}, English coaching ${city} Morocco, IELTS ${city}, Business English ${city}, online English ${city}, private English teacher ${city}`}
         breadcrumbs={[
           { name: "Courses", item: "https://fluentry.online/courses" },

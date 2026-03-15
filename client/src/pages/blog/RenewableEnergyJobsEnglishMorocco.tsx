@@ -16,6 +16,11 @@ export default function RenewableEnergyJobsEnglishMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="renewable energy jobs Morocco, green jobs Morocco, English for engineers Morocco, solar energy jobs Morocco"
+      
+        titleFr="Emplois en énergie renouvelable au Maroc : Anglais requis"
+        titleAr="وظائف الطاقة المتجددة في المغرب: الإنجليزية مطلوبة"
+        descriptionFr="Les emplois en énergie renouvelable au Maroc nécessitant l'anglais."
+        descriptionAr="وظائف الطاقة المتجددة في المغرب التي تتطلب الإنجليزية."
       />
 
       <div className="min-h-screen bg-gray-50">

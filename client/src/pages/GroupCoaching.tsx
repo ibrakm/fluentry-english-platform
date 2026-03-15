@@ -141,6 +141,11 @@ export default function GroupCoaching() {
         description="Affordable small-group English coaching in Morocco. IELTS preparation, Business English & Speaking Confidence groups. Max 6 students per group for personalised attention. From 35 MAD per session. Online via Zoom, Saturdays & Sundays. TESOL-certified coach Mr. Ibrahim K."
         keywords="group English coaching Morocco, IELTS group class Morocco, Business English group Morocco, online English group lessons Morocco, affordable English classes Morocco, cours anglais groupe Maroc, group English lessons Tangier, affordable IELTS class Morocco"
         path="/group-coaching"
+
+        titleFr="Coaching de groupe en anglais | Sessions abordables au Maroc"
+        titleAr="تدريب جماعي على الإنجليزية | جلسات بأسعار معقولة في المغرب"
+        descriptionFr="Rejoignez nos sessions de coaching de groupe en anglais. Petits groupes, interactif et abordable."
+        descriptionAr="انضم إلى جلسات التدريب الجماعي على الإنجليزية. مجموعات صغيرة وتفاعلية وبأسعار معقولة."
         breadcrumbs={[
           { name: "Home", item: "https://fluentry.online/" },
           { name: "Group Coaching", item: "https://fluentry.online/group-coaching" },

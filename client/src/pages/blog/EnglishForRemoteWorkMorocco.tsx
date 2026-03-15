@@ -18,6 +18,11 @@ export default function EnglishForRemoteWorkMorocco() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="remote work Morocco English, work from home Morocco English, freelance English Morocco, remote jobs Morocco, English for remote work, travail à distance Maroc anglais, العمل عن بعد المغرب إنجليزية, earn dollars Morocco, international remote jobs Morocco, English level remote work"
+
+        titleFr="Anglais pour le travail à distance au Maroc | Gagnez en dollars depuis le Maroc"
+        titleAr="الإنجليزية للعمل عن بُعد في المغرب | اكسب بالدولار من المغرب"
+        descriptionFr="Découvrez comment l'anglais peut vous ouvrir les portes du travail à distance depuis le Maroc. Compétences requises, plateformes et salaires."
+        descriptionAr="اكتشف كيف يمكن للإنجليزية أن تفتح لك أبواب العمل عن بُعد من المغرب. المهارات المطلوبة والمنصات والرواتب."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "English for Remote Work Morocco", item: "https://fluentry.online/blog/english-for-remote-work-morocco" },

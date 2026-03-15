@@ -186,6 +186,11 @@ export default function ResourceLibrary() {
         description="Download free English learning resources for Moroccan students and professionals. IELTS guides, business email templates, vocabulary lists, pronunciation guides, and more. All free from Fluentry."
         path="/resource-library"
         keywords="free English resources Morocco, IELTS guide Morocco, business English templates Morocco, English vocabulary list Morocco, free PDF English Morocco"
+
+        titleFr="Bibliothèque de ressources | Fluentry Maroc"
+        titleAr="مكتبة الموارد | Fluentry المغرب"
+        descriptionFr="Explorez notre bibliothèque complète de ressources pour apprendre l'anglais."
+        descriptionAr="استكشف مكتبتنا الشاملة من الموارد لتعلم الإنجليزية."
         breadcrumbs={[{ name: "Resource Library", item: "https://www.fluentry.online/resource-library" }]}
       />
 

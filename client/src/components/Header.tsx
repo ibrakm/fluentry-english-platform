@@ -10,7 +10,7 @@ import { useState, useRef, useEffect } from "react";
 import { useLanguage, Language } from "@/contexts/LanguageContext";
 
 const WA_URL =
-  "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20strategy%20call";
+  "https://wa.me/212672580932?text=Hi%20Ibrahim%2C%20I%27d%20like%20to%20book%20a%20lesson%20and%20start%20with%20a%20free%20consultation%20call";
 
 const LANGUAGES: { code: Language; label: string; flag: string }[] = [
   { code: "en", label: "English", flag: "🇬🇧" },
@@ -73,111 +73,111 @@ export default function Header() {
     { href: `${langPrefix}`, label: t("nav.home"), icon: Home },
     { href: `${langPrefix}/about`, label: t("nav.about"), icon: Info },
     {
-      label: "Learn",
+      label: t("nav.learn"),
       dropdown: [
         {
           href: `${langPrefix}/courses`,
           label: t("nav.courses"),
-          description: "1-on-1 personalised coaching sessions",
+          description: t("nav.courses.desc"),
           icon: BookOpen,
         },
         {
           href: `${langPrefix}/group-coaching`,
           label: t("nav.groupCoaching"),
-          description: "Small groups · affordable · interactive",
+          description: t("nav.groupCoaching.desc"),
           icon: Users,
         },
         {
           href: `${langPrefix}/pricing`,
           label: t("nav.pricing"),
-          description: "Transparent plans from 100 MAD/hr",
+          description: t("nav.pricing.desc"),
           icon: Tag,
         },
         {
           href: `${langPrefix}/success-stories`,
           label: t("nav.successStories"),
-          description: "Real results from real Moroccan students",
+          description: t("nav.successStories.desc"),
           icon: Star,
         },
       ],
     },
     {
-      label: "Exams & Tests",
+      label: t("nav.examsTests"),
       dropdown: [
         {
           href: `${langPrefix}/ielts-preparation-morocco`,
-          label: "IELTS Preparation",
-          description: "Guaranteed 7.5+ band score strategy",
+          label: t("nav.ieltsPrep"),
+          description: t("nav.ieltsPrep.desc"),
           icon: Award,
           badge: "Popular",
         },
         {
           href: `${langPrefix}/free-test`,
           label: t("nav.freeTest"),
-          description: "Know your level in 10 minutes — free",
+          description: t("nav.freeTest.desc"),
           icon: ClipboardList,
         },
         {
           href: `${langPrefix}/blog/ielts-vs-toeic-morocco`,
-          label: "IELTS vs TOEIC Guide",
-          description: "Which exam is right for you?",
+          label: t("nav.ieltsVsToeic"),
+          description: t("nav.ieltsVsToeic.desc"),
           icon: BarChart2,
         },
         {
           href: `${langPrefix}/blog/how-to-pass-ielts-in-morocco`,
-          label: "How to Pass IELTS",
-          description: "Complete 2026 Morocco guide",
+          label: t("nav.howPassIelts"),
+          description: t("nav.howPassIelts.desc"),
           icon: GraduationCap,
         },
       ],
     },
     {
-      label: "Resources",
+      label: t("nav.resources"),
       dropdown: [
         {
           href: `${langPrefix}/free-resources`,
           label: t("nav.freeResources"),
-          description: "Practice exercises, vocabulary & tools",
+          description: t("nav.freeResources.desc"),
           icon: Layers,
         },
         {
           href: `${langPrefix}/blog/best-apps-websites-learn-english-morocco`,
-          label: "Best Apps & Websites",
-          description: "Top 15 tools for Moroccan learners",
+          label: t("nav.bestApps"),
+          description: t("nav.bestApps.desc"),
           icon: Lightbulb,
         },
         {
           href: `${langPrefix}/blog/a2-to-b1-english-6-month-plan-morocco`,
-          label: "A2 → B1 Study Plan",
-          description: "6-month step-by-step roadmap",
+          label: t("nav.a2ToB1"),
+          description: t("nav.a2ToB1.desc"),
           icon: TrendingUp,
         },
         {
           href: `${langPrefix}/blog/english-for-call-centers-morocco`,
-          label: "English for Call Centers",
-          description: "Career English for Morocco's top sector",
+          label: t("nav.callCenters"),
+          description: t("nav.callCenters.desc"),
           icon: Briefcase,
         },
       ],
     },
     {
-      label: "Pricing",
+      label: t("nav.pricing"),
       dropdown: [
         {
           href: `${langPrefix}/pricing`,
           label: t("nav.pricing"),
-          description: "1-on-1 coaching plans — from 100 MAD/hr",
+          description: t("nav.pricing1on1.desc"),
           icon: Tag,
         },
         {
           href: `${langPrefix}/group-coaching`,
           label: t("nav.groupCoaching"),
-          description: "Group sessions — affordable & interactive",
+          description: t("nav.groupCoaching2.desc"),
           icon: Users,
         },
       ],
     },
-    { href: `${langPrefix}/blog`, label: "Blog", icon: Newspaper },
+    { href: `${langPrefix}/blog`, label: t("nav.blog"), icon: Newspaper },
   ];
 
   const currentLang = LANGUAGES.find(l => l.code === lang) || LANGUAGES[0];

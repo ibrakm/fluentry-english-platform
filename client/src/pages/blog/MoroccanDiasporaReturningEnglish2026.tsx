@@ -13,6 +13,11 @@ export default function MoroccanDiasporaReturningEnglish2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Moroccan diaspora returning, MRE Morocco 2026, returning Moroccans jobs, English competitive advantage Morocco, international profile Morocco"
+      
+        titleFr="Diaspora marocaine de retour : L'avantage de l'anglais 2026"
+        titleAr="المغاربة العائدون من الخارج: ميزة الإنجليزية 2026"
+        descriptionFr="Comment les Marocains de retour de l'étranger utilisent l'anglais comme avantage professionnel."
+        descriptionAr="كيف يستخدم المغاربة العائدون من الخارج الإنجليزية كميزة مهنية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero section */}

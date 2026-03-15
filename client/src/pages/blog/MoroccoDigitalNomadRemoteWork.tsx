@@ -16,6 +16,11 @@ export default function MoroccoDigitalNomadRemoteWork() {
         type="article"
         publishedDate="2026-03-10"
         keywords="remote jobs Morocco, digital nomad Morocco, freelance jobs Morocco, work from home Morocco English"
+      
+        titleFr="Maroc : Destination pour les nomades numériques et le travail à distance"
+        titleAr="المغرب: وجهة للرحالة الرقميين والعمل عن بُعد"
+        descriptionFr="Le Maroc comme destination pour les nomades numériques et l'importance de l'anglais."
+        descriptionAr="المغرب كوجهة للرحالة الرقميين وأهمية الإنجليزية."
       />
 
       <div className="min-h-screen bg-gray-50">

@@ -16,6 +16,11 @@ export default function WorldCup2030Morocco() {
         type="article"
         publishedDate="2026-03-11"
         keywords="World Cup 2030 Morocco jobs, hospitality English Morocco, project management English, Morocco World Cup infrastructure, learn English Morocco, English salary Morocco, ملعت برغملا ةيزيلجنإلا"
+      
+        titleFr="Coupe du Monde 2030 Maroc : Emplois et anglais"
+        titleAr="كأس العالم 2030 المغرب: الوظائف والإنجليزية"
+        descriptionFr="Comment la Coupe du Monde 2030 au Maroc crée des opportunités pour les anglophones."
+        descriptionAr="كيف يخلق كأس العالم 2030 في المغرب فرصاً لمتحدثي الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* ── HERO SECTION ── */}

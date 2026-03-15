@@ -52,6 +52,11 @@ export default function HowToPassToeicTestMorocco() {
         title="How to Pass the TOEIC Test in Morocco (2026 Guide)"
         description="Your complete guide to passing the TOEIC Listening & Reading test in Morocco. Learn about test centers (AMIDEAST), required scores, and preparation strategies."
         keywords={'toeic test morocco, toeic preparation casablanca, amideast morocco toeic, toeic score for engineers morocco'}
+      
+        titleFr="Comment réussir le test TOEIC au Maroc | Guide complet"
+        titleAr="كيف تنجح في اختبار TOEIC في المغرب | دليل شامل"
+        descriptionFr="Guide complet pour réussir le test TOEIC au Maroc avec des stratégies éprouvées."
+        descriptionAr="دليل شامل للنجاح في اختبار TOEIC في المغرب مع استراتيجيات مجربة."
       />
 
       <div className="min-h-screen bg-gray-50">

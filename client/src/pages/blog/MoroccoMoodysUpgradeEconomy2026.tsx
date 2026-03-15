@@ -13,6 +13,11 @@ export default function MoroccoMoodysUpgradeEconomy2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco Moody's upgrade, Ba1 credit rating Morocco, Morocco FDI 2026, English jobs Morocco, Morocco economy 2026"
+      
+        titleFr="Moody's rehausse le Maroc 2026 : Impact sur les emplois anglophones"
+        titleAr="Moody's ترفع تصنيف المغرب 2026: التأثير على الوظائف بالإنجليزية"
+        descriptionFr="L'impact de la revalorisation de Moody's sur l'économie marocaine et la demande d'anglais."
+        descriptionAr="تأثير رفع تصنيف Moody's على الاقتصاد المغربي والطلب على الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero section */}

@@ -53,6 +53,11 @@ export default function A2ToB1SixMonthPlan() {
         title="From A2 to B1 in 6 Months: A Realistic Step-by-Step Plan for Moroccan English Learners"
         description="A practical 6-month plan for Moroccan learners to advance from A2 to B1 English. Follow our weekly schedule and expert tips to improve your fluency and confidence."
         keywords="A2 to B1 English, progresser en anglais Maroc, 6 month English plan, improve English level"
+      
+        titleFr="Plan d'étude A2 à B1 en 6 mois | Guide pratique Maroc"
+        titleAr="خطة دراسة من A2 إلى B1 في 6 أشهر | دليل عملي المغرب"
+        descriptionFr="Un plan pratique de 6 mois pour améliorer votre anglais de A2 à B1 au Maroc."
+        descriptionAr="خطة عملية لمدة 6 أشهر لتحسين إنجليزيتك من A2 إلى B1 في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

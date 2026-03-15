@@ -14,6 +14,11 @@ export default function MoroccoEmigrationGuideEnglish2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco emigration 2026, Moroccan immigration Canada, Morocco Germany work visa, Morocco UAE jobs English"
+      
+        titleFr="Guide d'émigration Maroc 2026 : L'anglais comme atout"
+        titleAr="دليل الهجرة من المغرب 2026: الإنجليزية كميزة"
+        descriptionFr="Guide complet d'émigration depuis le Maroc en 2026 avec l'anglais comme atout."
+        descriptionAr="دليل شامل للهجرة من المغرب في 2026 مع الإنجليزية كميزة."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

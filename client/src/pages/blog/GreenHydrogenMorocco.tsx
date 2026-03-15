@@ -16,6 +16,11 @@ export default function GreenHydrogenMorocco() {
         type="article"
         publishedDate="2026-03-11"
         keywords="Green hydrogen Morocco, renewable energy jobs Morocco, technical English Morocco, engineering English coaching, Morocco green energy 2026, learn English Morocco, ملعت برغملا ةيزيلجنإلا"
+      
+        titleFr="Hydrogène vert au Maroc : Emplois nécessitant l'anglais"
+        titleAr="الهيدروجين الأخضر في المغرب: وظائف تتطلب الإنجليزية"
+        descriptionFr="Le secteur de l'hydrogène vert au Maroc et les emplois nécessitant l'anglais."
+        descriptionAr="قطاع الهيدروجين الأخضر في المغرب والوظائف التي تتطلب الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* ── HERO SECTION ── */}

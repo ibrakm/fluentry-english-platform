@@ -23,7 +23,12 @@ export default function HowToPassIeltsInMorocco() {
 
   return (
     <>
-      <SEO title={title} description={description} path="/blog/how-to-pass-ielts-in-morocco" />
+      <SEO title={title} description={description} path="/blog/how-to-pass-ielts-in-morocco" 
+        titleFr="Comment réussir l'IELTS au Maroc | Guide complet"
+        titleAr="كيف تنجح في IELTS في المغرب | دليل شامل"
+        descriptionFr="Guide complet pour réussir l'IELTS depuis le Maroc."
+        descriptionAr="دليل شامل للنجاح في IELTS من المغرب."
+      />
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       <div className="bg-gray-50 text-gray-800 font-sans leading-relaxed">
         {/* Article Header */}

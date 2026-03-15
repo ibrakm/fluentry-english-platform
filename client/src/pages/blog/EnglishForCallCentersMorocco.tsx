@@ -70,7 +70,12 @@ export default function EnglishForCallCentersMorocco() {
 
   return (
     <>
-      <SEO title={c.title} description={c.description} path="/blog/english-for-call-centers-morocco" />
+      <SEO title={c.title} description={c.description} path="/blog/english-for-call-centers-morocco" 
+        titleFr="Anglais pour les centres d'appels au Maroc | Guide carrière"
+        titleAr="الإنجليزية لمراكز الاتصال في المغرب | دليل مهني"
+        descriptionFr="Maîtrisez les compétences en anglais nécessaires pour les carrières BPO au Maroc."
+        descriptionAr="أتقن مهارات الإنجليزية اللازمة لمهن مراكز الاتصال في المغرب."
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
         <header

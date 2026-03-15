@@ -14,6 +14,11 @@ export default function IranWarMoroccoEconomy2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Iran war Morocco economy, Hormuz crisis Morocco prices, Morocco inflation 2026, Tanger Med shipping reroute"
+      
+        titleFr="Impact géopolitique sur l'économie marocaine 2026"
+        titleAr="التأثير الجيوسياسي على الاقتصاد المغربي 2026"
+        descriptionFr="Comment les événements géopolitiques impactent l'économie marocaine et la demande d'anglais."
+        descriptionAr="كيف تؤثر الأحداث الجيوسياسية على الاقتصاد المغربي والطلب على الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

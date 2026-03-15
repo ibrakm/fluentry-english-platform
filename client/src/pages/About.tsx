@@ -107,6 +107,11 @@ export default function About() {
         description="Meet Ibrahim K. — Morocco's most trusted TESOL-certified English coach in Tangier. 100+ students coached, 4.9★ rating, 3+ years experience. Specialist in IELTS preparation, Business English, and fluency coaching. Results guaranteed or your money back."
         path="/about"
         keywords="English coach Tangier Morocco, TESOL certified English teacher Morocco, Ibrahim English coach Fluentry, IELTS coach Morocco, Business English coach Tangier, professeur anglais Tanger, مدرب الإنجليزية طنجة, English tutor Morocco, about Fluentry coach, best English teacher Morocco, English coaching results Morocco, IELTS preparation coach Tangier"
+
+        titleFr="M. Ibrahim K. | Coach d'anglais certifié TESOL à Tanger, Maroc | Fluentry"
+        titleAr="الأستاذ إبراهيم ك. | مدرب إنجليزية معتمد TESOL في طنجة، المغرب | Fluentry"
+        descriptionFr="Rencontrez Ibrahim K. — le coach d'anglais certifié TESOL le plus fiable du Maroc à Tanger. Plus de 100 étudiants, note 4.9★. Spécialiste IELTS, anglais des affaires et coaching de fluidité."
+        descriptionAr="تعرف على إبراهيم ك. — مدرب الإنجليزية المعتمد TESOL الأكثر ثقة في المغرب في طنجة. أكثر من 100 طالب، تقييم 4.9★. متخصص في IELTS والإنجليزية التجارية وتدريب الطلاقة."
         breadcrumbs={[{ name: "About", item: "https://fluentry.online/about" }]}
         faqItems={aboutFAQ}
       />

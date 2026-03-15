@@ -16,6 +16,11 @@ export default function MoroccoEducationReformEnglish() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco education reform, English in Moroccan schools, Baccalaureate English Morocco, middle school English Morocco"
+      
+        titleFr="Réforme de l'éducation au Maroc : Place de l'anglais"
+        titleAr="إصلاح التعليم في المغرب: مكانة الإنجليزية"
+        descriptionFr="La réforme éducative au Maroc et le rôle croissant de l'anglais."
+        descriptionAr="الإصلاح التعليمي في المغرب والدور المتزايد للإنجليزية."
       />
 
       <div className="min-h-screen bg-gray-50">

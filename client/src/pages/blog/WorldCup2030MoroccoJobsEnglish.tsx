@@ -14,6 +14,11 @@ export default function WorldCup2030MoroccoJobsEnglish() {
         type="article"
         publishedDate="2026-03-10"
         keywords="World Cup 2030 Morocco jobs, Morocco FIFA 2030 English, Morocco tourism jobs English, World Cup Morocco career"
+      
+        titleFr="Emplois Coupe du Monde 2030 Maroc nécessitant l'anglais"
+        titleAr="وظائف كأس العالم 2030 المغرب التي تتطلب الإنجليزية"
+        descriptionFr="Les emplois liés à la Coupe du Monde 2030 au Maroc qui nécessitent l'anglais."
+        descriptionAr="الوظائف المرتبطة بكأس العالم 2030 في المغرب التي تتطلب الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

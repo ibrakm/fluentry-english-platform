@@ -12,7 +12,12 @@ export default function TechJobsMoroccoEnglish() {
     <>
       <SEO title={title} description={description}
         path="/blog/tech-jobs-morocco-english-level"
- />
+ 
+        titleFr="Emplois tech au Maroc : Niveau d'anglais requis"
+        titleAr="وظائف التكنولوجيا في المغرب: مستوى الإنجليزية المطلوب"
+        descriptionFr="Les exigences en anglais pour le secteur technologique au Maroc."
+        descriptionAr="متطلبات الإنجليزية لقطاع التكنولوجيا في المغرب."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/tech-jobs-morocco-english.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

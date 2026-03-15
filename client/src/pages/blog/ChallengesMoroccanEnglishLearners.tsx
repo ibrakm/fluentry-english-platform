@@ -81,6 +81,11 @@ export default function ChallengesMoroccanEnglishLearners() {
         title="The 5 Real Challenges Every Moroccan Faces When Learning English (And How to Beat Them)"
         description="An empathetic look at the 5 unique challenges Moroccan learners face with English and practical solutions to overcome them."
         keywords="challenges learning English Morocco, difficultés apprendre anglais Maroc, Moroccan English learners"
+      
+        titleFr="Défis des apprenants marocains en anglais | Solutions pratiques"
+        titleAr="تحديات متعلمي الإنجليزية المغاربة | حلول عملية"
+        descriptionFr="Les obstacles uniques que rencontrent les apprenants marocains en anglais et comment les surmonter."
+        descriptionAr="العقبات الفريدة التي يواجهها متعلمو الإنجليزية المغاربة وكيفية التغلب عليها."
       />
 
       <div className="min-h-screen bg-gray-50">

@@ -72,6 +72,11 @@ export default function BookLesson() {
         description="Book a 1-on-1 English lesson with TESOL-certified coach Mr. Ibrahim K. in Morocco. 100 MAD/hr. Free 10-min strategy call. Flexible scheduling via Google Meet. IELTS & Business English."
         path="/book-lesson"
         keywords="book English lesson Morocco, online English tutor booking Morocco, English lesson appointment Morocco, réserver cours anglais Maroc, حجز درس إنجليزي المغرب, schedule English lesson Morocco, English lesson WhatsApp Morocco, English tutor contact Morocco"
+
+        titleFr="Réserver un cours d'anglais | Appel de consultation gratuit"
+        titleAr="احجز درس إنجليزية | مكالمة استشارية مجانية"
+        descriptionFr="Réservez votre cours d'anglais personnalisé avec M. Ibrahim. Appel de consultation gratuit de 10 minutes."
+        descriptionAr="احجز درس الإنجليزية المخصص مع الأستاذ إبراهيم. مكالمة استشارية مجانية لمدة 10 دقائق."
         breadcrumbs={[{ name: "Book a Lesson", item: "https://fluentry.online/book-lesson" }]}
         faqItems={[
           { question: "How do I book an English lesson with Fluentry in Morocco?", answer: "Booking is simple: click the WhatsApp button on this page, send a message to Mr. Ibrahim K., and he will schedule your free 10-minute strategy call within 24 hours. No forms, no waiting — just a direct conversation about your goals." },

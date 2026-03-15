@@ -12,7 +12,12 @@ export default function LearnEnglish3MonthsMorocco() {
     <>
       <SEO title={title} description={description}
         path="/blog/learn-english-3-months-morocco-story"
- />
+ 
+        titleFr="Apprendre l'anglais en 3 mois au Maroc | Témoignage"
+        titleAr="تعلم الإنجليزية في 3 أشهر في المغرب | قصة نجاح"
+        descriptionFr="Comment un étudiant marocain a appris l'anglais en seulement 3 mois avec Fluentry."
+        descriptionAr="كيف تعلم طالب مغربي الإنجليزية في 3 أشهر فقط مع Fluentry."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/learn-english-3-months-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

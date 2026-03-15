@@ -16,6 +16,11 @@ export default function LearnEnglishWithChatGPTMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="learn English ChatGPT, AI English learning Morocco, ChatGPT prompts English, practice English AI"
+      
+        titleFr="Apprendre l'anglais avec ChatGPT au Maroc"
+        titleAr="تعلم الإنجليزية مع ChatGPT في المغرب"
+        descriptionFr="Comment utiliser ChatGPT pour améliorer votre anglais au Maroc."
+        descriptionAr="كيف تستخدم ChatGPT لتحسين إنجليزيتك في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

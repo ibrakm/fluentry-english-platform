@@ -9,6 +9,10 @@ export default function TermsOfService() {
         title="Terms of Service | Fluentry — English Coaching Morocco"
         description="Read Fluentry's terms of service. These terms govern your use of our website and coaching services."
         path="/terms-of-service"
+        titleFr="Conditions d'utilisation | Fluentry"
+        titleAr="شروط الخدمة | Fluentry"
+        descriptionFr="Conditions d'utilisation de Fluentry — termes et conditions de nos services de coaching."
+        descriptionAr="شروط خدمة Fluentry — الشروط والأحكام لخدمات التدريب لدينا."
       />
       <div className="min-h-screen bg-gray-50 py-16 px-4">
         <div className="container mx-auto max-w-3xl bg-white rounded-2xl shadow-md p-8 sm:p-12">

@@ -18,6 +18,11 @@ export default function EnglishForUniversityAdmissionMorocco() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="English university admission Morocco, study abroad Morocco English, IELTS for university Morocco, TOEFL university admission Morocco, Moroccan students study abroad, anglais admission université Maroc, إنجليزية القبول الجامعي المغرب, personal statement English Morocco, English requirements UK university Morocco, study in Canada Morocco English"
+
+        titleFr="Anglais pour l'admission universitaire au Maroc | Guide des études à l'étranger"
+        titleAr="الإنجليزية للقبول الجامعي في المغرب | دليل الدراسة في الخارج"
+        descriptionFr="Guide complet des exigences en anglais pour les étudiants marocains souhaitant étudier à l'étranger. IELTS, TOEFL, universités et bourses."
+        descriptionAr="دليل شامل لمتطلبات الإنجليزية للطلاب المغاربة الراغبين في الدراسة في الخارج. IELTS و TOEFL والجامعات والمنح."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "English for University Admission Morocco", item: "https://fluentry.online/blog/english-for-university-admission-morocco" },

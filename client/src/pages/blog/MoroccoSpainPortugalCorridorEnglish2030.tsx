@@ -13,6 +13,11 @@ export default function MoroccoSpainPortugalCorridorEnglish2030() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco Spain Portugal economic corridor, 2030 World Cup Morocco jobs, trilateral Mediterranean trade, English language Mediterranean business, Morocco infrastructure investment 2030"
+      
+        titleFr="Corridor Maroc-Espagne-Portugal 2030 : Anglais requis"
+        titleAr="ممر المغرب-إسبانيا-البرتغال 2030: الإنجليزية مطلوبة"
+        descriptionFr="Le corridor économique Maroc-Espagne-Portugal et les opportunités pour les anglophones."
+        descriptionAr="الممر الاقتصادي المغرب-إسبانيا-البرتغال والفرص للناطقين بالإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero section */}

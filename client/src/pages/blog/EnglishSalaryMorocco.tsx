@@ -15,6 +15,11 @@ export default function EnglishSalaryMorocco() {
         title={title}
         description={description}
         path="/blog/english-speaker-salary-morocco"
+      
+        titleFr="Salaire des anglophones au Maroc | Impact sur les revenus"
+        titleAr="رواتب متحدثي الإنجليزية في المغرب | التأثير على الدخل"
+        descriptionFr="Comment la maîtrise de l'anglais impacte votre potentiel de revenus au Maroc."
+        descriptionAr="كيف تؤثر إتقان الإنجليزية على إمكانياتك في الكسب في المغرب."
       />
       <div className="min-h-screen bg-gray-50">
         <header

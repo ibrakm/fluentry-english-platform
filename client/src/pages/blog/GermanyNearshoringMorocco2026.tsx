@@ -14,6 +14,11 @@ export default function GermanyNearshoringMorocco2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Germany nearshoring Morocco, German companies Morocco jobs, Morocco Germany investment 2026, nearshoring Morocco English"
+      
+        titleFr="Nearshoring Allemagne-Maroc 2026 : Opportunités anglophones"
+        titleAr="النيرشورينغ ألمانيا-المغرب 2026: فرص للناطقين بالإنجليزية"
+        descriptionFr="Le nearshoring allemand au Maroc et les opportunités pour les anglophones."
+        descriptionAr="النيرشورينغ الألماني في المغرب والفرص للناطقين بالإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

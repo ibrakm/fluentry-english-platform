@@ -54,6 +54,11 @@ export default function HowToGetCallCenterJobMorocco() {
         title="How to Get a Call Center Job in Morocco (The Ultimate 2026 Guide)"
         description="Your step-by-step guide to getting a high-paying call center job in Morocco. Learn the required English level, interview questions, salary expectations, and top companies hiring now."
         keywords={'call center jobs morocco, english for call centers morocco, call center salary morocco, call center interview questions morocco'}
+      
+        titleFr="Comment obtenir un emploi en centre d'appels au Maroc"
+        titleAr="كيف تحصل على وظيفة في مركز اتصال في المغرب"
+        descriptionFr="Compétences en anglais nécessaires pour les carrières en centre d'appels au Maroc."
+        descriptionAr="مهارات الإنجليزية اللازمة لمهن مراكز الاتصال في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

@@ -12,7 +12,12 @@ export default function EnglishJobInterviewMorocco() {
     <>
       <SEO title={title} description={description}
         path="/blog/english-job-interview-morocco-guide"
- />
+ 
+        titleFr="Réussir un entretien d'embauche en anglais au Maroc | Guide"
+        titleAr="النجاح في مقابلة عمل بالإنجليزية في المغرب | دليل"
+        descriptionFr="Guide complet pour réussir votre entretien d'embauche en anglais au Maroc."
+        descriptionAr="دليل شامل للنجاح في مقابلة العمل بالإنجليزية في المغرب."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-job-interview-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

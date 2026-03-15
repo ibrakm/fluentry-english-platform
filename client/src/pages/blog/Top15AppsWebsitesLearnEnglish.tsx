@@ -146,6 +146,11 @@ export default function Top15AppsWebsitesLearnEnglish() {
         title="The 15 Best Apps & Websites for Learning English in Morocco (2026 Review)"
         description="Our 2026 review of the 15 best apps and websites for Moroccan English learners. Discover the top tools for vocabulary, listening, and reading."
         keywords="best apps learn English Morocco, applications pour apprendre l'anglais, English learning websites"
+      
+        titleFr="Top 15 applications et sites pour apprendre l'anglais"
+        titleAr="أفضل 15 تطبيقاً وموقعاً لتعلم الإنجليزية"
+        descriptionFr="Découvrez les 15 meilleures applications et sites web pour apprendre l'anglais au Maroc."
+        descriptionAr="اكتشف أفضل 15 تطبيقاً وموقعاً لتعلم الإنجليزية في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

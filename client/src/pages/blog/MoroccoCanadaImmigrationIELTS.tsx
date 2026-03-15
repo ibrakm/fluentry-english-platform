@@ -12,7 +12,12 @@ export default function MoroccoCanadaImmigrationIELTS() {
     <>
       <SEO title={title} description={description}
         path="/blog/morocco-canada-immigration-ielts-guide"
- />
+ 
+        titleFr="Immigration Canada depuis le Maroc : Guide IELTS complet"
+        titleAr="الهجرة إلى كندا من المغرب: دليل IELTS الشامل"
+        descriptionFr="Guide complet IELTS pour l'immigration canadienne depuis le Maroc."
+        descriptionAr="دليل IELTS الشامل للهجرة الكندية من المغرب."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/morocco-canada-immigration-ielts.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

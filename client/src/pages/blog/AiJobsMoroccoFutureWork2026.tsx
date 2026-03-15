@@ -13,6 +13,11 @@ export default function AiJobsMoroccoFutureWork2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="AI jobs Morocco 2026, artificial intelligence Morocco careers, future of work Morocco English, AI automation Morocco"
+      
+        titleFr="Emplois IA au Maroc 2026 : L'anglais comme compétence clé"
+        titleAr="وظائف الذكاء الاصطناعي في المغرب 2026: الإنجليزية كمهارة أساسية"
+        descriptionFr="L'intelligence artificielle transforme le marché du travail au Maroc. L'anglais est essentiel pour ces nouveaux emplois."
+        descriptionAr="الذكاء الاصطناعي يحول سوق العمل في المغرب. الإنجليزية ضرورية لهذه الوظائف الجديدة."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

@@ -216,6 +216,10 @@ export default function StartPage() {
         title="كوتش إنجليزية أونلاين بالمغرب | نتائج مضمونة — Fluentry"
         description="تعلم الإنجليزية مع كوتش متخصص بالمغرب. نتائج مضمونة. IELTS، إنجليزية الأعمال، والمحادثة. احجز استشارتك المجانية الآن."
         path="/start"
+        titleFr="Commencez votre parcours d'anglais | Fluentry Maroc"
+        titleAr="ابدأ رحلتك في تعلم الإنجليزية | Fluentry المغرب"
+        descriptionFr="Commencez votre parcours d'apprentissage de l'anglais avec Fluentry au Maroc."
+        descriptionAr="ابدأ رحلتك في تعلم الإنجليزية مع Fluentry في المغرب."
       />
 
       {/* NO Header — intentional for ad landing pages */}

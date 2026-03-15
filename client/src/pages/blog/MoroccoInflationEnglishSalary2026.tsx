@@ -13,6 +13,11 @@ export default function MoroccoInflationEnglishSalary2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco inflation 2026, Morocco salary English premium, English salary Morocco, purchasing power Morocco 2026"
+      
+        titleFr="Inflation au Maroc 2026 : L'anglais pour protéger votre salaire"
+        titleAr="التضخم في المغرب 2026: الإنجليزية لحماية راتبك"
+        descriptionFr="Comment l'anglais vous aide à maintenir votre pouvoir d'achat face à l'inflation au Maroc."
+        descriptionAr="كيف تساعدك الإنجليزية في الحفاظ على قدرتك الشرائية في مواجهة التضخم في المغرب."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

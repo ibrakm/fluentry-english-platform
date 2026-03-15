@@ -18,6 +18,11 @@ export default function EnglishForDevelopersMorocco() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="English for developers Morocco, English for programmers Morocco, developer English skills, software engineer English Morocco, tech English Morocco, anglais développeurs Maroc, إنجليزية للمطورين المغرب, coding English vocabulary, technical English Morocco, developer salary English Morocco"
+
+        titleFr="Anglais pour les développeurs marocains | Doublez votre salaire"
+        titleAr="الإنجليزية للمطورين المغاربة | ضاعف راتبك"
+        descriptionFr="Les compétences en anglais qui doublent le salaire d'un développeur marocain. Git, Stack Overflow, entretiens techniques — tout en anglais."
+        descriptionAr="مهارات الإنجليزية التي تضاعف راتب المطور المغربي. Git و Stack Overflow والمقابلات التقنية — كلها بالإنجليزية."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "English for Developers Morocco", item: "https://fluentry.online/blog/english-for-developers-morocco" },

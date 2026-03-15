@@ -70,6 +70,11 @@ export default function IELTSPreparationMorocco() {
         description="Morocco's best IELTS preparation coaching online. TESOL-certified Mr. Ibrahim K. guarantees band 7.5+ in 8 weeks — or coaching is free. All 4 sections: Listening, Reading, Writing & Speaking. 1-on-1 sessions from Tangier. Serving Casablanca, Rabat, Marrakech & all Morocco."
         path="/ielts-preparation-morocco"
         keywords="IELTS preparation Morocco, IELTS coaching Morocco, IELTS online Morocco, IELTS Casablanca, IELTS Rabat, IELTS Tangier, IELTS preparation Maroc, تحضير IELTS المغرب, IELTS band score Morocco, IELTS 7.5 Morocco, IELTS Academic Morocco, IELTS General Training Morocco, online IELTS coaching Morocco 2026, best IELTS tutor Morocco, IELTS preparation course Morocco"
+
+        titleFr="Préparation IELTS au Maroc | Score 7.5+ garanti | Fluentry"
+        titleAr="تحضير IELTS في المغرب | درجة 7.5+ مضمونة | Fluentry"
+        descriptionFr="Préparation IELTS personnalisée au Maroc. Score 7.5+ garanti avec la méthode Fluency Bridge™."
+        descriptionAr="تحضير IELTS مخصص في المغرب. درجة 7.5+ مضمونة مع طريقة Fluency Bridge™."
         breadcrumbs={[
           { name: "Courses", item: "https://fluentry.online/courses" },
           { name: "IELTS Preparation Morocco", item: "https://fluentry.online/ielts-preparation-morocco" },

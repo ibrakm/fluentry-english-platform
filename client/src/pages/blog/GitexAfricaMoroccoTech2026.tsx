@@ -14,6 +14,11 @@ export default function GitexAfricaMoroccoTech2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="GITEX Africa 2026 Morocco, Morocco tech jobs English, Morocco startup ecosystem English, Morocco digital economy 2026"
+      
+        titleFr="GITEX Africa Maroc 2026 : Tech et anglais"
+        titleAr="GITEX أفريقيا المغرب 2026: التكنولوجيا والإنجليزية"
+        descriptionFr="GITEX Africa au Maroc et pourquoi l'anglais est essentiel dans le secteur tech."
+        descriptionAr="GITEX أفريقيا في المغرب ولماذا الإنجليزية ضرورية في قطاع التكنولوجيا."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

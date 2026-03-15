@@ -16,6 +16,11 @@ export default function MoroccoSpainTunnelEnglishJobs() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco Spain tunnel jobs, Gibraltar strait tunnel jobs, English for engineers Morocco, infrastructure jobs Morocco"
+      
+        titleFr="Tunnel Maroc-Espagne : Emplois nécessitant l'anglais"
+        titleAr="نفق المغرب-إسبانيا: وظائف تتطلب الإنجليزية"
+        descriptionFr="Le projet de tunnel Maroc-Espagne et les emplois nécessitant l'anglais."
+        descriptionAr="مشروع نفق المغرب-إسبانيا والوظائف التي تتطلب الإنجليزية."
       />
 
       <div className="min-h-screen bg-gray-50">

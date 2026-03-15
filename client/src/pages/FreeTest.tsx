@@ -27,6 +27,11 @@ export default function FreeTest() {
         description="Discover your exact English level in 5 minutes with Fluentry's free CEFR assessment (A1–C2). Get a personalised learning roadmap from TESOL-certified coach Mr. Ibrahim K. No registration required. 100% free for all Moroccan learners."
         path="/free-test"
         keywords="free English level test Morocco, CEFR test Morocco, English proficiency test free, test niveau anglais gratuit Maroc, اختبار مستوى الإنجليزية مجاني, English assessment Morocco, CEFR level test online Morocco, English test A1 B1 B2 C1 Morocco, test my English level free, English placement test Morocco"
+
+        titleFr="Test de niveau d'anglais gratuit | Fluentry Maroc"
+        titleAr="اختبار مستوى الإنجليزية المجاني | Fluentry المغرب"
+        descriptionFr="Testez votre niveau d'anglais gratuitement en 10 minutes. Obtenez votre score CECR et des recommandations personnalisées."
+        descriptionAr="اختبر مستواك في الإنجليزية مجاناً في 10 دقائق. احصل على درجتك في CEFR وتوصيات مخصصة."
         breadcrumbs={[{ name: "Free Level Test", item: "https://fluentry.online/free-test" }]}
         faqItems={freeTestFAQ}
       />

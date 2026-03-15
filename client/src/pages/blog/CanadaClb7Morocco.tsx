@@ -16,6 +16,11 @@ export default function CanadaClb7Morocco() {
         type="article"
         publishedDate="2026-03-11"
         keywords="Canada immigration Morocco, CLB 7 IELTS, Express Entry 2026, learn English Morocco, IELTS coaching Tangier, Canadian PR for Moroccans, ملعت برغملا ةيزيلجنإلا"
+      
+        titleFr="Immigration Canada depuis le Maroc : Guide IELTS CLB 7"
+        titleAr="الهجرة إلى كندا من المغرب: دليل IELTS CLB 7"
+        descriptionFr="Guide complet pour atteindre le CLB 7 en IELTS pour l'immigration canadienne depuis le Maroc."
+        descriptionAr="دليل شامل لتحقيق CLB 7 في IELTS للهجرة الكندية من المغرب."
       />
       <div className="min-h-screen bg-gray-50">
         {/* ── HERO SECTION ── */}

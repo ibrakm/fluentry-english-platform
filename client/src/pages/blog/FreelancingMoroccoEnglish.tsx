@@ -15,6 +15,11 @@ export default function FreelancingMoroccoEnglish() {
         title={title}
         description={description}
         path="/blog/freelancing-morocco-english-advantage"
+      
+        titleFr="Freelance au Maroc : L'avantage de l'anglais"
+        titleAr="العمل الحر في المغرب: ميزة الإنجليزية"
+        descriptionFr="Comment l'anglais ouvre les portes du freelance international depuis le Maroc."
+        descriptionAr="كيف تفتح الإنجليزية أبواب العمل الحر الدولي من المغرب."
       />
       <div className="min-h-screen bg-gray-50">
         <header

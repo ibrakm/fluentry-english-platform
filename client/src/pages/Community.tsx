@@ -32,6 +32,11 @@ export default function Community() {
         title="Fluentry Community | 500+ Moroccan English Learners | Free Resources"
         description="Join Fluentry's free WhatsApp community for Moroccan English learners. Daily tips, study partners, free resources & group sessions. Refer a friend and earn a free lesson."
         keywords="English community Morocco, English learners WhatsApp group Morocco, learn English with friends Morocco, Fluentry community, مجتمع تعلم الإنجليزية المغرب, groupe WhatsApp anglais Maroc, English study group Morocco, free English resources Morocco"
+
+        titleFr="Communauté Fluentry | Apprenants d'anglais au Maroc"
+        titleAr="مجتمع Fluentry | متعلمو الإنجليزية في المغرب"
+        descriptionFr="Rejoignez la communauté Fluentry d'apprenants d'anglais au Maroc."
+        descriptionAr="انضم إلى مجتمع Fluentry لمتعلمي الإنجليزية في المغرب."
         breadcrumbs={[{ name: "Community", item: "https://fluentry.online/community" }]}
       />
 

@@ -44,7 +44,12 @@ export default function UltimateIELTSGuideMorocco() {
 
   return (
     <>
-      <SEO title={title} description={description} path="/blog/ultimate-ielts-guide-morocco" />
+      <SEO title={title} description={description} path="/blog/ultimate-ielts-guide-morocco" 
+        titleFr="Guide ultime IELTS au Maroc | Préparation complète"
+        titleAr="الدليل الشامل لـ IELTS في المغرب | تحضير كامل"
+        descriptionFr="La ressource complète de préparation IELTS pour le Maroc."
+        descriptionAr="المورد الشامل لتحضير IELTS في المغرب."
+      />
       <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

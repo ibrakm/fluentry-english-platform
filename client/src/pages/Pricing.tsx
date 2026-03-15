@@ -77,6 +77,11 @@ export default function Pricing() {
         description="Transparent, affordable English coaching prices in Morocco. 1-on-1 lessons from 65 MAD/hr. IELTS Accelerator program, Business English Mastery, and General English plans. TESOL-certified coach Mr. Ibrahim K. No hidden fees. Free 10-min strategy call."
         path="/pricing"
         keywords="English lesson price Morocco, affordable English tutor Morocco, English coaching cost Morocco, cours anglais prix Maroc, تكلفة دروس الإنجليزية المغرب, English lesson packages Morocco, IELTS program price Morocco, Business English program price Morocco, cheap English lessons Morocco, English tutor price Tangier, cours anglais pas cher Maroc, online English lessons price Morocco, how much English coaching Morocco"
+
+        titleFr="Tarifs coaching anglais au Maroc | À partir de 65 MAD/h | Fluentry Tanger"
+        titleAr="أسعار تدريب الإنجليزية في المغرب | ابتداءً من 65 درهم/ساعة | Fluentry طنجة"
+        descriptionFr="Tarifs transparents et abordables pour le coaching d'anglais au Maroc. Cours 1-à-1 à partir de 65 MAD/h. Programmes IELTS, anglais des affaires et anglais général. Sans frais cachés."
+        descriptionAr="أسعار شفافة ومعقولة لتدريب الإنجليزية في المغرب. دروس فردية ابتداءً من 65 درهم/ساعة. برامج IELTS وإنجليزية الأعمال والإنجليزية العامة. بدون رسوم خفية."
         breadcrumbs={[{ name: "Pricing", item: "https://fluentry.online/pricing" }]}
         faqItems={faqs.map((f) => ({ question: f.q, answer: f.a }))}
       />

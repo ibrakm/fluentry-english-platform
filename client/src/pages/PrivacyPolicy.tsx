@@ -9,6 +9,10 @@ export default function PrivacyPolicy() {
         title="Privacy Policy | Fluentry — English Coaching Morocco"
         description="Read Fluentry's privacy policy. We are committed to protecting your personal data and being transparent about how we collect and use information."
         path="/privacy-policy"
+        titleFr="Politique de confidentialité | Fluentry"
+        titleAr="سياسة الخصوصية | Fluentry"
+        descriptionFr="Politique de confidentialité de Fluentry — comment nous protégeons vos données personnelles."
+        descriptionAr="سياسة الخصوصية لـ Fluentry — كيف نحمي بياناتك الشخصية."
       />
       <div className="min-h-screen bg-gray-50 py-16 px-4">
         <div className="container mx-auto max-w-3xl bg-white rounded-2xl shadow-md p-8 sm:p-12">

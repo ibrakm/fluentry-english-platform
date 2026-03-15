@@ -12,7 +12,12 @@ export default function EnglishForEngineersMorocco() {
     <>
       <SEO title={title} description={description}
         path="/blog/english-for-engineers-morocco"
- />
+ 
+        titleFr="Anglais technique pour les ingénieurs marocains"
+        titleAr="الإنجليزية التقنية للمهندسين المغاربة"
+        descriptionFr="Compétences en anglais technique essentielles pour les ingénieurs marocains."
+        descriptionAr="مهارات الإنجليزية التقنية الأساسية للمهندسين المغاربة."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/english-for-engineers-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

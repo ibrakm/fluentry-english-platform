@@ -16,6 +16,11 @@ export default function EuBlueCardMoroccoEnglish() {
         type="article"
         publishedDate="2026-03-10"
         keywords="EU Blue Card Morocco, work in Europe from Morocco, Germany work visa Morocco, English for immigration"
+      
+        titleFr="Carte Bleue UE depuis le Maroc : Exigences en anglais"
+        titleAr="البطاقة الزرقاء الأوروبية من المغرب: متطلبات الإنجليزية"
+        descriptionFr="Guide pour obtenir la Carte Bleue européenne depuis le Maroc avec l'anglais."
+        descriptionAr="دليل الحصول على البطاقة الزرقاء الأوروبية من المغرب مع الإنجليزية."
       />
 
       <div className="min-h-screen bg-gray-50">

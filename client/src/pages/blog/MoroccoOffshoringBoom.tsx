@@ -12,7 +12,12 @@ export default function MoroccoOffshoringBoom() {
     <>
       <SEO title={title} description={description}
         path="/blog/morocco-offshoring-boom-2026"
- />
+ 
+        titleFr="Boom de l'offshoring au Maroc 2026 | Emplois anglophones"
+        titleAr="ازدهار الأوفشورينغ في المغرب 2026 | وظائف بالإنجليزية"
+        descriptionFr="L'essor de l'offshoring au Maroc et pourquoi l'anglais est essentiel pour ces emplois."
+        descriptionAr="ازدهار الأوفشورينغ في المغرب ولماذا الإنجليزية ضرورية لهذه الوظائف."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/morocco-offshoring-boom.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

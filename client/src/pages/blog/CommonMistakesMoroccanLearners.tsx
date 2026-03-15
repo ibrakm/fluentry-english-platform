@@ -17,6 +17,11 @@ export default function CommonMistakesMoroccanLearners() {
         publishedDate="2026-01-10"
         modifiedDate="2026-03-07"
         keywords="common English mistakes Moroccan learners, English mistakes Arabic speakers, English mistakes French speakers Morocco, أخطاء الإنجليزية المغاربة, erreurs anglais apprenants marocains, English grammar mistakes Morocco, how to improve English Morocco"
+
+        titleFr="Erreurs courantes des apprenants marocains en anglais"
+        titleAr="الأخطاء الشائعة لمتعلمي الإنجليزية المغاربة"
+        descriptionFr="Évitez les erreurs les plus fréquentes que font les apprenants marocains en anglais."
+        descriptionAr="تجنب الأخطاء الأكثر شيوعاً التي يرتكبها متعلمو الإنجليزية المغاربة."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "10 Common Mistakes Moroccan English Learners Make", item: "https://fluentry.online/blog/common-mistakes-moroccan-english-learners" }

@@ -18,6 +18,11 @@ export default function WorldCup2030VolunteersEnglish() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="World Cup 2030 volunteer Morocco, FIFA volunteer English, volunteer World Cup Morocco English, World Cup 2030 Morocco volunteer application, English for FIFA volunteers, bénévole Coupe du Monde 2030 Maroc anglais, متطوع كأس العالم 2030 المغرب إنجليزية, volunteer English level FIFA, World Cup 2030 Morocco language requirements"
+
+        titleFr="Anglais pour les bénévoles de la Coupe du Monde 2030 au Maroc | Guide complet"
+        titleAr="الإنجليزية لمتطوعي كأس العالم 2030 في المغرب | دليل شامل"
+        descriptionFr="Vous voulez être bénévole à la Coupe du Monde FIFA 2030 au Maroc ? Vous aurez besoin d'anglais. Ce guide couvre le niveau requis, les phrases clés et comment se préparer."
+        descriptionAr="هل تريد التطوع في كأس العالم 2030 في المغرب؟ ستحتاج إلى الإنجليزية. يغطي هذا الدليل المستوى المطلوب والعبارات الأساسية وكيفية التحضير."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "World Cup 2030 Volunteers English", item: "https://fluentry.online/blog/world-cup-2030-volunteers-english-morocco" },

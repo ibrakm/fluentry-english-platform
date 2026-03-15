@@ -12,7 +12,12 @@ export default function TourismHospitalityWorldCupMorocco() {
     <>
       <SEO title={title} description={description}
         path="/blog/tourism-hospitality-world-cup-morocco"
- />
+ 
+        titleFr="Tourisme et hôtellerie pour la Coupe du Monde au Maroc | Anglais requis"
+        titleAr="السياحة والضيافة لكأس العالم في المغرب | الإنجليزية المطلوبة"
+        descriptionFr="Opportunités dans le tourisme et l'hôtellerie pour la Coupe du Monde 2030 au Maroc."
+        descriptionAr="فرص في السياحة والضيافة لكأس العالم 2030 في المغرب."
+      />
       <div className="min-h-screen bg-gray-50">
         <header className="relative bg-cover bg-center text-white py-24 px-4 text-center" style={{ backgroundImage: "url('/images/blog/tourism-hospitality-world-cup-morocco.webp')" }}>
           <div className="absolute inset-0 bg-black/60" />

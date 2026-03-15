@@ -677,6 +677,11 @@ export default function Blog() {
         description={description}
         path="/blog"
         keywords="English learning blog Morocco, IELTS tips Morocco, Business English Morocco, English pronunciation Arabic speakers, English speaking skills Morocco, تعلم الإنجليزية المغرب, blog anglais Maroc"
+
+        titleFr="Blog | Conseils et guides pour apprendre l'anglais au Maroc"
+        titleAr="المدونة | نصائح وأدلة لتعلم الإنجليزية في المغرب"
+        descriptionFr="Articles, guides et conseils d'experts pour améliorer votre anglais au Maroc."
+        descriptionAr="مقالات وأدلة ونصائح خبراء لتحسين إنجليزيتك في المغرب."
         breadcrumbs={[{ name: "Blog", item: "https://fluentry.online/blog" }]}
       />
       <div className="min-h-screen bg-background">

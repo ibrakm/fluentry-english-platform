@@ -17,6 +17,11 @@ export default function HowToThinkInEnglish() {
         publishedDate="2026-01-25"
         modifiedDate="2026-03-07"
         keywords="how to think in English Morocco, stop translating English Arabic, stop translating English French Morocco, كيف تفكر بالإنجليزية, penser en anglais Maroc, English fluency Morocco, think in English not translate"
+
+        titleFr="Comment penser en anglais | Arrêtez de traduire"
+        titleAr="كيف تفكر بالإنجليزية | توقف عن الترجمة"
+        descriptionFr="Apprenez à penser directement en anglais sans traduire depuis l'arabe ou le français."
+        descriptionAr="تعلم التفكير مباشرة بالإنجليزية دون ترجمة من العربية أو الفرنسية."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "How to Think in English", item: "https://fluentry.online/blog/how-to-think-in-english" }

@@ -16,6 +16,11 @@ export default function EcommerceDropshippingEnglishMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="dropshipping Morocco, e-commerce Morocco English, Shopify Morocco, learn English for business"
+      
+        titleFr="E-commerce et dropshipping au Maroc : L'anglais comme avantage"
+        titleAr="التجارة الإلكترونية والدروبشيبينغ في المغرب: الإنجليزية كميزة"
+        descriptionFr="Comment l'anglais booste votre business e-commerce et dropshipping au Maroc."
+        descriptionAr="كيف تعزز الإنجليزية أعمالك في التجارة الإلكترونية والدروبشيبينغ في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

@@ -252,6 +252,10 @@ export default function AudioAudit() {
         title="Instant Audio Audit — اختبار النطق المجاني | Fluentry"
         description="سجّل صوتك وأنت تقرأ بالإنجليزية واحصل على تقييم فوري من الذكاء الاصطناعي + ملاحظات شخصية من الأستاذ إبراهيم."
         path="/audio-audit"
+        titleFr="Audit audio de prononciation anglaise | Fluentry Maroc"
+        titleAr="تدقيق صوتي لنطق الإنجليزية | Fluentry المغرب"
+        descriptionFr="Obtenez un audit personnalisé de votre prononciation anglaise avec des conseils d'amélioration."
+        descriptionAr="احصل على تدقيق مخصص لنطقك الإنجليزي مع نصائح للتحسين."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 py-10 px-4">

@@ -15,6 +15,11 @@ export default function HighEndEnglishTrainingMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="English coaching Morocco, premium English training, Business English Morocco, IELTS coaching"
+      
+        titleFr="Formation anglais haut de gamme au Maroc | Coaching premium"
+        titleAr="تدريب إنجليزي راقي في المغرب | تدريب متميز"
+        descriptionFr="Formation anglais premium et personnalisée pour les professionnels marocains ambitieux."
+        descriptionAr="تدريب إنجليزي متميز ومخصص للمهنيين المغاربة الطموحين."
       />
 
       <div className="min-h-screen bg-gray-50">

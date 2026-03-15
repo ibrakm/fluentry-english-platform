@@ -16,6 +16,11 @@ export default function LearnEnglishNetflixMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="learn English Netflix, practice listening English, English movies Morocco, improve English vocabulary"
+      
+        titleFr="Apprendre l'anglais avec Netflix au Maroc | Guide pratique"
+        titleAr="تعلم الإنجليزية مع Netflix في المغرب | دليل عملي"
+        descriptionFr="Comment utiliser Netflix pour améliorer votre anglais efficacement au Maroc."
+        descriptionAr="كيف تستخدم Netflix لتحسين إنجليزيتك بفعالية في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

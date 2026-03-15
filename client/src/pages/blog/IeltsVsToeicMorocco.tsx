@@ -98,7 +98,12 @@ export default function IeltsVsToeicMorocco() {
 
   return (
     <>
-      <SEO title={c.title} description={c.description} path="/blog/ielts-vs-toeic-morocco" />
+      <SEO title={c.title} description={c.description} path="/blog/ielts-vs-toeic-morocco" 
+        titleFr="IELTS vs TOEIC au Maroc : Quel examen choisir ?"
+        titleAr="IELTS مقابل TOEIC في المغرب: أي امتحان تختار؟"
+        descriptionFr="Comparaison entre IELTS et TOEIC pour les étudiants et professionnels marocains."
+        descriptionAr="مقارنة بين IELTS و TOEIC للطلاب والمهنيين المغاربة."
+      />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
         <header

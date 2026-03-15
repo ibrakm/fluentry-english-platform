@@ -1,5 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 interface BreadcrumbItem {
   name: string;
   item: string;
@@ -37,6 +39,10 @@ interface SEOProps {
     duration?: string;
     contentUrl?: string;
   };
+  titleFr?: string;
+  titleAr?: string;
+  descriptionFr?: string;
+  descriptionAr?: string;
 }
 
 const BASE_URL = "https://fluentry.online";
@@ -58,10 +64,27 @@ export const SEO = ({
   courseData,
   breadcrumbs,
   reviewData,
+  titleFr,
+  titleAr,
+  descriptionFr,
+  descriptionAr,
   videoData,
 }: SEOProps) => {
   const fullUrl = `${BASE_URL}${path}`;
-  const fullTitle = title.includes("Fluentry") ? title : `${title} | Fluentry`;
+
+  // Multilingual support
+  let currentLang = "en";
+  try {
+    const pathSegment = window.location.pathname.split("/")[1];
+    if (["en", "fr", "ar"].includes(pathSegment)) currentLang = pathSegment;
+  } catch (e) {}
+
+  const localizedTitle = currentLang === "fr" && titleFr ? titleFr : currentLang === "ar" && titleAr ? titleAr : title;
+  const localizedDescription = currentLang === "fr" && descriptionFr ? descriptionFr : currentLang === "ar" && descriptionAr ? descriptionAr : description;
+  const localeMap: Record<string, string> = { en: "en_US", fr: "fr_MA", ar: "ar_MA" };
+  const langNameMap: Record<string, string> = { en: "English", fr: "French", ar: "Arabic" };
+
+  const fullTitle = localizedTitle.includes("Fluentry") ? localizedTitle : `${localizedTitle} | Fluentry`;
 
   // ── Structured Data: Organization / Local Business ──────────────────────
   const organizationSchema = {
@@ -159,7 +182,7 @@ export const SEO = ({
     "@id": `${fullUrl}#webpage`,
     url: fullUrl,
     name: fullTitle,
-    description,
+    description: localizedDescription,
     isPartOf: { "@id": `${BASE_URL}/#website` },
     ...(type === "article" && {
       headline: fullTitle,
@@ -181,7 +204,7 @@ export const SEO = ({
       dateModified: modifiedDate || publishedDate,
       image: imageUrl,
       mainEntityOfPage: { "@type": "WebPage", "@id": fullUrl },
-      inLanguage: "en",
+      inLanguage: currentLang === "fr" ? "fr" : currentLang === "ar" ? "ar" : "en",
     }),
   };
 
@@ -202,7 +225,7 @@ export const SEO = ({
       },
       "query-input": "required name=search_term_string",
     },
-    inLanguage: "en",
+    inLanguage: currentLang === "fr" ? "fr" : currentLang === "ar" ? "ar" : "en",
   };
 
   // ── Structured Data: BreadcrumbList ────────────────────────────────────
@@ -318,12 +341,17 @@ export const SEO = ({
     <Helmet>
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={localizedDescription} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullUrl} />
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      {/* Hreflang alternate links for multilingual SEO */}
+      <link rel="alternate" hrefLang="en" href={`${BASE_URL}/en${path}`} />
+      <link rel="alternate" hrefLang="fr" href={`${BASE_URL}/fr${path}`} />
+      <link rel="alternate" hrefLang="ar" href={`${BASE_URL}/ar${path}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}${path}`} />
       <meta name="author" content="Mr. Ibrahim K. — Fluentry" />
-      <meta name="language" content="English" />
+      <meta name="language" content={langNameMap[currentLang] || "English"} />
       <meta name="geo.region" content="MA-01" />
       <meta name="geo.placename" content="Tangier, Morocco" />
       <meta name="geo.position" content="35.7595;-5.8340" />
@@ -335,13 +363,13 @@ export const SEO = ({
       <meta property="og:type" content={type} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={localizedDescription} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Fluentry — English Coaching Morocco" />
       <meta property="og:site_name" content="Fluentry" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content={localeMap[currentLang] || "en_US"} />
       <meta property="og:locale:alternate" content="fr_MA" />
       <meta property="og:locale:alternate" content="ar_MA" />
 
@@ -349,7 +377,7 @@ export const SEO = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={fullUrl} />
       <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:description" content={localizedDescription} />
       <meta name="twitter:image" content={imageUrl} />
       <meta name="twitter:image:alt" content="Fluentry — English Coaching Morocco" />
 

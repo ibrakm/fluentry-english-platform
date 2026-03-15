@@ -15,6 +15,11 @@ export default function WorldCup2030EnglishJobs() {
         title={title}
         description={description}
         path="/blog/world-cup-2030-english-jobs-morocco"
+      
+        titleFr="Emplois anglais pour la Coupe du Monde 2030 au Maroc"
+        titleAr="وظائف تتطلب الإنجليزية لكأس العالم 2030 في المغرب"
+        descriptionFr="Découvrez les opportunités d'emploi nécessitant l'anglais pour la Coupe du Monde 2030 au Maroc."
+        descriptionAr="اكتشف فرص العمل التي تتطلب الإنجليزية لكأس العالم 2030 في المغرب."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

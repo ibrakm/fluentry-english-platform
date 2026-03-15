@@ -17,6 +17,11 @@ export default function BusinessEnglishEmailWritingGuide() {
         publishedDate="2026-01-20"
         modifiedDate="2026-03-07"
         keywords="Business English email writing Morocco, professional email English Morocco, كتابة البريد الإلكتروني بالإنجليزية, rédiger email professionnel anglais Maroc, Business English Morocco, email templates English work Morocco"
+
+        titleFr="Guide de rédaction d'emails professionnels en anglais"
+        titleAr="دليل كتابة البريد الإلكتروني المهني بالإنجليزية"
+        descriptionFr="Rédigez des emails professionnels impressionnants en anglais."
+        descriptionAr="اكتب رسائل بريد إلكتروني مهنية مؤثرة بالإنجليزية."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "Business English Email Writing Guide", item: "https://fluentry.online/blog/business-english-email-writing-guide" }

@@ -48,6 +48,11 @@ export default function Home() {
         title={title}
         description={description}
         path="/"
+
+        titleFr="Coach d'anglais en ligne au Maroc | Cours personnalisés 1-à-1 | Fluentry"
+        titleAr="مدرب إنجليزية عبر الإنترنت في المغرب | دروس مخصصة فردية | Fluentry"
+        descriptionFr="Coaching d'anglais personnalisé 1-à-1 au Maroc avec M. Ibrahim K., certifié TESOL. IELTS, anglais des affaires, conversation. À partir de 65 MAD/h. Résultats garantis."
+        descriptionAr="تدريب إنجليزية مخصص فردي في المغرب مع الأستاذ إبراهيم ك.، معتمد TESOL. IELTS، إنجليزية الأعمال، محادثة. ابتداءً من 65 درهم/ساعة. نتائج مضمونة."
         keywords={homeKeywords}
         faqItems={homeFAQ}
         reviewData={{

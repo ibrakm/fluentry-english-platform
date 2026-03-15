@@ -18,6 +18,11 @@ export default function IeltsVsToeflMorocco() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="IELTS vs TOEFL Morocco, IELTS ou TOEFL Maroc, IELTS TOEFL comparison Morocco, which English test Morocco, TOEFL Morocco cost, IELTS Morocco cost, TOEFL iBT Morocco, IELTS Academic Morocco, مقارنة IELTS و TOEFL المغرب, best English test for university Morocco, IELTS vs TOEFL difficulty, TOEFL test centres Morocco"
+
+        titleFr="IELTS vs TOEFL au Maroc : Quel examen choisir ? | Comparaison complète"
+        titleAr="IELTS مقابل TOEFL في المغرب: أي امتحان تختار؟ | مقارنة شاملة"
+        descriptionFr="Comparaison détaillée entre IELTS et TOEFL pour les étudiants marocains. Format, coût, reconnaissance et quel examen convient à vos objectifs."
+        descriptionAr="مقارنة مفصلة بين IELTS و TOEFL للطلاب المغاربة. الشكل والتكلفة والاعتراف وأي امتحان يناسب أهدافك."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "IELTS vs TOEFL Morocco", item: "https://fluentry.online/blog/ielts-vs-toefl-morocco" },

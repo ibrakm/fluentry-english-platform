@@ -121,6 +121,11 @@ export default function SuccessStories() {
         description="Real results from real Moroccan students. IELTS 5.5 → 7.0, A2 → B2 fluency, and career breakthroughs — all in 8 weeks with Fluentry's TESOL-certified coach Mr. Ibrahim K. Read verified testimonials and see what's possible for you."
         keywords="Fluentry success stories, IELTS results Morocco, English improvement Morocco, English coaching testimonials, learn English Tangier, IELTS 7 Morocco, English coaching results Morocco, IELTS improvement Morocco"
         path="/success-stories"
+
+        titleFr="Témoignages de réussite | Étudiants Fluentry Maroc"
+        titleAr="قصص النجاح | طلاب Fluentry المغرب"
+        descriptionFr="Découvrez les histoires de réussite de nos étudiants marocains qui ont transformé leur anglais avec Fluentry."
+        descriptionAr="اكتشف قصص نجاح طلابنا المغاربة الذين حوّلوا إنجليزيتهم مع Fluentry."
         breadcrumbs={[
           { name: "Home", item: "https://fluentry.online/" },
           { name: "Success Stories", item: "https://fluentry.online/success-stories" },

@@ -42,7 +42,12 @@ export default function UltimateBusinessEnglishGuideMorocco() {
 
   return (
     <>
-      <SEO title={title} description={description} path="/blog/ultimate-business-english-guide-morocco" />
+      <SEO title={title} description={description} path="/blog/ultimate-business-english-guide-morocco" 
+        titleFr="Guide ultime de l'anglais des affaires au Maroc"
+        titleAr="الدليل الشامل للإنجليزية التجارية في المغرب"
+        descriptionFr="Maîtrisez l'anglais des affaires pour les professionnels marocains."
+        descriptionAr="أتقن الإنجليزية التجارية للمهنيين المغاربة."
+      />
       <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

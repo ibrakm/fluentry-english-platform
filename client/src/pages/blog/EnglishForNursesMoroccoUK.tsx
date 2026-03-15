@@ -18,6 +18,11 @@ export default function EnglishForNursesMoroccoUK() {
         publishedDate="2026-03-15"
         modifiedDate="2026-03-15"
         keywords="English for nurses Morocco UK, Moroccan nurses UK NHS, IELTS for nurses Morocco, OET for nurses Morocco, NMC registration Morocco, nursing English UK, infirmier marocain Angleterre, ممرض مغربي بريطانيا إنجليزية, nurse migration Morocco UK, NHS recruitment Morocco, English level nurses UK, IELTS 7 nurses Morocco"
+
+        titleFr="Anglais pour les infirmiers marocains voulant travailler au Royaume-Uni | Guide complet"
+        titleAr="الإنجليزية للممرضين المغاربة للعمل في بريطانيا | دليل شامل"
+        descriptionFr="Guide complet pour les infirmiers marocains souhaitant travailler au Royaume-Uni : exigences IELTS, OET, processus NMC et comment préparer votre anglais."
+        descriptionAr="دليل شامل للممرضين المغاربة الراغبين في العمل في بريطانيا: متطلبات IELTS و OET وعملية NMC وكيفية تحضير لغتك الإنجليزية."
         breadcrumbs={[
           { name: "Blog", item: "https://fluentry.online/blog" },
           { name: "English for Nurses Morocco UK", item: "https://fluentry.online/blog/english-for-nurses-morocco-uk" },

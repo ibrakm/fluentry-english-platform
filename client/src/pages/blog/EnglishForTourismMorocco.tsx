@@ -53,6 +53,11 @@ export default function EnglishForTourismMorocco() {
         title="English for Tourism in Morocco: Guide for Hotel Staff & Tour Guides"
         description="Learn the essential English phrases and skills for the tourism and hospitality sector in Morocco. Boost your career and earn more with better English."
         keywords={'english for tourism morocco, hotel english course marrakech, english for tour guides morocco, hospitality english casablanca'}
+      
+        titleFr="Anglais pour le tourisme au Maroc"
+        titleAr="الإنجليزية للسياحة في المغرب"
+        descriptionFr="L'anglais essentiel pour l'industrie touristique au Maroc."
+        descriptionAr="الإنجليزية الأساسية لصناعة السياحة في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

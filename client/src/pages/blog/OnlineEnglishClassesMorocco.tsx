@@ -53,6 +53,11 @@ export default function OnlineEnglishClassesMorocco() {
         title="Online English Classes for Moroccans: The Complete 2026 Guide to Prices, Methods, and Real Results"
         description="The ultimate 2026 guide to online English classes in Morocco. Compare prices, methods (apps, group classes, 1-on-1 coaching), and find the best way to learn English online."
         keywords="online English classes Morocco, apprendre l'anglais en ligne Maroc, prix cours anglais, best online English courses"
+      
+        titleFr="Cours d'anglais en ligne au Maroc | Comparatif et guide"
+        titleAr="دروس الإنجليزية عبر الإنترنت في المغرب | مقارنة ودليل"
+        descriptionFr="Comparez les meilleurs cours d'anglais en ligne disponibles au Maroc."
+        descriptionAr="قارن أفضل دروس الإنجليزية عبر الإنترنت المتاحة في المغرب."
       />
 
       <div className="min-h-screen bg-gray-50">

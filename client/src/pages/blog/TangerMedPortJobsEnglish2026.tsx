@@ -14,6 +14,11 @@ export default function TangerMedPortJobsEnglish2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Tanger Med jobs English, Tanger Med port 2026, logistics jobs Morocco English, freight forwarder Morocco"
+      
+        titleFr="Emplois au port Tanger Med 2026 : Anglais requis"
+        titleAr="وظائف ميناء طنجة المتوسط 2026: الإنجليزية مطلوبة"
+        descriptionFr="Les opportunités d'emploi au port Tanger Med nécessitant l'anglais."
+        descriptionAr="فرص العمل في ميناء طنجة المتوسط التي تتطلب الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}

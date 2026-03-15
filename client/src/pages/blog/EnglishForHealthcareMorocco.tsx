@@ -16,6 +16,11 @@ export default function EnglishForHealthcareMorocco() {
         type="article"
         publishedDate="2026-03-10"
         keywords="English for nurses Morocco, medical English Morocco, doctors English Morocco, healthcare jobs English"
+      
+        titleFr="Anglais pour le secteur de la santé au Maroc"
+        titleAr="الإنجليزية لقطاع الرعاية الصحية في المغرب"
+        descriptionFr="L'anglais médical essentiel pour les professionnels de santé marocains."
+        descriptionAr="الإنجليزية الطبية الأساسية للمهنيين الصحيين المغاربة."
       />
 
       <div className="min-h-screen bg-gray-50">

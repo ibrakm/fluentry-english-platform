@@ -13,6 +13,11 @@ export default function MoroccoSuccessfulProfessionalsEnglish() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Morocco successful professionals English, English turning point career Morocco, Tanger Med English promotion, OET exam Morocco nurse, CFC analyst English Morocco"
+      
+        titleFr="Professionnels marocains qui réussissent grâce à l'anglais"
+        titleAr="المهنيون المغاربة الناجحون بفضل الإنجليزية"
+        descriptionFr="Histoires de professionnels marocains qui ont transformé leur carrière grâce à l'anglais."
+        descriptionAr="قصص مهنيين مغاربة حولوا مسيرتهم المهنية بفضل الإنجليزية."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero section */}

@@ -13,6 +13,11 @@ export default function CasablancaFinanceCityJobsEnglish2026() {
         type="article"
         publishedDate="2026-03-10"
         keywords="Casablanca Finance City jobs, CFC Morocco English, finance jobs Morocco salary, Big Four Morocco, investment banking Morocco English"
+      
+        titleFr="Casablanca Finance City : Emplois anglophones 2026"
+        titleAr="الدار البيضاء المالية: وظائف بالإنجليزية 2026"
+        descriptionFr="Opportunités d'emploi à Casablanca Finance City nécessitant l'anglais en 2026."
+        descriptionAr="فرص العمل في الدار البيضاء المالية التي تتطلب الإنجليزية في 2026."
       />
       <div className="min-h-screen bg-gray-50">
         {/* Hero section */}
